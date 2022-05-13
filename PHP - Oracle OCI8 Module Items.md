@@ -31,10 +31,11 @@ And you might need to run this command if you get this message, “WARNING: chan
 
 Now install the OCI8 version that works with your version of PHP. Here is how it breaks down:
 
-* **PHP 8**: `pecl install oci8`
-* **PHP 7.x**: `pecl install oci8-2.2.0`
-* **PHP 5.2–5.6**: `pecl install oci8-2.0.12`
-* **PHP 4.3.9-5.1**: `pecl install oci8-1.4.10`
+ - **PHP 8.1**: `pecl install oci8`
+ - **PHP 8.0**: `pecl install oci8-3.0.1`
+ - **PHP 7.x**: `pecl install oci8-2.2.0`
+ - **PHP 5.2–5.6**: `pecl install oci8-2.0.12`
+ - **PHP 4.3.9-5.1**: `pecl install oci8-1.4.10`
 
 So in this case, we are installing it for PHP version 5.6.10 so we will install version 2.0.12 using this command:
 
@@ -95,18 +96,19 @@ And you might need to run this command if you get this message, “WARNING: chan
 
 Now install the OCI8 version that works with your version of PHP. Here is how it breaks down:
 
-* **PHP 8**: `pecl install oci8`
-* **PHP 7.x**: `pecl install oci8-2.2.0`
-* **PHP 5.2–5.6**: `pecl install oci8-2.0.12`
-* **PHP 4.3.9-5.1**: `pecl install oci8-1.4.10`
+ - **PHP 8.1**: `pecl install oci8`
+ - **PHP 8.0**: `pecl install oci8-3.0.1`
+ - **PHP 7.x**: `pecl install oci8-2.2.0`
+ - **PHP 5.2–5.6**: `pecl install oci8-2.0.12`
+ - **PHP 4.3.9-5.1**: `pecl install oci8-1.4.10`
 
-So in this case, we are installing it for PHP version 5.6.10 so we will install version 2.0.12 using this command:
+So in this case, we are installing it for PHP version 8.0 so we will install version 3.0.1 using this command:
 
-	sudo pecl install oci8-2.0.12
+	sudo pecl install oci8-3.0.1
 
 If you need to force a rebuild, use the `-f` option like this:
 
-	sudo pecl install -f oci8-2.0.12
+	sudo pecl install -f oci8-3.0.1
 
 During the install you might be asked to provide the `ORACLE_HOME` path via a message like this:
 
@@ -141,7 +143,7 @@ Or do it the brute force way like this:
 
 	cd /usr/lib/oracle/
 	sudo rm -rf 12.2
-	
+
 	cd /usr/include/oracle/
 	sudo rm -rf 12.2
 
@@ -156,7 +158,7 @@ Then uninstall the OCI8 version that exists:
 
 And install the new one like this:
 
-	sudo pecl install oci8-2.2.0	
+	sudo pecl install oci8-2.2.0
 
 The path to the libraries is:
 
