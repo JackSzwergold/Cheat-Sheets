@@ -105,7 +105,8 @@ Same instructions as above under the instructions for PHP 5.6.10. Just make sure
 
 Now install the OCI 8 version that works with your version of PHP. Here is how it breaks down:
 
-* **PHP 8**: `pecl install oci8`
+* **PHP 8.1**: `pecl install oci8`
+* **PHP 8.0**: `pecl install oci8-3.0.1`
 * **PHP 7.x**: `pecl install oci8-2.2.0`
 * **PHP 5.2–5.6**: `pecl install oci8-2.0.12`
 * **PHP 4.3.9-5.1**: `pecl install oci8-1.4.10`
