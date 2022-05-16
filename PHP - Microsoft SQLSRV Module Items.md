@@ -19,7 +19,7 @@ Now install the PHP SQLSRV module items via Yum:
 
 	sudo ACCEPT_EULA=Y yum install php-sqlsrv
 
-### PHP Microsoft SQLSRV ia Yum repos and PECL.
+### PHP Microsoft SQLSRV via Yum repos and PECL.
 
 First, the install the system ODBC stuff:
 
