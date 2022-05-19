@@ -25,24 +25,6 @@ Sundry service control commands:
 	sudo service nginx stop
 	sudo service nginx status
 
-#### Install `ngxtop`.
-
-Install `ngxtop` to monitor realtime stats on the server like this. First install PIP like this:
-
-	sudo aptitude install python-pip
-
-Then install `ngxtop` like this:
-
-	sudo pip install ngxtop
-
-And then monitor the Nginx service like this:
-
-	sudo ngxtop
-
-An example of showing 200 top items and filtering out items that don’t begin with `/sockjs`:
-
-	sudo ngxtop -n 200 --filter 'not request_path.startswith("/sockjs")'
-
 #### Disable Nginx version number from header calls.
 
 Open up the config file here:
