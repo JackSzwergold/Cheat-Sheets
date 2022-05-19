@@ -67,6 +67,10 @@ Default Nginx page located here:
 
 	/usr/share/nginx/html/index.html
 
+Error log should be located where it is defined in the Nginx confg.
+
+	/var/log/nginx/error.log
+
 ### Nginx config examples.
 
 A basic reverse proxy config for Nginx:
@@ -110,7 +114,7 @@ A basic reverse proxy config for Nginx:
 
 A more advanced Nginx reverse proxy config. This case Nginx is acting as a reverse proxy for a Gunicorn Python application server.
 
-While in the other, simpler config above the `proxy_pass` setting simply goes directly to the web server at `http://127.0.0.1:8080`, this config leverages an `upstream` config namded `app_server` that is then called by `proxy_pass` as `proxy_pass http://app_server;`.
+While in the other, simpler config above the `proxy_pass` setting simply goes directly to the web server at `http://127.0.0.1:8080`, this config leverages an `upstream` config named `app_server` that is then called by `proxy_pass` as `proxy_pass http://app_server;`.
 
 The core benefit of this setup is it is easier to add other members to an application pool but, in the case of a single member “pool”, the `fail_timeout=0` option in the `upstream` config tells Nginx, “Try to connect to the upstream server indicated until you get a response and don’t timeout any earlier than the `proxy_connect_timeout`, `proxy_read_timeout` and `proxy_send_timeout`.”
 
@@ -193,6 +197,65 @@ This helps in cases where, in this case, the Python application somehow fails, t
 	    }
 	  }
 	}
+
+### Increasing the open file limit so `worker_rlimit_nofile` can be increased as well.
+
+On most all Linux systems, the open file limit is 1024. You can check this from the command limit here:
+
+	ulimit -n
+
+To increase the value, first check if SELinux is running and has a value set for `httpd_setrlimit` by running this command:
+
+	getsebool -a | grep httpd_setrlimit
+
+If SELinux is running and `httpd_setrlimit` is off the output would be “off” like this:
+
+	httpd_setrlimit --> off	
+
+To disable it, run this `setsebool` command and check the `httpd_setrlimit` value again:
+
+	sudo setsebool -P httpd_setrlimit 1
+
+If that worked, the value of `httpd_setrlimit` should be “on” and look like this:
+
+	httpd_setrlimit --> on
+
+Now move onto actually making the changes to allow Nginx to adjust the	 `worker_rlimit_nofile`.
+
+Open up the Nginx system service override file like this:
+
+	sudo nano /etc/systemd/system/nginx.service.d/override.conf
+
+The contents should look like this:
+
+	[Service]
+	ExecStartPost=/bin/sleep 0.1
+
+Add `LimitNOFILE=65536` to the bottom of the file so it looks like this:
+
+	[Service]
+	ExecStartPost=/bin/sleep 0.1
+	LimitNOFILE=65536	
+
+Save the file and run this command to get the `nginx.service` stuff reloaded:
+
+	systemctl daemon-reload
+
+Now in the Nginx config file change the	value of `worker_rlimit_nofile` to something higher than 1024 like this:
+
+	worker_rlimit_nofile 2048;
+
+Note that `worker_rlimit_nofile` should always be double the value of `worker_connections`. So you might want to increase the `worker_connections` value to 1024 to match.
+
+Once done, restart Nginx like this:
+
+	sudo service nginx restart
+
+And with that done, the new `worker_rlimit_nofile` value should be set. To confirm, check the Nginx error log (`/var/log/nginx/error.log`) and make sure you don’t see errors like this:
+
+	2020/01/01 15:46:40 [alert] 11508#0: setrlimit(RLIMIT_NOFILE, 2048) failed (13: Permission denied)
+
+That error basically states the `worker_rlimit_nofile` change didn’t take. Check the steps above and try again.
 
 ***
 
