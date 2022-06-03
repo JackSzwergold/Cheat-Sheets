@@ -119,6 +119,10 @@ Run this command to auto repair all databases on the server:
 
 	mysqlcheck -u root -p --auto-repair --check --all-databases
 
+Run this command to repair a server that has been upgraded from one version to another:
+
+	mysql_upgrade -u root -p --force
+
 ### Fix MySQL InnoDB oddities.
 
 #### Basic InnoDB cleanup workflow.
