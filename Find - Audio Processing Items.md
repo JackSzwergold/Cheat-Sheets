@@ -79,12 +79,22 @@ Strip seconds off of the end of an MP3 file. In this case 6.875 seconds:
 
 ### Convert AIFF files to VBR MP3 files.
 
-Convert MP3 audio files with LAME into VBR files:
+Convert AIFF  audio files with LAME into VBR files:
 
     find -E "Desktop/Audio" -type f -iregex ".*\.(AIFF)$" |\
       while read full_audio_filepath
       do
         lame --quiet -m s --lowpass 19.7 -V 3 --vbr-new -q 0 -b 96 --scale 0.99 --athaa-sensitivity 1 "$full_audio_filepath" "`sed 's/\.aiff/\.mp3/g' <<< ${full_audio_filepath}`";
+      done
+
+### Convert WAV files to VBR MP3 files.
+
+Convert AIFF  audio files with LAME into VBR files:
+
+    find -E "Desktop/Audio" -type f -iregex ".*\.(WAV)$" |\
+      while read full_audio_filepath
+      do
+        lame --quiet -m s --lowpass 19.7 -V 3 --vbr-new -q 0 -b 96 --scale 0.99 --athaa-sensitivity 1 "$full_audio_filepath" "`sed 's/\.wav/\.mp3/g' <<< ${full_audio_filepath}`";
       done
 
 ### Convert FLAC to VBR MP3 files.
