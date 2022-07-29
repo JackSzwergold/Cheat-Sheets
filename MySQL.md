@@ -185,7 +185,7 @@ Stop the MySQL Server:
 
 Start the mysqld configuration in Ubuntu/Debian:
 
-    sudo mysqld --skip-grant-tables &
+    sudo mysqld --skip-grant-tables --user=root &
 
 Start the mysqld configuration in RedHat/CentOS:
 
