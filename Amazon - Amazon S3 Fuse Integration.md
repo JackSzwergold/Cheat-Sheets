@@ -1,3 +1,12 @@
+---
+Title: Amazon - Amazon S3 Fuse Integration
+Description: A cheat sheet for Amazon S3 Fuse integration.
+Author: Jack Szwergold
+Date: 2015-10-06
+Robots: noindex,nofollow
+Template: index
+---
+
 ## Amazon - Amazon S3 Fuse Integration
 
 By Jack Szwergold

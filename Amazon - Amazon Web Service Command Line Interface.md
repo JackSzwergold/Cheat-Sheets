@@ -1,3 +1,12 @@
+---
+Title: Amazon - Amazon Web Service Command Line Interface
+Description: A cheat sheet for Amazon Web Service command line interface stuff.
+Author: Jack Szwergold
+Date: 2015-10-07
+Robots: noindex,nofollow
+Template: index
+---
+
 ## Amazon - Amazon Web Service Command Line Interface
 
 By Jack Szwergold
