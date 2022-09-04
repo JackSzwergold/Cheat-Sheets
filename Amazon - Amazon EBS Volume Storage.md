@@ -1,3 +1,12 @@
+---
+Title: Amazon - Amazon EBS Volume Storage
+Description: A cheat sheet for Amazon EBS volume storage.
+Author: Jack Szwergold
+Date: 2015-09-23
+Robots: noindex,nofollow
+Template: index
+---
+
 ## Amazon - Amazon EBS Volume Storage
 
 By Jack Szwergold

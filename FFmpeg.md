@@ -56,7 +56,7 @@ And example command to create a 10 minute (600 seconds) sample file with the `-s
 
 	caffeinate \
 	nice -n 10 \
-	ffmpeg -i input.mkv \
+	ffmpeg -i input.mp4 \
 	       -ss 0 -t 600 \
 	       -map_metadata -1 \
 	       -vf scale=-2:720 \

@@ -1,3 +1,12 @@
+---
+Title: Amazon - Amazon EC2 SSH Adjustments to Allow Password Authentication
+Description: A cheat sheet for Amazon EC2 SSH adjustments to allow password authentication.
+Author: Jack Szwergold
+Date: 2016-01-17
+Robots: noindex,nofollow
+Template: index
+---
+
 ## Amazon - Amazon EC2 SSH Adjustments to Allow Password Authentication
 
 By Jack Szwergold
