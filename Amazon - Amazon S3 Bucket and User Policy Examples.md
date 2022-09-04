@@ -1,3 +1,12 @@
+---
+Title: Amazon - Amazon S3 Bucket and User Policy Examples
+Description: A cheat sheet for Amazon S3 Bucket and user policy examples.
+Author: Jack Szwergold
+Date: 2015-10-06
+Robots: noindex,nofollow
+Template: index
+---
+
 ## Amazon - Amazon S3 Bucket and User Policy Examples
 
 By Jack Szwergold
