@@ -1,3 +1,12 @@
+---
+Title: Apache - AWStats Installation
+Description: A cheat sheet for Apache AWStats installation.
+Author: Jack Szwergold
+Date: 2015-10-16
+Robots: noindex,nofollow
+Template: index
+---
+
 ## Apache - AWStats Installation
 
 By Jack Szwergold
@@ -21,12 +30,12 @@ And now rename the director to be version-less:
 	sudo mv awstats-7.7 awstats
 
 And delete the remnant `awstats-7.7.tar.gz` archive:
-	
+
 	sudo rm /usr/share/awstats-7.7.tar.gz
 
 ### Configuring Apache for AWStats.
-	
-#### How to set it up in Ubuntu 12.04: 
+
+#### How to set it up in Ubuntu 12.04:
 
 Now let’s create our own `awstats.conf` like this:
 
@@ -36,13 +45,13 @@ Here is an example of a basic, non-secure Apache config for AWStats:
 
 	# The default method which doesn't allow directory indexing
 	# ScriptAlias /awstats /usr/share/awstats/wwwroot/cgi-bin
-	
+
 	# Alias /awstats /usr/share/awstats/wwwroot/cgi-bin
 	# Alias /awstatsclasses /usr/share/awstats/wwwroot/classes/
 	# Alias /awstatscss /usr/share/awstats/wwwroot/css/
 	# Alias /awstatsicons /usr/share/awstats/wwwroot/icon/
 	# Alias /icon /usr/share/awstats/wwwroot/icon/
-	
+
 	# Modified method that allows indexing
 	<Directory "/usr/share/awstats/wwwroot/cgi-bin">
 	  AddHandler cgi-script cgi pl
@@ -58,28 +67,28 @@ Here is an example of a basic, secure Apache config for AWStats. Note the `Allow
 
 	# The default method which doesn't allow directory indexing
 	# ScriptAlias /awstats /usr/share/awstats/wwwroot/cgi-bin
-	
+
 	# Alias /awstats /usr/share/awstats/wwwroot/cgi-bin
 	# Alias /awstatsclasses /usr/share/awstats/wwwroot/classes/
 	# Alias /awstatscss /usr/share/awstats/wwwroot/css/
 	# Alias /awstatsicons /usr/share/awstats/wwwroot/icon/
 	# Alias /icon /usr/share/awstats/wwwroot/icon/
-	
+
 	# Modified method that allows indexing
 	<Directory "/usr/share/awstats/wwwroot/cgi-bin">
 	  AddHandler cgi-script cgi pl
 	  Options ExecCGI
 	</Directory>
-	
+
 	<Directory "/usr/share/awstats/wwwroot">
 	  Options FollowSymLinks
 	  AllowOverride All
-	
+
 	  AuthName "AWStats Access"
 	  AuthType Basic
 	  require valid-user
 	  AuthUserFile /etc/apache2/htpasswd_awstats
-	
+
 	  Order Deny,Allow
 	  Deny from all
 	  Allow from 127.0.0.1 ::1
@@ -87,10 +96,10 @@ Here is an example of a basic, secure Apache config for AWStats. Note the `Allow
 	  Allow from 192.168
 	  Allow from 10
 	  Satisfy Any
-	
+
 	</Directory>
 
-#### How to set it up in Ubuntu 14.04 and Ubuntu 16.04: 
+#### How to set it up in Ubuntu 14.04 and Ubuntu 16.04:
 
 Now let’s create our own `awstats.conf` like this:
 
@@ -100,13 +109,13 @@ Here is an example of a basic, non-secure Apache config for AWStats:
 
 	# The default method which doesn't allow directory indexing
 	# ScriptAlias /awstats /usr/share/awstats/wwwroot/cgi-bin
-	
+
 	# Alias /awstats /usr/share/awstats/wwwroot/cgi-bin
 	# Alias /awstatsclasses /usr/share/awstats/wwwroot/classes/
 	# Alias /awstatscss /usr/share/awstats/wwwroot/css/
 	# Alias /awstatsicons /usr/share/awstats/wwwroot/icon/
 	# Alias /icon /usr/share/awstats/wwwroot/icon/
-	
+
 	# Modified method that allows indexing
 	<Directory "/usr/share/awstats/wwwroot/cgi-bin">
 	  AddHandler cgi-script cgi pl
@@ -117,34 +126,34 @@ Here is an example of a basic, secure Apache config for AWStats. Note the `Allow
 
 	# The default method which doesn't allow directory indexing
 	# ScriptAlias /awstats /usr/share/awstats/wwwroot/cgi-bin
-	
+
 	# Alias /awstats /usr/share/awstats/wwwroot/cgi-bin
 	# Alias /awstatsclasses /usr/share/awstats/wwwroot/classes/
 	# Alias /awstatscss /usr/share/awstats/wwwroot/css/
 	# Alias /awstatsicons /usr/share/awstats/wwwroot/icon/
 	# Alias /icon /usr/share/awstats/wwwroot/icon/
-	
+
 	# Modified method that allows indexing
 	<Directory "/usr/share/awstats/wwwroot/cgi-bin">
 	  AddHandler cgi-script cgi pl
 	  Options ExecCGI
 	</Directory>
-	
+
 	<Directory "/usr/share/awstats/wwwroot">
 	  Options FollowSymLinks
 	  AllowOverride All
-	
+
 	  AuthName "AWStats Access"
 	  AuthType Basic
 	  require valid-user
 	  AuthUserFile /etc/apache2/htpasswd_awstats
-	
+
 	  Require all denied
 	  Require ip 127.0.0.1 ::1
 	  Require host localhost
 	  Require ip 192.168
 	  Require ip 10
-	
+
 	</Directory>
 
 With that done, be sure to enable the AWStats Apache module like this:
@@ -252,7 +261,7 @@ Adjust `ExtraTrackedRowsLimit` from `500` to `5000`:
 	ExtraTrackedRowsLimit=5000
 
 Disable `DNSLookup` by setting it to `0`:
-	
+
 	#DNSLookup=1
 	DNSLookup=0
 
@@ -295,7 +304,7 @@ If permissions need to be adjusted, just run these commands:
 	sudo chmod 754 -R /usr/share/awstats
 	sudo chmod 754 -R /usr/share/doc/awstats-7.03
 	sudo chmod 754 -R /var/lib/awstats
-	
+
 As well as these commands:
 
 	sudo chmod 755 /etc/awstats
@@ -305,7 +314,7 @@ As well as these commands:
 	sudo chmod 755 /var/lib/awstats
 
 And this command:
-	
+
 	sudo chmod 775 /usr/share/awstats/wwwroot/cgi-bin/
 
 #### Known icons missing from AWStats.

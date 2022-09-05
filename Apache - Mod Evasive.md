@@ -1,3 +1,12 @@
+---
+Title: Apache - Mod Evasive
+Description: A cheat sheet for Apache Mod Evasive related items.
+Author: Jack Szwergold
+Date: 2015-09-27
+Robots: noindex,nofollow
+Template: index
+---
+
 ## Apache - Mod Evasive
 
 By Jack Szwergold
@@ -52,13 +61,13 @@ On an unrelated system—like the desktop of a Mac OS X system—create a file n
 Now place this code in that file. Adjust the values of `$how_many` and `$target_host` to match the values that suit your testing needs:
 
 	#!/usr/bin/perl
-	
+
 	use IO::Socket;
 	use strict;
-	
+
 	my $how_many = 30;
 	my $target_host = "sandbox.local:80";
-	
+
 	for (0..$how_many) {
 	  my($response);
 	  my($SOCKET) = new IO::Socket::INET(Proto => "tcp", PeerAddr => $target_host);

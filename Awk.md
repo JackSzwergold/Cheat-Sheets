@@ -1,3 +1,12 @@
+---
+Title: Awk
+Description: A cheat sheet for Awk related items.
+Author: Jack Szwergold
+Date: 2015-10-08
+Robots: noindex,nofollow
+Template: index
+---
+
 ## Awk
 
 By Jack Szwergold

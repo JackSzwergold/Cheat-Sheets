@@ -1,3 +1,12 @@
+---
+Title: Apache - Mod Evasive
+Description: A cheat sheet for Apache Mod Evasive related items.
+Author: Jack Szwergold
+Date: 2015-09-27
+Robots: noindex,nofollow
+Template: index
+---
+
 ## Apache - Mod Security
 
 By Jack Szwergold
@@ -44,32 +53,32 @@ This is the custom config file (`999-tweaks_to_modsecurity.conf`) we can make ad
 And here are the contents of `999-tweaks_to_modsecurity.conf`:
 
 	<ifmodule mod_security2.c>
-	
+
 	  # Activate the rules engine. (On|Off|DetectionOnly)
 	  # SecRuleEngine DetectionOnly
 	  SecRuleEngine On
-	
+
 	  # Simple security rule for testing
 	  # SecRule REQUEST_URI "/foobar"
-	
+
 	  # Set audit logging to the bare minimum.
 	  SecAuditEngine RelevantOnly
 	  # SecAuditLogParts ABCFHZ
 	  SecAuditLogParts AHZ
-	
+
 	  # Set request body limit to 64MB in bytes (67108864); 32MB (33554432)
 	  SecRequestBodyLimit 67108864
 	  SecRequestBodyNoFilesLimit 67108864
-	
+
 	  # Allow specific IP addresses access without mod_security filtering.
 	  SecRule REMOTE_ADDR "^127\.0\.0\.1$" "phase:1,nolog,allow,ctl:ruleEngine=Off,ctl:auditEngine=Off"
-	
+
 	  # Load the rules for mod_security
 	  Include /usr/share/modsecurity-crs/*.conf
 	  # Include /usr/share/modsecurity-crs/base_rules/*.conf
 	  # Include /usr/share/modsecurity-crs/optional_rules/*.conf
 	  Include /etc/modsecurity/activated_rules/*.conf
-	
+
 	</ifmodule>
 
 #### Setting up the Apache virtual host specific Mod Security config.
@@ -87,7 +96,7 @@ And here are the contents of `common_mod_security.conf`:
       <LocationMatch /(awstats|munin|phpmyadmin)>
         SecRuleEngine Off
       </LocationMatch>
-    
+
       SecRuleInheritance On
       SecRuleEngine On
       SecAuditEngine On
@@ -102,7 +111,7 @@ And here are the contents of `common_mod_security.conf`:
 
 Then make sure your Apache virtual host config points to it like this. First open up the Apache virtual host config:
 
-    sudo nano /etc/apache2/sites-available/default 
+    sudo nano /etc/apache2/sites-available/default
 
 And make sure a line like this is set to have it load the `common_mod_security.conf` we have setup above:
 
@@ -122,7 +131,7 @@ If you need to remove the `activated_rules` just dump the whole directory like t
 #### Activate the Mod Security `base_rules`.
 
 	cd /etc/modsecurity/activated_rules/
-	
+
 	sudo ln -s /usr/share/modsecurity-crs/base_rules/modsecurity_40_generic_attacks.data .
 	sudo ln -s /usr/share/modsecurity-crs/base_rules/modsecurity_41_sql_injection_attacks.data .
 	sudo ln -s /usr/share/modsecurity-crs/base_rules/modsecurity_crs_20_protocol_violations.conf .
@@ -138,7 +147,7 @@ If you need to remove the `activated_rules` just dump the whole directory like t
 #### Activate the Mod Security `optional_rules`.
 
 	cd /etc/modsecurity/activated_rules/
-	
+
 	sudo ln -s /usr/share/modsecurity-crs/optional_rules/modsecurity_42_comment_spam.data .
 	sudo ln -s /usr/share/modsecurity-crs/optional_rules/modsecurity_crs_10_ignore_static.conf .
 	sudo ln -s /usr/share/modsecurity-crs/optional_rules/modsecurity_crs_13_xml_enabler.conf .
@@ -159,7 +168,7 @@ Check how many `optional_rules` are available:
 Check how many rules are activated:
 
 	ls -la /etc/modsecurity/activated_rules/ | wc -l
-	
+
 ### De-activating Mod Security rules.
 
 I’ve removed these in the past for being overeager or too destructive in their approach to handling requests on some sites:
@@ -196,11 +205,11 @@ I’ve removed these in the past for being overeager or too destructive in their
 Various ways to follow the logs:
 
 	sudo tail -f -n 200 /var/log/apache2/error.log
-	
+
 	sudo tail -f -n 200 /var/log/apache2/modsec_audit.log
-	
+
 	sudo tail -f -n 8000 /var/log/apache2/modsec_audit.log | grep 'User-Agent:'
-	
+
 	sudo tail -f -n 10000 /var/log/apache2/modsec_audit.log | grep "GET /"
 
 Check if Mod Security is creating audit logs:
@@ -214,4 +223,3 @@ Remove Mod Security audit logs:
 ***
 
 *CCheat Sheet - Apache - Mod Security (c) by Jack Szwergold; written on October 1, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*
-

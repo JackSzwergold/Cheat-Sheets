@@ -1,3 +1,12 @@
+---
+Title: Apache
+Description: A cheat sheet for Apache related items.
+Author: Jack Szwergold
+Date: 2015-09-19
+Robots: noindex,nofollow
+Template: index
+---
+
 ## Apache
 
 By Jack Szwergold
@@ -144,29 +153,29 @@ Memory Mapping (MMAP) stuff:
 	EnableSendfile Off
 
 ### Some basic Apache rewrite rules.
-	
+
 	RewriteEngine On
-	
+
 	# 2017-03-29: Some basic redirects to a new server.
 	Redirect 301 /index.php http://www.example.com/something
 	Redirect 301 /index.html http://www.example.com/something
-	
+
 	# 2017-03-29: Some slightly more complex redirects with a wildcard.
 	RedirectMatch 301 /site/something_1.*.html http://www.example.com/something/1
 	RedirectMatch 301 /site/something_1.*.html http://www.example.com/something/2
 	RedirectMatch 301 /site/something_1.*.html http://www.example.com/something/3
-	
+
 	# 2017-03-29: Some more basic redirects to a new server.
 	Redirect 301 /site/something_else_1.html http://www.example.com/something_else/1
 	Redirect 301 /site/something_else_2.html http://www.example.com/something_else/2
 	Redirect 301 /site/something_else_3.html http://www.example.com/something_else/3
-	
+
 	# 2017-03-29: Some more slightly more complex redirects with a boolean 'or' logic.
 	RedirectMatch 301 /site/something_fancy_(sm|md)_1.html http://www.example.com/something_fancy/1
 	RedirectMatch 301 /site/something_fancy_(sm|md)_2.html http://www.example.com/something_fancy/2
 	RedirectMatch 301 /site/something_fancy_(sm|md)_3.html http://www.example.com/something_fancy/3
-	
-	
+
+
 	# 2017-03-29: A more complex rewrite rule that can pass parameters to a new destination.
 	RewriteEngine on
 	RewriteRule ^/site/something/?(.*)$ http://www.example.com/something_fancy/$1 [L,R=301]
@@ -180,15 +189,15 @@ First create a file for the rewrite map named something like `silliness2id.txt` 
 	Something%20Else 456
 	Bleagh 789
 	bleagh 789
-	
+
 Now add this to the Apache config or `.htaccess` file:
 
 	# 2017-03-29: A more complex rewrite rule set that uses a rewrite map that can pass parameters to a new destination.	RewriteMap silliness   txt:/etc/apache2/silliness2id.txt
-	
+
 	RewriteEngine On
 	RewriteCond %{QUERY_STRING}  (bleagh|whatever)=([^&]+)
 	RewriteRule ^/site/something_more_complex/$ /site/something_more_complex/${silliness:%2}? [L,R=301]
-	
+
 ### Useful Apache rewrite rules.
 
 Rewrite rule to force lowercase:
@@ -236,26 +245,26 @@ Suggested way of forcing HTTPS; not so great since it needs to pay attention to 
 	# RewriteCond %{HTTPS} off [OR]
 	# RewriteCond %{HTTP_HOST} ^www\.example\.com*
 	# RewriteRule ^(.*)$ https://example.com/$1 [L,R=301]
-	
+
 A cleaner way of forcing HTTPS; generic and more flexible/portable.
 
 	RewriteCond %{HTTPS} !=on
 	# RewriteRule ^/?(.*) https://%{SERVER_NAME}:%{SERVER_PORT}/$1 [R,L]
 	# RewriteRule ^/?(.*) https://%{SERVER_NAME}:8443/$1 [R,L]
 	RewriteRule ^/?(.*) https://%{SERVER_NAME}/$1 [R,L]
-	
+
 	RewriteCond %{HTTPS} off
 	RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
-	
+
 Allow traffic through based on referrers.
 
 	RewriteEngine On
 	RewriteBase /
-	
+
 	# Allow these referrers to pass.
 	RewriteCond %{HTTP_REFERER} ^https://(unblocked|blocked)\.example\.com
 	RewriteRule ^ - [L]
-	
+
 	# Redirect all other traffic that doesn’t match the above referrers.
 	RewriteRule ^ https://blocked.example.com/ [R,L]
 

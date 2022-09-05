@@ -1,8 +1,17 @@
+---
+Title: Apache - Load Balancer Related Items
+Description: A cheat sheet for Apache load balancer related items.
+Author: Jack Szwergold
+Date: 2015-10-18
+Robots: noindex,nofollow
+Template: index
+---
+
 ## Apache - Load Balancer Related Items
 
 By Jack Szwergold
 
-The purpose of this cheat sheet is to explain the basic concepts behind using an Apache-based load balancer. 
+The purpose of this cheat sheet is to explain the basic concepts behind using an Apache-based load balancer.
 
 In this setup we are using the same physical server with balancer members running on ports `8001` and `8002` just for an example’s sake. This setup is strictly for proof-of-concept and testing purposes. In a real world implementation, the balancer—and each of the members of the load balancer—would be it’s own separate server thus balancing the load across different servers.
 
@@ -23,7 +32,7 @@ And restart Apache for the modules to be loaded:
 #### Other items.
 
 Get a summary of the `VirtualHost` configurations for Apache:
- 
+
     sudo apachectl -S
 
 Check the list of sites that are available on the server:
@@ -117,7 +126,7 @@ And add these contents to that file:
 Then enable this virtual host configuration by running this `a2ensite` command:
 
 	sudo a2ensite sandbox.local.conf
-	
+
 And reload Apache for the config to take effect:
 
     sudo service apache2 reload
@@ -158,7 +167,7 @@ And add these contents to that file:
 	  DocumentRoot /var/www/sandbox.local.8001/site
 	  ServerName sandbox.local
 	  ServerAlias sandbox.local
-	
+
 	  ErrorLog /var/log/apache2/sandbox.local.8001.error.log
 	  CustomLog /var/log/apache2/sandbox.local.8001.access.log combined
 
@@ -166,21 +175,21 @@ And add these contents to that file:
       # RewriteEngine On
       # RewriteCond %{HTTP_X_FORWARDED_HOST} ^(www\.)?sandbox\.local/ [NC]
       # RewriteRule .* - [CO=BALANCEID:balancer.www1:.sandbox.local] [L]
-	
+
 	  <Directory "/var/www/sandbox.local.8001/site">
 	    Options FollowSymLinks
-	
+
 	    Order Allow,Deny
 	    Allow from all
 	    Satisfy Any
-	
+
 	  </Directory>
-	
+
 	  # 2014-01-11: Compression JSON output.
 	  <IfModule mod_deflate.c>
 	    AddOutputFilterByType DEFLATE application/json
 	  </IfModule>
-	
+
 	</VirtualHost>
 
 ##### Enable the virtual host configuration.
@@ -229,7 +238,7 @@ And add these contents to that file:
 	  DocumentRoot /var/www/sandbox.local.8002/site
 	  ServerName sandbox.local
 	  ServerAlias sandbox.local
-	
+
 	  ErrorLog /var/log/apache2/sandbox.local.8002.error.log
 	  CustomLog /var/log/apache2/sandbox.local.8002.access.log combined
 
@@ -240,18 +249,18 @@ And add these contents to that file:
 
 	  <Directory "/var/www/sandbox.local.8002/site">
 	    Options FollowSymLinks
-	
+
 	    Order Allow,Deny
 	    Allow from all
 	    Satisfy Any
-	
+
 	  </Directory>
-	
+
 	  # 2014-01-11: Compression JSON output.
 	  <IfModule mod_deflate.c>
 	    AddOutputFilterByType DEFLATE application/json
 	  </IfModule>
-	
+
 	</VirtualHost>
 
 ##### Enable the virtual host configuration.

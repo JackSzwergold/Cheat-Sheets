@@ -1,3 +1,12 @@
+---
+Title: Apache - Cordova
+Description: A cheat sheet for Apache Cordova.
+Author: Jack Szwergold
+Date: 2016-03-11
+Robots: noindex,nofollow
+Template: index
+---
+
 ## Apache - Cordova
 
 By Jack Szwergold

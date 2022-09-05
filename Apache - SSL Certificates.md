@@ -1,3 +1,12 @@
+---
+Title: Apache - SSL Certificates
+Description: A cheat sheet for Apache SSL certificates.
+Author: Jack Szwergold
+Date: 2015-09-19
+Robots: noindex,nofollow
+Template: index
+---
+
 ## Apache - SSL Certificates
 
 By Jack Szwergold
@@ -36,18 +45,18 @@ Extracting the certificate from the `.pfx` file:
 	  <VirtualHost *:443>
 	    # 2013-10-26: Including common items in a common file for ssl & non-ssl.
 	    include /etc/apache2/sites-available/www.example.com.common.conf
-	
+
 	    SSLEngine on
 	    SSLCertificateFile /opt/ssl/cert-www.example.com.crt
 	    SSLCertificateKeyFile /opt/ssl/www.example.com.key
 	    SSLCertificateChainFile /opt/ssl/GandiStandardSSLCA.pem
 	    SSLVerifyClient None
-	
+
 	    SSLProtocol all
 	    SSLCipherSuite HIGH:MEDIUM
-	
+
 	    RequestHeader set X_FORWARDED_PROTO 'https'
-	
+
 	  </VirtualHost>
 	</IfModule>
 

@@ -1,3 +1,12 @@
+---
+Title: Avahi Daemon
+Description: A cheat sheet for Avahi Daemon related items.
+Author: Jack Szwergold
+Date: 2015-09-15
+Robots: noindex,nofollow
+Template: index
+---
+
 ## Avahi Daemon
 
 By Jack Szwergold
@@ -28,7 +37,7 @@ Start, stop and control the Avahi daemon:
 An example AFP (Apple Filing Protocol) service (`afpd.service`):
 
 	sudo nano /etc/avahi/services/afpd.service
-	
+
 	<?xml version="1.0" standalone='no'?><!--*-nxml-*-->
 	<!DOCTYPE service-group SYSTEM "avahi-service.dtd">
 	<service-group>
@@ -42,7 +51,7 @@ An example AFP (Apple Filing Protocol) service (`afpd.service`):
 An example Apache web server service (`apache.service`):
 
 	sudo nano /etc/avahi/services/apache.service
-	
+
 	<?xml version="1.0" standalone='no'?><!--*-nxml-*-->
 	<!DOCTYPE service-group SYSTEM "avahi-service.dtd">
 	<service-group>
@@ -57,7 +66,7 @@ An example Apache web server service (`apache.service`):
 An example VNC (Virtual Network Computing) service (`rfb.service`):
 
 	sudo nano /etc/avahi/services/rfb.service
-	
+
 	<?xml version="1.0" standalone='no'?><!--*-nxml-*-->
 	<!DOCTYPE service-group SYSTEM "avahi-service.dtd">
 	<service-group>
@@ -71,7 +80,7 @@ An example VNC (Virtual Network Computing) service (`rfb.service`):
 An example SMB (Samba) service (`samba.service`):
 
 	sudo nano /etc/avahi/services/samba.service
-	
+
 	<?xml version="1.0" standalone='no'?><!--*-nxml-*-->
 	<!DOCTYPE service-group SYSTEM "avahi-service.dtd">
 	<service-group>
@@ -85,7 +94,7 @@ An example SMB (Samba) service (`samba.service`):
 An example SFTP (Secure FTP) service (`sftp.service`):
 
 	sudo nano /etc/avahi/services/sftp.service
-	
+
 	<?xml version="1.0" standalone='no'?><!--*-nxml-*-->
 	<!DOCTYPE service-group SYSTEM "avahi-service.dtd">
 	<service-group>
@@ -99,7 +108,7 @@ An example SFTP (Secure FTP) service (`sftp.service`):
 An example SSH (Secure Shell) service (`ssh.service`):
 
 	sudo nano /etc/avahi/services/ssh.service
-	
+
 	<?xml version="1.0" standalone='no'?><!--*-nxml-*-->
 	<!DOCTYPE service-group SYSTEM "avahi-service.dtd">
 	<service-group>
