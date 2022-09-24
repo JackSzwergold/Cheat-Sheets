@@ -1,3 +1,12 @@
+---
+Title: Iconv
+Description: A cheat sheet for Iconv related items.
+Author: Jack Szwergold
+Date: 2015-10-07
+Robots: noindex,nofollow
+Template: index
+---
+
 ## Iconv
 
 By Jack Szwergold

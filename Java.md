@@ -1,3 +1,12 @@
+---
+Title: Java
+Description: A cheat sheet for Java related items.
+Author: Jack Szwergold
+Date: 2015-09-21
+Robots: noindex,nofollow
+Template: index
+---
+
 ## Java
 
 By Jack Szwergold

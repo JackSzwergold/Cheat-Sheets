@@ -1,3 +1,12 @@
+---
+Title: Joomla - Getting Joomla 1 to Work on Modern PHP
+Description: A cheat sheet for Joomla - Getting Joomla 1 to Work on Modern PHP related items.
+Author: Jack Szwergold
+Date: 2015-10-05
+Robots: noindex,nofollow
+Template: index
+---
+
 ## Joomla - Getting Joomla 1 to Work on Modern PHP
 
 By Jack Szwergold

@@ -1,3 +1,12 @@
+---
+Title: ImageMagick - Installing ImageMagick from Source via a Custom Debian Package Build on Ubuntu
+Description: ImageMagick - Installing ImageMagick from Source via a Custom Debian Package Build on Ubuntu
+Author: Jack Szwergold
+Date: 2015-09-21
+Robots: noindex,nofollow
+Template: index
+---
+
 ## ImageMagick - Installing ImageMagick from Source via a Custom Debian Package Build on Ubuntu
 
 By Jack Szwergold

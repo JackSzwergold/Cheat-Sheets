@@ -1,3 +1,12 @@
+---
+Title: ImageMagick
+Description: A cheat sheet for ImageMagick related items.
+Author: Jack Szwergold
+Date: 2015-10-05
+Robots: noindex,nofollow
+Template: index
+---
+
 ## ImageMagick
 
 By Jack Szwergold

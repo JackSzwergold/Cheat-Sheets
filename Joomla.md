@@ -1,3 +1,12 @@
+---
+Title: Joomla
+Description: A cheat sheet for Joomla related items.
+Author: Jack Szwergold
+Date: 2015-10-05
+Robots: noindex,nofollow
+Template: index
+---
+
 ## Joomla
 
 By Jack Szwergold

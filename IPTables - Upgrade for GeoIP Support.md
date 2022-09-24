@@ -1,3 +1,12 @@
+---
+Title: IPTables - Upgrade for GeoIP Support
+Description: A cheat sheet for IPTables - Upgrade for GeoIP Support related items.
+Author: Jack Szwergold
+Date: 2015-10-15
+Robots: noindex,nofollow
+Template: index
+---
+
 ## IPTables - Upgrade for GeoIP Support
 
 By Jack Szwergold
