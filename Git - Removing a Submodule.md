@@ -1,3 +1,12 @@
+---
+Title: Git - Removing a Submodule
+Description: Git - Removing a Submodule
+Author: Jack Szwergold
+Date: 2015-09-15
+Robots: noindex,nofollow
+Template: index
+---
+
 ## Git - Removing a Submodule
 
 By Jack Szwergold

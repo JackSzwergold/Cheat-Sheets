@@ -1,3 +1,12 @@
+---
+Title: Git - Rewinding to a Specific Commit
+Description: Git - Rewinding to a Specific Commit
+Author: Jack Szwergold
+Date: 2015-09-15
+Robots: noindex,nofollow
+Template: index
+---
+
 ## Git - Rewinding to a Specific Commit
 
 By Jack Szwergold

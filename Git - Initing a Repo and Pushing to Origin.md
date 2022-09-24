@@ -1,3 +1,12 @@
+---
+Title: Git - Initing a Repo and Pushing to Origin
+Description: Git - Initing a Repo and Pushing to Origin
+Author: Jack Szwergold
+Date: 2015-09-15
+Robots: noindex,nofollow
+Template: index
+---
+
 ## Git - Initing a Repo and Pushing to Origin
 
 By Jack Szwergold

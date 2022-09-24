@@ -1,3 +1,12 @@
+---
+Title: Git - Changing Text Across Multiple Commit Messages
+Description: Git - Changing Text Across Multiple Commit Messages
+Author: Jack Szwergold
+Date: 2015-09-15
+Robots: noindex,nofollow
+Template: index
+---
+
 ## Git - Changing Text Across Multiple Commit Messages
 
 By Jack Szwergold

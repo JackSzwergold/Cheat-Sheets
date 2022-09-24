@@ -1,3 +1,12 @@
+---
+Title: Git - Install GIT via PPA on Ubuntu
+Description: Git - Install GIT via PPA on Ubuntu
+Author: Jack Szwergold
+Date: 2015-09-15
+Robots: noindex,nofollow
+Template: index
+---
+
 ## Git - Install GIT via PPA on Ubuntu
 
 By Jack Szwergold

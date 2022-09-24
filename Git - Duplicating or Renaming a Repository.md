@@ -1,3 +1,12 @@
+---
+Title: Git - Duplicating or Renaming a Repository
+Description: Git - Duplicating or Renaming a Repository
+Author: Jack Szwergold
+Date: 2015-09-15
+Robots: noindex,nofollow
+Template: index
+---
+
 ## Git - Duplicating or Renaming a Repository
 
 By Jack Szwergold

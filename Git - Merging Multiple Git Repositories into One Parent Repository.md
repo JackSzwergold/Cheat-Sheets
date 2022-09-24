@@ -1,3 +1,12 @@
+---
+Title: Git - Merging Multiple Git Repositories into One Parent Repository
+Description: Git - Merging Multiple Git Repositories into One Parent Repository
+Author: Jack Szwergold
+Date: 2015-10-18
+Robots: noindex,nofollow
+Template: index
+---
+
 ## Git - Merging Multiple Git Repositories into One Parent Repository
 
 By Jack Szwergold

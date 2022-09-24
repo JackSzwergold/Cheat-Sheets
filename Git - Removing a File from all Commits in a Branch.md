@@ -1,3 +1,12 @@
+---
+Title: Git - Removing a File from all Commits in a Branch
+Description: Git - Removing a File from all Commits in a Branch
+Author: Jack Szwergold
+Date: 2015-09-15
+Robots: noindex,nofollow
+Template: index
+---
+
 ## Git - Removing a File from all Commits in a Branch
 
 By Jack Szwergold

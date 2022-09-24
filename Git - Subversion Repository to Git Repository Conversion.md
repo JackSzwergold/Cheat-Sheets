@@ -1,3 +1,12 @@
+---
+Title: Git - Subversion Repository to Git Repository Conversion
+Description: Git - Subversion Repository to Git Repository Conversion
+Author: Jack Szwergold
+Date: 2015-10-08
+Robots: noindex,nofollow
+Template: index
+---
+
 ## Git - Subversion Repository to Git Repository Conversion
 
 By Jack Szwergold

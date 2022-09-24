@@ -1,3 +1,12 @@
+---
+Title: Git - Restoring Lost Commits from Dangling Blobs and Reference Logs
+Description: Git - Restoring Lost Commits from Dangling Blobs and Reference Logs
+Author: Jack Szwergold
+Date: 2015-10-03
+Robots: noindex,nofollow
+Template: index
+---
+
 ## Git - Restoring Lost Commits from Dangling Blobs and Reference Logs
 
 By Jack Szwergold

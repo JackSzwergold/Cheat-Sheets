@@ -1,3 +1,12 @@
+---
+Title: Git - Dealing With Tags
+Description: Git - Dealing With Tags
+Author: Jack Szwergold
+Date: 2015-09-15
+Robots: noindex,nofollow
+Template: index
+---
+
 ## Git - Dealing With Tags
 
 By Jack Szwergold

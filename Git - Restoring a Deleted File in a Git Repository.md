@@ -1,3 +1,12 @@
+---
+Title: Git - Restoring a Deleted File in a Git Repository
+Description: Git - Restoring a Deleted File in a Git Repository
+Author: Jack Szwergold
+Date: 2015-10-02
+Robots: noindex,nofollow
+Template: index
+---
+
 ## Git - Restoring a Deleted File in a Git Repository
 
 By Jack Szwergold

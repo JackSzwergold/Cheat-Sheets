@@ -1,3 +1,12 @@
+---
+Title: Git - Creating and Managing Branches
+Description: Git - Creating and Managing Branches
+Author: Jack Szwergold
+Date: 2015-09-15
+Robots: noindex,nofollow
+Template: index
+---
+
 ## Git - Creating and Managing Branches
 
 By Jack Szwergold
