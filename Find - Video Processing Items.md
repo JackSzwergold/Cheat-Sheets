@@ -1,3 +1,12 @@
+---
+Title: Find - Video Processing Items
+Description: A cheat sheet for Find related video processing items.
+Author: Jack Szwergold
+Date: 2017-07-25
+Robots: noindex,nofollow
+Template: index
+---
+
 ## Find - Video Processing Items
 
 By Jack Szwergold

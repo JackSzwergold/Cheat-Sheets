@@ -1,3 +1,12 @@
+---
+Title: FFmpeg
+Description: A cheat sheet for FFmpeg related items.
+Author: Jack Szwergold
+Date: 2018-11-07
+Robots: noindex,nofollow
+Template: index
+---
+
 ## FFmpeg
 
 By Jack Szwergold

@@ -1,3 +1,12 @@
+---
+Title: Find - User and Permissions Related Items
+Description: A cheat sheet for Find related user and permissions items.
+Author: Jack Szwergold
+Date: 2015-09-28
+Robots: noindex,nofollow
+Template: index
+---
+
 ## Find - User and Permissions Related Items
 
 By Jack Szwergold

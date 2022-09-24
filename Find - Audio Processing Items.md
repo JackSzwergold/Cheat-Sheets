@@ -1,3 +1,12 @@
+---
+Title: Find - Audio Processing Items
+Description: A cheat sheet for Find related audio processing items.
+Author: Jack Szwergold
+Date: 2017-01-01
+Robots: noindex,nofollow
+Template: index
+---
+
 ## Find - Audio Processing Items
 
 By Jack Szwergold

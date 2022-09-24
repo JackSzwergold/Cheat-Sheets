@@ -1,3 +1,12 @@
+---
+Title: Find - Text Processing Items
+Description: A cheat sheet for Find related text processing items.
+Author: Jack Szwergold
+Date: 2021-05-19
+Robots: noindex,nofollow
+Template: index
+---
+
 ## Find - Text Processing Items
 
 By Jack Szwergold
@@ -10,11 +19,11 @@ This simple script uses `tr`:
 
 And here you go:
 
-  find -E "Desktop/Text" -type f |\
-    while read full_text_filepath
-    do
-      dos2unix -k -n -c mac "${full_text_filepath}" "${full_text_filepath}".txt;
-    done
+    find -E "Desktop/Text" -type f |\
+      while read full_text_filepath
+      do
+        dos2unix -k -n -c mac "${full_text_filepath}" "${full_text_filepath}".txt;
+      done
 
 ***
 

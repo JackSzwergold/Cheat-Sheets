@@ -1,3 +1,12 @@
+---
+Title: Find - Image Manipulation Related Items
+Description: A cheat sheet for Find related image manipulation processing items.
+Author: Jack Szwergold
+Date: 2015-09-29
+Robots: noindex,nofollow
+Template: index
+---
+
 ## Find - Image Manipulation Related Items
 
 By Jack Szwergold

@@ -1,3 +1,12 @@
+---
+Title: Find
+Description: A cheat sheet for Find related items.
+Author: Jack Szwergold
+Date: 2015-09-27
+Robots: noindex,nofollow
+Template: index
+---
+
 ## Find
 
 By Jack Szwergold
