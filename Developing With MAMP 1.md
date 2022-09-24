@@ -1,3 +1,12 @@
+---
+Title: Developing With MAMP 2.1.4
+Description: Part 1: Setting Up a Basic, Useful MAMP Environment
+Author: Jack Szwergold
+Date: 2014-02-16
+Robots: noindex,nofollow
+Template: index
+---
+
 ## Developing With MAMP 2.1.4
 
 By Jack Szwergold

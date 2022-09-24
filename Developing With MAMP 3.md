@@ -1,3 +1,12 @@
+---
+Title: Developing With MAMP 2.1.4
+Description: Part 3: Upgrading the PHP Pear Library in MAMP
+Author: Jack Szwergold
+Date: 2014-02-17
+Robots: noindex,nofollow
+Template: index
+---
+
 ## Developing With MAMP 2.1.4
 
 By Jack Szwergold

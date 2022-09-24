@@ -1,3 +1,12 @@
+---
+Title: GeoIP
+Description: A cheat sheet for GeoIP related items.
+Author: Jack Szwergold
+Date: 2015-09-23
+Robots: noindex,nofollow
+Template: index
+---
+
 ## GeoIP
 
 By Jack Szwergold

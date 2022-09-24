@@ -1,3 +1,12 @@
+---
+Title: Ghostscript
+Description: A cheat sheet for Ghostscript related items.
+Author: Jack Szwergold
+Date: 2022-01-29
+Robots: noindex,nofollow
+Template: index
+---
+
 ## Ghostscript
 
 By Jack Szwergold
