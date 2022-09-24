@@ -1,3 +1,12 @@
+---
+Title: Different Ways of Wiping Disk Space
+Description: A cheat sheet for different ways of wiping disk space related items.
+Author: Jack Szwergold
+Date: 2015-10-08
+Robots: noindex,nofollow
+Template: index
+---
+
 ## Different Ways of Wiping Disk Space
 
 By Jack Szwergold

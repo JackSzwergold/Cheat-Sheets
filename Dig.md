@@ -1,3 +1,12 @@
+---
+Title: Dig
+Description: A cheat sheet for Dig related items.
+Author: Jack Szwergold
+Date: 2015-09-15
+Robots: noindex,nofollow
+Template: index
+---
+
 ## Dig
 
 By Jack Szwergold

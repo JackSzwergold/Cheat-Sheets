@@ -1,3 +1,12 @@
+---
+Title: Diff
+Description: A cheat sheet for Diff related items.
+Author: Jack Szwergold
+Date: 2015-09-15
+Robots: noindex,nofollow
+Template: index
+---
+
 ## Diff
 
 By Jack Szwergold
