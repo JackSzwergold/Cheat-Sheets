@@ -1,3 +1,12 @@
+---
+Title: Kernel Networking Tweaks
+Description: A cheat sheet for Kernel Networking Tweaks related items.
+Author: Jack Szwergold
+Date: 2015-10-07
+Robots: noindex,nofollow
+Template: index
+---
+
 ## Kernel Networking Tweaks
 
 By Jack Szwergold
