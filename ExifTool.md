@@ -1,3 +1,12 @@
+---
+Title: ExifTool
+Description: A cheat sheet for ExifTool related items.
+Author: Jack Szwergold
+Date: 2015-09-14
+Robots: noindex,nofollow
+Template: index
+---
+
 ## ExifTool
 
 By Jack Szwergold

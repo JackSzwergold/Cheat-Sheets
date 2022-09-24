@@ -1,3 +1,12 @@
+---
+Title: Fail2Ban
+Description: A cheat sheet for Fail2Ban related items.
+Author: Jack Szwergold
+Date: 2015-10-19
+Robots: noindex,nofollow
+Template: index
+---
+
 ## Fail2Ban
 
 By Jack Szwergold

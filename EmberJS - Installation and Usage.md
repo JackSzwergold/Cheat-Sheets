@@ -1,3 +1,12 @@
+---
+Title: EmberJS - Installation and Usage
+Description: A cheat sheet for EmberJS related items.
+Author: Jack Szwergold
+Date: 2015-11-16
+Robots: noindex,nofollow
+Template: index
+---
+
 ## EmberJS - Installation and Usage
 
 By Jack Szwergold
