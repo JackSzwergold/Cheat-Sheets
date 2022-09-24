@@ -1,3 +1,12 @@
+---
+Title: Bash
+Description: A cheat sheet for Bash related items.
+Author: Jack Szwergold
+Date: 2015-09-27
+Robots: noindex,nofollow
+Template: index
+---
+
 ## Bash
 
 By Jack Szwergold

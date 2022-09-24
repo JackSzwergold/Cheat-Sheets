@@ -1,3 +1,12 @@
+---
+Title: Connecting to MAMP from Windows on a Mac OS X Install of VirtualBox 3
+Description: Part 3: Advanced — Using a Dual Network Interface Setup with a Host-Only Interface
+Author: Jack Szwergold
+Date: 2014-03-02
+Robots: noindex,nofollow
+Template: index
+---
+
 ## Connecting to MAMP from Windows on a Mac OS X Install of VirtualBox
 
 By Jack Szwergold
