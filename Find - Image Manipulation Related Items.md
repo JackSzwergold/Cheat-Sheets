@@ -155,7 +155,7 @@ Resize JPEG, PNG, TIFF or HEIC images to dimensions of 1920 pixels wide or high 
 	    convert -density 72 -units PixelsPerInch -resize "1920x1920>" -quality 90 "${FULL_IMAGE_PATH}" "${FULL_IMAGE_PATH}"
 	  done
 
-### Convert JPEG, PNG, TIFF or HEIC images to JPEG images at 90% quality.
+### Convert JPEG, PNG, TIFF or HEIC images to JPEG images at 100% quality.
 
 This command converts JPEG, PNG, TIFF or HEIC images to JPEGs at 90% quality:
 
@@ -163,7 +163,7 @@ This command converts JPEG, PNG, TIFF or HEIC images to JPEGs at 90% quality:
 	  while read FULL_IMAGE_PATH
 	  do
 	    PATH_SANS_EXTENSION="${FULL_IMAGE_PATH%.*}"
-	    convert -density 72 -units PixelsPerInch -quality 90 "${FULL_IMAGE_PATH}" "${PATH_SANS_EXTENSION}".jpg
+	    convert -density 72 -units PixelsPerInch -quality 100 "${FULL_IMAGE_PATH}" "${PATH_SANS_EXTENSION}".jpg
 	  done
 
 This command converts TIFF images to JPEGs at 100% quality with a 1200 DPI setting:
