@@ -77,14 +77,6 @@ Convert any JPEG, PNG or TIFF images found into a same format 300 pixels wide or
 
 ### Strip out EXIF data with ExifTool.
 
-Strip out all image EXIF data from JPEG images with ExifTool:
-
-	find 'Desktop/Pics' -type f -name '*.jpg' |\
-	  while read FULL_IMAGE_PATH
-	  do
-	    exiftool -all= -overwrite_original_in_place "${FULL_IMAGE_PATH}"
-	  done
-
 Strip out all image EXIF data connected to JPEG, PNG or TIFF images with ExifTool:
 
 	find -E 'Desktop/Pics' -type f -iregex '.*\.(JPG|JPEG|PNG|TIF|TIFF)$' |\
@@ -239,4 +231,4 @@ This script is a first draft of a script that uses ImageMagick and Potrace to co
 
 ***
 
-*Find - Image Manipulation Related Items (c) by Jack Szwergold; written on September 29, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*
+*Find - Image Manipulation Related Items (c) by Jack Szwergold; written on September 29, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*x
