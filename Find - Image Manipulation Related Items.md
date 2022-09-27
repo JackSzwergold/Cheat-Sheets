@@ -109,14 +109,6 @@ Strip the ICC profile out of the EXIF data connected to JPEG, PNG or TIFF images
 	    exiftool -icc_profile:all= -overwrite_original_in_place "${FULL_IMAGE_PATH}"
 	  done
 
-Strip out all image EXIF data from JPEG, PNG or TIFF images with ExifTool:
-
-	find -E 'Desktop/Pics' -type f -iregex '.*\.(JPG|JPEG|PNG|TIF|TIFF)$' |\
-	  while read FULL_IMAGE_PATH
-	  do
-	    exiftool -all= -overwrite_original_in_place "${FULL_IMAGE_PATH}"
-	  done
-
 Find any stray images with the `*.jpg_original` extension that ExifTool created and remove them:
 
 	find 'Desktop/Pics' -type f -name '*.jpg_original' |\
