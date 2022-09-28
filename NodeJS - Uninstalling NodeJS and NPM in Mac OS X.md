@@ -1,3 +1,12 @@
+---
+Title: NodeJS - Uninstalling NodeJS and NPM in Mac OS X
+Description: NodeJS - Uninstalling NodeJS and NPM in Mac OS X
+Author: Jack Szwergold
+Date: 2015-02-03
+Robots: noindex,nofollow
+Template: index
+---
+
 ## NodeJS - Uninstalling NodeJS and NPM in Mac OS X
 
 By Jack Szwergold

@@ -1,3 +1,12 @@
+---
+Title: NodeJS - Installing NodeJS and NPM via a PPA on Ubuntu
+Description: NodeJS - Installing NodeJS and NPM via a PPA on Ubuntu
+Author: Jack Szwergold
+Date: 2015-09-22
+Robots: noindex,nofollow
+Template: index
+---
+
 ## NodeJS - Installing NodeJS and NPM via a PPA on Ubuntu
 
 By Jack Szwergold

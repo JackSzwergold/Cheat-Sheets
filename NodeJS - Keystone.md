@@ -1,3 +1,12 @@
+---
+Title: NodeJS - KeystoneJS
+Description: NodeJS - KeystoneJS
+Author: Jack Szwergold
+Date: 2016-11-05
+Robots: noindex,nofollow
+Template: index
+---
+
 ## NodeJS - KeystoneJS
 
 By Jack Szwergold

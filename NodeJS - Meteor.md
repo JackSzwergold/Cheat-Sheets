@@ -1,3 +1,12 @@
+---
+Title: NodeJS - Meteor
+Description: NodeJS - Meteor
+Author: Jack Szwergold
+Date: 2015-09-22
+Robots: noindex,nofollow
+Template: index
+---
+
 ## NodeJS - Meteor
 
 By Jack Szwergold

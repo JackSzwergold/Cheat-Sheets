@@ -1,3 +1,12 @@
+---
+Title: NodeJS - Installing PhantomJS via a NPM on Ubuntu
+Description: NodeJS - Installing PhantomJS via a NPM on Ubuntu
+Author: Jack Szwergold
+Date: 2015-09-22
+Robots: noindex,nofollow
+Template: index
+---
+
 ## NodeJS - Installing PhantomJS via a NPM on Ubuntu
 
 By Jack Szwergold
