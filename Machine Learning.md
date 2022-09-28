@@ -1,10 +1,21 @@
+---
+Title: Machine Learning
+Description: A cheat sheet for machine learning related items.
+Author: Jack Szwergold
+Date: 2017-11-06
+Robots: noindex,nofollow
+Template: index
+---
+
 ## Machine Learning
 
 By Jack Szwergold
 
 ### Torch
 
-* `http://torch.ch/docs/getting-started.html`
+ - `http://torch.ch/docs/getting-started.html`
+
+<!-- -->
 
 	git clone https://github.com/torch/distro.git ~/torch --recursive
 	cd ~/torch;
@@ -13,7 +24,9 @@ By Jack Szwergold
 
 ### char-rnn
 
-* `https://github.com/karpathy/char-rnn`
+ - `https://github.com/karpathy/char-rnn`
+
+<!-- -->
 
 	luarocks install nngraph 
 	luarocks install optim

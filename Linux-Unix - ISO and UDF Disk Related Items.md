@@ -1,3 +1,12 @@
+---
+Title: Linux-Unix - ISO and UDF Disk Related Items
+Description: A cheat sheet for ISO and UDF disk related items.
+Author: Jack Szwergold
+Date: 2015-09-30
+Robots: noindex,nofollow
+Template: index
+---
+
 ## Linux-Unix - ISO and UDF Disk Related Items
 
 By Jack Szwergold

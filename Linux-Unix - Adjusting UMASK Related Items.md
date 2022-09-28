@@ -1,3 +1,12 @@
+---
+Title: Linux-Unix - Adjusting UMASK Related Items
+Description: A cheat sheet for adjusting UMASK related items.
+Author: Jack Szwergold
+Date: 2015-09-16
+Robots: noindex,nofollow
+Template: index
+---
+
 ## Linux-Unix - Adjusting UMASK Related Items
 
 By Jack Szwergold

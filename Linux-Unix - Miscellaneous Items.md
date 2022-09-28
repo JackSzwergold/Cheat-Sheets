@@ -1,3 +1,12 @@
+---
+Title: Linux-Unix - Miscellaneous Items
+Description: A cheat sheet for miscellaneous related items.
+Author: Jack Szwergold
+Date: 2015-10-04
+Robots: noindex,nofollow
+Template: index
+---
+
 ## Linux-Unix - Miscellaneous Items
 
 By Jack Szwergold

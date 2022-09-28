@@ -1,3 +1,12 @@
+---
+Title: Linux-Unix - Networking Interfaces
+Description: A cheat sheet for networking interface related items.
+Author: Jack Szwergold
+Date: 2015-09-11
+Robots: noindex,nofollow
+Template: index
+---
+
 ## Linux-Unix - Networking Interfaces
 
 By Jack Szwergold

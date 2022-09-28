@@ -1,3 +1,12 @@
+---
+Title: Linux-Unix - Startup Service Init Script Related Items
+Description: A cheat sheet for startup service init script related items.
+Author: Jack Szwergold
+Date: 2015-10-03
+Robots: noindex,nofollow
+Template: index
+---
+
 ## Linux-Unix - Startup Service Init Script Related Items
 
 By Jack Szwergold

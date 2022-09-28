@@ -1,3 +1,12 @@
+---
+Title: GUID Partition Table Related Items
+Description: A cheat sheet for GUID partition table related items.
+Author: Jack Szwergold
+Date: 2015-09-30
+Robots: noindex,nofollow
+Template: index
+---
+
 ## Linux-Unix - GUID Partition Table Related Items
 
 By Jack Szwergold

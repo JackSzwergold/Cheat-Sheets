@@ -1,3 +1,12 @@
+---
+Title: Linux-Unix - HFS Volume Related Items
+Description: A cheat sheet for HFS volume related items.
+Author: Jack Szwergold
+Date: 2015-09-22
+Robots: noindex,nofollow
+Template: index
+---
+
 ## Linux-Unix - HFS Volume Related Items
 
 By Jack Szwergold

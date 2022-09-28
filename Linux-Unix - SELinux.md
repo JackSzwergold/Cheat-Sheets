@@ -1,3 +1,12 @@
+---
+Title: Linux-Unix - SELinux
+Description: A cheat sheet for SELinux related items.
+Author: Jack Szwergold
+Date: 2017-08-07
+Robots: noindex,nofollow
+Template: index
+---
+
 ## Linux-Unix - SELinux
 
 By Jack Szwergold

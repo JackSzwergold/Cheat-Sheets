@@ -1,3 +1,12 @@
+---
+Title: LS
+Description: A cheat sheet for LS related items.
+Author: Jack Szwergold
+Date: 2015-09-17
+Robots: noindex,nofollow
+Template: index
+---
+
 ## LS
 
 By Jack Szwergold

@@ -1,3 +1,12 @@
+---
+Title: Linux-Unix - User Account Setup
+Description: A cheat sheet for user account setup related items.
+Author: Jack Szwergold
+Date: 2015-09-16
+Robots: noindex,nofollow
+Template: index
+---
+
 ## Linux-Unix - User Account Setup
 
 By Jack Szwergold

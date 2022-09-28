@@ -1,3 +1,12 @@
+---
+Title: Lsyncd
+Description: A cheat sheet for Lsyncd related items.
+Author: Jack Szwergold
+Date: 2015-09-18
+Robots: noindex,nofollow
+Template: index
+---
+
 ## Lsyncd
 
 By Jack Szwergold

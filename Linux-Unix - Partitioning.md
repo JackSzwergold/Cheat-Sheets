@@ -1,3 +1,12 @@
+---
+Title: Linux-Unix - Partitioning
+Description: A cheat sheet for partitioning related items.
+Author: Jack Szwergold
+Date: 2015-09-15
+Robots: noindex,nofollow
+Template: index
+---
+
 ## Linux-Unix - Partitioning
 
 By Jack Szwergold

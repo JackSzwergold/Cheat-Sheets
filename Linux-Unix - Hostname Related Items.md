@@ -1,3 +1,12 @@
+---
+Title: Linux-Unix - Hostname Related Items
+Description: A cheat sheet for hostname related items.
+Author: Jack Szwergold
+Date: 2015-09-27
+Robots: noindex,nofollow
+Template: index
+---
+
 ## Linux-Unix - Hostname Related Items
 
 By Jack Szwergold

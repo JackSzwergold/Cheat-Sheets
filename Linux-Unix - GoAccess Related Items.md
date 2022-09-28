@@ -1,3 +1,12 @@
+---
+Title: Linux-Unix - GoAccess Related Items
+Description: A cheat sheet for GoAccess related items.
+Author: Jack Szwergold
+Date: 2017-11-08
+Robots: noindex,nofollow
+Template: index
+---
+
 ## Linux-Unix - GoAccess Related Items
 
 By Jack Szwergold

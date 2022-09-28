@@ -1,3 +1,12 @@
+---
+Title: Linux-Unix - MSDOS Floppy Disk Reading, Formatting and Partitioning
+Description: A cheat sheet for MSDOS floppy disk reading, formatting and partitioning related items.
+Author: Jack Szwergold
+Date: 2015-09-18
+Robots: noindex,nofollow
+Template: index
+---
+
 ## Linux-Unix - MSDOS Floppy Disk Reading, Formatting and Partitioning
 
 By Jack Szwergold
