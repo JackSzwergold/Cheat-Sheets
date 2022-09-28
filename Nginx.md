@@ -1,3 +1,12 @@
+---
+Title: Nginx
+Description: A cheat sheet for Nginx related items.
+Author: Jack Szwergold
+Date: 2015-09-27
+Robots: noindex,nofollow
+Template: index
+---
+
 ## Nginx
 
 By Jack Szwergold

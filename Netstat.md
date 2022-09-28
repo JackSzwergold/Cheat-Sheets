@@ -1,3 +1,12 @@
+---
+Title: Netstat
+Description: A cheat sheet for Netstat related items.
+Author: Jack Szwergold
+Date: 2017-11-09
+Robots: noindex,nofollow
+Template: index
+---
+
 ## Netstat
 
 By Jack Szwergold

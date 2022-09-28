@@ -1,3 +1,12 @@
+---
+Title: Netcat
+Description: A cheat sheet for Netcat related items.
+Author: Jack Szwergold
+Date: 2015-10-17
+Robots: noindex,nofollow
+Template: index
+---
+
 ## Netcat
 
 By Jack Szwergold

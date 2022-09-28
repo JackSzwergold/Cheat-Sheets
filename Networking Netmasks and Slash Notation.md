@@ -1,3 +1,12 @@
+---
+Title: Networking Netmasks and Slash Notation
+Description: A cheat sheet for networking netmasks and slash notation related items.
+Author: Jack Szwergold
+Date: 2015-10-09
+Robots: noindex,nofollow
+Template: index
+---
+
 ## Networking Netmasks and Slash Notation
 
 By Jack Szwergold

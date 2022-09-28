@@ -1,3 +1,12 @@
+---
+Title: Nikto
+Description: A cheat sheet for Nikto related items.
+Author: Jack Szwergold
+Date: 2016-05-04
+Robots: noindex,nofollow
+Template: index
+---
+
 ## Nikto
 
 By Jack Szwergold
