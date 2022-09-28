@@ -44,11 +44,11 @@ Strip an 1/8 of a second off of the beginning of an MP3 file; useful for times w
 	     audio_basename=$(basename "${full_audio_filepath}");
 	     audio_filename="${audio_basename%.*}";
 	     # audio_extension="${audio_basename##*.}";
-	
+
 	     # Set the MP3 directory.
 	     mp3_dirpath="${audio_dirname}/mp3";
 	     mp3_filepath="${mp3_dirpath}/${audio_filename}.mp3";
-	
+
 	     # Create the child MP3 directory.
 	     mkdir -p "${mp3_dirpath}";
 
@@ -70,11 +70,11 @@ Strip seconds off of the end of an MP3 file. In this case 6.875 seconds:
 	     audio_basename=$(basename "${full_audio_filepath}");
 	     audio_filename="${audio_basename%.*}";
 	     # audio_extension="${audio_basename##*.}";
-	
+
 	     # Set the MP3 directory.
 	     mp3_dirpath="${audio_dirname}/mp3";
 	     mp3_filepath="${mp3_dirpath}/${audio_filename}.mp3";
-	
+
 	     # Create the child MP3 directory.
 	     mkdir -p "${mp3_dirpath}";
 
@@ -124,20 +124,20 @@ Convert FLAC audio files into MP3 audio by piping them through LAME for VBR outp
 	find -E "Desktop/Audio" -type f -iregex ".*\.(FLAC|M4A|WMA|APE|AIFF)$" |\
 	  while read full_audio_filepath
 	  do
-	
+
 	    # Break up the full audio filepath stuff into different directory and filename components.
 	    audio_dirname=$(dirname "${full_audio_filepath}");
 	    audio_basename=$(basename "${full_audio_filepath}");
 	    audio_filename="${audio_basename%.*}";
 	    # audio_extension="${audio_basename##*.}";
-	
+
 	    # Set the MP3 directory.
 	    mp3_dirpath="${audio_dirname}/mp3";
 	    mp3_filepath="${mp3_dirpath}/${audio_filename}.mp3";
-	
+
 	    # Create the child MP3 directory.
 	    mkdir -p "${mp3_dirpath}";
-	
+
 	    # Get the track metadata.
 	    mp3_title=$(ffprobe 2> /dev/null -show_format "${full_audio_filepath}" | grep -i TAG:TITLE= | cut -d '=' -f 2- );
 	    mp3_artist=$(ffprobe 2> /dev/null -show_format "${full_audio_filepath}" | grep -i TAG:ARTIST= | cut -d '=' -f 2- );
@@ -146,11 +146,11 @@ Convert FLAC audio files into MP3 audio by piping them through LAME for VBR outp
 	    mp3_track=$(ffprobe 2> /dev/null -show_format "${full_audio_filepath}" | grep -i TAG:TRACK= | cut -d '=' -f 2- | sed 's/^0*//' );
 	    mp3_tracktotal=$(ffprobe 2> /dev/null -show_format "${full_audio_filepath}" | grep -i TAG:TRACKTOTAL= | cut -d '=' -f 2- | sed 's/^0*//' );
 	    mp3_genre=$(ffprobe 2> /dev/null -show_format "${full_audio_filepath}" | grep -i TAG:GENRE= | cut -d '=' -f 2- );
-	
+
 	    # Where the magic happens.
 	    ffmpeg -y -v quiet -nostdin -i "${full_audio_filepath}" -ar 44100 -sample_fmt s16 -ac 2 -f s16le -acodec pcm_s16le - | \
 	      lame --quiet --add-id3v2 --pad-id3v2 --tt "${mp3_title}" --ta "${mp3_artist}" --tl "${mp3_album}" --tn "${mp3_track}"/"${mp3_tracktotal}" --tg "${mp3_genre}" -r -m s --lowpass 19.7 -V 3 --vbr-new -q 0 -b 96 --scale 0.99 --athaa-sensitivity 1 - "${mp3_filepath}";
-	
+
 	  done
 
 ***

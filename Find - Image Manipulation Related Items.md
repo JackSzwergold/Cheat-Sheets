@@ -196,29 +196,29 @@ This script is a first draft of a script that uses ImageMagick and Potrace to co
 	find -E 'Desktop/Pics' -type f -iregex ".*\.(JPG|JPG|PNG|TIF|TIFF|HEIC)$" |\
 	  while read full_image_filepath
 	  do
-	
+
 	    # Break up the full  filepath stuff into different directory and filename components.
 	    image_dirname=$(dirname "${full_image_filepath}");
 	    image_basename=$(basename "${full_image_filepath}");
 	    image_filename="${image_basename%.*}";
 	    # image_extension="${image_basename##*.}";
-	
+
 	    # Set the directory values.
 	    eps_dirpath="${image_dirname}/eps";
 	    pnm_dirpath="${image_dirname}/eps";
-	
+
 	    # Set the filename values.
 	    eps_filepath="${eps_dirpath}/${image_filename}.eps";
 	    pnm_filepath="${pnm_dirpath}/${image_filename}.pnm";
-	
+
 	    # Create the child directories.
 	    mkdir -p "${eps_dirpath}";
-	
+
 	    # Where the magic happens.
 	    convert "${full_image_filepath}" "${pnm_filepath}";
 	    potrace --eps "${pnm_filepath}" -o "${eps_filepath}";
 	    rm -f "${pnm_filepath}";
-	
+
 	  done
 
 ***
