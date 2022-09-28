@@ -1,3 +1,12 @@
+---
+Title: Rackspace - Cloudfuse Installation and Usage
+Description: Rackspace - Cloudfuse Installation and Usage
+Author: Jack Szwergold
+Date: 2015-10-07
+Robots: noindex,nofollow
+Template: index
+---
+
 ## Rackspace - Cloudfuse Installation and Usage
 
 By Jack Szwergold

@@ -1,3 +1,12 @@
+---
+Title: PHP - Oracle OCI8 Module Items
+Description: PHP - Oracle OCI8 Module Items
+Author: Jack Szwergold
+Date: 2017-10-10
+Robots: noindex,nofollow
+Template: index
+---
+
 ## PHP - Oracle OCI8 Module Items
 
 By Jack Szwergold

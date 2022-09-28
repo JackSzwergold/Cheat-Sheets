@@ -1,3 +1,12 @@
+---
+Title: Postfix - How to clean up the clientmqueue Spool Directory
+Description: Postfix - How to clean up the clientmqueue Spool Directory
+Author: Jack Szwergold
+Date: 2015-09-17
+Robots: noindex,nofollow
+Template: index
+---
+
 ## Postfix - How to clean up the clientmqueue Spool Directory
 
 By Jack Szwergold

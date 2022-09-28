@@ -1,3 +1,12 @@
+---
+Title: PHP - Microsoft SQLSRV Module Items
+Description: PHP - Microsoft SQLSRV Module Items
+Author: Jack Szwergold
+Date: 2019-01-25
+Robots: noindex,nofollow
+Template: index
+---
+
 ## PHP - Microsoft SQLSRV Module Items
 
 By Jack Szwergold

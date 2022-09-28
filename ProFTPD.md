@@ -1,3 +1,12 @@
+---
+Title: ProFTPD
+Description: A cheat sheet for ProFTPD related items.
+Author: Jack Szwergold
+Date: 2015-10-07
+Robots: noindex,nofollow
+Template: index
+---
+
 ## ProFTPD
 
 By Jack Szwergold

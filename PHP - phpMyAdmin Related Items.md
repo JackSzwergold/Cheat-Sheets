@@ -1,3 +1,12 @@
+---
+Title: PHP - phpMyAdmin Related Items
+Description: PHP - phpMyAdmin Related Items
+Author: Jack Szwergold
+Date: 2015-10-17
+Robots: noindex,nofollow
+Template: index
+---
+
 ## PHP - phpMyAdmin Related Items
 
 By Jack Szwergold

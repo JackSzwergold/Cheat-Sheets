@@ -1,3 +1,12 @@
+---
+Title: PHP - Installing APC
+Description: PHP - Installing APC
+Author: Jack Szwergold
+Date: 2015-10-05
+Robots: noindex,nofollow
+Template: index
+---
+
 ## PHP - Installing APC
 
 By Jack Szwergold

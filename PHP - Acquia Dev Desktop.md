@@ -1,3 +1,12 @@
+---
+Title: PHP - Acquia Dev Desktop
+Description: PHP - Acquia Dev Desktop
+Author: Jack Szwergold
+Date: 2016-12-13
+Robots: noindex,nofollow
+Template: index
+---
+
 ## PHP - Acquia Dev Desktop
 
 By Jack Szwergold

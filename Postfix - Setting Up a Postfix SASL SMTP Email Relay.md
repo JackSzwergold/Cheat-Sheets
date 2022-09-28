@@ -1,4 +1,13 @@
-## Setting Up a Postfix SASL SMTP Email Relay
+---
+Title: Postfix - Setting Up a Postfix SASL SMTP Email Relay
+Description: Postfix - Setting Up a Postfix SASL SMTP Email Relay
+Author: Jack Szwergold
+Date: 2015-10-07
+Robots: noindex,nofollow
+Template: index
+---
+
+## Postfix - Setting Up a Postfix SASL SMTP Email Relay
 
 By Jack Szwergold
 
@@ -158,4 +167,4 @@ Followed by this `launchctl load` command:
 
 ***
 
-*Setting Up a Postfix SASL SMTP Email Relay (c) by Jack Szwergold; written on October 7, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*
+*Postfix - Setting Up a Postfix SASL SMTP Email Relay (c) by Jack Szwergold; written on October 7, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

@@ -1,3 +1,12 @@
+---
+Title: PHP - Compiling and Installing PHP on Ubuntu
+Description: PHP - Compiling and Installing PHP on Ubuntu
+Author: Jack Szwergold
+Date: 2015-10-13
+Robots: noindex,nofollow
+Template: index
+---
+
 ## PHP - Compiling and Installing PHP on Ubuntu
 
 By Jack Szwergold

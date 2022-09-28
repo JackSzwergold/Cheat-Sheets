@@ -1,3 +1,12 @@
+---
+Title: PHP - Drush
+Description: PHP - Drush
+Author: Jack Szwergold
+Date: 2016-12-15
+Robots: noindex,nofollow
+Template: index
+---
+
 ## PHP - Drush
 
 By Jack Szwergold

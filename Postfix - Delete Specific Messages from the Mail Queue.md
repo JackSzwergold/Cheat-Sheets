@@ -1,3 +1,12 @@
+---
+Title: Postfix - Delete Specific Messages from the Mail Queue
+Description: Postfix - Delete Specific Messages from the Mail Queue
+Author: Jack Szwergold
+Date: 2015-09-17
+Robots: noindex,nofollow
+Template: index
+---
+
 ## Postfix - Delete Specific Messages from the Mail Queue
 
 By Jack Szwergold

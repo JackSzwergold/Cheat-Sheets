@@ -1,3 +1,12 @@
+---
+Title: PHP - WordPress Related Items
+Description: PHP - WordPress Related Items
+Author: Jack Szwergold
+Date: 2015-10-16
+Robots: noindex,nofollow
+Template: index
+---
+
 ## PHP - WordPress Related Items
 
 By Jack Szwergold

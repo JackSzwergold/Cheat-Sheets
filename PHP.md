@@ -1,3 +1,12 @@
+---
+Title: PHP
+Description: A cheat sheet for PHP related items.
+Author: Jack Szwergold
+Date: 2015-10-05
+Robots: noindex,nofollow
+Template: index
+---
+
 ## PHP
 
 By Jack Szwergold
