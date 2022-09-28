@@ -1,3 +1,12 @@
+---
+Title: macOS - Upgrading the PHP Pear Library in MAMP
+Description: A cheat sheet for upgrading the PHP Pear library in MAMP.
+Author: Jack Szwergold
+Date: 2015-10-07
+Robots: noindex,nofollow
+Template: index
+---
+
 ## macOS - Upgrading the PHP Pear Library in MAMP
 
 By Jack Szwergold

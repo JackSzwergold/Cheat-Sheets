@@ -1,3 +1,12 @@
+---
+Title: macOS - SSHPASS
+Description: A cheat sheet for SSHPASS related items.
+Author: Jack Szwergold
+Date: 2016-09-15
+Robots: noindex,nofollow
+Template: index
+---
+
 ## macOS - SSHPASS
 
 By Jack Szwergold

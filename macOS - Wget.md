@@ -1,3 +1,12 @@
+---
+Title: macOS - Wget
+Description: A cheat sheet for Wget related items.
+Author: Jack Szwergold
+Date: 2015-09-11
+Robots: noindex,nofollow
+Template: index
+---
+
 ## macOS - Wget
 
 By Jack Szwergold

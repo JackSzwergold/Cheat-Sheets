@@ -1,3 +1,12 @@
+---
+Title: macOS - Watchman
+Description: A cheat sheet for Watchman related items.
+Author: Jack Szwergold
+Date: 2015-11-18
+Robots: noindex,nofollow
+Template: index
+---
+
 ## macOS - Watchman
 
 By Jack Szwergold

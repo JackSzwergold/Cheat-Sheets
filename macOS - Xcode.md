@@ -1,3 +1,12 @@
+---
+Title: macOS - Xcode
+Description: A cheat sheet for Xcode related items.
+Author: Jack Szwergold
+Date: 2016-03-16
+Robots: noindex,nofollow
+Template: index
+---
+
 ## macOS - Xcode
 
 By Jack Szwergold

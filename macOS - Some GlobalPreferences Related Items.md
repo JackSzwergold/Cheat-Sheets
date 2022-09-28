@@ -1,3 +1,12 @@
+---
+Title: macOS - Some GlobalPreferences Related Items
+Description: A cheat sheet for some GlobalPreferences related items.
+Author: Jack Szwergold
+Date: 2016-05-04
+Robots: noindex,nofollow
+Template: index
+---
+
 ## macOS - Some GlobalPreferences Related Items
 
 By Jack Szwergold

@@ -1,3 +1,12 @@
+---
+Title: macOS - Uninstalling MySQL from macOS
+Description: A cheat sheet for uninstalling MySQL from macOS.
+Author: Jack Szwergold
+Date: 2015-09-14
+Robots: noindex,nofollow
+Template: index
+---
+
 ## macOS - Uninstalling MySQL from macOS
 
 By Jack Szwergold

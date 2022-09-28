@@ -1,3 +1,12 @@
+---
+Title: macOS - Various CUPS Server Items
+Description: A cheat sheet for various CUPS server items.
+Author: Jack Szwergold
+Date: 2015-10-06
+Robots: noindex,nofollow
+Template: index
+---
+
 ## macOS - Various CUPS Server Items
 
 By Jack Szwergold
