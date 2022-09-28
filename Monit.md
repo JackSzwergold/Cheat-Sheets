@@ -1,3 +1,12 @@
+---
+Title: Monit
+Description: A cheat sheet for Monit related items.
+Author: Jack Szwergold
+Date: 2015-09-15
+Robots: noindex,nofollow
+Template: index
+---
+
 ## Monit
 
 By Jack Szwergold

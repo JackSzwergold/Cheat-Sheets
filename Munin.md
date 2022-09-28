@@ -1,3 +1,12 @@
+---
+Title: Munin
+Description: A cheat sheet for Munin related items.
+Author: Jack Szwergold
+Date: 2015-09-16
+Robots: noindex,nofollow
+Template: index
+---
+
 ## Munin
 
 By Jack Szwergold

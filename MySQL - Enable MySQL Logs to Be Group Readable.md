@@ -1,3 +1,12 @@
+---
+Title: MySQL - Enable MySQL Logs to Be Group Readable
+Description: A cheat sheet for MySQL to enable MySQL logs to be group readable related items.
+Author: Jack Szwergold
+Date: 2015-09-24
+Robots: noindex,nofollow
+Template: index
+---
+
 ## MySQL - Enable MySQL Logs to Be Group Readable
 
 By Jack Szwergold

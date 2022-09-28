@@ -1,3 +1,12 @@
+---
+Title: MongoDB
+Description: A cheat sheet for MongoDB related items.
+Author: Jack Szwergold
+Date: 2015-09-22
+Robots: noindex,nofollow
+Template: index
+---
+
 ## MongoDB
 
 By Jack Szwergold

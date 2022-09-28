@@ -1,3 +1,12 @@
+---
+Title: Munin - Moving and Renaming Data Files
+Description: A cheat sheet for Munin, moving and renaming data files, related items.
+Author: Jack Szwergold
+Date: 2015-09-16
+Robots: noindex,nofollow
+Template: index
+---
+
 ## Munin - Moving and Renaming Data Files
 
 By Jack Szwergold

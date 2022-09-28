@@ -1,3 +1,12 @@
+---
+Title: MySQL
+Description: A cheat sheet for MySQL related items.
+Author: Jack Szwergold
+Date: 2015-09-24
+Robots: noindex,nofollow
+Template: index
+---
+
 ## MySQL
 
 By Jack Szwergold

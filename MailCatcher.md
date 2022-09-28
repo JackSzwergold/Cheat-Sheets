@@ -1,3 +1,12 @@
+---
+Title: MailCatcher
+Description: A cheat sheet for MailCatcher related items.
+Author: Jack Szwergold
+Date: 2015-09-14
+Robots: noindex,nofollow
+Template: index
+---
+
 ## MailCatcher
 
 By Jack Szwergold

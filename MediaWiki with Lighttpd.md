@@ -1,3 +1,12 @@
+---
+Title: How To Set Up the Latest MediaWiki with Lighttpd on Ubuntu 14.04
+Description: A cheat sheet for how to set up the latest MediaWiki with Lighttpd on Ubuntu 14.04.
+Author: Jack Szwergold
+Date: 2016-08-01
+Robots: noindex,nofollow
+Template: index
+---
+
 # How To Set Up the Latest MediaWiki with Lighttpd on Ubuntu 14.04
 
 By Jack Szwergold
