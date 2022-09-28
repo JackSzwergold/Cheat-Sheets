@@ -1,3 +1,12 @@
+---
+Title: macOS - MAMP - MSSQL Module Items
+Description: A cheat sheet for MAMP MSSQL related items.
+Author: Jack Szwergold
+Date: 2017-08-17
+Robots: noindex,nofollow
+Template: index
+---
+
 ## macOS - MAMP - MSSQL Module Items
 
 By Jack Szwergold

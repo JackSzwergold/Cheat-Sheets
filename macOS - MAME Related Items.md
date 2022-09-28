@@ -1,3 +1,12 @@
+---
+Title: macOS - MAME Related Items
+Description: A cheat sheet for MAME related items.
+Author: Jack Szwergold
+Date: 2015-10-07
+Robots: noindex,nofollow
+Template: index
+---
+
 ## macOS - MAME Related Items
 
 By Jack Szwergold

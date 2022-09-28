@@ -1,3 +1,12 @@
+---
+Title: macOS - MacPorts
+Description: A cheat sheet for MacPorts related items.
+Author: Jack Szwergold
+Date: 2015-09-22
+Robots: noindex,nofollow
+Template: index
+---
+
 ## macOS - MacPorts
 
 By Jack Szwergold

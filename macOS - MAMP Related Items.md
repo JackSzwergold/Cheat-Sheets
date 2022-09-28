@@ -1,3 +1,12 @@
+---
+Title: macOS - MAMP Related Items
+Description: A cheat sheet for MAMP related items.
+Author: Jack Szwergold
+Date: 2015-10-07
+Robots: noindex,nofollow
+Template: index
+---
+
 ## macOS - MAMP Related Items
 
 By Jack Szwergold

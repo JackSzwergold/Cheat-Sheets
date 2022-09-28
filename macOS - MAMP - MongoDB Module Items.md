@@ -1,3 +1,12 @@
+---
+Title: macOS - MAMP - MongoDB Module Items
+Description: A cheat sheet for MAMP MongoDB related items.
+Author: Jack Szwergold
+Date: 2015-11-22
+Robots: noindex,nofollow
+Template: index
+---
+
 ## macOS - MAMP - MongoDB Module Items
 
 By Jack Szwergold

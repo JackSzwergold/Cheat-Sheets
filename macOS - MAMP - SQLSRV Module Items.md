@@ -1,3 +1,12 @@
+---
+Title: macOS - MAMP - SQLSRV Module Items
+Description: A cheat sheet for MAMP SQLSRV module items.
+Author: Jack Szwergold
+Date: 2019-01-25
+Robots: noindex,nofollow
+Template: index
+---
+
 ## macOS - MAMP - SQLSRV Module Items
 
 By Jack Szwergold

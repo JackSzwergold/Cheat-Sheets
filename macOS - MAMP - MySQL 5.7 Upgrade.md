@@ -1,3 +1,12 @@
+---
+Title: macOS - MAMP - MySQL 5.7 Upgrade
+Description: A cheat sheet for MAMP MySQL 5.7 upgrade.
+Author: Jack Szwergold
+Date: 2018-04-26
+Robots: noindex,nofollow
+Template: index
+---
+
 ## macOS - MAMP - MySQL 5.7 Upgrade
 
 By Jack Szwergold

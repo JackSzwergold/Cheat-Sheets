@@ -1,3 +1,12 @@
+---
+Title: macOS - MAMP - Oracle OCI8 Module Items
+Description: A cheat sheet for MAMP Oracle OCI8 module items.
+Author: Jack Szwergold
+Date: 2017-08-17
+Robots: noindex,nofollow
+Template: index
+---
+
 ## macOS - MAMP - Oracle OCI8 Module Items
 
 By Jack Szwergold

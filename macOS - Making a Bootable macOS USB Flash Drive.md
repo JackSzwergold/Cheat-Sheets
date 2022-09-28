@@ -1,3 +1,12 @@
+---
+Title: macOS - Making a Bootable macOS USB Flash Drive
+Description: A cheat sheet for making a bootable macOS USB flash drive.
+Author: Jack Szwergold
+Date: 2015-10-06
+Robots: noindex,nofollow
+Template: index
+---
+
 ## macOS - Making a Bootable macOS USB Flash Drive
 
 By Jack Szwergold
