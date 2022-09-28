@@ -1,3 +1,12 @@
+---
+Title: macOS - SheepShaver Emulator Related Items
+Description: A cheat sheet for SheepShaver emulator related items.
+Author: Jack Szwergold
+Date: 2015-10-09
+Robots: noindex,nofollow
+Template: index
+---
+
 ## macOS - SheepShaver Emulator Related Items
 
 By Jack Szwergold

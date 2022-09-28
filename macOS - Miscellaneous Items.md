@@ -1,3 +1,12 @@
+---
+Title: macOS - Miscellaneous Items
+Description: A cheat sheet for miscellaneous items.
+Author: Jack Szwergold
+Date: 2015-10-06
+Robots: noindex,nofollow
+Template: index
+---
+
 ## macOS - Miscellaneous Items
 
 By Jack Szwergold

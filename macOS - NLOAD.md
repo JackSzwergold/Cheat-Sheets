@@ -1,3 +1,12 @@
+---
+Title: macOS - NLOAD
+Description: A cheat sheet for NLOAD related items.
+Author: Jack Szwergold
+Date: 2015-09-15
+Robots: noindex,nofollow
+Template: index
+---
+
 ## macOS - NLOAD
 
 By Jack Szwergold

@@ -1,3 +1,12 @@
+---
+Title: macOS - SMB Tweaking
+Description: A cheat sheet for SMB tweaking related items.
+Author: Jack Szwergold
+Date: 2015-10-06
+Robots: noindex,nofollow
+Template: index
+---
+
 ## macOS - SMB Tweaking
 
 By Jack Szwergold

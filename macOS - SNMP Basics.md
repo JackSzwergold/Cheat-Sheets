@@ -1,3 +1,12 @@
+---
+Title: macOS - SNMP Basics
+Description: A cheat sheet for SNMP basics.
+Author: Jack Szwergold
+Date: 2015-10-06
+Robots: noindex,nofollow
+Template: index
+---
+
 ## macOS - SNMP Basics
 
 By Jack Szwergold

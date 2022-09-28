@@ -1,3 +1,12 @@
+---
+Title: macOS - MD5 Basics
+Description: A cheat sheet for MD5 basics.
+Author: Jack Szwergold
+Date: 2015-09-14
+Robots: noindex,nofollow
+Template: index
+---
+
 ## macOS - MD5 Basics
 
 By Jack Szwergold

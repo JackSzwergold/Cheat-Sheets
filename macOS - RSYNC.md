@@ -1,3 +1,12 @@
+---
+Title: macOS - RSYNC
+Description: A cheat sheet for RSYNC related items.
+Author: Jack Szwergold
+Date: 2015-09-13
+Robots: noindex,nofollow
+Template: index
+---
+
 ## macOS - RSYNC
 
 By Jack Szwergold

@@ -1,3 +1,12 @@
+---
+Title: macOS - Software Update Related Items
+Description: A cheat sheet for software update related items.
+Author: Jack Szwergold
+Date: 2015-10-06
+Robots: noindex,nofollow
+Template: index
+---
+
 ## macOS - Software Update Related Items
 
 By Jack Szwergold

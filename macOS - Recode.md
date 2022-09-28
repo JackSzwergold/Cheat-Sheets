@@ -1,3 +1,12 @@
+---
+Title: macOS - Recode
+Description: A cheat sheet for Recode related items.
+Author: Jack Szwergold
+Date: 2015-11-24
+Robots: noindex,nofollow
+Template: index
+---
+
 ## macOS - Recode
 
 By Jack Szwergold
