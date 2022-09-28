@@ -1,3 +1,12 @@
+---
+Title: macOS - Locations of Key User Data
+Description: A cheat sheet for locations of key user data related items.
+Author: Jack Szwergold
+Date: 2015-10-18
+Robots: noindex,nofollow
+Template: index
+---
+
 ## macOS - Locations of Key User Data
 
 By Jack Szwergold

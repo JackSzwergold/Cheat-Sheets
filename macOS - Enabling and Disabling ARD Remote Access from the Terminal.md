@@ -1,3 +1,12 @@
+---
+Title: macOS - Enabling and Disabling ARD Remote Access from the Terminal
+Description: A cheat sheet for enabling and disabling ARD remote access from the Terminal.
+Author: Jack Szwergold
+Date: 2015-09-13
+Robots: noindex,nofollow
+Template: index
+---
+
 ## macOS - Enabling and Disabling ARD Remote Access from the Terminal
 
 By Jack Szwergold

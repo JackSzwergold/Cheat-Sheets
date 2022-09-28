@@ -1,3 +1,12 @@
+---
+Title: macOS - LAME
+Description: A cheat sheet for LAME related items.
+Author: Jack Szwergold
+Date: 2016-12-27
+Robots: noindex,nofollow
+Template: index
+---
+
 ## macOS - LAME
 
 By Jack Szwergold

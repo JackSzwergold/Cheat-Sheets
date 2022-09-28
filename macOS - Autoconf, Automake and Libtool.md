@@ -1,3 +1,12 @@
+---
+Title: macOS - Autoconf, Automake and Libtool
+Description: A cheat sheet for autoconf, automake and libtool related items.
+Author: Jack Szwergold
+Date: 2015-09-14
+Robots: noindex,nofollow
+Template: index
+---
+
 ## macOS - Autoconf, Automake and Libtool
 
 By Jack Szwergold

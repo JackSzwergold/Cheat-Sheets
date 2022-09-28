@@ -1,3 +1,12 @@
+---
+Title: macOS - Homebrew
+Description: A cheat sheet for Homebrew related items.
+Author: Jack Szwergold
+Date: 2016-12-27
+Robots: noindex,nofollow
+Template: index
+---
+
 ## macOS - Homebrew
 
 By Jack Szwergold

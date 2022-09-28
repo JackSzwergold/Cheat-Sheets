@@ -1,3 +1,12 @@
+---
+Title: macOS - ID3Lib
+Description: A cheat sheet for ID3Lib related items.
+Author: Jack Szwergold
+Date: 2016-08-22
+Robots: noindex,nofollow
+Template: index
+---
+
 ## macOS - ID3Lib
 
 By Jack Szwergold

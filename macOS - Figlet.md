@@ -1,3 +1,12 @@
+---
+Title: macOS - Figlet
+Description: A cheat sheet for Figlet related items.
+Author: Jack Szwergold
+Date: 2015-11-01
+Robots: noindex,nofollow
+Template: index
+---
+
 ## macOS - Figlet
 
 By Jack Szwergold

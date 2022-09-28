@@ -1,3 +1,12 @@
+---
+Title: macOS - Disk Utility Repairs and Tricks from the Terminal
+Description: A cheat sheet for disk utility repairs and tricks from the terminal.
+Author: Jack Szwergold
+Date: 2015-09-13
+Robots: noindex,nofollow
+Template: index
+---
+
 ## macOS - Disk Utility Repairs and Tricks from the Terminal
 
 By Jack Szwergold

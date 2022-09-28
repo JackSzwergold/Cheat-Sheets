@@ -1,3 +1,12 @@
+---
+Title: macOS - Disabling FortiClient from Startup on macOS
+Description: A cheat sheet for disabling FortiClient from startup on macOS.
+Author: Jack Szwergold
+Date: 2022-03-24
+Robots: noindex,nofollow
+Template: index
+---
+
 ## macOS - Disabling FortiClient from Startup on macOS
 
 By Jack Szwergold

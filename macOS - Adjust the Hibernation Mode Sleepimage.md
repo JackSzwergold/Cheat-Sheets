@@ -1,3 +1,12 @@
+---
+Title: macOS - Adjust the Hibernation Mode Sleepimage
+Description: A cheat sheet for hibernation mode sleepimage related items.
+Author: Jack Szwergold
+Date: 2015-09-12
+Robots: noindex,nofollow
+Template: index
+---
+
 ## macOS - Adjust the Hibernation Mode Sleepimage
 
 By Jack Szwergold

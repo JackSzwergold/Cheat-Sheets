@@ -1,3 +1,12 @@
+---
+Title: macOS - LFT
+Description: A cheat sheet for LFT related items.
+Author: Jack Szwergold
+Date: 2015-09-14
+Robots: noindex,nofollow
+Template: index
+---
+
 ## macOS - LFT
 
 By Jack Szwergold
