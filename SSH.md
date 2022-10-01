@@ -1,3 +1,12 @@
+---
+Title: SSH
+Description: A cheat sheet for SSH related items.
+Author: Jack Szwergold
+Date: 2015-09-15
+Robots: noindex,nofollow
+Template: index
+---
+
 ## SSH
 
 By Jack Szwergold

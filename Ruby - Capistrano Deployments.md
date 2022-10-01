@@ -1,3 +1,12 @@
+---
+Title: Ruby - Capistrano Deployments
+Description: Ruby - Capistrano Deployments
+Author: Jack Szwergold
+Date: 2015-10-15
+Robots: noindex,nofollow
+Template: index
+---
+
 ## Ruby - Capistrano Deployments
 
 By Jack Szwergold

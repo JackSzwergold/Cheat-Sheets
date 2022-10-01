@@ -1,4 +1,13 @@
-## Using an Ubuntu Linux Server
+---
+Title: Using an Ubuntu Linux Server 2
+Description: Using an Ubuntu Linux Server 2
+Author: Jack Szwergold
+Date: 2014-03-30
+Robots: noindex,nofollow
+Template: index
+---
+
+## Using an Ubuntu Linux Server 2
 
 By Jack Szwergold
 

@@ -1,3 +1,12 @@
+---
+Title: Redis - Installing Redis via a PPA on Ubuntu
+Description: Redis - Installing Redis via a PPA on Ubuntu
+Author: Jack Szwergold
+Date: 2015-09-22
+Robots: noindex,nofollow
+Template: index
+---
+
 ## Redis - Installing Redis via a PPA on Ubuntu
 
 By Jack Szwergold

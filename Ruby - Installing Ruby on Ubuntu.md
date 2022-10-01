@@ -1,3 +1,12 @@
+---
+Title: Ruby - Installing Ruby on Ubuntu
+Description: Ruby - Installing Ruby on Ubuntu
+Author: Jack Szwergold
+Date: 2015-09-20
+Robots: noindex,nofollow
+Template: index
+---
+
 ## Ruby - Installing Ruby on Ubuntu
 
 By Jack Szwergold

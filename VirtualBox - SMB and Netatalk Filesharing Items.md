@@ -1,3 +1,12 @@
+---
+Title: VirtualBox - SMB and Netatalk Filesharing Items
+Description: VirtualBox - SMB and Netatalk Filesharing Items
+Author: Jack Szwergold
+Date: 2015-09-20
+Robots: noindex,nofollow
+Template: index
+---
+
 ## VirtualBox - SMB and Netatalk Filesharing Items
 
 By Jack Szwergold

@@ -1,3 +1,12 @@
+---
+Title: Ruby - Installing Ruby from Source on Ubuntu
+Description: Ruby - Installing Ruby from Source on Ubuntu
+Author: Jack Szwergold
+Date: 2015-09-21
+Robots: noindex,nofollow
+Template: index
+---
+
 ## Ruby - Installing Ruby from Source on Ubuntu
 
 By Jack Szwergold

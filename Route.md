@@ -1,3 +1,12 @@
+---
+Title: Route
+Description: A cheat sheet for Route related items.
+Author: Jack Szwergold
+Date: 2015-10-22
+Robots: noindex,nofollow
+Template: index
+---
+
 ## Route
 
 By Jack Szwergold

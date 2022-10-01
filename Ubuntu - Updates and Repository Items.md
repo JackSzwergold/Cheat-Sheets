@@ -1,3 +1,12 @@
+---
+Title: Ubuntu - Updates and Repository Items
+Description: Ubuntu - Updates and Repository Items
+Author: Jack Szwergold
+Date: 2015-09-11
+Robots: noindex,nofollow
+Template: index
+---
+
 ## Ubuntu - Updates and Repository Items
 
 By Jack Szwergold

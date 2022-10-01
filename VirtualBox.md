@@ -1,3 +1,12 @@
+---
+Title: VirtualBox
+Description: A cheat sheet for VirtualBox related items.
+Author: Jack Szwergold
+Date: 2015-09-19
+Robots: noindex,nofollow
+Template: index
+---
+
 ## VirtualBox
 
 By Jack Szwergold

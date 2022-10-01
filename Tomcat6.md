@@ -1,3 +1,12 @@
+---
+Title: Tomcat6
+Description: A cheat sheet for Tomcat6 related items.
+Author: Jack Szwergold
+Date: 2015-09-24
+Robots: noindex,nofollow
+Template: index
+---
+
 ## Tomcat6
 
 By Jack Szwergold

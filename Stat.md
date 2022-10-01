@@ -1,3 +1,12 @@
+---
+Title: Stat
+Description: A cheat sheet for Stat related items.
+Author: Jack Szwergold
+Date: 2015-09-15
+Robots: noindex,nofollow
+Template: index
+---
+
 ## Stat
 
 By Jack Szwergold

@@ -1,3 +1,12 @@
+---
+Title: SMARTMonTools
+Description: A cheat sheet for SMARTMonTools related items.
+Author: Jack Szwergold
+Date: 2015-09-23
+Robots: noindex,nofollow
+Template: index
+---
+
 ## SMARTMonTools
 
 By Jack Szwergold

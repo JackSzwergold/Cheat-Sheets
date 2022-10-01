@@ -1,3 +1,12 @@
+---
+Title: SQLite
+Description: A cheat sheet for SQLite related items.
+Author: Jack Szwergold
+Date: 2015-09-22
+Robots: noindex,nofollow
+Template: index
+---
+
 ## SQLite
 
 By Jack Szwergold

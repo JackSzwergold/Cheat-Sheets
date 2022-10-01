@@ -1,3 +1,12 @@
+---
+Title: Ruby - Sundry Ruby GEM Items
+Description: Ruby - Sundry Ruby GEM Items
+Author: Jack Szwergold
+Date: 2015-09-20
+Robots: noindex,nofollow
+Template: index
+---
+
 ## Ruby - Sundry Ruby GEM Items
 
 By Jack Szwergold

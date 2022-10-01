@@ -1,3 +1,12 @@
+---
+Title: Ubuntu - Let’s Encrypt Items
+Description: Ubuntu - Let’s Encrypt Items
+Author: Jack Szwergold
+Date: 2019-11-03
+Robots: noindex,nofollow
+Template: index
+---
+
 ## Ubuntu - Let’s Encrypt Items
 
 By Jack Szwergold

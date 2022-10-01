@@ -1,3 +1,12 @@
+---
+Title: Ubuntu - Trickle
+Description: Ubuntu - Trickle
+Author: Jack Szwergold
+Date: 2015-10-09
+Robots: noindex,nofollow
+Template: index
+---
+
 ## Ubuntu - Trickle
 
 By Jack Szwergold

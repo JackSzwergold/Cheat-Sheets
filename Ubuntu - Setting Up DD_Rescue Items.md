@@ -1,3 +1,12 @@
+---
+Title: Ubuntu - Setting Up DD_Rescue Items
+Description: Ubuntu - Setting Up DD_Rescue Items
+Author: Jack Szwergold
+Date: 2015-10-05
+Robots: noindex,nofollow
+Template: index
+---
+
 ## Ubuntu - Setting Up DD_Rescue Items
 
 By Jack Szwergold

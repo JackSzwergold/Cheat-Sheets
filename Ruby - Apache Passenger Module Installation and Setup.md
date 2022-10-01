@@ -1,3 +1,12 @@
+---
+Title: Ruby - Apache Passenger Module Installation and Setup
+Description: Ruby - Apache Passenger Module Installation and Setup
+Author: Jack Szwergold
+Date: 2015-09-20
+Robots: noindex,nofollow
+Template: index
+---
+
 ## Ruby - Apache Passenger Module Installation and Setup
 
 By Jack Szwergold

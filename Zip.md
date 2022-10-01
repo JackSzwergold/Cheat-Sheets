@@ -1,3 +1,12 @@
+---
+Title: Zip
+Description: A cheat sheet for Zip related items.
+Author: Jack Szwergold
+Date: 2015-09-11
+Robots: noindex,nofollow
+Template: index
+---
+
 ## Zip
 
 By Jack Szwergold

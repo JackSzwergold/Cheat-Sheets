@@ -1,3 +1,12 @@
+---
+Title: VI
+Description: A cheat sheet for VI related items.
+Author: Jack Szwergold
+Date: 2015-10-07
+Robots: noindex,nofollow
+Template: index
+---
+
 ## VI
 
 By Jack Szwergold

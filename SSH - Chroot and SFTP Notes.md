@@ -1,3 +1,12 @@
+---
+Title: SSH - Chroot and SFTP Notes
+Description: SSH - Chroot and SFTP Notes
+Author: Jack Szwergold
+Date: 2015-09-17
+Robots: noindex,nofollow
+Template: index
+---
+
 ## SSH - Chroot and SFTP Notes
 
 By Jack Szwergold

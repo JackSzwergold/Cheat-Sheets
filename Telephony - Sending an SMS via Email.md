@@ -1,3 +1,12 @@
+---
+Title: Telephony - Sending an SMS via Email
+Description: Telephony - Sending an SMS via Email
+Author: Jack Szwergold
+Date: 2015-10-08
+Robots: noindex,nofollow
+Template: index
+---
+
 ## Telephony - Sending an SMS via Email
 
 By Jack Szwergold

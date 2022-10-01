@@ -1,3 +1,12 @@
+---
+Title: SVN
+Description: A cheat sheet for SVN related items.
+Author: Jack Szwergold
+Date: 2015-10-08
+Robots: noindex,nofollow
+Template: index
+---
+
 ## SVN - Subversion Related Items
 
 By Jack Szwergold

@@ -1,3 +1,12 @@
+---
+Title: Ubuntu - SMB Related Items
+Description: Ubuntu - SMB Related Items
+Author: Jack Szwergold
+Date: 2015-09-15
+Robots: noindex,nofollow
+Template: index
+---
+
 ## Ubuntu - SMB Related Items
 
 By Jack Szwergold

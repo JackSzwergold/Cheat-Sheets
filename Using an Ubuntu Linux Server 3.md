@@ -1,4 +1,13 @@
-## Using an Ubuntu Linux Server
+---
+Title: Using an Ubuntu Linux Server 3
+Description: Using an Ubuntu Linux Server 3
+Author: Jack Szwergold
+Date: 2014-04-06
+Robots: noindex,nofollow
+Template: index
+---
+
+## Using an Ubuntu Linux Server 3
 
 By Jack Szwergold
 

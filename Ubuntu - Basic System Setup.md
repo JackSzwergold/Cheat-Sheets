@@ -1,3 +1,12 @@
+---
+Title: Ubuntu - Basic System Setup
+Description: Ubuntu - Basic System Setup
+Author: Jack Szwergold
+Date: 2016-01-16
+Robots: noindex,nofollow
+Template: index
+---
+
 ## Ubuntu - Basic System Setup
 
 By Jack Szwergold

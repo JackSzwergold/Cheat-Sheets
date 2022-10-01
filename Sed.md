@@ -1,3 +1,12 @@
+---
+Title: Sed
+Description: A cheat sheet for Sed related items.
+Author: Jack Szwergold
+Date: 2016-01-24
+Robots: noindex,nofollow
+Template: index
+---
+
 ## Sed
 
 By Jack Szwergold

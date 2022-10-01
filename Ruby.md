@@ -1,3 +1,12 @@
+---
+Title: Ruby
+Description: A cheat sheet for Ruby related items.
+Author: Jack Szwergold
+Date: 2015-09-20
+Robots: noindex,nofollow
+Template: index
+---
+
 ## Ruby
 
 By Jack Szwergold

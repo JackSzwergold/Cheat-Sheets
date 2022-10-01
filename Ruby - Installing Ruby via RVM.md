@@ -1,3 +1,12 @@
+---
+Title: Ruby - Installing Ruby via RVM
+Description: Ruby - Installing Ruby via RVM
+Author: Jack Szwergold
+Date: 2015-09-20
+Robots: noindex,nofollow
+Template: index
+---
+
 ## Ruby - Installing Ruby via RVM
 
 By Jack Szwergold

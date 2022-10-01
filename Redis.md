@@ -1,3 +1,12 @@
+---
+Title: Redis
+Description: A cheat sheet for Redis related items.
+Author: Jack Szwergold
+Date: 2015-09-22
+Robots: noindex,nofollow
+Template: index
+---
+
 ## Redis
 
 By Jack Szwergold

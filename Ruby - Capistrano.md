@@ -1,3 +1,12 @@
+---
+Title: Capistrano
+Description: A cheat sheet for Capistrano related items.
+Author: Jack Szwergold
+Date: 2016-09-15
+Robots: noindex,nofollow
+Template: index
+---
+
 ## Ruby - Capistrano
 
 By Jack Szwergold

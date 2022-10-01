@@ -1,3 +1,12 @@
+---
+Title: Vagrant
+Description: A cheat sheet for Vagrant related items.
+Author: Jack Szwergold
+Date: 2016-01-23
+Robots: noindex,nofollow
+Template: index
+---
+
 ## Vagrant
 
 By Jack Szwergold

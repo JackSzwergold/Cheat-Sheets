@@ -1,3 +1,12 @@
+---
+Title: Ubuntu - Locale Related Items
+Description: Ubuntu - Locale Related Items
+Author: Jack Szwergold
+Date: 2015-10-05
+Robots: noindex,nofollow
+Template: index
+---
+
 ## Ubuntu - Locale Related Items
 
 By Jack Szwergold

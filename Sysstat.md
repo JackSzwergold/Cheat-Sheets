@@ -1,3 +1,12 @@
+---
+Title: Sysstat
+Description: A cheat sheet for Sysstat related items.
+Author: Jack Szwergold
+Date: 2015-09-16
+Robots: noindex,nofollow
+Template: index
+---
+
 ## Sysstat
 
 By Jack Szwergold

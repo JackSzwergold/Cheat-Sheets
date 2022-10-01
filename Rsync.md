@@ -1,3 +1,12 @@
+---
+Title: Rsync
+Description: A cheat sheet for Rsync related items.
+Author: Jack Szwergold
+Date: 2015-09-17
+Robots: noindex,nofollow
+Template: index
+---
+
 ## Rsync
 
 By Jack Szwergold

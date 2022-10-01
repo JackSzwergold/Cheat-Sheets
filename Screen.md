@@ -1,3 +1,12 @@
+---
+Title: Screen
+Description: A cheat sheet for Screen related items.
+Author: Jack Szwergold
+Date: 2015-09-20
+Robots: noindex,nofollow
+Template: index
+---
+
 ## Screen
 
 By Jack Szwergold

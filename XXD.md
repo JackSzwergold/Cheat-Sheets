@@ -1,3 +1,12 @@
+---
+Title: XXD
+Description: A cheat sheet for XXD related items.
+Author: Jack Szwergold
+Date: 2015-09-11
+Robots: noindex,nofollow
+Template: index
+---
+
 ## XXD
 
 By Jack Szwergold

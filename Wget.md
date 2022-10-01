@@ -1,3 +1,12 @@
+---
+Title: Wget
+Description: A cheat sheet for Wget related items.
+Author: Jack Szwergold
+Date: 2015-10-08
+Robots: noindex,nofollow
+Template: index
+---
+
 ## Wget
 
 By Jack Szwergold

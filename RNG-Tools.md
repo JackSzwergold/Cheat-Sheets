@@ -1,3 +1,12 @@
+---
+Title: RNG-Tools
+Description: A cheat sheet for RNG-Tools related items.
+Author: Jack Szwergold
+Date: 2015-09-24
+Robots: noindex,nofollow
+Template: index
+---
+
 ## RNG-Tools
 
 By Jack Szwergold

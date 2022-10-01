@@ -1,3 +1,12 @@
+---
+Title: Ubuntu - Sensors
+Description: Ubuntu - Sensors
+Author: Jack Szwergold
+Date: 2015-09-22
+Robots: noindex,nofollow
+Template: index
+---
+
 ## Ubuntu - Sensors
 
 By Jack Szwergold
