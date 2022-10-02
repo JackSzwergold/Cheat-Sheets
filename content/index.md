@@ -45,7 +45,7 @@ These are mainly intended for quick reference without too much deep explanation 
 - [MongoDB](mongodb)
 - [Monit](monit)
 - [Munin - Moving and Renaming Data Files](munin_-_moving_and_renaming_data_files)
-- [Munin](Munin)
+- [Munin](munin)
 - [MySQL - Enable MySQL Logs to Be Group Readable](mysql_-_enable_mysql_logs_to_be_group_readable)
 - [MySQL](mysql)
 - [Netatalk](netatalk)
