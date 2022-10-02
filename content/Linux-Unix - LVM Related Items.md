@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## Linux-Unix - LVM Related Items
-
-By Jack Szwergold
-
 ### Renaming an LVM logical volume group.
 
 Show all the volume groups on the system:
@@ -222,8 +218,3 @@ And then run this `vgreduce` command:
 Check the current UUID:
 
 	sudo blkid -c /dev/null
-
-***
-
-*Linux-Unix - LVM Related Items (c) by Jack Szwergold; written on September 30, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*
-

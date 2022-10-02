@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## Linux-Unix - Partitioning
-
-By Jack Szwergold
-
 ### Prerequisites
 
 #### Install `lsblk`.
@@ -439,7 +435,3 @@ If the volume has to adjust itself to deal with increased or decreased space, th
 	The filesystem on /dev/xvdf1 is now 1048320 blocks long.
 
 When you remount the volume—either manually or via the reboot—the size of the available volume should be increased or decreased depending on what type of resizing was done.
-
-***
-
-*Linux-Unix - Partitioning (c) by Jack Szwergold; written on September 15, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

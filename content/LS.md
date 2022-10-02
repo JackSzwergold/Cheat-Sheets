@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## LS
-
-By Jack Szwergold
-
 List one item per line:
 
     ls -1
@@ -42,7 +38,3 @@ List only files:
 Get a count of files (not hidden) in a folder:
 
     ls -1 | wc -l
-
-***
-
-*LS (c) by Jack Szwergold; written on September 17, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

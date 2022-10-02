@@ -7,12 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## Linux-Unix - Networking Interfaces
-
-By Jack Szwergold
-
-***
-
 ### Manually start a network interface.
 
 Run this command to manually bring up a network interface via `ifconfig`; mainly useful during initial system setup to get an interface up from the console:
@@ -95,7 +89,3 @@ Check the routing tables again if you wish:
 They should be set to some default state. All good? Now startup the main network interface again like this:
 
 	sudo ifconfig eth0 up
-
-***
-
-*Linux-Unix - Networking Interfaces (c) by Jack Szwergold; written on September 11, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## Linux-Unix - User Account Setup
-
-By Jack Szwergold
-
 Here are instructions on how to setup an account on a Linux server.
 
 ### Create a user account.
@@ -106,7 +102,3 @@ Get username id and connected group id info:
 Get username id and connected group id info, more readable format:
 
     id [username] | tr -s ', ' '\n'
-
-***
-
-*Linux-Unix - User Account Setup (c) by Jack Szwergold; written on September 16, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

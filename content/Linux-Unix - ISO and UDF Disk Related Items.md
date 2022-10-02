@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## Linux-Unix - ISO and UDF Disk Related Items
-
-By Jack Szwergold
-
 ### Creating a volume based on an ISO.
 
 #### Copy the ISO data to the new device.
@@ -127,7 +123,3 @@ Install `udftools` and `udisks` on your system if you need them:
 Create a UDF file system on a partition:
 
     sudo mkudffs --media-type=hd --blocksize=512 /dev/sdb1
-
-***
-
-*Linux-Unix - ISO and UDF Disk Related Items (c) by Jack Szwergold; written on September 30, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

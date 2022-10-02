@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## Machine Learning
-
-By Jack Szwergold
-
 ### Torch
 
  - `http://torch.ch/docs/getting-started.html`
@@ -33,7 +29,3 @@ By Jack Szwergold
 	luarocks install nn
 
 	th train.lua -gpuid -1
-
-***
-
-*Machine Learning (c) by Jack Szwergold; written on November 6, 2017. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

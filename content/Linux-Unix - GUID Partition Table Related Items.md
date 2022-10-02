@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## Linux-Unix - GUID Partition Table Related Items
-
-By Jack Szwergold
-
 ### Getting rid of a GPT/GUID disk label.
 
 #### What’s this all about?
@@ -96,7 +92,3 @@ When that is all done, run `sfdisk` to check the basic info on the device again:
 And the output should be a clean report of device details without GPT/GUI a warning:
 
     /dev/sdb: 1022 cylinders, 247 heads, 62 sectors/track
-
-***
-
-*Linux-Unix - GUID Partition Table Related Items (c) by Jack Szwergold; written on September 30, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

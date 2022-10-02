@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## Linux-Unix - HFS Volume Related Items
-
-By Jack Szwergold
-
 ### Sundry stuff.
 
 Shows a list of all connected block level devices using `lsblk`:
@@ -40,7 +36,3 @@ Mount or remount the HFS+ drive; commands need to be something like the followin
 Finally, if the drive was improperly unmounted or has otherwise become partially corrupted run fsck.hfsplus (provided here by Jayson) as such:
 
     sudo fsck.hfsplus /dev/sdx#
-
-***
-
-*Linux-Unix - HFS Volume Related Items (c) by Jack Szwergold; written on September 22, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

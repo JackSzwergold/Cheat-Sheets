@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## Linux-Unix - Miscellaneous Items
-
-By Jack Szwergold
-
 ### Get some basic system information like this.
 
 Get the current Linux distribution name and related version information:
@@ -219,7 +215,3 @@ Display the list of open files with `lsof`:
 Use `losf` to see what ports are connected to a process:
 
     lsof -i -n -P | grep sendmail
-
-***
-
-*Linux-Unix - Miscellaneous Items (c) by Jack Szwergold; written on October 4, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

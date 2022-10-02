@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## Linux-Unix - MSDOS Floppy Disk Reading, Formatting and Partitioning
-
-By Jack Szwergold
-
 ### An adjustment to the GRUB bootloader that needs to be made to allow the floppy to be recognized.
 
 Edit the default GRUB config file:
@@ -172,7 +168,3 @@ Count the number of connected devices:
 Print USB device details:
 
     usb-devices
-
-***
-
-*Linux-Unix - MSDOS Floppy Disk Reading, Formatting and Partitioning (c) by Jack Szwergold; written on September 18, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

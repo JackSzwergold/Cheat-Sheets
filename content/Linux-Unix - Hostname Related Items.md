@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## Linux-Unix - Hostname Related Items
-
-By Jack Szwergold
-
 ### Checking the value of—and temporarily changing—hostname values.
 
 This `hostname` command will give you the hostname connected to the system on the system:
@@ -54,9 +50,3 @@ You can also use `sysctl` to change the hostname. First check the hostname value
 And if you feel like changing it, set it by using `sudo` and assigning a value like this:
 
     sudo sysctl kernel.hostname=example.com
-
-***
-
-*Linux-Unix - Hostname Related Items (c) by Jack Szwergold; written on September 27, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*
-
-

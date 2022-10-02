@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## Linux-Unix - Time Related Items
-
-By Jack Szwergold
-
 ### Setting time items on an Ubuntu/Debian system.
 
 Force a manual system clock update with `ntpdate` usng the hostname `ntp.ubuntu.com`:
@@ -55,7 +51,3 @@ Control NTP
 
     sudo /etc/init.d/ntpd start
     sudo /etc/init.d/ntpd stop
-
-***
-
-*Linux-Unix - Time Related Items (c) by Jack Szwergold; written on September 17, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

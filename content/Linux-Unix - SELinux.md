@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## Linux-Unix - SELinux
-
-By Jack Szwergold
-
 ### The basics.
 
 Check the SELinux status with this command:
@@ -131,7 +127,3 @@ Create a test file like this:
 	touch /opt/something.txt
 	chown apache:apache /opt/something.txt
 	ls -lZ /opt/something.txt
-
-***
-
-*Linux-Unix - SELinux (c) by Jack Szwergold; written on August 7, 2017. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

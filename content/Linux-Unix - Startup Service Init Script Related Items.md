@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## Linux-Unix - Startup Service Init Script Related Items
-
-By Jack Szwergold
-
 ### Setting up a startup service on Ubuntu/Debian systems.
 
 Use `update-rc.d` to install and remove System-V style init script links on Ubuntu/Debian. For example, to install the startup scripts for Apache just run this command:
@@ -71,7 +67,3 @@ But I will deconstruct the link structure for `S20apache2`. Here is how it break
 - **S** Indicates start priority. Could also be `K` to give something a stop priority.
 - **20** The loading number in the startup process; the lower the number the higher up in the priority it is.
 - **apache2** Simply the name of the service being acted on.
-
-***
-
-*Linux-Unix - Startup Service Init Script Related Items (c) by Jack Szwergold; written on October 3, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

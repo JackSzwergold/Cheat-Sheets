@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## Lsyncd
-
-By Jack Szwergold
-
 ### Installing Lsyncd.
 
 Install Lsyncd via `aptitude` like this:
@@ -210,7 +206,3 @@ And copy these simple log rotation scripts into that file:
 	        fi
 	        endscript
 	}
-
-***
-
-*Lsyncd (c) by Jack Szwergold; written on September 18, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*
