@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## Linux-Unix - Adjusting UMASK Related Items
-
-By Jack Szwergold
-
 ### Adjusting UMASK items on a CentOS/RedHat system.
 
 Open up `/etc/bashrc`:
@@ -60,7 +56,3 @@ Find the line that reads something like this:
 Change it to this by adding `umask=0002` to the end of the line:
 
     session optional                        pam_umask.so	umask=0002
-
-***
-
-*Linux-Unix - Adjusting UMASK Related Items (c) by Jack Szwergold; written on September 16, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

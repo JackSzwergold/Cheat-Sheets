@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## Linux-Unix - GoAccess Related Items
-
-By Jack Szwergold
-
 ### Installing GoAccess and NPM via a PPA on Ubuntu
 
 First, import the public key used by the package management system:
@@ -94,7 +90,3 @@ Process and save DB files:
 Load DB files from disk:
 
 	goaccess /var/log/nginx/access.log --log-format=COMBINED --keep-db-files --load-from-disk
-
-***
-
-*Linux-Unix - GoAccess Related Items (c) by Jack Szwergold; written on November 8, 2017. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

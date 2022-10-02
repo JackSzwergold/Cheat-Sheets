@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## Linux-Unix - exFAT Partitioning and Formatting
-
-By Jack Szwergold
-
 This document explains the basics of partitioning, formatting, mounting and labelling a block level device from the command line in Linux/Unix.
 
 ### Check for block level devices.
@@ -168,7 +164,3 @@ Run this command to check the device label on an ExFAT formatted volume:
 Run this command to change the device label on an ExFAT formatted volume:
 
     sudo exfatlabel /dev/sdb1 FooBar
-
-***
-
-*Linux-Unix - exFAT Partitioning and Formatting (c) by Jack Szwergold; written on September 11, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*
