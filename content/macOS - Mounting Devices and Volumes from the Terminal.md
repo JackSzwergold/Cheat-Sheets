@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## macOS - Mounting Devices and Volumes from the Terminal
-
-By Jack Szwergold
-
 ### Mounting disk images that throw a “no mountable filesystems” error.
 
 Some disk images—such as those created of system disks by “Disk Utility”—might throw up a “no mountable filesystems” error if there is an attempt to mount the disk image directly in the Finder. The instructions below allow you to mount the disk via the command line in the terminal.
@@ -44,7 +40,3 @@ Then run this `kextload` command to reload the `IOUSBMassStorageClass.kext`:
     sudo kextload /System/Library/Extensions/IOUSBMassStorageClass.kext
 
 The USB drive should now be remounted and accessible again.
-
-***
-
-*macOS - Mounting Devices and Volumes from the Terminal (c) by Jack Szwergold; written on September 12, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

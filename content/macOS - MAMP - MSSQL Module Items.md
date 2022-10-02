@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## macOS - MAMP - MSSQL Module Items
-
-By Jack Szwergold
-
 ### PHP MSSQL under MAMP 3.5.2 running PHP 5.6.10
 
 Before anything else, make sure your local MAMP install’s binary paths are part of you default PATH. You would do this by adding the following paths to your main PATH in your `~/.bash_profile`:
@@ -138,7 +134,3 @@ Now adjust the PHP config file (`php.ini`) like this to get PHP to recognize it:
 	sh -c "printf '\n[MSSQL]\nextension=mssql.so\n' >> /Applications/MAMP/bin/php/php5.6.10/conf/php.ini"
 
 Now start MAMP again and check the output of the PHP info page and `mssql` should be clearly listed there under installed components.
-
-***
-
-*macOS - MAMP - MSSQL Module Items (c) by Jack Szwergold; written on August 17, 2017. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

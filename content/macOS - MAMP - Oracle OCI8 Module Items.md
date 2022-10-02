@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## macOS - MAMP - Oracle OCI8 Module Items
-
-By Jack Szwergold
-
 ### PHP Oracle OCI8 under MAMP 3.5.2 running PHP 5.6.10
 
 Notes here based on information gleaned from these two excellent blog entries:
@@ -145,7 +141,3 @@ Now adjust the PHP config file (`php.ini`) like this to get PHP to recognize it:
 	sh -c "printf '\n[OCI8]\nextension=oci8.so\n' >> /Applications/MAMP/bin/php/php7.0.8/conf/php.ini"
 
 Now start MAMP again and check the output of the PHP info page and `oci8` should be clearly listed there under installed components.
-
-***
-
-*macOS - MAMP - Oracle OCI8 Module Items (c) by Jack Szwergold; written on August 17, 2017. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## macOS - Locations of Key User Data
-
-By Jack Szwergold
-
 All of this stuff is useful for a user migration to a clean OS install.
 
 ### Mail files and preferences.
@@ -54,7 +50,3 @@ The reimport the  playlists like this:
 Or you can copy the full iTunes music  directory from here:
 
     ~/Music/iTunes
-
-***
-
-*macOS - Locations of Key User Data (c) by Jack Szwergold; written on October 18, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## macOS - MAMP Related Items
-
-By Jack Szwergold
-
 This is how you can setup named virtual hosts on MAMP. First open up the `httpd.conf` file like this:
 
     nano /Applications/MAMP/conf/apache/httpd.conf
@@ -84,7 +80,3 @@ Then adjust it like this; which in this case switches the timezone to `America/N
 	date.timezone = "America/New_York"
 
 With that done, save the file, restart MAMP and the timezone for things like PHP error logs will now be properly set to the `America/New_York` timezone.
-
-***
-
-*macOS - MAMP Related Items (c) by Jack Szwergold; written on October 7, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

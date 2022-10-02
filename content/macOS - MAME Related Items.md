@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## macOS - MAME Related Items
-
-By Jack Szwergold
-
 ### Find all files that have not been touched in the last 3 hours.
 
 Dry run:
@@ -522,7 +518,3 @@ And this is the output:
 	-renderdriver        sdl render driver to use ('software', 'opengl', 'directfb' ... or 'auto' for SDL default
 	-audiodriver         sdl audio driver to use ('alsa', 'arts', ... or 'auto' for SDL default
 	-gl_lib              alternative libGL.so to use; 'auto' for system default
-
-***
-
-*macOS - MAME Related Items (c) by Jack Szwergold; written on October 7, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## macOS - Homebrew
-
-By Jack Szwergold
-
 Install Homebrew like this:
 
     /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -73,7 +69,3 @@ Additional versions of Java OpenJDK and JRE can be found here:
 Uninstall it like this:
 
 	brew cask uninstall adoptopenjdk8-jre
- 
-***
-
-*macOS - Homebrew (c) by Jack Szwergold; written on December 27, 2016. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

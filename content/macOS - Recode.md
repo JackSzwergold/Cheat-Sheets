@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## macOS - Recode
-
-By Jack Szwergold
-
 Recode is a character set conversion tool.
 
 First clone the source code from the official Recode GitHub repository:
@@ -45,7 +41,3 @@ The returned output should be:
 	Copyright (C) 1990, 92-94, 96, 97, 99, 08 Free Software Foundation, Inc.
 	This is free software; see the source for copying conditions.  There is NO
 	warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
-
-***
-
-*macOS - Recode (c) by Jack Szwergold; written on November 24, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

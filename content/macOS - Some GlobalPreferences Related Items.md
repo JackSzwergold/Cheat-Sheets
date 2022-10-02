@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## macOS - Some GlobalPreferences Related Items
-
-By Jack Szwergold
-
 ### Check a list of all user connected preference files.
 
 List all macOS user defaults preference files:
@@ -50,7 +46,3 @@ If you need to, restore the backup copy of `.GlobalPreferences.plist` like this:
 And then, just restart the Finder with this command:
 
     killall Finder
-
-***
-
-*macOS - Some GlobalPreferences Related Items (c) by Jack Szwergold; written on May 4, 2016. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

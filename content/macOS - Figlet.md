@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## macOS - Figlet
-
-By Jack Szwergold
-
 This tutorial explains how you can install Figlet directly from source code on macOS. Tested on macOS 10.9.5.
 
 ### Installing Figlet via official source code archive.
@@ -72,7 +68,3 @@ Uninstall Figlet by running these commands:
 	sudo rm -rf /usr/local/share/figlet
 	sudo rm -f /usr/local/bin/{figlet,chkfont,figlist,showfigfonts}
 	sudo rm -f /usr/local/man/man6/{figlet.6,chkfont.6,figlist.6,showfigfonts.6}
-
-***
-
-*macOS - Figlet (c) by Jack Szwergold; written on November 1, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

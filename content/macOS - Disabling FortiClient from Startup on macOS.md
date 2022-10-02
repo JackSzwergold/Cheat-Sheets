@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## macOS - Disabling FortiClient from Startup on macOS
-
-By Jack Szwergold
-
 To stop FortiClient from loading on reboot after it’s been installed, edit the contents of these two PLIST (Property List) files:
 
 	com.fortinet.forticlient.fct_launcher.plist
@@ -74,7 +70,3 @@ The contents of the `forticlient.credential_store.plist` file should look like t
 Look for the key that reads `<key>RunAtLoad</key>` and set the `<true/>` right beneath it to `<false/>` and save the file.
 
 Now, with both files modified and saved, reboot your Mac and the FortiClient should no longer be automatically loaded on reboot. To start it manually, go to “Applications” and double-click it like any other app.
-
-***
-
-*macOS - Disabling FortiClient from Startup on macOS (c) by Jack Szwergold; written on March 24, 2022. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

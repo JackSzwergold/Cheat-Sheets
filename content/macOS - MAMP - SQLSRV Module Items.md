@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## macOS - MAMP - SQLSRV Module Items
-
-By Jack Szwergold
-
 ### PHP SQLSRV under MAMP running PHP 7.x and Above
 
 Before anything else, make sure your local MAMP install’s binary paths are part of you default PATH. You would do this by adding the following paths to your main PATH in your `~/.bash_profile`:
@@ -45,7 +41,3 @@ And finally add these lines to your PHP config file (`php.ini`):
 	
 	;pdo_sqlsrv.log_severity = 0
 	;pdo_sqlsrv.client_buffer_max_kb_size = 10240
-
-***
-
-*macOS - MAMP - SQLSRV Module Items (c) by Jack Szwergold; written on Janurary 25, 2019. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

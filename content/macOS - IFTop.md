@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## macOS - IFTop
-
-By Jack Szwergold
-
 This tutorial explains how you can install IFTop directly from source code on macOS. Tested on macOS 10.9.5.
 
 ### Installing IFTop via official source code archive.
@@ -42,7 +38,3 @@ Finally install it by running `sudo make install`:
 And once it’s installed, run the command with `-h` to do a simple check to see it’s working:
 
 	iftop -h
-
-***
-
-*macOS - IFTop (c) by Jack Szwergold; written on September 14, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## macOS - MD5 Basics
-
-By Jack Szwergold
-
 Get the MD5 of a file via this command; change `.bash_profile` to match the actual path and file name of the file you want to check:
 
     md5 .bash_profile
@@ -34,7 +30,3 @@ You can also use the `openssl` command to get an MD5 like this:
 The returned output of that `openssl` command should look something like this:
 
     MD5(.bash_profile)= da4b8a88ad68b6c11a05e4956677c73e
-
-***
-
-*macOS - MD5 Basics (c) by Jack Szwergold; written on September 14, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

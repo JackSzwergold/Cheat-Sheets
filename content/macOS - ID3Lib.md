@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## macOS - ID3Lib
-
-By Jack Szwergold
-
 This tutorial explains how you can install ID3Lib directly from source code on macOS. Tested on macOS 10.11.5.
 
 ### Installing ID3Lib via official source code archive.
@@ -41,7 +37,3 @@ Finally install it by running `sudo make install`:
 * `id3tag`
 * `id3convert`
 * `id3cp`
-
-***
-
-*macOS - ID3Lib (c) by Jack Szwergold; written on August 22, 2016. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

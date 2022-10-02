@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## macOS - HTop
-
-By Jack Szwergold
-
 This tutorial explains how you can install HTop directly from source code on macOS. Tested on macOS 10.12 (Sierra).
 
 ### Compiling from source from the official GitHub repository.
@@ -53,7 +49,3 @@ Or just run these commands:
 	rm -f /usr/local/bin/htop
 	rm -f /usr/local/share/man/man1/htop.1
 	rm -f /usr/local/share/pixmaps/htop.png
-
-***
-
-*macOS - HTop (c) by Jack Szwergold; written on September 15, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

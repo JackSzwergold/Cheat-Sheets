@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## macOS - NLOAD
-
-By Jack Szwergold
-
 This tutorial explains how you can install `nload` directly from source code on macOS. Tested on macOS 10.9.5.
 
 #### Installing `nload` via official source code archive.
@@ -86,7 +82,3 @@ Response should be something like this:
 Uninstall if you need to:
 
 	sudo make uninstall
-
-***
-
-*macOS - NLOAD (c) by Jack Szwergold; written on September 15, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

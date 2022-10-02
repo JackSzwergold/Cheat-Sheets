@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## macOS - Wget
-
-By Jack Szwergold
-
 This tutorial explains how you can install `wget` directly from source code on macOS. Tested on macOS 10.12.1.
 
 Install it with OpenSSL like this:
@@ -37,7 +33,3 @@ Now install WGET like this:
 	make
 	sudo make install
 	sudo make uninstall
-
-***
-
-*macOS - Wget (c) by Jack Szwergold; written on September 11, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

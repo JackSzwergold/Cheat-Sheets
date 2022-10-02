@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## macOS - MAMP - MySQL 5.7 Upgrade
-
-By Jack Szwergold
-
 First, get a copy of the macOS binaries for MySQL 5.7; note that as of me posting this answer MySQL 5.7.22 is the current version so adjust this URL to whatever new version you might want to use:
 
 	curl -OL https://dev.mysql.com/get/Downloads/MySQL-5.7/mysql-5.7.22-macos10.13-x86_64.tar.gz
@@ -62,7 +58,3 @@ When this is all done, and you have confirmed MySQL is running as expected, just
 	sudo rm -rf /Applications/MAMP/db/mysql56
 
 With all that done you should all be set to cleanly use MySQL 5.7 under MAMP 4.4.1.
-
-***
-
-*macOS - MAMP - MySQL 5.7 Upgrade (c) by Jack Szwergold; written on April 26, 2018. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## macOS - Disk Utility Repairs and Tricks from the Terminal
-
-By Jack Szwergold
-
 ### Using `fsck_hfs` to repair a volume that “Disk Utility” chokes on.
 
 Apple’s GUI application “Disk Utility” works fine for sundry hard disk issues, but sometimes it just chokes on drives claiming it can’t repair the disk. Before you give up hope, you can see if using `fsck_hfs` will
@@ -125,7 +121,3 @@ Other options/flags for `hfs.util` are as follows:
 Erase a volume from the command line using `diskutil` like this. Note that `HFS+` should be changed to match whatever format type should be used, `[VolumeName]` should be changed to match the new volume name and `/dev/disk[device id]s[partition id]` to be the actual device ID number of the volume you want to act on:
 
     diskutil eraseVolume HFS+ [VolumeName] /dev/disk[device id]s[partition id]
-
-***
-
-*macOS - Disk Utility Repairs and Tricks from the Terminal (c) by Jack Szwergold; written on September 13, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

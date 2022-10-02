@@ -7,12 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## macOS - Adjust the Hibernation Mode Sleepimage
-
-By Jack Szwergold
-
-***
-
 When portables like MacBooks “hibernate” the contents of RAM are saved to disk in a `sleepimage` file for retrieval when the system comes back up again. By saving the contents of RAM to the `sleepimage` file, battery power is saved and if the system experiences power failure, the contents of the RAM saved to disk can quickly be restored.
 
 While this functionality is useful for portables like MacBooks, it’s not really that useful for desktop machines. If you have 16GB of RAM, that `sleepimage` file will take up approximately 16GB of disk space. And that’s a waste of 16GB of space if you don’t need hibernation mode.
@@ -56,7 +50,3 @@ Once that’s done, the `sleepimage` cannot be recreated by the system unless th
 With that done, if for some reason you need to delete that immutable `sleepimage` file, run this command to delete it:
 
     sudo chflags noschg /private/var/vm/sleepimage
-
-***
-
-*macOS - Adjust the Hibernation Mode Sleepimage (c) by Jack Szwergold; written on September 12, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

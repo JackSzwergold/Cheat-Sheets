@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## macOS - SNMP Basics
-
-By Jack Szwergold
-
 ### Customzing the SNMP data a host passes.
 
 To create a SNMP `snmpconf` file on the host, run this command as root:
@@ -46,7 +42,3 @@ Fetch the contact info from the host:
 Fetch the services info from the host:
 
 	/usr/bin/snmpget -c public [hostname] system.sysServices.0
-
-***
-
-*macOS - SNMP Basics (c) by Jack Szwergold; written on October 6, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

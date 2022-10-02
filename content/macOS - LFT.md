@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## macOS - LFT
-
-By Jack Szwergold
-
 This tutorial explains how you can install `lft` directly from source code on macOS. Tested on macOS 10.9.5.
 
 First grab a compressed archive from an official `lft` source site:
@@ -40,7 +36,3 @@ Finally install it by running `sudo make install`:
 And once it’s installed, run the command with `-v` to do a simple check to see it’s working:
 
 	lft -v
-
-***
-
-*macOS - LFT (c) by Jack Szwergold; written on September 14, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

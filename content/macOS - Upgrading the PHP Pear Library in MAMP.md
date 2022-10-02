@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## macOS - Upgrading the PHP Pear Library in MAMP
-
-By Jack Szwergold
-
 ### Setting your MAMP binary path in your shell.
 
 #### Set the MAMP PHP 5.6.10 version of Pear as part of your user PATH.
@@ -104,8 +100,3 @@ And remove the stuff at the top of the file so it looks like this:
 Now pipe that `pear-list` via `xargs` into `pear install` and wait:
 
 	cat pear-list | xargs -n 1 pear install
-
-***
-
-*macOS - Upgrading the PHP Pear Library in MAMP (c) by Jack Szwergold; written on October 7, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*
-

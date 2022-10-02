@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## MailCatcher
-
-By Jack Szwergold
-
 For email testing, you can use MailCatcher which is a great tool which runs a  simple SMTP server which catches any message sent to it to display in a web interface. Excellent for email process debugging. To install the Ruby GEM for it run this command:
 
     sudo gem install mailcatcher
@@ -34,7 +30,3 @@ Or run it like this to bind to any port on the host:
 Setting your code to send SMTP mail to port `1025` on `localhost` will send it to MailCatcher. And to view mails, just go to port `1080` on that server via a web browser like this:
 
     http://sandbox.local:1080
-
-***
-
-*MailCatcher (c) by Jack Szwergold; written on September 14, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

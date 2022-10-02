@@ -7,12 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## macOS - Making a Bootable macOS USB Flash Drive
-
-By Jack Szwergold
-
-***
-
 ### Creating a bootable macOS USB flash drive in macOS 10.7 and higher.
 
 If you are using macOS 1.7 (Lion) and higher, you can create bootable USB media using a command like this:
@@ -106,7 +100,3 @@ And now let’s “bless” the USB flash drive with the new name as well:
     sudo bless --folder "/Volumes/Install OS X Yosemite" -label "Install OS X Yosemite"
 
 Now, the bootable macOS USB flash drive should be renamed ready for use.
-
-***
-
-*macOS - Making a Bootable macOS USB Flash Drive (c) by Jack Szwergold; written on October 6, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

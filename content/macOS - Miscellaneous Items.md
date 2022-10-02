@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## macOS - Miscellaneous Items
-
-By Jack Szwergold
-
 ### ARP related stuff.
 
 List all Arp entries on the system:
@@ -361,7 +357,3 @@ The final config file should look like this:
 	account    required       pam_permit.so
 	password   required       pam_deny.so
 	session    required       pam_permit.so
-
-***
-
-*macOS - Miscellaneous Items (c) by Jack Szwergold; written on October 6, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

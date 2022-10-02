@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## macOS - Watchman
-
-By Jack Szwergold
-
 Watchman is a tool created by Facebook that is described as follows, “Watchman exists to watch files and record when they change. It can also trigger actions (such as rebuilding assets) when matching files change.” The main reason I use it is for improved development with EmberJS which recommends using Watchman over built-in file watching services on macOS. So hey, here is how I install it so I can do that.
 
 First clone the source code from the official Watchman GitHub repository:
@@ -48,7 +44,3 @@ To check if Watchman was properly installed, just check the version like this:
 The returned output should be:
 
     4.1.0
-
-***
-
-*macOS - Watchman (c) by Jack Szwergold; written on November 18, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

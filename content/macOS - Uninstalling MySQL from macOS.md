@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## macOS - Uninstalling MySQL from macOS
-
-By Jack Szwergold
-
 #### Uninstalling MySQL from macOS.
 
 If you installed MySQL from an official package installer and you want to now uninstall it, just run the following commands. These commands assume the version of MySQL that was installed was `mysql-5.5.12-osx10.6-x86_64` so adjust accordingly to match your setup:
@@ -67,7 +63,3 @@ Now edit `/etc/hostconfig`:
 And remove the line MySQL related line that should look like this:
 
     MYSQLCOM=-YES-
-
-***
-
-*macOS - Uninstalling MySQL from macOS (c) by Jack Szwergold; written on September 14, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

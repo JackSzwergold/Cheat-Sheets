@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## macOS - Autoconf, Automake and Libtool
-
-By Jack Szwergold
-
 macOS is a flavor of Unix (Darwin) based on BSD and as such does not contain many commonly available GNU Linux tools in it’s default install.
 
 So if you are planning on compiling any modern GNU projects you’re going to have to install a few core GNU related tools: Autoconf, Automake and Libtool. This tutorial explains how to do that.
@@ -128,7 +124,3 @@ Response should be something like this:
 Uninstall if you need to:
 
 	sudo make uninstall
-
-***
-
-*macOS - Autoconf, Automake and Libtool (c) by Jack Szwergold; written on September 14, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

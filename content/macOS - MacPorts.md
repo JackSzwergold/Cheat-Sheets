@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## macOS - MacPorts
-
-By Jack Szwergold
-
 This tutorial explains how you can uninstall MacPorts on macOS.
 
 List the contents of the `/opt/local` directory used by MacPorts:
@@ -62,7 +58,3 @@ Remove the `.plist` user and group files for the `macports` user (and related gr
 
     sudo rm -f /private/var/db/dslocal/nodes/Default/users/macports.plist
     sudo rm -f /private/var/db/dslocal/nodes/Default/groups/macports.plist
-
-***
-
-*macOS - MacPorts (c) by Jack Szwergold; written on September 22, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

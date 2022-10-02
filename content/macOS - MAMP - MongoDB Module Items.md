@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## macOS - MAMP - MongoDB Module Items
-
-By Jack Szwergold
-
 ### PHP MongoDB under MAMP 3.5.2 running PHP 5.6.10
 
 Before anything else, make sure your local MAMP install’s binary paths are part of you default PATH. You would do this by adding the following paths to your main PATH in your `~/.bash_profile`:
@@ -137,7 +133,3 @@ Now adjust the PHP config file (`php.ini`) like this to get PHP to recognize it:
 	echo "extension=mongodb.so" >> /Applications/MAMP/bin/php/php5.6.10/conf/php.ini
 
 Now start MAMP again and check the output of the PHP info page and `MongoDB` should be clearly listed there under installed components.
-
-***
-
-*macOS - MAMP - MongoDB Module Items (c) by Jack Szwergold; written on November 22, 2017. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*
