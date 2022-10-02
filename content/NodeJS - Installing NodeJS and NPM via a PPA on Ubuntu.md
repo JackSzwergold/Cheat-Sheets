@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## NodeJS - Installing NodeJS and NPM via a PPA on Ubuntu
-
-By Jack Szwergold
-
 #### Adding the NodeJS PPA to the system.
 
 First install `python-software-properties` like this:
@@ -52,7 +48,3 @@ Check the version number of NPM like this:
 And the output should be something like this:
 
     1.4.28
-
-***
-
-*NodeJS - Installing NodeJS and NPM via a PPA on Ubuntu (c) by Jack Szwergold; written on September 22, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

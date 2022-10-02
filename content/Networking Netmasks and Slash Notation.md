@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## Networking Netmasks and Slash Notation
-
-By Jack Szwergold
-
 ### What’s a netmask?
 
 On a most basic level, a netmask is a 32-bit “mask” that is used to divide IP addresses into subnets for management, isolation and security reasons.
@@ -80,7 +76,3 @@ I won’t even attempt to do the math that would correlate where that `.240` oct
 	FF.FF.FF.FC   /30     255.255.255.252      4      1/64 C
 	FF.FF.FF.FE   /31     255.255.255.254      2     1/128 C
 	FF.FF.FF.FF   /32     255.255.255.255   This is a single host route
-
-***
-
-*Networking Netmasks and Slash Notation (c) by Jack Szwergold; written on October 9, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

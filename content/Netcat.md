@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## Netcat
-
-By Jack Szwergold
-
 #### Create a simple one-line web server with Netcat.
 
 First, create a simple `index.html` file like this:
@@ -30,7 +26,3 @@ Then just check the URL in a web browser like this:
     localhost:8000
 
 And you should see the contents of `index.html` (aka: “Hello world!”) show up in your browser.
-
-***
-
-*Netcat (c) by Jack Szwergold; written on October 17, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

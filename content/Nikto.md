@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## Nikto
-
-By Jack Szwergold
-
 Nikto is a simple, web server scanner that scans a web server for known vulnerabilities. This document explains some of the basic ways Nitkto can be used.
 
 #### Basic Nikto usage.
@@ -112,7 +108,3 @@ Nikto is a simple, web server scanner that scans a web server for known vulnerab
 	       -Version           Print plugin and database versions
 	       -vhost+            Virtual host (for Host header)
 	   		+ requires a value
-	
-***
-
-*Nikto (c) by Jack Szwergold; written on May 4, 2016. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

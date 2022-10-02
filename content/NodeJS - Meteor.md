@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## NodeJS - Meteor
-
-By Jack Szwergold
-
 #### Install Meteor.
 
     curl https://install.meteor.com/ | sh
@@ -157,7 +153,3 @@ Note that the compressed `tar.gz` archive created by the build process is named 
 	export PORT=3000;
 
 	node main.js
-
-***
-
-*NodeJS - Meteor (c) by Jack Szwergold; written on September 22, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

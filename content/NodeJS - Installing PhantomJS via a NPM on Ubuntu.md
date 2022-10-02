@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## NodeJS - Installing PhantomJS via a NPM on Ubuntu
-
-By Jack Szwergold
-
 ### Install PhantomJS via NPM.
 
 Install PhantomJS via NPM like this:
@@ -72,7 +68,3 @@ The script will warn you:
 > Building PhantomJS from source takes a very long time, anywhere from 30 minutes to several hours (depending on the machine configuration). It is recommended to use the pre-made binary packages on supported operating systems.
 
 Just say `y` to that and wait. And wait. And wait.
-
-***
-
-*NodeJS - Installing PhantomJS via a NPM on Ubuntu (c) by Jack Szwergold; written on September 22, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

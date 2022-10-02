@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## Nginx
-
-By Jack Szwergold
-
 Get the version of Nginx from the command line:
 
     nginx -v
@@ -247,7 +243,3 @@ And with that done, the new `worker_rlimit_nofile` value should be set. To confi
 	2020/01/01 15:46:40 [alert] 11508#0: setrlimit(RLIMIT_NOFILE, 2048) failed (13: Permission denied)
 
 That error basically states the `worker_rlimit_nofile` change didn’t take. Check the steps above and try again.
-
-***
-
-*Nginx (c) by Jack Szwergold; written on September 27, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

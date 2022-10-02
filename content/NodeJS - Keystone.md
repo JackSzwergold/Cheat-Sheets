@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## NodeJS - KeystoneJS
-
-By Jack Szwergold
-
 	sudo npm install -g yo
 	sudo npm install -g generator-keystone
 	mkdir my-test-project
@@ -18,7 +14,3 @@ By Jack Szwergold
 	yo keystone
 	node keystone
 	http://localhost:3000
-
-***
-
-*NodeJS - KeystoneJS (c) by Jack Szwergold; written on November 5, 2016. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

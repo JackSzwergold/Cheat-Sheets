@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## Nmap
-
-By Jack Szwergold
-
 Scan a range via a wildcard and returns hostname as well as IP:
 
 	nmap -sP 192.168.1.*
@@ -48,7 +44,3 @@ A standard UDP port scan:
 A scan designed to attempt to discover versions of services on the server:
 
     sudo nmap -sV -Pn -p 22,80 -vv --reason -oN ~/nmap.SERVICE.results example.com
-
-***
-
-*Nmap (c) by Jack Szwergold; written on October 3, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*
