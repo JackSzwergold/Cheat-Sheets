@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## Postfix - Delete Specific Messages from the Mail Queue
-
-By Jack Szwergold
-
 ### A nice Perl script  to flush the mail queue. 
 
 A nice Perl script that deletes messages from the mail queue that matches a regular expression passed to the script as the first argument.
@@ -60,6 +56,3 @@ And to delete all queued messages that contain the characters `xyz` in the email
 
     ./postfix-delete.pl xyz
 
-***
-
-*Postfix - Delete Specific Messages from the Mail Queue (c) by Jack Szwergold; written on September 17, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

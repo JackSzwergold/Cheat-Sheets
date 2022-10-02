@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## PHP - Drush
-
-By Jack Szwergold
-
 ### Drush related stuff.
 
 * **Drush Git repo**: https://github.com/drush-ops/drush
@@ -36,7 +32,3 @@ Make `drush` executable as a command from anywhere. Destination can be anywhere 
 Optional. Enrich the bash startup file with completion and aliases.
 
 	drush init
-
-***
-
-*PHP - Drush (c) by Jack Szwergold; written on December 15, 2016. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

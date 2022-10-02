@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## PHP - phpMyAdmin Related Items
-
-By Jack Szwergold
-
 ### Note regarding PHP 5.1.6 and phpMyAdmin.
 
 Use this version of phpMyAdmin for PHP 5.1.6 installs. But lord help you if you ever have to deal with PHP 5.1.6 nowadays.
@@ -223,7 +219,3 @@ Then enable the module like this:
 And restart Apache like this:
 
     sudo service apache2 restart
-
-***
-
-*PHP - phpMyAdmin Related Items (c) by Jack Szwergold; written on October 17, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

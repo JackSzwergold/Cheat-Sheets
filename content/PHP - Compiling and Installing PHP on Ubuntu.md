@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## PHP - Compiling and Installing PHP on Ubuntu
-
-By Jack Szwergold
-
 This cheat sheet was compiled based on some notes from my dealing with a client specific application that would only work well in PHP 5.1.6 due to GD library TrueType font support. This is in no way the most complete version of PHP 5.1.6 one can compile from source on a modern Ubuntu install, but it worked for the task. The notes can possibly applied to compiling other versions of PHP from source code, but not spending any time testing—and debugging—version specific quirks for this cheat sheet.
 
 ### Preparation and prerequisite setup.
@@ -177,7 +173,3 @@ Search for `render_mode`; should look like this:
 Change to:
 
 	int render_mode = FT_LOAD_NO_HINTING;
-
-***
-
-*PHP - Compiling and Installing PHP on Ubuntu (c) by Jack Szwergold; written on October 13, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

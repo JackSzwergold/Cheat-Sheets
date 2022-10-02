@@ -7,12 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## PHP - WordPress Related Items
-
-By Jack Szwergold
-
-***
-
 ### Resetting a user password directly in the WordPress MySQL database.
 
 If you need to reset a user’s password, but cannot do so via WordPress’s web interface, you can change it directly in the MySQL database using a query like this:
@@ -52,7 +46,3 @@ With that added, just visit the new WordPress install location, login to the adm
      define('RELOCATE', false);
 
 Using `RELOCATE` forces the WordPress install to rewrite many default internal settings. Technically a server could run with `RELOCATE` set to `true`, but it’s performance would be slowed down by the things `RELOCATE` attempts to do with each page request. So you ultimately don’t want that kind of stuff happening for an extended period of time on a production server.
-
-***
-
-*PHP - WordPress Related Items (c) by Jack Szwergold; written on October 16, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

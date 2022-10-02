@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## PHP - Oracle OCI8 Module Items
-
-By Jack Szwergold
-
 ### PHP Oracle OCI8 under CentOS 6.8
 
 #### Install the Oracle Instant Client Archives
@@ -241,7 +237,3 @@ And change it to this; basically commenting out that line:
 	/* #define HAVE_OCI8_DTRACE 1 */
 
 Then go back and run that `pecl install` command again.
-
-***
-
-*PHP - Oracle OCI8 Module Items (c) by Jack Szwergold; written on October 10, 2017. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

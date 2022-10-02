@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## Postfix - How to clean up the clientmqueue Spool Directory
-
-By Jack Szwergold
-
 Basic `/var/spool/clientmqueue` details if you need them for reference:
 
 - **directory path:** `/var/spool/clientmqueue`
@@ -69,7 +65,3 @@ Once that is all cleared up and done, back out of `clientmqueue` and back into `
 And set the permissions back to what they were at the beginning of the process:
 
 	sudo chmod o-x /var/spool/clientmqueue/
-
-***
-
-*Postfix - How to clean up the clientmqueue Spool Directory (c) by Jack Szwergold; written on September 17, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

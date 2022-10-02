@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## Postfix - Setting Up a Postfix SASL SMTP Email Relay
-
-By Jack Szwergold
-
 By default, Mac OS X has Postfix installed. But it’s not enabled by default. Not to mention sending emails via a `localhost` MTA will most likely result in the message being tagged as SPAM pretty quickly.
 
 So this cheat sheet explains how you can use an external SMTP account to send emails via Postfix on a local machine. Tested and works well in Mac OS X.
@@ -164,7 +160,3 @@ Then you can stop reload that XML config by running this `launchctl unload` comm
 Followed by this `launchctl load` command:
 
 	sudo launchctl load /System/Library/LaunchDaemons/org.postfix.master.plist
-
-***
-
-*Postfix - Setting Up a Postfix SASL SMTP Email Relay (c) by Jack Szwergold; written on October 7, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

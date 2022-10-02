@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## PHP - Microsoft SQLSRV Module Items
-
-By Jack Szwergold
-
 ### PHP Microsoft SQLSRV via Yum repos.
 
 Simple way if the setup is using the Microsoft repos. First, the install the system ODBC stuff:
@@ -57,7 +53,3 @@ Then install the Unix ODBC development stuff:
 Now install the PHP SQLSRV module items via PECL:
 
 	sudo pecl install sqlsrv pdo_sqlsrv
-
-***
-
-*PHP - Microsoft SQLSRV Module Items (c) by Jack Szwergold; written on January 25, 2019. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

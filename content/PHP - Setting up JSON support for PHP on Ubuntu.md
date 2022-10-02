@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## PHP - Setting up JSON support for PHP on Ubuntu
-
-By Jack Szwergold
-
 These were notes from an attempt to get JSON support included for a custom compiled version of PHP 5.1.6. Doesn’t seem to work as expected. Notes are here for reference just in case I need to revisit this process at some point.
 
 ### Get the Pear `json-1.2.1.tgz` archive.
@@ -84,7 +80,3 @@ Once the `configure` process completes, run `make`:
 Finally install it by running `sudo make install`:
 
 	sudo make install
-
-***
-
-*PHP - Setting up JSON support for PHP on Ubuntu (c) by Jack Szwergold; written on October 13, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

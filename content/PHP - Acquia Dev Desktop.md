@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## PHP - Acquia Dev Desktop
-
-By Jack Szwergold
-
 ## MySQL Specific Stuff
 
 Acquia Dev Desktop MySQL Binary Path
@@ -36,7 +32,3 @@ So a database can be imported like this:
 And a GZipped directory can be imported like this:
 
 	gunzip < /path/to/databases/some_website_db.sql.gz | mysql -uroot --host=127.0.0.1 --port=33067 some_website_db
-
-***
-
-*PHP - Acquia Dev Desktop (c) by Jack Szwergold; written on December 13, 2016. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

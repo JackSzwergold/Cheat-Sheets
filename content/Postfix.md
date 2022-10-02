@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## Postfix
-
-By Jack Szwergold
-
 ### Check if `postfix` is running in Mac OS X.
 
 In Mac OS X this checks to see what services are launched at startup; look for `org.postfix.master`:
@@ -200,7 +196,3 @@ A simple test using `sendmail` from the command line:
 A more intricate test using `sendmail` from the command line:
 
 	printf "From: Example Email <email_address@example.com>\nTo: email_address@example.com\nSubject: Hello, world.\n\nA quick brown fox jumped over the lazy dog.\n" | /usr/sbin/sendmail -F "Example Email" -f "email_address@example.com" "email_address@example.com"
-
-***
-
-*Postfix (c) by Jack Szwergold; written on September 17, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

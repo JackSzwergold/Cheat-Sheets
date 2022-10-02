@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## PHP
-
-By Jack Szwergold
-
 ### Disable `expose_php` in PHP.
 
 Check if `expose_php` is on like this:
@@ -158,7 +154,3 @@ In case you are working on a Red Hat Enterprise Linux setup that doesn’t have 
 And now just install it directly from the RPM like this:
 
 	sudo yum localinstall php-mbstring-5.3.3-48.el6_8.x86_64.rpm
-
-***
-
-*PHP (c) by Jack Szwergold; written on October 5, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*
