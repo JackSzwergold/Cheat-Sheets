@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## Tomcat6
-
-By Jack Szwergold
-
 ### Install Tomcat6.
 
 Install Tomcat6 via `aptitude` like this:
@@ -170,7 +166,3 @@ Change permissions on the following directories:
 	sudo chown tomcat6:www-readwrite -R /etc/tomcat6
 	sudo chown tomcat6:www-readwrite -R /usr/share/tomcat6
 	sudo chown tomcat6:www-readwrite -R /var/log/tomcat6
-
-***
-
-*Tomcat6 (c) by Jack Szwergold; written on September 24, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## SVN - Subversion Related Items
-
-By Jack Szwergold
-
 ### Adding a user to a Subversion repository.
 
 Adding a user to the Subversion basic authentication file:
@@ -60,7 +56,3 @@ Forces all files to be added:
 Commit all files via `*` and add a message/note about the commit:
 
 	svn commit -m "First commit for content edit purposes." *
-
-***
-
-*SVN - Subversion Related Items (c) by Jack Szwergold; written on October 8, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

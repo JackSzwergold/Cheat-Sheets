@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## SMARTMonTools
-
-By Jack Szwergold
-
 Then install SMARTMonTools via `aptitude` like this:
 
     sudo aptitude install smartmontools
@@ -227,7 +223,3 @@ Check to see if `[smart_*]` entry exists. If it doesn’t just add this simple c
 	# If the test string DEVICESCAN is the first uncommented text
 	# then smartd will scan for devices /dev/hd[a-l] and /dev/sd[a-z]
 	# DEVICESCAN may be followed by any desired Directives.
-
-***
-
-*SMARTMonTools (c) by Jack Szwergold; written on September 23, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## Telephony - Telephone System Test Numbers
-
-By Jack Szwergold
-
 ### These are still active after all these years.
 
 - **1-202-965-9970**: You have just de-activated this feature.
@@ -53,7 +49,3 @@ By Jack Szwergold
 - **1-718-816-9901**: You have reached the North Staten Island DMS-100, serving codes 273, 390, 442, 447, 448, 556, 720, 727, 815, 816, 876, and 981.
 - **1-800-356-9919**: Message 202. Test message 202.
 - **1-941-232-9901**: You have reached the Katonah DMS 100 Central Office Exchange 232. Thank you very much.
-
-***
-
-*Telephony - Telephone System Test Numbers (c) by Jack Szwergold; written on September 19, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

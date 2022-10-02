@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## SSH
-
-By Jack Szwergold
-
 ### An SSH tunnel example
 
 This would route traffic from a remote server (`example.com`) on port 80 to `localhost` on port 8080:
@@ -168,7 +164,3 @@ If for some reason your Vagrant installed VirtualBox hangs when you SSH into it.
 Then reinstall it by running this command:
 
     sudo aptitude install virtualbox-dkms
-
-***
-
-*SSH (c) by Jack Szwergold; written on September 15, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

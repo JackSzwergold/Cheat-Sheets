@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## Screen
-
-By Jack Szwergold
-
 Install `screen`:
 
     sudo aptitude install screen
@@ -34,7 +30,3 @@ So if you wanted to reattach to that session, just enter this line.
 	screen -D -r '2839.test_screen'
 
 The `-D` detaches the screen session and then the `-r` reattaches the session.
-
-***
-
-*Screen (c) by Jack Szwergold; written on September 27, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

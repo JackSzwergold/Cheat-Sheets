@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## SSH - Chroot and SFTP Notes
-
-By Jack Szwergold
-
 ### Setting up SFTP chroot access for a specific user.
 
 Open up the main `sshd_config` on the server:
@@ -60,7 +56,3 @@ Or do this to disable SFTP access on a per-group basis:
 
 	Match Group [groupname]
 	  Subsystem sftp /bin/false
-
-***
-
-*SSH - Chroot and SFTP Notes (c) by Jack Szwergold; written on September 17, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

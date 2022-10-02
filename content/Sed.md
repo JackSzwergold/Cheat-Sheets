@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## Sed
-
-By Jack Szwergold
-
 ### Comment out all uncommented lines in a file including empty lines.
 
 	sed -e '/^#/!s/\(.*\)/# \1/g' /etc/update-motd.d/90-updates-available
@@ -41,7 +37,3 @@ By Jack Szwergold
     # MOTD_90_PATH="/etc/update-motd.d/90-updates-available"
     # sudo echo $(awk '$0 && $0 !~ /^#/ {printf "# "}1' "${MOTD_90_PATH}") > "${MOTD_90_PATH}";
     # sudo gawk -i inplace '$0 && $0 !~ /^#/ {printf "# "}1' "${MOTD_90_PATH}"
-
-***
-
-*Sed (c) by Jack Szwergold; written on January 24, 2016. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

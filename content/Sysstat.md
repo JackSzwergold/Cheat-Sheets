@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## Sysstat
-
-By Jack Szwergold
-
 ### Install Sysstat.
 
 Install the Sysstat utilities to monitor system statistics via `aptitude`:
@@ -52,7 +48,3 @@ If you get a message like the following:
 Then just purge and re-install `sysstat` to get it back up and running:
 
     sudo aptitude purge sysstat
-
-***
-
-*Sysstat (c) by Jack Szwergold; written on September 16, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

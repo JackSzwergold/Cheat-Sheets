@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## Tar
-
-By Jack Szwergold
-
 Run this command to show a list of a Tar/Gzipped files contents:
 
     tar -ztvf [tar archive]
@@ -33,7 +29,3 @@ Would show the following content info:
 	-rwxr-xr-x  0 leitner users    1808 Oct 24  1998 fortune-0.2/debian/rules
 	-rw-r--r--  0 leitner users     514 Oct 24  1998 fortune-0.2/debian/fortune.6
 	-rw-r--r--  0 leitner users     286 Oct 25  1998 fortune-0.2/CHANGES
-
-***
-
-*Tar (c) by Jack Szwergold; written on October 8, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

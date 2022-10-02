@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## Stat
-
-By Jack Szwergold
-
 ### Using Stat in Mac OS X.
 
 **ACCESS:** Get the last access time of a file.
@@ -58,7 +54,3 @@ By Jack Szwergold
 **FILESIZE:** Get the size of a file.
 
 	stat -c "%s" filename_here.txt
-
-***
-
-*Stat (c) by Jack Szwergold; written on September 15, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*
