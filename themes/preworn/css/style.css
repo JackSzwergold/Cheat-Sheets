@@ -10,7 +10,7 @@ html, body {
 
 html {
   font-size: 16px;
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 body {
@@ -25,7 +25,6 @@ body {
 }
 
 /******************************************************************************/
-
 a,
 a:link,
 a:visited,
@@ -60,7 +59,6 @@ hr {
 }
 
 /******************************************************************************/
-
 *::selection {
   background: #dddddd;
 }
@@ -78,15 +76,14 @@ hr {
 /* |_|  \___/|_| |_|\__|___/
 /*
 /******************************************************************************/
-
 @font-face {
   font-family: 'SinaNovaReg';
   src: url('../fonts/SinaNova/SinaNovaReg-webfont.eot');
   src: url('../fonts/SinaNova/SinaNovaReg-webfont.eot?#iefix') format('embedded-opentype'),
-       url('../fonts/SinaNova/SinaNovaReg-webfont.woff2') format('woff2'),
-       url('../fonts/SinaNova/SinaNovaReg-webfont.woff') format('woff'),
-       url('../fonts/SinaNova/SinaNovaReg-webfont.ttf') format('truetype'),
-       url('../fonts/SinaNova/SinaNovaReg-webfont.svg#sinanova-regularregular') format('svg');
+    url('../fonts/SinaNova/SinaNovaReg-webfont.woff2') format('woff2'),
+    url('../fonts/SinaNova/SinaNovaReg-webfont.woff') format('woff'),
+    url('../fonts/SinaNova/SinaNovaReg-webfont.ttf') format('truetype'),
+    url('../fonts/SinaNova/SinaNovaReg-webfont.svg#sinanova-regularregular') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -99,8 +96,7 @@ hr {
 /* |_| |_|\___|\__,_|\__,_|\___|_|
 /*
 /******************************************************************************/
-
-body > header {
+body>header {
   position: fixed;
   top: 0;
   right: 0;
@@ -116,7 +112,7 @@ body > header {
   z-index: 10;
 }
 
-body > header h1 {
+body>header h1 {
   font-family: "SinaNovaReg", Georgia, "New York", "Times New Roman", Times, serif;
   font-weight: normal;
   font-style: normal;
@@ -126,12 +122,12 @@ body > header h1 {
   letter-spacing: 0.025em;
 }
 
-body > header h1,
-body > header h1 a,
-body > header h1 a:link,
-body > header h1 a:visited,
-body > header h1 a:hover,
-body > header h1 a:active {
+body>header h1,
+body>header h1 a,
+body>header h1 a:link,
+body>header h1 a:visited,
+body>header h1 a:hover,
+body>header h1 a:active {
   color: #ffffff;
 }
 
@@ -143,8 +139,7 @@ body > header h1 a:active {
 /* |_| \_|\__,_| \_/
 /*
 /******************************************************************************/
-
-body > nav {
+body>nav {
   position: fixed;
   top: 0;
   left: 0;
@@ -159,8 +154,8 @@ body > nav {
   z-index: 20;
 }
 
-body > nav ul,
-body > nav ul li label {
+body>nav ul,
+body>nav ul li label {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -169,8 +164,7 @@ body > nav ul li label {
   align-content: center;
 }
 
-
-body > nav ul li label {
+body>nav ul li label {
   font-family: "SinaNovaReg", Georgia, "New York", "Times New Roman", Times, serif;
   font-weight: normal;
   font-style: normal;
@@ -191,7 +185,6 @@ body > nav ul li label {
 /* |_|  |_|\__,_|_|_| |_|
 /*
 /******************************************************************************/
-
 div.wrapper {
   display: flex;
   flex-direction: column;
@@ -204,7 +197,7 @@ div.wrapper {
   height: 100vh;
   margin: 0;
   padding: 0;
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   overflow-x: hidden;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
@@ -213,13 +206,11 @@ div.wrapper {
 }
 
 /******************************************************************************/
-
 div.wrapper input[type="radio"] {
   display: none;
 }
 
 /******************************************************************************/
-
 div.container {
   /*display: flex;
   flex-direction: column;
@@ -233,8 +224,7 @@ div.container {
 }
 
 /******************************************************************************/
-
-div.container > div.element {
+div.container>div.element {
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -258,12 +248,11 @@ div.container > div.element {
 /*                   |_|
 /*
 /******************************************************************************/
-
-div.container > div.element.home {
+div.container>div.element.home {
   justify-content: center;
 }
 
-div.container > div.element.home > div.shape {
+div.container>div.element.home>div.shape {
   position: relative;
   float: left;
   display: block;
@@ -286,7 +275,6 @@ div.container > div.element.home > div.shape {
 }
 
 /**************************************************************************************************/
-
 /*@keyframes shapeBackgroundColorShift {
   from {
     background-color: transparent;
@@ -297,42 +285,41 @@ div.container > div.element.home > div.shape {
     box-shadow: inset 2.5rem 2.5rem 2.5rem 0 rgba(68, 55, 49, 0.25), 1.25rem 1.25rem 0.75rem 0 rgba(68, 55, 49, 0.25);
   }
 }*/
-
-div.container > div.element.home > div.shape > nav {
+div.container>div.element.home>div.shape>nav {
   display: flex;
   /* flex-direction: column; */
-	/* flex-direction: column-reverse; */
-	/* flex-direction: row; */
-	/* flex-direction: row-reverse; */
-	flex-direction: row;
-	/* flex-wrap: nowrap; */
-	/* flex-wrap: wrap; */
-	/* flex-wrap: wrap-reverse; */
-	flex-wrap: wrap;
-	/* align-items: flex-start; */
-	/* align-items: flex-end; */
-	/* align-items: center; */
-	/* align-items: baseline; */
-	/* align-items: stretch; */
-	align-items: flex-start;
-	/* justify-content: flex-start; */
-	/* justify-content: flex-end; */
-	/* justify-content: center; */
-	/* justify-content: space-between; */
-	/* justify-content: space-around; */
-	justify-content: center;
-	/* align-content: flex-start; */
-	/* align-content: flex-end; */
-	/* align-content: center; */
-	/* align-content: stretch; */
-	/* align-content: space-between; */
-	/* align-content: space-around; */
-	align-content: space-between;
+  /* flex-direction: column-reverse; */
+  /* flex-direction: row; */
+  /* flex-direction: row-reverse; */
+  flex-direction: row;
+  /* flex-wrap: nowrap; */
+  /* flex-wrap: wrap; */
+  /* flex-wrap: wrap-reverse; */
+  flex-wrap: wrap;
+  /* align-items: flex-start; */
+  /* align-items: flex-end; */
+  /* align-items: center; */
+  /* align-items: baseline; */
+  /* align-items: stretch; */
+  align-items: flex-start;
+  /* justify-content: flex-start; */
+  /* justify-content: flex-end; */
+  /* justify-content: center; */
+  /* justify-content: space-between; */
+  /* justify-content: space-around; */
+  justify-content: center;
+  /* align-content: flex-start; */
+  /* align-content: flex-end; */
+  /* align-content: center; */
+  /* align-content: stretch; */
+  /* align-content: space-between; */
+  /* align-content: space-around; */
+  align-content: space-between;
   width: 100%;
   height: 100%;
 }
 
-div.container > div.element.home > div.shape > nav > label {
+div.container>div.element.home>div.shape>nav>label {
   flex-grow: 1;
   flex-shrink: 1;
   flex-basis: 40%;
@@ -340,38 +327,37 @@ div.container > div.element.home > div.shape > nav > label {
   height: 33.33%;
 }
 
-div.container > div.element.home > div.shape > nav > label:hover {
+div.container>div.element.home>div.shape>nav>label:hover {
   cursor: pointer;
 }
 
 /**************************************************************************************************/
-
-div.container > div.element.home input[type="radio"].shape_1:checked ~ div.shape {
+div.container>div.element.home input[type="radio"].shape_1:checked~div.shape {
   background: radial-gradient(circle farthest-corner at left top, #d01c1f 0%, #f7882f 60%, #f7c331 100%);
   box-shadow: inset 2.5rem 2.5rem 2.5rem 0 rgba(68, 55, 49, 0.25), 1.25rem 1.25rem 0.75rem 0 rgba(68, 55, 49, 0.25);
 }
 
-div.container > div.element.home input[type="radio"].shape_2:checked ~ div.shape {
+div.container>div.element.home input[type="radio"].shape_2:checked~div.shape {
   background: radial-gradient(circle farthest-corner at right top, #d01c1f 0%, #f7882f 60%, #f7c331 100%);
   box-shadow: inset -2.5rem 2.5rem 2.5rem 0 rgba(68, 55, 49, 0.25), 1.25rem 1.25rem 0.75rem 0 rgba(68, 55, 49, 0.25);
 }
 
-div.container > div.element.home input[type="radio"].shape_3:checked ~ div.shape {
+div.container>div.element.home input[type="radio"].shape_3:checked~div.shape {
   background: linear-gradient(90deg, #d01c1f 0%, #f7882f 60%, #f7c331 100%);
   box-shadow: inset 2.5rem 0 2.5rem 0 rgba(68, 55, 49, 0.25), 1.25rem 1.25rem 0.75rem 0 rgba(68, 55, 49, 0.25);
 }
 
-div.container > div.element.home input[type="radio"].shape_4:checked ~ div.shape {
+div.container>div.element.home input[type="radio"].shape_4:checked~div.shape {
   background: linear-gradient(-90deg, #d01c1f 0%, #f7882f 60%, #f7c331 100%);
   box-shadow: inset -2.5rem 0 2.5rem 0 rgba(68, 55, 49, 0.25), 1.25rem 1.25rem 0.75rem 0 rgba(68, 55, 49, 0.25);
 }
 
-div.container > div.element.home input[type="radio"].shape_5:checked ~ div.shape {
+div.container>div.element.home input[type="radio"].shape_5:checked~div.shape {
   background: radial-gradient(circle farthest-corner at left bottom, #d01c1f 0%, #f7882f 60%, #f7c331 100%);
   box-shadow: inset 2.5rem -2.5rem 2.5rem 0 rgba(68, 55, 49, 0.25), 1.25rem 1.25rem 0.75rem 0 rgba(68, 55, 49, 0.25);
 }
 
-div.container > div.element.home input[type="radio"].shape_6:checked ~ div.shape {
+div.container>div.element.home input[type="radio"].shape_6:checked~div.shape {
   background: radial-gradient(circle farthest-corner at right bottom, #d01c1f 0%, #f7882f 60%, #f7c331 100%);
   box-shadow: inset -2.5rem -2.5rem 2.5rem 0 rgba(68, 55, 49, 0.25), 1.25rem 1.25rem 0.75rem 0 rgba(68, 55, 49, 0.25);
 }
@@ -385,8 +371,7 @@ div.container > div.element.home input[type="radio"].shape_6:checked ~ div.shape
 /* /_/   \_\_|   \__|_|\___|_|\___|
 /*
 /******************************************************************************/
-
-div.container > div.element article {
+div.container>div.element article {
   position: relative;
   float: left;
   display: block;
@@ -398,13 +383,12 @@ div.container > div.element article {
 }
 
 /******************************************************************************/
-
-div.container > div.element article h1,
-div.container > div.element article h2,
-div.container > div.element article h3,
-div.container > div.element article h4,
-div.container > div.element article h5,
-div.container > div.element article h6 {
+div.container>div.element article h1,
+div.container>div.element article h2,
+div.container>div.element article h3,
+div.container>div.element article h4,
+div.container>div.element article h5,
+div.container>div.element article h6 {
   font-family: "SinaNovaReg", Georgia, "New York", "Times New Roman", Times, serif;
   font-weight: normal;
   font-style: normal;
@@ -414,72 +398,71 @@ div.container > div.element article h6 {
   color: #333333;
 }
 
-div.container > div.element article h1 a,
-div.container > div.element article h1 a:link,
-div.container > div.element article h1 a:visited,
-div.container > div.element article h1 a:hover,
-div.container > div.element article h1 a:active,
-div.container > div.element article h2 a,
-div.container > div.element article h2 a:link,
-div.container > div.element article h2 a:visited,
-div.container > div.element article h2 a:hover,
-div.container > div.element article h2 a:active,
-div.container > div.element article h3 a,
-div.container > div.element article h3 a:link,
-div.container > div.element article h3 a:visited,
-div.container > div.element article h3 a:hover,
-div.container > div.element article h3 a:active,
-div.container > div.element article h4 a,
-div.container > div.element article h4 a:link,
-div.container > div.element article h4 a:visited,
-div.container > div.element article h4 a:hover,
-div.container > div.element article h4 a:active {
+div.container>div.element article h1 a,
+div.container>div.element article h1 a:link,
+div.container>div.element article h1 a:visited,
+div.container>div.element article h1 a:hover,
+div.container>div.element article h1 a:active,
+div.container>div.element article h2 a,
+div.container>div.element article h2 a:link,
+div.container>div.element article h2 a:visited,
+div.container>div.element article h2 a:hover,
+div.container>div.element article h2 a:active,
+div.container>div.element article h3 a,
+div.container>div.element article h3 a:link,
+div.container>div.element article h3 a:visited,
+div.container>div.element article h3 a:hover,
+div.container>div.element article h3 a:active,
+div.container>div.element article h4 a,
+div.container>div.element article h4 a:link,
+div.container>div.element article h4 a:visited,
+div.container>div.element article h4 a:hover,
+div.container>div.element article h4 a:active {
   color: #333333;
 }
 
-div.container > div.element article h1 {
+div.container>div.element article h1 {
   font-size: 2.625rem;
   line-height: 1em;
   margin: 0.25em 0 0.25em 0;
 }
 
-div.container > div.element article h1:first-child {
+div.container>div.element article h1:first-child {
   margin: 0 0 0.25em 0;
 }
 
-div.container > div.element article h2 {
+div.container>div.element article h2 {
   font-size: 1.75rem;
   line-height: 1em;
   margin: 0.25em 0 0.25em 0;
 }
 
-div.container > div.element article h3 {
+div.container>div.element article h3 {
   font-size: 1.625rem;
   line-height: 1em;
   margin: 0.25em 0 0.25em 0;
 }
 
-div.container > div.element article h4 {
+div.container>div.element article h4 {
   font-size: 1.5rem;
   line-height: 1em;
   margin: 0.25em 0 0.25em 0;
 }
 
-div.container > div.element article h5 {
+div.container>div.element article h5 {
   font-size: 1.25rem;
   line-height: 1em;
   margin: 0.25em 0 0.25em 0;
 }
 
-div.container > div.element article h6 {
+div.container>div.element article h6 {
   font-size: 1.125rem;
   line-height: 1em;
   margin: 0.25em 0 0.25em 0;
 }
 
 /******************************************************************************/
-
-div.container > div.element article p {
+div.container>div.element article p {
   font-family: "SinaNovaReg", Georgia, "New York", "Times New Roman", Times, serif;
   font-weight: normal;
   font-style: normal;
@@ -490,15 +473,15 @@ div.container > div.element article p {
   clear: both;
 }
 
-div.container > div.element article p:last-child {
+div.container>div.element article p:last-child {
   margin: 0;
 }
 
-div.container > div.element article p a,
-div.container > div.element article p a:link,
-div.container > div.element article p a:visited,
-div.container > div.element article p a:hover,
-div.container > div.element article p a:active {
+div.container>div.element article p a,
+div.container>div.element article p a:link,
+div.container>div.element article p a:visited,
+div.container>div.element article p a:hover,
+div.container>div.element article p a:active {
   color: #333333;
   background-image: linear-gradient(#333333 50%, #333333 50%);
   background-repeat: repeat-x;
@@ -507,22 +490,21 @@ div.container > div.element article p a:active {
 }
 
 /******************************************************************************/
-
-div.container > div.element article ul,
-div.container > div.element article ol {
+div.container>div.element article ul,
+div.container>div.element article ol {
   margin: 0;
   clear: both;
   column-count: 3;
   column-gap: 1rem;
 }
 
-div.container > div.element article ul:last-child,
-div.container > div.element article ol:last-child {
+div.container>div.element article ul:last-child,
+div.container>div.element article ol:last-child {
   padding: 0;
 }
 
-div.container > div.element article ul li,
-div.container > div.element article ol li {
+div.container>div.element article ul li,
+div.container>div.element article ol li {
   font-family: "SinaNovaReg", Georgia, "New York", "Times New Roman", Times, serif;
   font-weight: normal;
   font-style: normal;
@@ -533,30 +515,30 @@ div.container > div.element article ol li {
   clear: both;
 }
 
-div.container > div.element article ul li,
-div.container > div.element article ol li {
+div.container>div.element article ul li,
+div.container>div.element article ol li {
   list-style-position: outside;
   display: list-item;
 }
 
-div.container > div.element article ul li {
+div.container>div.element article ul li {
   list-style-type: disc;
 }
 
-div.container > div.element article ol li {
+div.container>div.element article ol li {
   list-style-type: decimal;
 }
 
-div.container > div.element article ul li a,
-div.container > div.element article ul li a:link,
-div.container > div.element article ul li a:visited,
-div.container > div.element article ul li a:hover,
-div.container > div.element article ul li a:active,
-div.container > div.element article ol li a,
-div.container > div.element article ol li a:link,
-div.container > div.element article ol li a:visited,
-div.container > div.element article ol li a:hover,
-div.container > div.element article ol li a:active {
+div.container>div.element article ul li a,
+div.container>div.element article ul li a:link,
+div.container>div.element article ul li a:visited,
+div.container>div.element article ul li a:hover,
+div.container>div.element article ul li a:active,
+div.container>div.element article ol li a,
+div.container>div.element article ol li a:link,
+div.container>div.element article ol li a:visited,
+div.container>div.element article ol li a:hover,
+div.container>div.element article ol li a:active {
   background-image: linear-gradient(#ffffff 50%, #777777 50%);
   background-repeat: repeat-x;
   background-position: 0 90%;
@@ -564,24 +546,21 @@ div.container > div.element article ol li a:active {
 }
 
 /******************************************************************************/
-
-div.container > div.element article section {
+div.container>div.element article section {
   padding: 0 0 0.5rem 0;
 }
 
-div.container > div.element article section:last-child {
+div.container>div.element article section:last-child {
   padding: 0;
 }
 
 /******************************************************************************/
-
-div.container > div.element article > section > footer p {
+div.container>div.element article>section>footer p {
   font-size: 0.85rem;
   line-height: 1.25rem;
 }
 
 /******************************************************************************/
-
 pre {
   background: #333;
   color: #0f0;
@@ -620,54 +599,52 @@ pre code {
 /*                                             |___/
 /*
 /******************************************************************************/
-
-div.container > div.element:nth-child(1) {
+div.container>div.element:nth-child(1) {
   transform: translateX(0rem);
 }
 
-div.container > div.element:nth-child(2) {
+div.container>div.element:nth-child(2) {
   transform: translateX(180rem);
 }
 
-div.container > div.element:nth-child(3) {
+div.container>div.element:nth-child(3) {
   transform: translateX(360rem);
 }
 
-div.container > div.element:nth-child(4) {
+div.container>div.element:nth-child(4) {
   transform: translateX(540rem);
 }
 
-div.container > div.element:nth-child(5) {
+div.container>div.element:nth-child(5) {
   transform: translateX(720rem);
 }
 
-div.container > div.element:nth-child(6) {
+div.container>div.element:nth-child(6) {
   transform: translateX(900rem);
 }
 
 /******************************************************************************/
-
-div.wrapper input[type="radio"].element_1:checked ~ div.container {
+div.wrapper input[type="radio"].element_1:checked~div.container {
   transform: translateX(0rem);
 }
 
-div.wrapper input[type="radio"].element_2:checked ~ div.container {
+div.wrapper input[type="radio"].element_2:checked~div.container {
   transform: translateX(-180rem);
 }
 
-div.wrapper input[type="radio"].element_3:checked ~ div.container {
+div.wrapper input[type="radio"].element_3:checked~div.container {
   transform: translateX(-360rem);
 }
 
-div.wrapper input[type="radio"].element_4:checked ~ div.container {
+div.wrapper input[type="radio"].element_4:checked~div.container {
   transform: translateX(-540rem);
 }
 
-div.wrapper input[type="radio"].element_5:checked ~ div.container {
+div.wrapper input[type="radio"].element_5:checked~div.container {
   transform: translateX(-720rem);
 }
 
-div.wrapper input[type="radio"].element_6:checked ~ div.container {
+div.wrapper input[type="radio"].element_6:checked~div.container {
   transform: translateX(-900rem);
 }
 
@@ -680,45 +657,38 @@ div.wrapper input[type="radio"].element_6:checked ~ div.container {
 /* |_|  |_|\___|\__,_|_|\__,_|  \__\_\\__,_|\___|_|  |_|\___||___/
 /*
 /******************************************************************************/
-
 @media (min-width: 320px) {
-
   div.container {
     width: 17.25rem;
   }
 
-  div.container > div.element article ul,
-  div.container > div.element article ol {
+  div.container>div.element article ul,
+  div.container>div.element article ol {
     column-count: 1;
     column-gap: 1rem;
   }
-
 }
 
 @media (min-width: 640px) {
-
   div.container {
     width: 34.5rem;
   }
 
-  div.container > div.element article ul,
-  div.container > div.element article ol {
+  div.container>div.element article ul,
+  div.container>div.element article ol {
     column-count: 2;
     column-gap: 1rem;
   }
-
 }
 
 @media (min-width: 768px) {
-
   div.container {
     width: 48rem;
   }
 
-  div.container > div.element article ul,
-  div.container > div.element article ol {
+  div.container>div.element article ul,
+  div.container>div.element article ol {
     column-count: 3;
     column-gap: 1rem;
   }
-
 }
