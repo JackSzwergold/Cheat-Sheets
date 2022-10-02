@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## Find - Image Manipulation Related Items
-
-By Jack Szwergold
-
 ### Convert images into a JPEG tumbnail.
 
 #### The process for just JPEG images.
@@ -220,7 +216,3 @@ This script is a first draft of a script that uses ImageMagick and Potrace to co
 	    rm -f "${pnm_filepath}";
 
 	  done
-
-***
-
-*Find - Image Manipulation Related Items (c) by Jack Szwergold; written on September 29, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*x

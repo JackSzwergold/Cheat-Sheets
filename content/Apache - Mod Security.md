@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## Apache - Mod Security
-
-By Jack Szwergold
-
 ### Installing Mod Security.
 
 Install the Apache `mod_security` module and related items:
@@ -219,7 +215,3 @@ Check if Mod Security is creating audit logs:
 Remove Mod Security audit logs:
 
     sudo rm /var/log/apache2/modsec_audit*
-
-***
-
-*CCheat Sheet - Apache - Mod Security (c) by Jack Szwergold; written on October 1, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

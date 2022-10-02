@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## Apache - Mod Evasive
-
-By Jack Szwergold
-
 Install the Apache `mod_evasive` module:
 
     sudo aptitude install libapache2-mod-evasive
@@ -119,7 +115,3 @@ The output will be a pile of headers for each HTTP request that is made; see bel
 	HTTP/1.1 403 Forbidden
 	HTTP/1.1 403 Forbidden
 	HTTP/1.1 403 Forbidden
-
-***
-
-*Apache - Mod Evasive (c) by Jack Szwergold; written on September 27, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

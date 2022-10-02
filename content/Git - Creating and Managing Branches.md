@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## Git - Creating and Managing Branches
-
-By Jack Szwergold
-
 ### Create a development branch & push that to the origin.
 
 While most git repositories are set to the `master` branch to begin with, that’s not generally where you want to do your work. It’s best to create a separate/new branch to do work in and merge that to `master` when the work is done/tested.
@@ -253,7 +249,3 @@ And the output will be something like this; note there are no “dangling blobs�
 
 	Checking object directories: 100% (256/256), done.
 	Checking objects: 100% (139/139), done.
-
-***
-
-*Git - Creating and Managing Branches (c) by Jack Szwergold; written on September 15, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

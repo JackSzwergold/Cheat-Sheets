@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## Apache - SSL Certificates
-
-By Jack Szwergold
-
 ### Generate a CSR (certificate signing request).
 
     openssl req -nodes -newkey rsa:2048 -keyout www.example.com.key -out www.example.com.csr
@@ -59,7 +55,3 @@ Extracting the certificate from the `.pfx` file:
 
 	  </VirtualHost>
 	</IfModule>
-
-***
-
-*Apache - SSL Certificates (c) by Jack Szwergold; written on September 19, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

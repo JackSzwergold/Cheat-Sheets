@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## Git - Rewinding to a Specific Commit
-
-By Jack Szwergold
-
 ### Rewinding to a specific commit hash in the repository.
 
 Check the log for the commit hash.
@@ -32,7 +28,3 @@ Reset the repo to that commit.
 Now push that commit back to GitHub.
 
     git push -f
-
-***
-
-*Git - Rewinding to a Specific Commit (c) by Jack Szwergold; written on September 15, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

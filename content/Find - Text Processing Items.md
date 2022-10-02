@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## Find - Text Processing Items
-
-By Jack Szwergold
-
 This simple script uses `tr`:
 
       tr -d '\r' < "${full_text_filepath}" > "${full_text_filepath}".txt;
@@ -24,7 +20,3 @@ And here you go:
       do
         dos2unix -k -n -c mac "${full_text_filepath}" "${full_text_filepath}".txt;
       done
-
-***
-
-*Find - Text Processing Items (c) by Jack Szwergold; written on May 19, 2021. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

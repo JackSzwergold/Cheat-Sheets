@@ -7,11 +7,7 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## Amazon - Amazon S3 Fuse Integration
-
-By Jack Szwergold
-
-### Install Tony Wang’s fork of `s3fs` version 1.59.
+## Install Tony Wang’s fork of `s3fs` version 1.59.
 
 The reason you should install Tony Wang]s fork of `s3fs` version 1.59 is that—unlike the main master code—his fork supports folders created by the Amazon S3 control panel.
 
@@ -141,7 +137,3 @@ To avoid this, use the `–size-only` flag and use the `-r` flag instead of an `
 Before running that command for real, run it in a “dry run” mode to see exactly what Rsync would be acting on:
 
     rsync --dry-run -vr –size-only /path/to/the/source/ /path/to/the/destination/
-
-***
-
-*Amazon - Amazon S3 Fuse Integration (c) by Jack Szwergold; written on October 6, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

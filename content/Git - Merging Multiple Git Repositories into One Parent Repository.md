@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## Git - Merging Multiple Git Repositories into One Parent Repository
-
-By Jack Szwergold
-
 This process will allow you to merge two disparate repositories into one parent repository. In this example, the contents of each “child” repository will be stored in directories named `Directory_A` and `Directory_B`. Feel free to adjust specifics to match your projects needs.
 
 ### Create a parent project directory.
@@ -76,7 +72,3 @@ Then run `read-tree` to get the contents of `Child_B` into `Directory_B` like th
 And finally commit it like this:
 
 	git commit -a -m "Merging the contents of Child_B into Directory_B."
-
-***
-
-*Git - Merging Multiple Git Repositories into One Parent Repository (c) by Jack Szwergold; written on October 18, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

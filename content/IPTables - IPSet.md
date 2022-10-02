@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## IPTables - IPSet
-
-By Jack Szwergold
-
 ### Installing IPSet.
 
 Install `ipset`:
@@ -221,7 +217,3 @@ To remove all entries from the `BANNED_RANGES` IP set, just “flush” it like 
 And if somehow you need to remove that IPTables rule, run this command:
 
     sudo iptables -D INPUT -p tcp -m set --match-set BANNED_RANGES src -j REJECT
-
-***
-
-*IPTables - IPSet (c) by Jack Szwergold; written on October 27, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

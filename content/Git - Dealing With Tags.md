@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## Git - Dealing With Tags
-
-By Jack Szwergold
-
 ### Simple introduction to how tags work in git.
 
 List all local tags.
@@ -36,7 +32,3 @@ Push tags to origin.
 Checkout a specific tag:
 
     git checkout tags/1.0.6
-
-***
-
-*Git - Dealing With Tags (c) by Jack Szwergold; written on September 15, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

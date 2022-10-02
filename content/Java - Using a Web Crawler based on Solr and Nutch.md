@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## Java - Using a Web Crawler based on Solr and Nutch
-
-By Jack Szwergold
-
 ### Crawling via Bash script.
 
 Just run `crawl_and_index.sh` to get the crawler to run automatically:
@@ -120,7 +116,3 @@ How to follow log files.
 	sudo tail -f -n 200 /usr/share/apache-nutch-1.4/runtime/local/logs/hadoop.log
 	sudo tail -f -n 200 /var/log/tomcat6/catalina.2015-10-14.log
 	sudo tail -f -n 200 /var/log/tomcat6/catalina.out
-
-***
-
-*Java - Using a Web Crawler based on Solr and Nutch (c) by Jack Szwergold; written on October 14, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

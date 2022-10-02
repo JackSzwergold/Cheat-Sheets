@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## Apache - Expires and Cache Control Headers
-
-By Jack Szwergold
-
 ### How to disable cache control and expires headers.
 
 An example of disabling cache control headers:
@@ -104,7 +100,3 @@ An example of cache control and expires headers for an Amazon CloudFront CDN set
 	  ExpiresByType image/x-icon "access plus 7 seconds"
 	  ExpiresDefault "access plus 7 seconds"
 	</IfModule>
-
-***
-
-*Apache - Expires and Cache Control Headers (c) by Jack Szwergold; written on September 19, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

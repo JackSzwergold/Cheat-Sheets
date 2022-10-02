@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## IPTables - Upgrade for GeoIP Support
-
-By Jack Szwergold
-
 ### For Reference Only! 100% none of this seems to work!
 
 This is just here for refernece for now. Might not be worth the headache to get this setup for Ubuntu 12.04.5.
@@ -115,7 +111,3 @@ Check if the GeoIP module was installed:
 A test ban for (sadly) all of China:
 
     sudo iptables -A INPUT -m geoip --src-cc CN -j DROP
-
-***
-
-*IPTables - Upgrade for GeoIP Support (c) by Jack Szwergold; written on October 27, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

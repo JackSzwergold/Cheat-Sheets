@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## Apache - Cordova
-
-By Jack Szwergold
-
 ### Cordova related stuff.
 
 #### Installing and upgrading Cordova.
@@ -106,7 +102,3 @@ First, clear out the temp files, Node modules and Bower components:
 Next, reinstall the NPM and Bower dependencies:
 
     npm install && bower install
-
-***
-
-*Apache - Cordova (c) by Jack Szwergold; written on March 11, 2016. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

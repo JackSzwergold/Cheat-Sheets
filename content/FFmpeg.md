@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## FFmpeg
-
-By Jack Szwergold
-
 Extract subtitles from an MP4:
 
     ffmpeg -i input.mp4 -map 0:s:0 input.srt
@@ -148,7 +144,3 @@ Use this command to fix an MKV with an incorrect duration or other metadata rela
 	     -tag:v hvc1 -aspect 4/3 -sn \
 	     -map 0:0 -map 0:2 output.mp4
 	     ;
-
-***
-
-*FFmpeg (c) by Jack Szwergold; written on November 7, 2018. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

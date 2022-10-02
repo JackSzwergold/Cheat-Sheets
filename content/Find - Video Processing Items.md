@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## Find - Video Processing Items
-
-By Jack Szwergold
-
 ### Video Metadata Parser
 
 This script (`video_metadata_parser.sh`) uses ExifTool to parse dates, times and titles from a directory of video files on the desktop. Info is saved on the desktop into a dated text file named something like `VideoInfo-2017-07-25.txt`:
@@ -97,8 +93,3 @@ Simple script traverse a directory filled with DV, MOV and MKV files and extract
 	    PATH_SANS_EXTENSION="${FULL_PATH%.*}"
 	    caffeinate ffmpeg -y -v quiet -i "${FULL_PATH}" -map_metadata -1 -c:v copy -c:a copy -map 0:0 -map 0:1 "${PATH_SANS_EXTENSION}"_content.mp4 < /dev/null;
 	  done
-
-
-***
-
-*Find - Video Processing Items (c) by Jack Szwergold; written on July 25, 2017. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

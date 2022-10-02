@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## Amazon - Amazon EC2 Tool Installation Under Ubuntu
-
-By Jack Szwergold
-
 Edit the sources list:
 
 	sudo nano /etc/apt/sources.list
@@ -33,7 +29,3 @@ Now you can install the Amazon EC2 API tools:
 This is an example command that allows one to open the Amazone EC2 security set to all ICMP traffic instead of just SSH traffic on port `22`:
 
     ec2-authorize -O "$AWS_ACCES_KEY" -W "$AWS_SECRET_KEY" default -P icmp -t -1:-1 -s 0.0.0.0/0
-
-***
-
-*Amazon - Amazon EC2 Tool Installation Under Ubuntu (c) by Jack Szwergold; written on January 17, 2016. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

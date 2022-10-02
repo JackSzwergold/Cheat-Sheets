@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## Java - Installing a Web Crawler based on Solr and Nutch
-
-By Jack Szwergold
-
 ### Solr and Nutch web crawler prerequisites.
 
 Solr and Nutch web crawler requires Java 6—or better—to be installed for it to work. So make sure the system you plan on running the Solr and Nutch web crawler on has Java 6 installed and `JAVA_HOME` is properly set on the system.
@@ -498,7 +494,3 @@ And change it to this; note the `address="127.0.0.1"` line:
 	  </Location>
 	
 	</IfModule>
-
-***
-
-*Java - Installing a Web Crawler based on Solr and Nutch (c) by Jack Szwergold; written on October 14, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

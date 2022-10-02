@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## Find - Audio Processing Items
-
-By Jack Szwergold
-
 ### Convert FLAC to CBR MP3 files.
 
 Convert FLAC audio files into MP3 audio files at 320k CBR:
@@ -152,7 +148,3 @@ Convert FLAC audio files into MP3 audio by piping them through LAME for VBR outp
 	      lame --quiet --add-id3v2 --pad-id3v2 --tt "${mp3_title}" --ta "${mp3_artist}" --tl "${mp3_album}" --tn "${mp3_track}"/"${mp3_tracktotal}" --tg "${mp3_genre}" -r -m s --lowpass 19.7 -V 3 --vbr-new -q 0 -b 96 --scale 0.99 --athaa-sensitivity 1 - "${mp3_filepath}";
 
 	  done
-
-***
-
-*Find - Audio Processing Items (c) by Jack Szwergold; written on January 1, 2017. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

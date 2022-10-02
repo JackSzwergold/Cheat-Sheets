@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## ImageMagick
-
-By Jack Szwergold
-
 ### Basics of image conversion.
 
 Recompress a JPEG image at 95 percent quality:
@@ -130,8 +126,3 @@ These commands will generate some test images at 1920 pixels wide by 1200 pixels
 	convert -size 1920x1200 xc:orange ~/Desktop/big_test_orange_1920w.jpg
 	convert -size 1920x1200 xc:darkgrey ~/Desktop/big_test_darkgrey_1920w.jpg
 	convert -size 1920x1200 xc:purple ~/Desktop/big_test_purple_1920w.jpg
-
-***
-
-*ImageMagick (c) by Jack Szwergold; written on October 5, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*
-

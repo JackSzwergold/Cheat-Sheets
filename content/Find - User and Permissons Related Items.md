@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## Find - User and Permissions Related Items
-
-By Jack Szwergold
-
 ### Change user ownership on a directory.
 
 Dry run of the command using `echo`:
@@ -46,7 +42,3 @@ Actual, functional script:
 	  do
 	    sudo chown some_user "${FILENAME}"
 	  done
-
-***
-
-*Find - User and Permissions Related Items (c) by Jack Szwergold; written on September 28, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

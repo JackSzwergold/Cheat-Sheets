@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## Apache - Load Balancer Related Items
-
-By Jack Szwergold
-
 The purpose of this cheat sheet is to explain the basic concepts behind using an Apache-based load balancer.
 
 In this setup we are using the same physical server with balancer members running on ports `8001` and `8002` just for an example’s sake. This setup is strictly for proof-of-concept and testing purposes. In a real world implementation, the balancer—and each of the members of the load balancer—would be it’s own separate server thus balancing the load across different servers.
@@ -276,7 +272,3 @@ And reload Apache for the config to take effect:
 If you need to disable that virtual host configuration, run this `a2dissite` command:
 
     sudo a2dissite sandbox.local.8002.conf
-
-***
-
-*Apache - Load Balancer Related Items (c) by Jack Szwergold; written on October 18, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## Git - Removing a File from all Commits in a Branch
-
-By Jack Szwergold
-
 ### How to remove a file from every commit in a branch.
 
 This will effectively rewrite every commit to remove the `markdown/things/index.md`.
@@ -26,7 +22,3 @@ But that might leave a final commit that would still show the file’s existence
 Now push that commit back to GitHub.
 
     git push -f
-
-***
-
-*Git - Removing a File from all Commits in a Branch (c) by Jack Szwergold; written on September 15, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## Git - Initing a Repo and Pushing to Origin
-
-By Jack Szwergold
-
 ### Install GIT and get your local config setup.
 
 For GitHub to work correctly with your email address and username, you should make sure to set your local email address and name on your system after your initial install.
@@ -187,7 +183,3 @@ Use this command to remove a directory from all commits in a branch; in this exa
 
 	git filter-branch -f --tree-filter 'rm -rf some_foobar_directory ' \
 		--prune-empty --tag-name-filter cat -- --all
-
-***
-
-*Git - Initing a Repo and Pushing to Origin (c) by Jack Szwergold; written on September 15, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

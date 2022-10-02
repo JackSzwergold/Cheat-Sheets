@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## DD
-
-By Jack Szwergold
-
 ### Benchmark disk speed with DD.
 
 Test write speed:
@@ -78,7 +74,3 @@ Install the `pv` (pipe viewer) daemon:
 Then reformat your `dd` commands to insert `pv` inbetween the input files (`if`) and output files (`of`) like this:
 
     dd if=/dev/zero | pv | dd of=/dev/null
-
-***
-
-*DD (c) by Jack Szwergold; written on September 15, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

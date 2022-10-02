@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## Git - Restoring Lost Commits from Dangling Blobs and Reference Logs
-
-By Jack Szwergold
-
 The basic concept here is you dug yourself into a hole by reverting commits. And there is no easy way to “pull” from origin or recover by any other means.
 
 Don’t panic! Hope is not lost! As long as you have not done any “garbage collection” (via: `git gc`), a “dangling blob” might still be there just waiting for you to recover it.
@@ -89,7 +85,3 @@ Once you enter that command, the merge process should run and the commits you th
 	 create mode 100644 Cheat Sheet - Git - Restoring a Deleted File in a Git Repository.md
 
 With that done, pat yourself on the back. You just recovered some hard work and learned a new trick.
-
-***
-
-*Git - Restoring Lost Commits from Dangling Blobs and Reference Logs (c) by Jack Szwergold; written on October 3, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## iPerf
-
-By Jack Szwergold
-
 ### Basic iPerf usage.
 
 iPerf is a network bandwidth testing tool that measures bandwidth between machines during a (default) 10 second test period. Results are reported in `Mbits/sec` but can be adjusted via the `-f` flag.
@@ -207,7 +203,3 @@ Set the interval to be 2 seconds between tests, run it as a dual test to/from se
 	       http://iperf.sourceforge.net/
 	
 	NLANR/DAST                        APRIL 2008                          IPERF(1)
-
-***
-
-*iPerf (c) by Jack Szwergold; written on September 15, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

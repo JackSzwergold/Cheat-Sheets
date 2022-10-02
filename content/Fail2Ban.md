@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## Fail2Ban
-
-By Jack Szwergold
-
 ### Install Fail2Ban.
 
 First, install Fail2Ban via `aptitude` like this; this will install verison 0.8.6 of Fail2Ban on Ubuntu 12.04:
@@ -471,7 +467,3 @@ And the output would be something like this:
 	2015-10-27 05:09:02 ssh Ban 119.167.153.189
 	2015-10-27 13:04:40 ssh-ddos Ban 190.220.129.66
 	2015-10-27 17:01:12 ssh Ban 197.157.244.243
-
-***
-
-*Fail2Ban (c) by Jack Szwergold; written on October 19, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

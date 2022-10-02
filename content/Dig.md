@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## Dig
-
-By Jack Szwergold
-
 ### Basic Dig commands.
 
 Detailed DNS info for a hostname:
@@ -50,7 +46,3 @@ Get all records connected to a domain:
 Get pretty much all available info on a domain:
 
     dig +nocmd [hostname] any +multiline +noall +answer
-
-***
-
-*Dig (c) by Jack Szwergold; written on September 15, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

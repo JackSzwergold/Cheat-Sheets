@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## Apache
-
-By Jack Szwergold
-
 ### Sundry Apache items.
 
 Get a summary of the `VirtualHost` configurations for Apache:
@@ -280,7 +276,3 @@ Allow traffic through based on referrers.
 	  MaxRequestWorkers      40
 	  MaxConnectionsPerChild 2000
 	</IfModule>
-
-***
-
-*Apache (c) by Jack Szwergold; written on September 19, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

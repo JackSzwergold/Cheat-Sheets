@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## Developing With MAMP 2.1.4
-
-By Jack Szwergold
-
 ### Part 1: Setting Up a Basic, Useful MAMP Environment
 
 I like using MAMP because it’s a quick and easy way to get a very basic—and very standard—LAMP (Linux, Apache, MySQL and PHP) environment working on a Mac. While there are some purists who believe that coding on a pure Linux setup—virtual or physical—is the way the go, for pretty much every PHP task I have ever come across, MAMP has always worked well. And since it operates on on the Mac desktop like any other application, it allows me to use the great development tools that exist for Macs without much hassle. A complete win-win development setup for Mac developers who code in the LAMP world.
@@ -103,10 +99,6 @@ And then copy in this short but sweet PHP script into that file:
 	?>
 
 Save the file and reload your browser. The text, “Hello world!” should be displayed in the brower. Which means now you’re done setting up your basic MAMP development environment!
-
-***
-
-*Developing With MAMP 2.1.4 • Part 1: Setting Up a Basic, Useful MAMP Environment (c) by Jack Szwergold; written on February 16, 2014. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*
 
 [1]: http://us3.php.net/phpinfo "Info on phpinfo()."
 [2]: http://www.barebones.com/products/bbedit/ "Bare Bones Software’s BBEdit page."

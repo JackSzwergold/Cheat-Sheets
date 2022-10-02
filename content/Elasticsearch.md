@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## Elasticsearch
-
-By Jack Szwergold
-
 ### Elasticsearch prerequisites.
 
 Elasticsearch requires Java 7—or better—to be installed for it to work. So make sure the system you plan on running Elasticsearch on has Java 7 installed and `JAVA_HOME` is properly set on the system.
@@ -323,7 +319,3 @@ This will delete all indexes:
 And this will also delete all indexes:
 
     curl -XDELETE 'http://sandbox.local:9200/*?pretty=true'
-
-***
-
-*Elasticsearch (c) by Jack Szwergold; written on September 21, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

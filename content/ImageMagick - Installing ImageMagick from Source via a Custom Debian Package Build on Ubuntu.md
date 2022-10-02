@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## ImageMagick - Installing ImageMagick from Source via a Custom Debian Package Build on Ubuntu
-
-By Jack Szwergold
-
 ### Get rid of the default Ubuntu repository installed version of ImageMagick.
 
 Just run this `sudo aptitude purge` command to get rid of any ImageMagick stuff installed via the default Ubuntu repository:
@@ -90,7 +86,3 @@ Go into the decompressed directory where the initial ImageMagick install happene
 And run this `dpkg -r` command to uninstall it:
 
     sudo dpkg -r imagemagick-6.9.3
-
-***
-
-*ImageMagick - Installing ImageMagick from Source via a Custom Debian Package Build on Ubuntu (c) by Jack Szwergold; written on September 21, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

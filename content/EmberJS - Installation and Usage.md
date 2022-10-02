@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## EmberJS - Installation and Usage
-
-By Jack Szwergold
-
 Before anything, you need to be sure NodeJS is installed. The process is different and dependent on what OS you are using. For Mac OS X you can just download a package installer. But once installed you can then complete the following steps.
 
 ### Installing and using EmberJS via NodeJS.
@@ -225,7 +221,3 @@ The output of that command would be as follows:
 	installing model-test
 
 The JavaScript component logic would go into `app/models/pull-requests.js`.
-
-***
-
-*EmberJS - Installation and Usage (c) by Jack Szwergold; written on November 16, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

@@ -1,8 +1,8 @@
 ---
-Title: Test
-Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Title: Cheat Sheets
+Description: Cheat Sheets
 Author: Jack Szwergold
-Date: 2015-09-15
+Date: 2022-10-01
 Robots: noindex,nofollow
 Template: index
 ---

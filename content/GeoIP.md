@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## GeoIP
-
-By Jack Szwergold
-
 ### 2019-10-14: Nothing Here Works as Expected
 
 MaxMind changed their DB format and now this happens. Anyway, reinstall GeoIP tools via repo like this:
@@ -117,7 +113,3 @@ Adjust the permissions of all of the GeoIP databases to be `root`:
 Check to see if the GeoIP databases are set:
 
     ls -la /usr/local/share/GeoIP/
-
-***
-
-*GeoIP (c) by Jack Szwergold; written on September 23, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

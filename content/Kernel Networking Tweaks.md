@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## Kernel Networking Tweaks
-
-By Jack Szwergold
-
 The main reason for this document existing is attempting to deal with oddball network connectivity issues in a mixed Windows/Mac environment. Here is what I know and have done.
 
 ### TCP ACK settings.
@@ -75,7 +71,3 @@ And set entries like this in there:
 	kern.ipc.maxsockbuf=500000
 	net.inet.tcp.sendspace=250000
 	net.inet.tcp.recvspace=250000
-
-***
-
-*Kernel Networking Tweaks (c) by Jack Szwergold; written on October 7, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

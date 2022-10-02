@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## Java
-
-By Jack Szwergold
-
 ### Installing Java via the WebUpd8 PPA repository.
 
 #### Adding the WebUpd8 PPA repository to the system.
@@ -142,7 +138,3 @@ Now, remove the `oab-java.sh` PPA (Personal Package Archive) stuff:
     sudo rm /etc/apt/sources.list.d/oab.list
 
 Finally, remove the old `oab-java.sh` items from `/var/local/`.
-
-***
-
-*Java (c) by Jack Szwergold; written on September 21, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

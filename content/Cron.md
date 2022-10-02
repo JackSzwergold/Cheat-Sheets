@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## Cron
-
-By Jack Szwergold
-
 #### Start, stop and control the Cron service on an Ubuntu/Debian system.
 
 	sudo service cron start
@@ -50,7 +46,3 @@ Now restart the `rsyslog` service:
 Now restart the Cron service:
 
 	sudo service cron restart
-
-***
-
-*Cron (c) by Jack Szwergold; written on September 19, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

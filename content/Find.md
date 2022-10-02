@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## Find
-
-By Jack Szwergold
-
 ### Find files older than a specified span of time.
 
 Find all created (`ctime`) files in the current directory that are older than 14 days:
@@ -84,7 +80,3 @@ Run this command to get rid of `.DS_Store` files:
 Run this command to get rid of `.DS_Store`, `.Trashes`, `._*` and  `.TemporaryItems` files:
 
     find \( -name ".DS_Store" -or -name ".Trashes" -or -name "._*" -or -name ".TemporaryItems" \) -delete
-
-***
-
-*Find (c) by Jack Szwergold; written on September 27, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

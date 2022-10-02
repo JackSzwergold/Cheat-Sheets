@@ -7,12 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## Amazon - Amazon Web Service Command Line Interface
-
-By Jack Szwergold
-
-***
-
 ### First, install the PIP package manager for the Python package index.
 
 Download the `get-pip.py` script:
@@ -99,7 +93,3 @@ Output returned would be something like this:
 	    0,
 	    0
 	]
-
-***
-
-*Amazon - Amazon Web Service Command Line Interface (c) by Jack Szwergold; written on October 7, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## Apache - AWStats Installation
-
-By Jack Szwergold
-
 ### Installing AWStats.
 
 Go into the `/usr/share` directory:
@@ -386,7 +382,3 @@ Append this custom report configuration to your website’s core configuration i
 	ExtraSectionAddSumRow2=1
 	MaxNbOfExtra2=25
 	MinHitExtra2=1
-
-***
-
-*Apache - AWStats Installation (c) by Jack Szwergold; written on October 16, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

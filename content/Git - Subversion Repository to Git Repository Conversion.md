@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## Git - Subversion Repository to Git Repository Conversion
-
-By Jack Szwergold
-
 ### Install the `svn2git` Ruby GEM like this:
 
 Install the `svn2git` Ruby GEM:
@@ -78,7 +74,3 @@ And set the content such as this:
     .DS_Store
 
 Commit that and move on with your life happily living Subversion behind.
-
-***
-
-*Ubuntu - Updates and Repository Items (c) by Jack Szwergold; written on October 8, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## Amazon - Amazon S3 Bucket and User Policy Examples
-
-By Jack Szwergold
-
 ### All Amazon S3 actions for reference.
 
 	s3:AbortMultipartUpload
@@ -137,7 +133,3 @@ This is for a bucket named `s3_bucket_name`. It works, but gives note that it gi
 	    }
 	  ]
 	}
-
-***
-
-*Amazon - Amazon S3 Bucket and User Policy Examples (c) by Jack Szwergold; written on October 6, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

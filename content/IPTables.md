@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## IPTables
-
-By Jack Szwergold
-
 ### Start, stop and control IPTables.
 
 On Ubuntu/Debian systems you can start, stop, restart and flush IPTables this way:
@@ -316,7 +312,3 @@ This variant will let you know date, time and whether the dropped packet was TCP
     sudo iptables -A OUTPUT -p udp -j UDP_OUT_FLOOD
     sudo iptables -A UDP_OUT_FLOOD -p udp -m limit --limit 3/min --limit-burst 10 -j LOG --log-prefix "IPTABLES_DENIED_UDP_OUT: " --log-level 4
     sudo iptables -A UDP_OUT_FLOOD -j REJECT --reject-with icmp-host-prohibited
-
-***
-
-*IPTables (c) by Jack Szwergold; written on September 11, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*
