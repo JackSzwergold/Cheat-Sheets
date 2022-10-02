@@ -9,24 +9,24 @@ Template: index
 
 This simple script uses `tr`:
 
-      tr -d '\r' < "${full_text_filepath}" > "${full_text_filepath}".txt;
+      tr -d '\r' < "${source_filepath}" > "${source_filepath}".txt;
 
 ### Convert old Mac OS line endings to modern text files using `dos2unix`.
 
 And here you go:
 
-    find -E "Desktop/Text" -type f |\
-      while read full_text_filepath
+    find -E . -type f |\
+      while read source_filepath
       do
-        dos2unix -k -n -c mac "${full_text_filepath}" "${full_text_filepath}".txt;
+        dos2unix -k -n -c mac "${source_filepath}" "${source_filepath}".txt;
       done
 
 ### Lowercase file names and change spaces to underscores.
 
     find . -depth -name "* *" -type f |\
-      while read full_text_filepath
+      while read source_filepath
       do
-        new_filename=$(echo "${full_text_filepath}" | tr A-Z a-z | tr -s ' ' | tr ' ' '_'| sed 's/_\./\./');
-        mv -f "${full_text_filepath}" "${new_filename}";
+        destination_filepath=$(echo "${source_filepath}" | tr A-Z a-z | tr -s ' ' | tr ' ' '_'| sed 's/_\./\./');
+        mv -f "${source_filepath}" "${destination_filepath}";
       done
 
