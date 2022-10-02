@@ -11,6 +11,10 @@ Here is a collection of cheat sheets I’ve compiled for my own personal referen
 
 These are mainly intended for quick reference without too much deep explanation behind what is happening.
 
+***
+
+**Caveat Emptor**: But please keep in mind that many of the instructions and ideas here might be out of date or no longer work. So if you choose to follow them, and something doesn’t work as expected? What can I tell you.
+
 - [Avahi Daemon](avahi_daemon)
 - [Awk](awk)
 - [Bash](bash)
