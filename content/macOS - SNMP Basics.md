@@ -1,0 +1,52 @@
+---
+Title: macOS - SNMP Basics
+Description: A cheat sheet for SNMP basics.
+Author: Jack Szwergold
+Date: 2015-10-06
+Robots: noindex,nofollow
+Template: index
+---
+
+## macOS - SNMP Basics
+
+By Jack Szwergold
+
+### Customzing the SNMP data a host passes.
+
+To create a SNMP `snmpconf` file on the host, run this command as root:
+
+	sudo snmpconf -i
+
+Customize the config as you feel fit and then when it’s done, it will create a new `snmpd.conf` file here:
+
+    /usr/share/snmp/snmpd.conf
+
+Start the `snmpd` daemon like this:
+
+    sudo snmpd
+
+Stop the `snmpd` daemon like this:
+
+    sudo killall snmpd
+
+### Collection of SNMP data from a remote host.
+
+Run this `snmpget` command to fetch data from a host; replace [hostname] with the name of the target host:
+
+    /usr/bin/snmpget -c public [hostname]
+
+Fetch the location info from the host:
+
+    /usr/bin/snmpget -c public [hostname] system.sysLocation.0
+
+Fetch the contact info from the host:
+
+	/usr/bin/snmpget -c public [hostname] system.sysContact.0
+
+Fetch the services info from the host:
+
+	/usr/bin/snmpget -c public [hostname] system.sysServices.0
+
+***
+
+*macOS - SNMP Basics (c) by Jack Szwergold; written on October 6, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

@@ -1,0 +1,64 @@
+---
+Title: Stat
+Description: A cheat sheet for Stat related items.
+Author: Jack Szwergold
+Date: 2015-09-15
+Robots: noindex,nofollow
+Template: index
+---
+
+## Stat
+
+By Jack Szwergold
+
+### Using Stat in Mac OS X.
+
+**ACCESS:** Get the last access time of a file.
+
+    stat -f "%Sa" -t "%Y-%m-%d %H:%M:%S" filename_here.txt
+
+**MODIFICATION:** Get the modification time of a file.
+
+    stat -f "%Sm" -t "%Y-%m-%d %H:%M:%S" filename_here.txt
+
+**CHANGED:** Get the modification time of a file.
+
+    stat -f "%Sc" -t "%Y-%m-%d %H:%M:%S" filename_here.txt
+
+**BIRTH:** Get the birth time of an inode.
+
+    stat -f "%SB" -t "%Y-%m-%d %H:%M:%S" filename_here.txt
+
+**FILESIZE:** Get the size of a file.
+
+    stat -f "%z" filename_here.txt
+
+### Using Stat in Linux/Unix.
+
+**ACCESS:** Get the last access time of a file.
+
+	stat -c '%.19x' filename_here.txt
+	stat -c '%x' filename_here.txt | sed 's/\(:[0-9]\{2\}\)\.[0-9]* /\1 /'
+
+**MODIFICATION:** Get the modification time of a file.
+
+	stat -c '%.19y' filename_here.txt
+	stat -c '%y' filename_here.txt | sed 's/\(:[0-9]\{2\}\)\.[0-9]* /\1 /'
+
+**CHANGED:** Get the modification time of a file.
+
+	stat -c '%.19z' filename_here.txt
+	stat -c '%z' filename_here.txt | sed 's/\(:[0-9]\{2\}\)\.[0-9]* /\1 /'
+
+**BIRTH:** Get the birth time of an inode.
+
+	stat -c '%.19w' filename_here.txt
+	stat -c '%w' filename_here.txt | sed 's/\(:[0-9]\{2\}\)\.[0-9]* /\1 /'
+
+**FILESIZE:** Get the size of a file.
+
+	stat -c "%s" filename_here.txt
+
+***
+
+*Stat (c) by Jack Szwergold; written on September 15, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*
