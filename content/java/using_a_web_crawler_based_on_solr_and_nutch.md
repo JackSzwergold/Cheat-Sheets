@@ -1,5 +1,5 @@
 ---
-Title: Java - Using a Web Crawler based on Solr and Nutch
+Title: Using a Web Crawler based on Solr and Nutch
 Description: A cheat sheet for Java - Using a Web Crawler based on Solr and Nutch related items.
 Author: Jack Szwergold
 Date: 2015-10-14

@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## Bash
-
-By Jack Szwergold
-
 ### Dumping Bash history
 
 First remove the `.bash_history` file that holds past session history:
@@ -98,7 +94,3 @@ And here are some example `LSCOLORS` settings:
 	
 	# For Acquia DevDesktop tools.
 	# export PATH="$PATH:/Applications/DevDesktop/tools"
-
-***
-
-*Bash (c) by Jack Szwergold; written on September 27, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*
