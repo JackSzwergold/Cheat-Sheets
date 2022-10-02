@@ -38,7 +38,7 @@ And just set `CLICOLOR` settings like this:
 Setting `LSCOLORS` sets the colors used by `ls` for directory listings. As explained in the manpage for `ls`:
 
 > The value of this variable describes what color to use for which attribute when colors are enabled with `CLICOLOR`. This string is a concatenation of pairs of the format `fb`, where `f` is the foreground color and `b` is the background color. The color designators are as follows:
-	
+
 	a     black
 	b     red
 	c     green
@@ -74,27 +74,23 @@ And here are some example `LSCOLORS` settings:
 
 	# Setting CLI colors.
 	export CLICOLOR=1;
-	
+
 	# MAMP stuff.
 	export MAMP_BIN="/Applications/MAMP/Library/bin";
 	export MAMP_PHP="/Applications/MAMP/bin/php/php5.6.10/bin";
 	# export MAMP_PHP="/Applications/MAMP/bin/php/php7.0.8/bin";
 	# export MAMP_PHP="/Applications/MAMP/bin/php/php7.1.22/bin";
 	# export MAMP_PHP="/Applications/MAMP/bin/php/php7.2.10/bin";
-	
+
 	# Final $PATH setting.
 	# export PATH="/usr/local/bin:/usr/local/sbin:$PATH";
 	export PATH="$MAMP_BIN:$MAMP_PHP:/usr/local/bin:/usr/local/sbin:$PATH";
-	
+
 	# Set the VAGRANT_HOME path.
 	# export VAGRANT_HOME="/Someplace/Somewhere/vagrant.d";
-	
+
 	# 2016-12-08: Load the SSH keys into the keychain.
 	ssh-add -K 2>/dev/null;
-	
+
 	# For Acquia DevDesktop tools.
 	# export PATH="$PATH:/Applications/DevDesktop/tools"
-
-***
-
-*Bash (c) by Jack Szwergold; written on September 27, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*
