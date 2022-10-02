@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## Redis
-
-By Jack Szwergold
-
 ### Sundry Redis items.
 
 Redis should now be installed and you can check the version by running:
@@ -264,7 +260,3 @@ Get a value connected to a key like this; the response should be “somevalue”
 
 	redis 127.0.0.1:6379> get mykey
 	"somevalue"
-
-***
-
-*Redis (c) by Jack Szwergold; written on September 22, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

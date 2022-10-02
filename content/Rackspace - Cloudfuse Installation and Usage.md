@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## Rackspace - Cloudfuse Installation and Usage
-
-By Jack Szwergold
-
 CloudFuse allows you to mount Rackspace Cloud Files as a mountable fuse filesystem.
 
 ### Install Cloudfuse.
@@ -212,7 +208,3 @@ Next change the permissions to restrict read, write and execute to only that one
 	
 	Michael Barton
 	<mike@weirdlooking.com>
-
-***
-
-*Rackspace - Cloudfuse Installation and Usage (c) by Jack Szwergold; written on October 7, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

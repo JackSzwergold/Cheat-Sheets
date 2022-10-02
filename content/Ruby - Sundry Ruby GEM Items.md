@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## Ruby - Sundry Ruby GEM Items
-
-By Jack Szwergold
-
 ### List all locally installed Ruby GEMs.
 
     gem query --local
@@ -42,7 +38,3 @@ Will remove all versions less than 1.3.4.
 Will remove all old versions of the GEM.
 
     sudo gem cleanup [GEM name]
-
-***
-
-*Ruby - Sundry Ruby GEM Items (c) by Jack Szwergold; written on September 20, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

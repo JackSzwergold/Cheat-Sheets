@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## Ruby - Apache Passenger Module Installation and Setup
-
-By Jack Szwergold
-
 This tutorial outlines how to install Passenger (`mod_passenger`) to allow an Apache to manage Ruby applications.
 
 Why? Easy. Apache is far more robust and flexible when it comes to web server configuration than most Ruby servers. Passenger allows Ruby applications to leverage this flexibility easily and without having to play around with deeper Ruby web server specifics.
@@ -253,7 +249,3 @@ And you are now good to go!
 	RackAutoDetect <on|off>
 	RackBaseURI <uri>
 	RackEnv <string>
-
-***
-
-*Ruby - Apache Passenger Module Installation and Setup (c) by Jack Szwergold; written on September 20, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

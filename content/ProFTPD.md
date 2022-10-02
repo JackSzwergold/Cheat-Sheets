@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## ProFTPD
-
-By Jack Szwergold
-
 First things first: Unless you are in 1993, there is no reason to use straight FTP anymore. Pretty much every “FTP” connection anyone uses nowadays is SFTP anyway. But on the off chance you have to work on a setup that requires FTP, you could do worse than use ProFTP to manage the service.
 
 And if you restrict FTP access to a specific IP address, it will make the whole idea you are using flawed technology in a modern era easier to swallow; see the section on allowing FTP ports access for more details.
@@ -336,7 +332,3 @@ And here is the actual, full ProFTPD config file for review:
 	
 	# Include other custom configuration files
 	Include /etc/proftpd/conf.d/
-
-***
-
-*ProFTPD (c) by Jack Szwergold; written on October 7, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

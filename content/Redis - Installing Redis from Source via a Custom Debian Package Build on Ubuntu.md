@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## Redis - Installing Redis from Source via a Custom Debian Package Build on Ubuntu
-
-By Jack Szwergold
-
 ### Get rid of the default Ubuntu repository installed version of Redis.
 
 Just run this `sudo aptitude purge` command to get rid of any Redis stuff installed via the default Ubuntu repository:
@@ -85,7 +81,3 @@ Run this `dpkg -r` command to uninstall it:
 And if you ever want to reinstall that Debian package, just run this command:
 
     sudo dpkg -i redis_3.0.4-1_amd64.deb
-
-***
-
-*Redis - Installing Redis from Source via a Custom Debian Package Build on Ubuntu (c) by Jack Szwergold; written on September 22, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

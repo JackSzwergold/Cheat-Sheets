@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## RNG-Tools
-
-By Jack Szwergold
-
 ### Install RNG-Tools.
 
 Check system entropy levels with this `watch` command:
@@ -76,7 +72,3 @@ Add those values to the bottom of each respective commented out area for easier 
 Note that on Ubuntu 14.04 and above that `RNGDOPTIONS` with `--feed-interval` doesn’t work. So just set that to something like this:
 
 	RNGDOPTIONS="--fill-watermark=90% "
-
-***
-
-*RNG-Tools (c) by Jack Szwergold; written on September 24, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

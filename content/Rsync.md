@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## Rsync
-
-By Jack Szwergold
-
 ### Basic Rync command to clone directories.
 
     rsync -avz --dry-run /source_directory/ /destination_directory/
@@ -40,7 +36,3 @@ A nice way to effectively “diff” two directories using Rsync:
 - **-v**: Increase verbosity.
 - **-n**: Dry-run mode; show what would have been transferred.
 - **-c**: Checksum the files, not mod-time & size.
-
-***
-
-*Rsync (c) by Jack Szwergold; written on September 17, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

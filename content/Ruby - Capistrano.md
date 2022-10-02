@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## Ruby - Capistrano
-
-By Jack Szwergold
-
 **NOTE:** As of May 15, 2015 this document is for reference only since much of the advice has been obsoleted by a recent upgrade of the deployment scripts to use Capistrano 3; specifically version 3.4.0. Installing Capistrano like this should suffice to get the code deployed:
 
     sudo gem install capistrano:3.4.0
@@ -120,7 +116,3 @@ As for what a successful deployment looks like, it’s actually easier to explai
 Now errors are not good, but you shouldn’t worry too much. The reality is `capistrano` is very error resilient and at no point will it deploy a “half baked” deployment. Meaning, the deployment won’t be finalized until all steps are clean & error free.
 
 So let’s say your Internet connection is bad & drops out during a deployment. No need to worry about your codebase on the destination server going bad. The old deployment—whenever that was made—will always be in place until a newer deployment is successfully completely.
-
-***
-
-*Ruby - Capistrano (c) by Jack Szwergold; written on September 15, 2016. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

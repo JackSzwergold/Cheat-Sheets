@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## Ruby
-
-By Jack Szwergold
-
 ### Install required Ruby GEMs for the test web application install.
 
     sudo gem install rack sinatra bundler --no-rdoc --no-ri
@@ -45,7 +41,3 @@ For Sinatra a port can be specified with the `-p` flag like this which overrides
 Or it could even be manually launched directly through ruby like this:
 
     ruby bin/app.rb
-
-***
-
-*Ruby (c) by Jack Szwergold; written on September 20, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

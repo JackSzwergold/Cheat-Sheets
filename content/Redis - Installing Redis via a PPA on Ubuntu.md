@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## Redis - Installing Redis via a PPA on Ubuntu
-
-By Jack Szwergold
-
 ### Get rid of the default Ubuntu repository installed version of Redis.
 
 Just run this `sudo aptitude purge` command to get rid of any Redis stuff installed via the default Ubuntu repository:
@@ -42,7 +38,3 @@ Check the version number like this:
 And the output should be something like this:
 
 	Redis server v=3.0.4 sha=00000000:0 malloc=jemalloc-3.6.0 bits=64 build=e10d4bb04434c274
-
-***
-
-*Redis - Installing Redis via a PPA on Ubuntu (c) by Jack Szwergold; written on September 22, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

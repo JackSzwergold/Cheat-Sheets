@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## Ruby - Installing Ruby on Ubuntu
-
-By Jack Szwergold
-
 By default, Ubuntu 12.04 will install Ruby 1.8 and not upgrade it. If your code needs the newer functionality available in Ruby 1.9 follow these steps to remove Ruby 1.8 and install Ruby 1.9 on Ubuntu 12.04.
 
 ### Clean out the old Ruby 1.8 stuff.
@@ -66,7 +62,3 @@ Make your selection and then move onto the `update-alternatives` for related Rub
 Finally, confirm the version of Ruby has been updated like this:
 		
     ruby --version
-
-***
-
-*Ruby - Installing Ruby on Ubuntu (c) by Jack Szwergold; written on September 20, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

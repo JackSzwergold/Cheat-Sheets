@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## Ruby - Installing Ruby via RVM
-
-By Jack Szwergold
-
 ### Installing RVM (Ruby Version Manager).
 	
 	gpg --keyserver hkp://keys.gnupg.net --recv-keys D39DC0E3
@@ -72,7 +68,3 @@ Install the latest version of Ruby GEMs:
 Install the latest version of Bundler:
 	
 	gem install bundler
-
-***
-
-*Ruby - Installing Ruby via RVM (c) by Jack Szwergold; written on September 20, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*
