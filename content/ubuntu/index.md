@@ -1,6 +1,6 @@
 ---
-Title: Git Cheat Sheets
-Description: A collection of IPTables specific cheat sheets.
+Title: Ubuntu Cheat Sheets
+Description: A collection of Ubuntu specific cheat sheets.
 Author: Jack Szwergold
 Date: 2022-10-02
 Robots: noindex,nofollow

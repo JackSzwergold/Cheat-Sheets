@@ -1,6 +1,6 @@
 ---
 Title: Git Cheat Sheets
-Description: A collection of IPTables specific cheat sheets.
+Description: A collection of Git specific cheat sheets.
 Author: Jack Szwergold
 Date: 2022-10-02
 Robots: noindex,nofollow

@@ -1,6 +1,6 @@
 ---
 Title: Find Cheat Sheets
-Description: A collection of IPTables specific cheat sheets.
+Description: A collection of Find specific cheat sheets.
 Author: Jack Szwergold
 Date: 2022-10-02
 Robots: noindex,nofollow
