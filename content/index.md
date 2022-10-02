@@ -11,7 +11,7 @@ Here is a collection of cheat sheets I’ve compiled for my own personal referen
 
 These are mainly intended for quick reference without too much deep explanation behind what is happening.
 
-- [Avahi Daemon](avahi_daemon)
+- Avahi Daemon [Avahi Daemon](avahi_daemon)
 - [Awk](awk)
 - [Bash](bash)
 - [Cron](cron)

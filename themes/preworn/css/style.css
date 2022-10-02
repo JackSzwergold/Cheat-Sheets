@@ -522,7 +522,7 @@ div.container > div.element article ol:last-child {
 
 div.container > div.element article ul li,
 div.container > div.element article ol li {
-  font-family: Georgia, "New York", "Times New Roman", Times, serif;
+  font-family: "SinaNovaReg", Georgia, "New York", "Times New Roman", Times, serif;
   font-weight: normal;
   font-style: normal;
   font-size: 1rem;
