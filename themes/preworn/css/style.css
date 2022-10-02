@@ -580,6 +580,36 @@ div.container > div.element article > section > footer p {
 }
 
 /******************************************************************************/
+
+pre {
+  background: #333;
+  color: #0f0;
+  font-size: 0.85rem;
+  line-height: 1.25rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+code {
+  background: #333;
+  color: #0f0;
+  padding: 0.125rem;
+  font-size: 0.85em;
+  line-height: 1.25em;
+}
+
+pre code {
+  display: block;
+  background: none;
+  white-space: pre;
+  -webkit-overflow-scrolling: touch;
+  overflow-x: scroll;
+  max-width: 100%;
+  min-width: 100px;
+  padding: 0;
+}
+
+/******************************************************************************/
 /*
 /*  ____           _ _   _             _
 /* |  _ \ ___  ___(_) |_(_) ___  _ __ (_)_ __   __ _
