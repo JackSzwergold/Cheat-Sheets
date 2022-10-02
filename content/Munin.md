@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## Munin
-
-By Jack Szwergold
-
 ### Install `munin`.
 
 Install Munin on Ubuntu 12.04:
@@ -286,7 +282,3 @@ And if you are using the secure setup, be sure to setup the `/etc/apache2/htpass
     sudo htpasswd -c /etc/apache2/htpasswd_munin munin
 
 That command will initiate the process to create an `htpasswd` for a user named `munin` in the file named `htpasswd_munin`. When prompted, enter whatever password you would like to use.
-
-***
-
-*Munin (c) by Jack Szwergold; written on September 16, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

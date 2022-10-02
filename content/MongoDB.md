@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## MongoDB
-
-By Jack Szwergold
-
 ### Install MongoDB.
 
 First, import the public key used by the package management system:
@@ -399,7 +395,3 @@ If the error log has a line like this in it:
 Then do this to get rid of the old lock file:
 
     sudo rm  /var/lib/mongodb/mongod.lock
-
-***
-
-*MongoDB (c) by Jack Szwergold; written on September 22, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

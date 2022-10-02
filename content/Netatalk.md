@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## Netatalk
-
-By Jack Szwergold
-
 Netatalk is a very cool, open source implementation of Apple’s AppleTalk networking protocols. Very nice and useful for setting up Linux/Unix AFP file servers.
 
 #### Installing Netatalk.
@@ -44,7 +40,3 @@ Add this line to the end of the `AppleVolumes.default` config file to define a N
 
 	# /var/www  WebRoot allow:@www-readwrite options:usedots,upriv
 	/var/www  "WebRoot (Netatalk)" allow:@www-readwrite options:usedots,upriv,noadouble
-
-***
-
-*Netatalk (c) by Jack Szwergold; written on September 19, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## MOTD
-
-By Jack Szwergold
-
 ### Adding a custom MOTD message.
 
 For example, let’s say we wanted to use `figlet` to make a nice server banner like this:
@@ -63,7 +59,3 @@ Comment out the content of these MOTD scripts:
 	sudo nano /etc/update-motd.d/90-updates-available
 	sudo nano /etc/update-motd.d/91-release-upgrade
 	sudo nano /etc/update-motd.d/95-hwe-eol
-
-***
-
-*MOTD (c) by Jack Szwergold; written on September 24, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

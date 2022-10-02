@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## Munin - Moving and Renaming Data Files
-
-By Jack Szwergold
-
 This tutorial explains how to move or change a Munin node name without losing past data files and related history.
 
 For this example we are moving data saved under the hostname `localdomain`—default Munin install hostname—to the new hostname of `sandbox.local`.
@@ -82,7 +78,3 @@ And remove all of the `munin` node web datafiles connected to the old hostname. 
 And the final step is to restart the Munin node again:
 
     sudo service munin-node start
-
-***
-
-*Munin - Moving and Renaming Data Files (c) by Jack Szwergold; written on September 16, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-# How To Set Up the Latest MediaWiki with Lighttpd on Ubuntu 14.04
-
-By Jack Szwergold
-
 ### Introduction
 
 MediaWiki is a popular open source wiki platform that can be used for public or internal collaborative content publishing. MediaWiki is used for many of the most popular wikis on the internet including Wikipedia, the site that the project was originally designed to serve.
@@ -242,7 +238,3 @@ Once that’s done, your install of MediaWiki should be complete! You can check 
 ## Conclusion
 
 With all of that done, you should now have MediaWiki fully installed and configured on your system.
-
-***
-
-*MediaWiki with Lighttpd (c) by Jack Szwergold; written on August 1, 2016. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

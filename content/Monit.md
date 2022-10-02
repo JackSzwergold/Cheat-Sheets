@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## Monit
-
-By Jack Szwergold
-
 ### Getting Monit installed and other basics.
 
 First, install Monit via `aptitude` like this:
@@ -183,7 +179,3 @@ One type of NodeJS monitoring rule:
 Restart Monit and all should be good:
 
     sudo service monit restart
-
-***
-
-*Monit (c) by Jack Szwergold; written on September 15, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*
