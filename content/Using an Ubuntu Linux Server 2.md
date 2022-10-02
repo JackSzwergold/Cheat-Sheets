@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## Using an Ubuntu Linux Server 2
-
-By Jack Szwergold
-
 ### Part 2: Setting Up a LAMP Stack
 
 So in part 1 of my tutorial, I explained how I like to configure a base level Ubuntu server. In part 2 of my tutorial I will explain how to setup useful and solid LAMP stack that can be used as a production server or a development/sandbox server for web development needs.
@@ -261,7 +257,3 @@ And one last thing: Whenever MySQL is installed or upgraded, it adds a few “te
     sudo mysql_secure_installation
 
 It will initially ask for your root password. Enter it and move on. The next question will ask you to reset the root password which makes no sense since you just entered it. So answer “no” to that question. Then answer “yes” to all other other questions such as, “Remove anonymous users?”, “Disallow root login remotely?” and “Remove test database and access to it?” Then the final question should be “Reload privilege tables now?” Answer “yes” to that one and your MySQL setup should be all solid and secure.
-
-***
-
-*Using an Ubuntu Linux Server • Part 2: Setting Up a LAMP Stack (c) by Jack Szwergold; written on March 30, 2014. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

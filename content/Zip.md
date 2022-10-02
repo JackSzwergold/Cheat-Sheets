@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## Zip
-
-By Jack Szwergold
-
 ### Basic Compression
 
 #### Create a basic Zip archive.
@@ -62,7 +58,3 @@ And to decompress a Zip archive to a specific directory, just do this. The `-d` 
 Use this command to decompress multiple Zip files with a password from the command line:
 
     unzip -P [password here] \*.zip
-
-***
-
-*Zip (c) by Jack Szwergold; written on September 11, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

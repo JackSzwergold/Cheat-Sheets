@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## Ubuntu - Locale Related Items
-
-By Jack Szwergold
-
 ### Fixing Perl local errors on Ubuntu.
 
 If you get errors like this running Perl on an Ubuntu server:
@@ -58,7 +54,3 @@ Check the output of `locale` which should now be something like this:
 	LC_MEASUREMENT="en_US.UTF-8"
 	LC_IDENTIFICATION="en_US.UTF-8"
 	LC_ALL=
-
-***
-
-*Ubuntu - Locale Related Items (c) by Jack Szwergold; written on October 5, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

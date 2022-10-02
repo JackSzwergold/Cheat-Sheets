@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## Using an Ubuntu Linux Server 3
-
-By Jack Szwergold
-
 ### Part 3: Monitoring and Securing Your Ubuntu Server
 
 In part 3 of my tutorial I will explain how to setup useful monitoring and security tools. You should never be in a situation where you cannot be able to review and assess server health. Being able to monitor and secure your server is the key to running a safe and stable server environment.
@@ -354,7 +350,3 @@ Just copy the `iptables.conf` file you created just now into `/etc/iptables/rule
     sudo cp ~/iptables.conf /etc/iptables/rules.v4
 
 Now when your server restarts, `iptables-persistent` will load all of the rules stored in `/etc/iptables/rules.v4` so your `iptables` rule set will always be active.
-
-***
-
-*Using an Ubuntu Linux Server • Part 3: Monitoring and Securing Your Ubuntu Server (c) by Jack Szwergold; written on April 6, 2014. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

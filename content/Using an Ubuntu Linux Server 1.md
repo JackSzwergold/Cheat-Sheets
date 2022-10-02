@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## Using an Ubuntu Linux Server 1
-
-By Jack Szwergold
-
 ### Part 1: Configuring a Base Level Ubuntu Server
 
 The purpose of this tutorial is to explain how I like to configure a base level Ubuntu server. This doesn’t go into details as to how you got Ubuntu installed on a server to begin with. But begins with the assumption that you have an Ubuntu machine set up to the point you have a basic terminal prompt and you can login as a user with administrator rights.
@@ -398,7 +394,3 @@ Then, I comment out the content of `updates-available` as well as `release-upgra
     sudo nano /etc/update-motd.d/91-release-upgrade
 
 Technically speaking, I could conceivably just delete the `updates-available` and `release-upgrade` files as well. But I personally do not like destroying files and data that I could potentially need or use in the future. So I find that commenting out the few lines of core functionality in those two files to a preferable way of neutering them in this case.
-
-***
-
-*Using an Ubuntu Linux Server • Part 1: Configuring a Base Level Ubuntu Server (c) by Jack Szwergold; written on March 19, 2014. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

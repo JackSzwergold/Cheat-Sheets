@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## Ubuntu - SMB Related Items
-
-By Jack Szwergold
-
 ### The basics.
 
 Then install SMB/CIFS stuff via `aptitude` like this:
@@ -65,7 +61,3 @@ An example appropriate for Netatalk servers is here:
 	; Veto the Apple specific files that a Netatalk server
 	; creates.
 	veto files = /.AppleDouble/.bin/.AppleDesktop/Network Trash Folder/
-
-***
-
-*Ubuntu - SMB Related Items (c) by Jack Szwergold; written on September 15, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

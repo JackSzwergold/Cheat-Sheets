@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## Ubuntu - Setting Up and Using Apple Filing Protocol Utility Items
-
-By Jack Szwergold
-
 ### Installation.
 
 Install the Apple Filing Protocol (AFP) stuff:
@@ -30,7 +26,3 @@ The overall structure of how to mount an AFP volume:
 Unmount an AFP volume:
 
     afp_client unmount [mountpoint]
-
-***
-
-*Ubuntu - Setting Up and Using Apple Filing Protocol Utility Items (c) by Jack Szwergold; written on October 4, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

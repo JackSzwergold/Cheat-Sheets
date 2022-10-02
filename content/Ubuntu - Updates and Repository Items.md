@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## Ubuntu - Updates and Repository Items
-
-By Jack Szwergold
-
 ### Clean out old Linux Kernels.
 
 #### Get the currently active Linux kernel version.
@@ -137,7 +133,3 @@ Option two is *always* the best option since a full OS release upgrade risks bre
     sudo aptitude install linux-generic-lts-trusty linux-image-generic-lts-trusty
 
 That command is specific to upgrading the HWE in Ubuntu 12.04 so if you see that message come up in another version of Ubuntu be sure to use the command recommended for your particular Ubuntu install.
-
-***
-
-*Ubuntu - Updates and Repository Items (c) by Jack Szwergold; written on September 11, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

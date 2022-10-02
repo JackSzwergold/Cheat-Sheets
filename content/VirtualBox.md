@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## VirtualBox
-
-By Jack Szwergold
-
 ### Start the VirtualBox virtual machine as a headless machine.
 
     nohup VBoxHeadless --startvm "Sandbox" &
@@ -197,7 +193,3 @@ Clone a VirtualBox hard disk:
 Compact a VirtualBox hard disk:
 
     VBoxManage modifyhd --compact Disk.vdi
-
-***
-
-*VirtualBox (c) by Jack Szwergold; written on September 19, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

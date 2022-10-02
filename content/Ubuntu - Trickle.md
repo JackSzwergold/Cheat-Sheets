@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## Ubuntu - Trickle
-
-By Jack Szwergold
-
 ### Installing Trickle.
 
 Install `trickle`:
@@ -77,7 +73,3 @@ According to the official documentation, the value of `Time-Smoothing` is define
 And similarly, the value of `Length-Smoothing` is defined as follows in the documentation:
 
 > Set smoothing length to length KB. The smoothing length is a fallback of the smoothing time. If `trickled` cannot meet the requested smoothing time, it will instead fall back on sending length KB of data. The default value is 10 KB.
-
-***
-
-*Ubuntu - Trickle (c) by Jack Szwergold; written on October 9, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

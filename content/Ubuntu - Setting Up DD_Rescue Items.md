@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## Ubuntu - Setting Up DD_Rescue Items
-
-By Jack Szwergold
-
 ### Installation.
 
 Install DD_Rescue:
@@ -30,7 +26,3 @@ Copy an image with DD_Rescue via standard output to a remote server via a pipe; 
 Compress a disk image in real-time:
 
     dd_rescue /dev/sdb1 - | gzip > ~/image_of_sdb1.img.gzip
-
-***
-
-*Ubuntu - Setting Up DD_Rescue Items (c) by Jack Szwergold; written on October 5, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

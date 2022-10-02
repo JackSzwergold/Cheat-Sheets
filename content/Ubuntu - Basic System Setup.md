@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## Ubuntu - Basic System Setup
-
-By Jack Szwergold
-
 ### Set up the base system.
 
 #### Basic user and group setup.
@@ -522,7 +518,3 @@ Add this to the last line:
 	sudo pear install --nodeps MDB2_Driver_mssql
 	
 	sudo pear install HTTP_Request
-
-***
-
-*Ubuntu - Basic System Setup (c) by Jack Szwergold; written on January 16, 2016. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

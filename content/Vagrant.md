@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## Vagrant
-
-By Jack Szwergold
-
 ### Basic usage.
 
 This will init a basic Ubuntu 14.04 LTS (64-bit) setup:
@@ -241,7 +237,3 @@ With that done, run the Vagrant box list command again like this:
 And the output should be something like this:
 
 	Ubuntu 14.04 (virtualbox, 0)
-
-***
-
-*Vagrant (c) by Jack Szwergold; written on January 23, 2016. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

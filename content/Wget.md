@@ -7,10 +7,6 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-## Wget
-
-By Jack Szwergold
-
 ### Some Wget command parameters.
 
 - `-A [list/pattern]`: Accept list. Basically a comma separated list of filename suffixes to accept. For example, `-A jpg,jpeg,png,gif` would grab all image files and `-A mp3` would grab all MP3 files.
@@ -61,7 +57,3 @@ If Wget somehow chokes on a secure page with some message along the lines of:
 Just run the smae command with `--no-check-certificate` appended to it like so:
 
 	wget -m -k -p -w 1 -e robots=off http://[some url] --no-check-certificate
-
-***
-
-*Wget (c) by Jack Szwergold; written on October 8, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*
