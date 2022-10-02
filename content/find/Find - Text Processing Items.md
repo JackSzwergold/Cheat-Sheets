@@ -20,3 +20,13 @@ And here you go:
       do
         dos2unix -k -n -c mac "${full_text_filepath}" "${full_text_filepath}".txt;
       done
+
+### Lowercase file names and change spaces to underscores.
+
+    find . -depth -name "* *" -type f |\
+      while read full_text_filepath
+      do
+        new_filename=$(echo "${full_text_filepath}" | tr A-Z a-z | tr -s ' ' | tr ' ' '_'| sed 's/_\./\./');
+        mv -f "${full_text_filepath}" "${new_filename}";
+      done
+
