@@ -28,7 +28,6 @@ These are mainly intended for quick reference without too much deep explanation 
 - [Ghostscript](ghostscript)
 - [IFTop](iftop)
 - [Iconv](iconv)
-- [ImageMagick - Installing ImageMagick from Source via a Custom Debian Package Build on Ubuntu](imagemagick_-_installing_imagemagick_from_source_via_a_custom_debian_package_build_on_ubuntu)
 - [ImageMagick](imagemagick)
 - [iPerf](iperf)
 - [Kernel Networking Tweaks](kernel_networking_tweaks)
