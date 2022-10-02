@@ -511,8 +511,9 @@ div.container > div.element article p a:active {
 div.container > div.element article ul,
 div.container > div.element article ol {
   margin: 0;
-  margin: 0;
   clear: both;
+  column-count: 3;
+  column-gap: 1rem;
 }
 
 div.container > div.element article ul:last-child,
@@ -686,6 +687,12 @@ div.wrapper input[type="radio"].element_6:checked ~ div.container {
     width: 17.25rem;
   }
 
+  div.container > div.element article ul,
+  div.container > div.element article ol {
+    column-count: 1;
+    column-gap: 1rem;
+  }
+
 }
 
 @media (min-width: 640px) {
@@ -694,12 +701,24 @@ div.wrapper input[type="radio"].element_6:checked ~ div.container {
     width: 34.5rem;
   }
 
+  div.container > div.element article ul,
+  div.container > div.element article ol {
+    column-count: 2;
+    column-gap: 1rem;
+  }
+
 }
 
 @media (min-width: 768px) {
 
   div.container {
     width: 48rem;
+  }
+
+  div.container > div.element article ul,
+  div.container > div.element article ol {
+    column-count: 3;
+    column-gap: 1rem;
   }
 
 }
