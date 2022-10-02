@@ -1,6 +1,10 @@
 ---
 Title: Test
 Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Author: Jack Szwergold
+Date: 2015-09-15
+Robots: noindex,nofollow
+Template: index
 ---
 
 ## This is a test.
