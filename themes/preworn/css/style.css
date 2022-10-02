@@ -573,6 +573,13 @@ div.container > div.element article section:last-child {
 }
 
 /******************************************************************************/
+
+div.container > div.element article > section > footer p {
+  font-size: 0.85rem;
+  line-height: 1.25rem;
+}
+
+/******************************************************************************/
 /*
 /*  ____           _ _   _             _
 /* |  _ \ ___  ___(_) |_(_) ___  _ __ (_)_ __   __ _
