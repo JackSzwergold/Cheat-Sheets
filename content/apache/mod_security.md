@@ -1,6 +1,6 @@
 ---
-Title: Apache - Mod Evasive
-Description: A cheat sheet for Apache Mod Evasive related items.
+Title: Apache - Mod Security
+Description: A cheat sheet for Apache Mod Security related items.
 Author: Jack Szwergold
 Date: 2015-09-27
 Robots: noindex,nofollow
