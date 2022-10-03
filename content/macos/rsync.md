@@ -1,6 +1,6 @@
 ---
-Title: macOS - RSYNC
-Description: A cheat sheet for RSYNC related items.
+Title: macOS - Rsync
+Description: A cheat sheet for Rsync related items.
 Author: Jack Szwergold
 Date: 2015-09-13
 Robots: noindex,nofollow

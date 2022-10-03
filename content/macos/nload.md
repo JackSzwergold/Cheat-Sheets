@@ -1,6 +1,6 @@
 ---
-Title: macOS - NLOAD
-Description: A cheat sheet for NLOAD related items.
+Title: macOS - Nload
+Description: A cheat sheet for Nload related items.
 Author: Jack Szwergold
 Date: 2015-09-15
 Robots: noindex,nofollow
