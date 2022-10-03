@@ -15,6 +15,25 @@ These are mainly intended for quick reference without too much deep explanation 
 
 **Caveat Emptor**: But please keep in mind that many of the instructions and ideas here might be out of date or no longer work. So if you choose to follow them, and something doesn’t work as expected? What can I tell you.
 
+- [Amazon](amazon)
+- [Apache](apache)
+- [Find](find)
+- [Git](git)
+- [IPTables](iptables)
+- [Java](java)
+- [Joomla](joomla)
+- [Linux/Unix](linux-unix)
+- [macOS](macos)
+- [MAMP](mamp)
+- [NodeJS](nodejs)
+- [PHP](php)
+- [Postfix](postfix)
+- [Redis](redis)
+- [Ruby](ruby)
+- [Ubuntu](ubuntu)
+
+***
+
 - [Avahi Daemon](avahi_daemon)
 - [Awk](awk)
 - [Bash](bash)
