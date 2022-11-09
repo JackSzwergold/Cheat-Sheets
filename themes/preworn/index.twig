@@ -31,21 +31,21 @@
         <div class="container-fluid">
           <div class="row">
 
-
-            <header class="col col-12 p-3 m-0 bg-dark">
-              <h1 class="p-0 m-0"><a href="{{ base_url }}" class="p-0 m-0 text-decoration-none">{% if meta.title %} {{ meta.title }} {% else %} {{ site_title }} {% endif %}</a></h1>
+            <header class="col col-12 p-0 m-0 py-3 bg-dark">
+              <span class="badge badge-pill badge-primary"><a href="{{ base_url }}" class="p-0 m-0 text-light font-weight-light text-decoration-none"><em class="fa fa-home mr-1"></em> Home</a></span>
+              <h1 class="p-0 m-0 text-light">{% if meta.title %} {{ meta.title }} {% else %} {{ site_title }} {% endif %}</h1>
               <p class="p-0 m-0 text-light">By {{ meta.author }} ({{ meta.date|date("F j, Y") }})</p>
             </header>
 
-            <main class="col col-12 p-3 m-0 bg-light">
+            <main class="col col-12 p-0 m-0 px-3 pt-3 bg-light">
               {{ content }}
             </main>
 
-            <footer class="col col-12 p-3 m-0 bg-dark">
+            <footer class="col col-12 p-0 m-0 py-3 bg-dark">
               <p class="p-0 m-0 text-light">
-                {{ meta.title }} (c) by {{ meta.author }}; written on {{ meta.date|date("F j, Y") }}.
-                This work is licensed under a Creative Commons Attribution-NonCommercial 4.0
-                International License (CC-BY-NC-4.0).
+                <small>{{ meta.title }} (c) by {{ meta.author }}; written on {{ meta.date|date("F j, Y") }}.
+                  This work is licensed under a Creative Commons Attribution-NonCommercial 4.0
+                  International License (CC-BY-NC-4.0).</small>
               </p>
             </footer>
 
