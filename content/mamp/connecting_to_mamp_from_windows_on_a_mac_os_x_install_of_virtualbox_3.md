@@ -1,6 +1,6 @@
 ---
 Title: Connecting to MAMP from Windows on a Mac OS X Install of VirtualBox 3
-Description: Part 3: Advanced — Using a Dual Network Interface Setup with a Host-Only Interface
+Description: Part 3 - Advanced — Using a Dual Network Interface Setup with a Host-Only Interface
 Author: Jack Szwergold
 Date: 2014-03-02
 Robots: noindex,nofollow
@@ -33,10 +33,10 @@ You only need to add two items to create a new adapter:
 2. The IPv4 network mask of **255.255.255.0**.
 
 And then click the DHCP pane and make sure the DHCP server is disabled since this will be a static network.
- 
+
 Okay, got that? When all that is done your base VirtualBox `host` installation now has a new network interface that can be used for any/all of your virtual machines.
 
-Now to set it up on a `guest` machine just highlight whatever VirtualBox virtual machine you would like to to have this adapter and: 
+Now to set it up on a `guest` machine just highlight whatever VirtualBox virtual machine you would like to to have this adapter and:
 
 1. Click *Settings*.
 2. Then choose *Network*.

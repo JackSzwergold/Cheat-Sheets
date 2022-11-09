@@ -1,6 +1,6 @@
 ---
 Title: Connecting to MAMP from Windows on a Mac OS X Install of VirtualBox 1
-Description: Part 1: Overall Virtualization Concepts
+Description: Part 1 - Overall Virtualization Concepts
 Author: Jack Szwergold
 Date: 2014-03-02
 Robots: noindex,nofollow

@@ -1,6 +1,6 @@
 ---
 Title: Connecting to MAMP from Windows on a Mac OS X Install of VirtualBox 2
-Description: Part 2: Basic — Using a Single Network Interface Setup
+Description: Part 2 - Basic — Using a Single Network Interface Setup
 Author: Jack Szwergold
 Date: 2014-03-02
 Robots: noindex,nofollow
