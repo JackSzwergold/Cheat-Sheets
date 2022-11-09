@@ -15,6 +15,7 @@ These are mainly intended for quick reference without too much deep explanation 
 
 **Caveat Emptor**: But please keep in mind that many of the instructions and ideas here might be out of date or no longer work. So if you choose to follow them, and something doesn’t work as expected? What can I tell you.
 
+<div class="column_list" markdown="1">
 - [Amazon](amazon)
 - [Apache](apache)
 - [Find](find)
@@ -31,9 +32,11 @@ These are mainly intended for quick reference without too much deep explanation 
 - [Redis](redis)
 - [Ruby](ruby)
 - [Ubuntu](ubuntu)
+</div>
 
 ***
 
+<div class="column_list" markdown="1">
 - [Avahi Daemon](avahi_daemon)
 - [Awk](awk)
 - [Bash](bash)
@@ -99,3 +102,4 @@ These are mainly intended for quick reference without too much deep explanation 
 - [Wget](wget)
 - [XXD](xxd)
 - [Zip](zip)
+</div>
