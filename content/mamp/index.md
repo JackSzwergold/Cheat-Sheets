@@ -27,4 +27,4 @@ These are mainly intended for quick reference without too much deep explanation 
 - [MySQL 5.7 Upgrade](mamp/mysql_5.7_upgrade)
 - [Oracle OCI8 Module Items](mamp/oracle_oci8_module_items)
 - [SQLSRV Module Items](mamp/sqlsrv_module_items)
-- [Upgrading the PHP Pear Library in MAMP](macos/upgrading_the_php_pear_library_in_mamp)
+- [Upgrading the PHP Pear Library in MAMP](mamp/upgrading_the_php_pear_library_in_mamp)
