@@ -24,35 +24,59 @@
 
 <body>
 
+  <nav class="navbar navbar-dark bg-dark fixed-top navbar-expand-lg navbar-light bg-light">
+    <span class="badge badge-pill badge-primary"><a href="{{ base_url }}" class="p-0 m-0 text-light font-weight-light text-decoration-none"><em class="fa fa-home mr-1"></em> Home</a></span>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav m-0 p-0">
+        <li class="nav-item active m-0 p-0">
+          <a class="nav-link" href="#">Active</a>
+        </li>
+        <li class="nav-item m-0 p-0">
+          <a class="nav-link" href="#">One</a>
+        </li>
+        <li class="nav-item m-0 p-0">
+          <a class="nav-link" href="#">Two</a>
+        </li>
+      </ul>
+      <span class="ml-auto navbar-text">
+        Give me money
+      </span>
+    </div>
+  </nav>
+
   <div class="container-fluid">
     <div class="row">
-      <div class="col px-md-5 py-2 bg-code">
+      <div class="col px-md-5 pt-5 bg-code">
 
         <div class="container-fluid">
           <div class="row">
+            <div class="col py-3">
 
-            <header class="col col-12 p-0 m-0 pb-2 bg-code">
-              <span class="badge badge-pill badge-primary"><a href="{{ base_url }}" class="p-0 m-0 text-light font-weight-light text-decoration-none"><em class="fa fa-home mr-1"></em> Home</a></span>
-              <h1 class="p-0 m-0 text-sinanova-black text-light">{% if meta.title %} {{ meta.title }} {% else %} {{ site_title }} {% endif %}</h1>
-              <p class="p-0 m-0 text-sinanova-light text-light">By {{ meta.author }} ({{ meta.date|date("F j, Y") }})</p>
-            </header>
+              <header class="col col-12 p-0 m-0 pb-2 bg-code">
+                <h1 class="p-0 m-0 text-sinanova-black text-light">{% if meta.title %} {{ meta.title }} {% else %} {{ site_title }} {% endif %}</h1>
+                <p class="p-0 m-0 text-sinanova-light text-light">By {{ meta.author }} ({{ meta.date|date("F j, Y") }})</p>
+              </header>
 
-            <main class="col col-12 p-0 m-0 p-3 bg-light">
-              <article class="col col-12 p-0 m-0">
-              <span class="text-sinanova-regular">
-                {{ content }}
-              </span>
-            </article>
-            </main>
+              <main class="col col-12 p-0 m-0 p-3 bg-light">
+                <article class="col col-12 p-0 m-0">
+                  <span class="text-sinanova-regular">
+                    {{ content }}
+                  </span>
+                </article>
+              </main>
 
-            <footer class="col col-12 p-0 m-0 pt-2 bg-code">
-              <p class="p-0 m-0 text-sinanova-regular text-light">
-                <small>{{ meta.title }} (c) by {{ meta.author }}; written on {{ meta.date|date("F j, Y") }}.
-                  This work is licensed under a Creative Commons Attribution-NonCommercial 4.0
-                  International License (CC-BY-NC-4.0).</small>
-              </p>
-            </footer>
+              <footer class="col col-12 p-0 m-0 pt-2 bg-code">
+                <p class="p-0 m-0 text-sinanova-regular text-light">
+                  <small>{{ meta.title }} (c) by {{ meta.author }}; written on {{ meta.date|date("F j, Y") }}.
+                    This work is licensed under a Creative Commons Attribution-NonCommercial 4.0
+                    International License (CC-BY-NC-4.0).</small>
+                </p>
+              </footer>
 
+            </div>
           </div>
         </div>
 
