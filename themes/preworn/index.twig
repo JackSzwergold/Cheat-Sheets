@@ -33,7 +33,7 @@
 
 
             <header class="col col-12 p-3 m-0 bg-dark">
-              <h1 class="p-0 m-0"><a href="{{ base_url }}" class="p-0 m-0 text-decoration-none">{{ site_title }}</a></h1>
+              <h1 class="p-0 m-0"><a href="{{ base_url }}" class="p-0 m-0 text-decoration-none">{% if meta.title %} {{ meta.title }} {% else %} {{ site_title }} {% endif %}</a></h1>
               <p class="p-0 m-0 text-light">By {{ meta.author }} ({{ meta.date|date("F j, Y") }})</p>
             </header>
 
