@@ -24,26 +24,35 @@
 
 <body>
 
-  <div class="container">
+  <div class="container-fluid">
     <div class="row">
+      <div class="col px-5 bg-dark">
 
-      <header class="col col-12 p-0 pr-md-3 m-0">
-        <h1 class="p-0 m-0"><a href="{{ base_url }}" class="text-decoration-none">{{ site_title }}</a></h1>
-        <p>By {{ meta.author }} ({{ meta.date|date("F j, Y") }})</p>
-      </header>
+        <div class="container-fluid">
+          <div class="row">
 
-      <main class="col col-12 p-0 pr-md-3 m-0">
-        {{ content }}
-      </main>
 
-      <footer class="col col-12 p-0 pr-md-3 m-0">
-        <p>
-          {{ meta.title }} (c) by {{ meta.author }}; written on {{ meta.date|date("F j, Y") }}.
-          This work is licensed under a Creative Commons Attribution-NonCommercial 4.0
-          International License (CC-BY-NC-4.0).
-        </p>
-      </footer>
+            <header class="col col-12 p-3 m-0 bg-dark">
+              <h1 class="p-0 m-0"><a href="{{ base_url }}" class="p-0 m-0 text-decoration-none">{{ site_title }}</a></h1>
+              <p class="p-0 m-0 text-light">By {{ meta.author }} ({{ meta.date|date("F j, Y") }})</p>
+            </header>
 
+            <main class="col col-12 p-3 m-0 bg-light rounded">
+              {{ content }}
+            </main>
+
+            <footer class="col col-12 p-3 m-0 bg-dark">
+              <p class="p-0 m-0 text-light">
+                {{ meta.title }} (c) by {{ meta.author }}; written on {{ meta.date|date("F j, Y") }}.
+                This work is licensed under a Creative Commons Attribution-NonCommercial 4.0
+                International License (CC-BY-NC-4.0).
+              </p>
+            </footer>
+
+          </div>
+        </div>
+
+      </div>
     </div>
   </div>
 
