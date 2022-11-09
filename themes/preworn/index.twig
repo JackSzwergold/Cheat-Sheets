@@ -3,100 +3,48 @@
 
 <head>
   <title>{% if meta.title %}{{ meta.title }} | {% endif %}{{ site_title }}</title>
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   {% if meta.description %}
   <meta name="description" content="{{ meta.description|striptags }}" />
   {% endif %}
   {% if meta.robots %}
   <meta name="robots" content="{{ meta.robots }}" />
   {% endif %}
-  <meta name="date" content="2016-06-13" />
-  <meta name="dc.date" content="2016-06-13" />
-  <meta name="author" content="Jack Szwergold" />
-  <meta name="citation_author" content="Jack Szwergold" />
-  <meta name="dc.creator" content="Jack Szwergold" />
-  <meta name="dcterms.rightsHolder" content="(c) Copyright by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0)." />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta property="og:title" content="Preworn" />
-  <meta property="og:description" content="This site is Jack Szwergold’s personal portfolio and professional calling card." />
-  <meta property="og:type" content="website" />
-  <meta property="og:locale" content="en_US" />
-  <meta property="og:url" content="{{ base_url }}" />
-  <meta property="og:site_name" content="Preworn" />
-  <meta property="og:image" content="{{ theme_url }}favicons/favicons/icon_200x200.png" />
-  <meta property="fb:admins" content="504768652" />
-  <meta property="twitter:card" content="summary" />
-  <meta property="twitter:title" content="Preworn" />
-  <meta property="twitter:description" content="This site is Jack Szwergold’s personal portfolio and professional calling card." />
-  <meta property="twitter:url" content="{{ base_url }}" />
-  <meta property="twitter:image" content="{{ theme_url }}favicons/favicons/icon_200x200.png" />
-  <link rel="stylesheet" type="text/css" href="{{ theme_url }}/css/style.css" />
-  <link rel="stylesheet" type="text/css" href="{{ theme_url }}/fonts/font-awesome-4.7.0/css/font-awesome.min.css" />
-  <link rel="author" href="https://www.preworn.com/" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" type="image/png" href="{{ theme_url }}/favicons/favicon.ico" />
-  <link rel="apple-touch-icon-precomposed" href="{{ theme_url }}/favicons/apple-icon-precomposed.png" />
-  <link rel="apple-touch-icon" sizes="72x72" href="{{ theme_url }}favicons/apple-icon" />
-  <link rel="apple-touch-icon" sizes="57x57" href="{{ theme_url }}/favicons/apple-icon-57x57.png" />
-  <link rel="apple-touch-icon" sizes="60x60" href="{{ theme_url }}/favicons/apple-icon-60x60.png" />
-  <link rel="apple-touch-icon" sizes="72x72" href="{{ theme_url }}/favicons/apple-icon-72x72.png" />
-  <link rel="apple-touch-icon" sizes="76x76" href="{{ theme_url }}/favicons/apple-icon-76x76.png" />
-  <link rel="apple-touch-icon" sizes="114x114" href="{{ theme_url }}/favicons/apple-icon-114x114.png" />
-  <link rel="apple-touch-icon" sizes="120x120" href="{{ theme_url }}/favicons/apple-icon-120x120.png" />
-  <link rel="apple-touch-icon" sizes="144x144" href="{{ theme_url }}/favicons/apple-icon-144x144.png" />
-  <link rel="apple-touch-icon" sizes="152x152" href="{{ theme_url }}/favicons/apple-icon-152x152.png" />
-  <link rel="apple-touch-icon" sizes="180x180" href="{{ theme_url }}/favicons/apple-icon-180x180.png" />
-  <link rel="icon" sizes="36x36" href="{{ theme_url }}/favicons/android-icon-36x36.png" />
-  <link rel="icon" sizes="48x48" href="{{ theme_url }}/favicons/android-icon-48x48.png" />
-  <link rel="icon" sizes="72x72" href="{{ theme_url }}/favicons/android-icon-72x72.png" />
-  <link rel="icon" sizes="96x96" href="{{ theme_url }}/favicons/android-icon-96x96.png" />
-  <link rel="icon" sizes="144x144" href="{{ theme_url }}/favicons/android-icon-144x144.png" />
-  <link rel="icon" sizes="192x192" href="{{ theme_url }}/favicons/android-icon-192x192.png" />
-  <link rel="icon" sizes="96x96" href="{{ theme_url }}/favicons/favicon-16x16.png" />
-  <link rel="icon" sizes="32x32" href="{{ theme_url }}/favicons/favicon-32x32.png" />
-  <link rel="icon" sizes="96x96" href="{{ theme_url }}/favicons/favicon-96x96.png" />
-  <script src="{{ theme_url }}/script/jquery/jquery-3.5.1.min.js" defer="defer"></script>
-  <script src="{{ theme_url }}/script/hammer.min.js" defer="defer"></script>
-  <script src="{{ theme_url }}/script/hammer-time.min.js" defer="defer"></script>
-  <script src="{{ theme_url }}/script/javascript.js" defer="defer"></script>
-  <base href="" />
+  <link rel="stylesheet" type="text/css" href="{{ theme_url }}/css/bootstrap/bootstrap.css" />
+  <link rel="stylesheet" type="text/css" href="{{ theme_url }}/fonts/font-awesome-4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" type="text/css" href="{{ theme_url }}/css/style.css" />
+  <script src="{{ theme_url }}/script/bootstrap/bootstrap.bundle.min.js" defer="defer"></script>
+  <script src="{{ theme_url }}/script/jquery/jquery-3.5.1.min.js"></script>
+  <script src="{{ theme_url }}/script/underscore/underscore-min.js"></script>
+  <script src="{{ theme_url }}/script/javascript.js"></script>
 </head>
 
-<body ontouchstart>
+<body>
 
-  <header>
-    <h1><a href="{{ base_url }}">{{ site_title }}</a></h1>
-  </header>
+  <div class="container">
+    <div class="row">
 
-  <div class="wrapper">
+      <header class="col col-12 p-0 pr-md-3 m-0">
+        <h1 class="p-0 m-0"><a href="{{ base_url }}" class="text-decoration-none">{{ site_title }}</a></h1>
+        <p>By {{ meta.author }} ({{ meta.date|date("F j, Y") }})</p>
+      </header>
 
-    <div class="container">
+      <main class="col col-12 p-0 pr-md-3 m-0">
+        {{ content }}
+      </main>
 
-      <div class="element">
+      <footer class="col col-12 p-0 pr-md-3 m-0">
+        <p>
+          {{ meta.title }} (c) by {{ meta.author }}; written on {{ meta.date|date("F j, Y") }}.
+          This work is licensed under a Creative Commons Attribution-NonCommercial 4.0
+          International License (CC-BY-NC-4.0).
+        </p>
+      </footer>
 
-        <article>
-
-          <section>
-
-            <h1>{{ meta.title }}</h1>
-            <p>By {{ meta.author }} ({{ meta.date|date("F j, Y") }})</p>
-            <hr />
-            {{ content }}
-            <hr />
-
-            <footer>
-              <p><em>{{ meta.title }} (c) by {{ meta.author }}; written on {{ meta.date|date("F j, Y") }}.
-                  This work is licensed under a Creative Commons Attribution-NonCommercial 4.0
-                  International License (CC-BY-NC-4.0).</em></p>
-            </footer>
-
-          </section>
-
-        </article>
-
-      </div>
     </div>
-
   </div>
 
 </body>
