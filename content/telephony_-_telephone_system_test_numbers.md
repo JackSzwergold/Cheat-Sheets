@@ -9,6 +9,7 @@ Template: index
 
 ### These are still active after all these years.
 
+<div class="pb-3 list_style_none" markdown="1">
 - **1-202-965-9970**: “You have just de-activated this feature.”
 - **1-916-440-0031**: “We’re sorry, due to telephone company facility trouble, your call cannot be completed at this time. Will you try your call again later?”
 - **1-409-724-3137**: “The call you have made requires an initial deposit. Please hang up momentarily…”
@@ -22,16 +23,20 @@ Template: index
 - **1-916-440-0029**: “We’re sorry. All circuits are busy now. Will you please try your call again later.”
 - **1-914-737-9938**: “This is a CPTA announcement test. I don’t know what it’s supposed to say… Not really that concerned with it… So… If anyone gets this just disregard it and hang up.”
 - **1-646-674-9999**: “You have reached Bell Atlantic Office of West 36th Street serving codes 646, 674, 212, 594, 917, 339.”
+</div>
 
 ### 2022-10-01: Inactive, changed, out of service or just dead.
 
+<div class="pb-3 list_style_none" markdown="1">
 - **1-845-268-9922**: “Excuse me, please deposit five cents for the next two minutes or your call will be terminated…”
 - **1-916-440-0017**: “We’re sorry, your service has been interrupted. For fire, medical and police emergencies, dial 911.”
 - **1-914-345-9935**: “Excuse me, please deposit 5 cents for the next two minutes or your call will be terminated. Thank you for using NYNEX. This is a recording.”
 - **1-718-980-9901**: “Congratulations! You have reached New Dorp DSL 5ESS Switch and line trunk, handling codes 351, 667, 668, 979, 980, and 987.”
+</div>
 
 ### 2018-03-17: Inactive, changed, out of service or just dead.
 
+<div class="pb-3 list_style_none" markdown="1">
 - **1-313-324-9901**: “You have reached AT&T local services. DT RT MI BA DS0.”
 - **1-206-343-0011**: “This call requires a coin deposit. Please hang up momentarily…”
 - **1-541-967-0010**: “The business telephone number you have dialed is experiencing a temporary service outage… USWEST.”
@@ -49,3 +54,4 @@ Template: index
 - **1-718-816-9901**: “You have reached the North Staten Island DMS-100, serving codes 273, 390, 442, 447, 448, 556, 720, 727, 815, 816, 876, and 981.”
 - **1-800-356-9919**: “Message 202. Test message 202.”
 - **1-941-232-9901**: “You have reached the Katonah DMS 100 Central Office Exchange 232. Thank you very much.”
+</div>

@@ -99,7 +99,7 @@ pre {
 }
 
 /******************************************************************************/
-/* Article column breaks.
+/* Article column list breaks.
 /******************************************************************************/
 
 main > article div.column_list ul,
@@ -109,6 +109,17 @@ main > article div.column_list ol {
   clear: both;
   column-count: 3;
   column-gap: 1rem;
+}
+
+/******************************************************************************/
+/* Article list style none.
+/******************************************************************************/
+
+main > article div.list_style_none ul,
+main > article div.list_style_none ol {
+  margin: 0;
+  padding: 0 1rem 0 1rem;
+  list-style: none;
 }
 
 /******************************************************************************/
