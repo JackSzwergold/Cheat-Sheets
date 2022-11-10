@@ -21,5 +21,5 @@ These are mainly intended for quick reference without too much deep explanation 
 - [Expires and Cache Control Headers](apache/expires_and_cache_control_headers)
 - [Load Balancer Related Items](apache/load_balancer_related_items)
 - [Mod Evasive](apache/mod_evasive)
-- [Mod Evasive](apache/mod_security)
-- [Mod Security](apache/ssl_certificates)
+- [Mod Security](apache/mod_security)
+- [SSL Certificates](apache/ssl_certificates)
