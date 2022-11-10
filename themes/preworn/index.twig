@@ -26,8 +26,8 @@
 
 <body>
 
-  <nav class="navbar navbar-dark bg-dark m-0 p-0 pl-3 fixed-top navbar-expand navbar-light bg-light">
-    <span class="badge badge-pill badge-primary"><a href="{{ base_url }}" class="p-0 m-0 text-light font-weight-light text-decoration-none"><em class="fa fa-home mr-1"></em> Cheat Sheets Home</a></span>
+  <nav class="navbar navbar-dark bg-dark m-0 p-0 py-2 px-2 fixed-top navbar-expand navbar-light bg-light">
+    <span class="badge badge-pill badge-primary"><a href="{{ base_url }}" class="p-0 m-0 text-light font-weight-light text-decoration-none"><em class="fa fa-home mr-1"></em>Cheat Sheets Home</a></span>
     <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button> -->
@@ -63,8 +63,8 @@
 
               <header class="col col-12 p-0 m-0 pb-2 bg-code">
                 <h1 class="p-0 m-0 text-sinanova-black text-light">{% if meta.title %} {{ meta.title }} {% else %} {{ site_title }} {% endif %}</h1>
-                <p class="p-0 m-0 text-sinanova-light text-light">{% if meta.author %}By {{ meta.author }}{% endif %}</p>
-                <p class="p-0 m-0 text-sinanova-light text-light">{% if meta.date %} <small>{{ meta.date|date("F j, Y") }} </small>{% endif %}</p>
+                <p class="p-0 m-0 text-sinanova-light text-light">{% if meta.author %}<em class="fa fa-pencil mr-2"></em>{{ meta.author }}{% endif %}</p>
+                <p class="p-0 m-0 text-sinanova-light text-light">{% if meta.date %}<em class="fa fa-calendar mr-2"></em>{{ meta.date|date("F j, Y") }}{% endif %}</p>
               </header>
 
               <main class="col col-12 p-0 m-0 p-3 bg-light">
