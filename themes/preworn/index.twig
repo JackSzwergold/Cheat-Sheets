@@ -63,7 +63,8 @@
 
               <header class="col col-12 p-0 m-0 pb-2 bg-code">
                 <h1 class="p-0 m-0 text-sinanova-black text-light">{% if meta.title %} {{ meta.title }} {% else %} {{ site_title }} {% endif %}</h1>
-                <p class="p-0 m-0 text-sinanova-light text-light">By {{ meta.author }} ({{ meta.date|date("F j, Y") }})</p>
+                <p class="p-0 m-0 text-sinanova-light text-light">{% if meta.author %}By {{ meta.author }}{% endif %}</p>
+                <p class="p-0 m-0 text-sinanova-light text-light">{% if meta.date %} <small>{{ meta.date|date("F j, Y") }} </small>{% endif %}</p>
               </header>
 
               <main class="col col-12 p-0 m-0 p-3 bg-light">
