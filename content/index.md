@@ -1,6 +1,6 @@
 ---
 Title: Cheat Sheets
-Description: Cheat Sheets
+Description: CHere is a collection of cheat sheets I’ve compiled for my own personal reference—and to share with clients as well as other techs—over the years. If you stumble across this and find it useful I’m cool with that.
 Author: Jack Szwergold
 Date: 2022-10-01
 Robots: noindex,nofollow
