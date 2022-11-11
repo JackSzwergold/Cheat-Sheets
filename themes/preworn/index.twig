@@ -26,26 +26,47 @@
 
 <body>
 
-  <nav class="navbar navbar-dark bg-dark m-0 p-0 py-2 px-2 fixed-top navbar-expand navbar-light bg-light">
-    <span class="badge badge-pill badge-primary"><a href="{{ base_url }}" class="p-0 m-0 text-light font-weight-light text-decoration-none"><em class="fa fa-home mr-1"></em>Cheat Sheets Home</a></span>
-    <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button> -->
+  <nav class="navbar navbar-light m-0 p-0 py-2 px-2 fixed-top navbar-expand">
+    <!-- <span class="text-sinanova-light{% if current_page.id == 'resume' %} active{% endif %}">
+      <a href="{{ base_url }}" class="p-0 m-0 text-light font-weight-light text-decoration-none"><em class="fa fa-home mr-2"></em> Home</a>
+    </span> -->
+    <!-- <span class="badge badge-pill badge-primary"><a href="{{ base_url }}" class="p-0 m-0 text-light font-weight-light text-decoration-none"><em class="fa fa-home"></em></a></span> -->
     <div class="collapse navbar-collapse" id="navbarText">
-      <!-- <ul class="navbar-nav m-0 p-0">
-        <li class="nav-item active m-0 p-0">
-          <a class="nav-link" href="#">Active</a>
+      <ul class="navbar-nav m-0 p-0">
+        <li class="nav-item m-0 p-0">
+          <span class="text-sinanova-light{% if current_page.id == 'index' %} active{% endif %}">
+            <a class="nav-link" href="{{ base_url }}"><em class="fa fa-home"></em></a>
+          </span>
+        </li>
+        <!-- <li class="nav-item m-0 p-0">
+          <span class="text-sinanova-light{% if current_page.id == 'about' %} active{% endif %}">
+            <a class="nav-link" href="{{ base_url }}/about">About</a>
+          </span>
         </li>
         <li class="nav-item m-0 p-0">
-          <a class="nav-link" href="#">One</a>
+          <span class="text-sinanova-light{% if current_page.id == 'resume' %} active{% endif %}">
+            <a class="nav-link" href="{{ base_url }}/resume">Résumé</a>
+          </span>
         </li>
         <li class="nav-item m-0 p-0">
-          <a class="nav-link" href="#">Two</a>
+          <span class="text-sinanova-light{% if current_page.id == 'projects' %} active{% endif %}">
+            <a class="nav-link" href="{{ base_url }}/projects">Projects</a>
+          </span>
         </li>
-      </ul> -->
-      <span class="h2 p-0 m-0 ml-auto navbar-text text-sinanova-black text-white">
-        <div class="bg-code m-0 p-0 px-5 py-1">
-          <a href="{{ config.parent_site_url }}" class="text-decoration-none">
+        <li class="nav-item m-0 p-0">
+          <span class="text-sinanova-light{% if current_page.id == 'bookmarks' %} active{% endif %}">
+            <a class="nav-link" href="{{ base_url }}/bookmarks">Bookmarks</a>
+          </span>
+        </li>
+        <li class="nav-item m-0 p-0">
+          <span class="text-sinanova-light{% if current_page.id == 'contact' %} active{% endif %}">
+            <a class="nav-link" href="{{ base_url }}/contact">Contact</a>
+          </span>
+        </li> -->
+      </ul>
+      <span class="h2 p-0 m-0 ml-auto navbar-text">
+        <div class="bg-dark m-0 p-0 px-3">
+          <a href="{{ config.parent_site_url }}" class="text-decoration-none text-sinanova-regular text-light">
             Preworn
           </a>
         </div>
@@ -53,43 +74,46 @@
     </div>
   </nav>
 
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col px-md-5 pt-5 bg-code">
 
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col py-3">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col px-md-5 pt-5">
 
-              <header class="col col-12 p-0 m-0 pb-2 bg-code">
-                <h1 class="p-0 m-0 text-sinanova-black text-light">{% if meta.title %} {{ meta.title }} {% else %} {{ site_title }} {% endif %}</h1>
-                <p class="p-0 m-0 text-sinanova-light text-light">{% if meta.author %}<em class="fa fa-pencil mr-2"></em>{{ meta.author }}{% endif %}</p>
-                <p class="p-0 m-0 text-sinanova-light text-light">{% if meta.date %}<em class="fa fa-calendar mr-2"></em>{{ meta.date|date("F j, Y") }}{% endif %}</p>
-              </header>
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col py-3">
 
-              <main class="col col-12 p-0 m-0 p-3 bg-light">
-                <article class="col col-12 p-0 m-0">
-                  <span class="text-sinanova-regular">
-                    {{ content }}
-                  </span>
-                </article>
-              </main>
+                <header class="col col-12 p-0 m-0 pb-3 mb-3 border-bottom border-dark">
+                  <h1 class="p-0 m-0 text-sinanova-regular text-dark">{% if meta.title %} {{ meta.title }} {% else %} {{ site_title }} {% endif %}</h1>
+                  <h2 class="p-0 m-0 text-sinanova-regular text-dark">{% if meta.description %} {{ meta.description }} {% else %} {{ site_description }} {% endif %}</h2>
+                  <p class="p-0 m-0 mt-2 text-sinanova-light text-dark">{% if meta.author %}<em class="fa fa-pencil mr-2"></em>{{ meta.author }}{% endif %}</p>
+                  <p class="p-0 m-0 text-sinanova-light text-dark">{% if meta.date %}<em class="fa fa-calendar mr-2"></em>{{ meta.date|date("F j, Y") }}{% endif %}</p>
+                </header>
 
-              <footer class="col col-12 p-0 m-0 pt-2 bg-code">
-                <p class="p-0 m-0 text-sinanova-regular text-light">
-                  <small>{{ meta.title }} (c) by {{ meta.author }}; written on {{ meta.date|date("F j, Y") }}.
-                    This work is licensed under a Creative Commons Attribution-NonCommercial 4.0
-                    International License (CC-BY-NC-4.0).</small>
-                </p>
-              </footer>
+                <main class="col col-12 p-0 m-0">
+                  <article class="col col-12 p-0 m-0">
+                    <span class="text-sinanova-regular">
+                      {{ content }}
+                    </span>
+                  </article>
+                </main>
 
+                <footer class="col col-12 p-0 m-0 pt-3 mt-3 border-top border-dark">
+                  <p class="p-0 m-0 text-sinanova-regular text-dark">
+                    <small>Copyright © {{ "now"|date("Y") }} {{ meta.author }}.
+                      This work is licensed under a Creative Commons Attribution-NonCommercial 4.0
+                      International License (CC-BY-NC-4.0).</small>
+                  </p>
+                </footer>
+
+              </div>
             </div>
           </div>
-        </div>
 
+        </div>
       </div>
     </div>
-  </div>
+
 
 </body>
 
