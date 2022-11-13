@@ -37,21 +37,21 @@ Extracting the certificate from the `.pfx` file:
 
 ### A basic Apache config for an SSL certificate.
 
-	<IfModule mod_ssl.c>
-	  <VirtualHost *:443>
-	    # 2013-10-26: Including common items in a common file for ssl & non-ssl.
-	    include /etc/apache2/sites-available/www.example.com.common.conf
+    <IfModule mod_ssl.c>
+      <VirtualHost *:443>
+        # 2013-10-26: Including common items in a common file for ssl & non-ssl.
+        include /etc/apache2/sites-available/www.example.com.common.conf
 
-	    SSLEngine on
-	    SSLCertificateFile /opt/ssl/cert-www.example.com.crt
-	    SSLCertificateKeyFile /opt/ssl/www.example.com.key
-	    SSLCertificateChainFile /opt/ssl/GandiStandardSSLCA.pem
-	    SSLVerifyClient None
+        SSLEngine on
+        SSLCertificateFile /opt/ssl/cert-www.example.com.crt
+        SSLCertificateKeyFile /opt/ssl/www.example.com.key
+        SSLCertificateChainFile /opt/ssl/GandiStandardSSLCA.pem
+        SSLVerifyClient None
 
-	    SSLProtocol all
-	    SSLCipherSuite HIGH:MEDIUM
+        SSLProtocol all
+        SSLCipherSuite HIGH:MEDIUM
 
-	    RequestHeader set X_FORWARDED_PROTO 'https'
+        RequestHeader set X_FORWARDED_PROTO 'https'
 
-	  </VirtualHost>
-	</IfModule>
+      </VirtualHost>
+    </IfModule>

@@ -11,31 +11,31 @@ This tutorial explains how you can install `rsync` directly from source code on 
 
 First grab a compressed archive from an official `rsync` source site:
 
-	curl -O -L https://download.samba.org/pub/rsync/src/rsync-3.1.1.tar.gz
+    curl -O -L https://download.samba.org/pub/rsync/src/rsync-3.1.1.tar.gz
 
 Next, decompress the archive like this:
 
-	tar -xf rsync-3.*.tar.gz
+    tar -xf rsync-3.*.tar.gz
 
 Now go into the decompressed directory:
 
-	cd rsync-3.*
-	
+    cd rsync-3.*
+    
 Run this `configure` command:
 
-	./configure
+    ./configure
 
 Once the `configure` process completes, run `make`:
 
-	make
+    make
 
 Finally install it by running `sudo make install`:
 
-	sudo make install	
+    sudo make install    
 
 And once it’s installed, run the command with `--version` to do a simple check to see it’s working:
 
-	/usr/local/bin/rsync --version
+    /usr/local/bin/rsync --version
 
 Note how I’m invoking the `rsync` command with the full binary path of `/usr/local/bin/rsync` instead of just `rsync`. This is because macOS already has a built-in—but out of date—version of `rsync`.
 

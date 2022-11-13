@@ -13,10 +13,12 @@ Template: index
 
 <!-- -->
 
-	git clone https://github.com/torch/distro.git ~/torch --recursive
-	cd ~/torch;
-	bash install-deps;
-	./install.sh
+    git clone https://github.com/torch/distro.git ~/torch --recursive
+    cd ~/torch;
+    bash install-deps;
+    ./install.sh
+
+***
 
 ### char-rnn
 
@@ -24,8 +26,8 @@ Template: index
 
 <!-- -->
 
-	luarocks install nngraph 
-	luarocks install optim
-	luarocks install nn
+    luarocks install nngraph
+    luarocks install optim
+    luarocks install nn
 
-	th train.lua -gpuid -1
+    th train.lua -gpuid -1

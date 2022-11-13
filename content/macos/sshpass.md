@@ -15,5 +15,5 @@ Template: index
     sudo make install
     sudo make uninstall
 
-	rm -f /usr/local/bin/sshpass
-	rm -f /usr/local/share/man/man1/sshpass.1
+    rm -f /usr/local/bin/sshpass
+    rm -f /usr/local/share/man/man1/sshpass.1

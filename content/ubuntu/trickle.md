@@ -41,30 +41,30 @@ Instead of dealing with launching and configuring the Trickle daemon via the com
 
 Here are the contents of the sample Trickle daemon configurations:
 
-	# this file is an example for a system-wide or personal settings file
-	# for trickle (see manual pages for trickle, trickled and trickled.conf
-	# below are two examples that should be self-explaining
-	
-	# [ssh]
-	# Priority = 1
-	# Time-Smoothing = 0.1
-	# Length-Smoothing = 2
-	# [ftp]
-	# Priority = 8
-	# Time-Smoothing = 5
-	# Length-Smoothing = 20
+    # this file is an example for a system-wide or personal settings file
+    # for trickle (see manual pages for trickle, trickled and trickled.conf
+    # below are two examples that should be self-explaining
+    
+    # [ssh]
+    # Priority = 1
+    # Time-Smoothing = 0.1
+    # Length-Smoothing = 2
+    # [ftp]
+    # Priority = 8
+    # Time-Smoothing = 5
+    # Length-Smoothing = 20
 
 And here are some sample Trickle daemon configurations for `curl` and `wget`:
 
-	[curl]
-	  Priority = 8
-	  Time-Smoothing = 5
-	  Length-Smoothing = 20
-	
-	[wget]
-	  Priority = 8
-	  Time-Smoothing = 5
-	  Length-Smoothing = 20
+    [curl]
+      Priority = 8
+      Time-Smoothing = 5
+      Length-Smoothing = 20
+    
+    [wget]
+      Priority = 8
+      Time-Smoothing = 5
+      Length-Smoothing = 20
 
 According to the official documentation, the value of `Time-Smoothing` is defined as follows in the documentation:
 

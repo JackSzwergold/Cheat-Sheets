@@ -15,13 +15,13 @@ Open up `/etc/bashrc`:
 
 Search through the code and find the chunk of code that looks something like this:
 
-	# By default, we want this to get set.
-	# Even for non-interactive, non-login shells.
-	if [ $UID -gt 99 ] && [ "`id -gn`" = "`id -un`" ]; then
-	        umask 002
-	else
-	    	umask 022
-	fi
+    # By default, we want this to get set.
+    # Even for non-interactive, non-login shells.
+    if [ $UID -gt 99 ] && [ "`id -gn`" = "`id -un`" ]; then
+            umask 002
+    else
+            umask 022
+    fi
 
 Change the `umask` value in the `else` logic to:
 
@@ -55,4 +55,4 @@ Find the line that reads something like this:
 
 Change it to this by adding `umask=0002` to the end of the line:
 
-    session optional                        pam_umask.so	umask=0002
+    session optional                        pam_umask.so    umask=0002

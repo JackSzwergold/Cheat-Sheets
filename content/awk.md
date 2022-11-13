@@ -15,4 +15,4 @@ Just change `*.txt` to match the text file pattern you are attempting to match a
 
 This command will take a text file and will convert all uppercase to capital case:
 
-	cat foo.txt | tr "[A-Z]" "[a-z]"  | awk '{for (i=1;i<=NF;i++) $i=toupper(substr($i,1,1)) substr($i,2)} 1' > bar.txt
+    cat foo.txt | tr "[A-Z]" "[a-z]"  | awk '{for (i=1;i<=NF;i++) $i=toupper(substr($i,1,1)) substr($i,2)} 1' > bar.txt

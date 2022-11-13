@@ -13,28 +13,28 @@ Honestly, some of this is just “magic” and I don’t trust any of these conf
 
     sudo nano /etc/nsmb.conf
 
-	[default]
-	    streams=no
-	    notify_off=yes
-	    port445=no_netbios
+    [default]
+        streams=no
+        notify_off=yes
+        port445=no_netbios
 
 ### A better idea.
 
     sudo nano /etc/nsmb.conf
 
-	[default]
-	    streams=yes
+    [default]
+        streams=yes
 
 ### Something that might work.
 
-	sudo nano /etc/smb.conf
-	
-	sudo nano /private/etc/smb.conf
+    sudo nano /etc/smb.conf
+    
+    sudo nano /private/etc/smb.conf
 
-	[global]
-	    socket options = TCP_NODELAY IPTOS_LOWDELAY
-	    large readwrite = no
+    [global]
+        socket options = TCP_NODELAY IPTOS_LOWDELAY
+        large readwrite = no
 
 ### Edit SMB (Samba) shares.
 
-	sudo nano /var/db/samba/smb.shares
+    sudo nano /var/db/samba/smb.shares

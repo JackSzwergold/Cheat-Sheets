@@ -17,6 +17,8 @@ Then clear the history connected to the current Bash session:
 
     history -c
 
+***
+
 ### Set Bash terminal colors.
 
 #### CLICOLOR and related values.
@@ -38,23 +40,23 @@ And just set `CLICOLOR` settings like this:
 Setting `LSCOLORS` sets the colors used by `ls` for directory listings. As explained in the manpage for `ls`:
 
 > The value of this variable describes what color to use for which attribute when colors are enabled with `CLICOLOR`. This string is a concatenation of pairs of the format `fb`, where `f` is the foreground color and `b` is the background color. The color designators are as follows:
-	
-	a     black
-	b     red
-	c     green
-	d     brown
-	e     blue
-	f     magenta
-	g     cyan
-	h     light grey
-	A     bold black, usually shows up as dark grey
-	B     bold red
-	C     bold green
-	D     bold brown, usually shows up as yellow
-	E     bold blue
-	F     bold magenta
-	G     bold cyan
-	H     bold light grey; looks like bright white
+
+    a     black
+    b     red
+    c     green
+    d     brown
+    e     blue
+    f     magenta
+    g     cyan
+    h     light grey
+    A     bold black, usually shows up as dark grey
+    B     bold red
+    C     bold green
+    D     bold brown, usually shows up as yellow
+    E     bold blue
+    F     bold magenta
+    G     bold cyan
+    H     bold light grey; looks like bright white
     x     default foreground or background
 
 To set `LSCOLORS` open up `.bash_profile`:
@@ -66,31 +68,33 @@ And here are some example `LSCOLORS` settings:
     export LSCOLORS=GxFxCxDxBxegedabagaced
     export LSCOLORS=ExGxBxDxCxEgEdxbxgxcxd
 
+***
+
 ### An example of a basic Bash shell `.bash_profile`.
 
-	# Disable shell sessions to get a real history back.
-	# You can also just create a '.bash_sessions_disable' file in your home directory.
-	# SHELL_SESSION_HISTORY=0;
+    # Disable shell sessions to get a real history back.
+    # You can also just create a '.bash_sessions_disable' file in your home directory.
+    # SHELL_SESSION_HISTORY=0;
 
-	# Setting CLI colors.
-	export CLICOLOR=1;
-	
-	# MAMP stuff.
-	export MAMP_BIN="/Applications/MAMP/Library/bin";
-	export MAMP_PHP="/Applications/MAMP/bin/php/php5.6.10/bin";
-	# export MAMP_PHP="/Applications/MAMP/bin/php/php7.0.8/bin";
-	# export MAMP_PHP="/Applications/MAMP/bin/php/php7.1.22/bin";
-	# export MAMP_PHP="/Applications/MAMP/bin/php/php7.2.10/bin";
-	
-	# Final $PATH setting.
-	# export PATH="/usr/local/bin:/usr/local/sbin:$PATH";
-	export PATH="$MAMP_BIN:$MAMP_PHP:/usr/local/bin:/usr/local/sbin:$PATH";
-	
-	# Set the VAGRANT_HOME path.
-	# export VAGRANT_HOME="/Someplace/Somewhere/vagrant.d";
-	
-	# 2016-12-08: Load the SSH keys into the keychain.
-	ssh-add -K 2>/dev/null;
-	
-	# For Acquia DevDesktop tools.
-	# export PATH="$PATH:/Applications/DevDesktop/tools"
+    # Setting CLI colors.
+    export CLICOLOR=1;
+
+    # MAMP stuff.
+    export MAMP_BIN="/Applications/MAMP/Library/bin";
+    export MAMP_PHP="/Applications/MAMP/bin/php/php5.6.10/bin";
+    # export MAMP_PHP="/Applications/MAMP/bin/php/php7.0.8/bin";
+    # export MAMP_PHP="/Applications/MAMP/bin/php/php7.1.22/bin";
+    # export MAMP_PHP="/Applications/MAMP/bin/php/php7.2.10/bin";
+
+    # Final $PATH setting.
+    # export PATH="/usr/local/bin:/usr/local/sbin:$PATH";
+    export PATH="$MAMP_BIN:$MAMP_PHP:/usr/local/bin:/usr/local/sbin:$PATH";
+
+    # Set the VAGRANT_HOME path.
+    # export VAGRANT_HOME="/Someplace/Somewhere/vagrant.d";
+
+    # 2016-12-08: Load the SSH keys into the keychain.
+    ssh-add -K 2>/dev/null;
+
+    # For Acquia DevDesktop tools.
+    # export PATH="$PATH:/Applications/DevDesktop/tools"

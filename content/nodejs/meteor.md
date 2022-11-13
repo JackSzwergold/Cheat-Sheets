@@ -21,17 +21,17 @@ Template: index
 
 First create a simple “TODO” application:
 
-	meteor create ~/simple-todos
+    meteor create ~/simple-todos
 
 This will create a new directory with this layout:
 
-	client/main.js        # a JavaScript entry point loaded on the client
-	client/main.html      # an HTML file that defines view templates
-	client/main.css       # a CSS file to define your app's styles
-	server/main.js        # a JavaScript entry point loaded on the server
-	package.json          # a control file for installing NPM packages
-	.meteor               # internal Meteor files
-	.gitignore            # a control file for git
+    client/main.js        # a JavaScript entry point loaded on the client
+    client/main.html      # an HTML file that defines view templates
+    client/main.css       # a CSS file to define your app's styles
+    server/main.js        # a JavaScript entry point loaded on the server
+    package.json          # a control file for installing NPM packages
+    .meteor               # internal Meteor files
+    .gitignore            # a control file for git
 
 With that done, now go into the `simple-todos` directory like this:
 
@@ -99,18 +99,18 @@ Richer, more detailed version information can be gleaned by running this command
 
 And the output should be:
 
-	Package: meteor@1.2.17                        
-	Maintainers: mdg                              
-	Exports: Meteor, global, meteorEnv            
-	                                              
-	This is an internal Meteor package.           
-	                                              
-	Recent versions:                              
-	  1.1.15    June 10th, 2016                   
-	  1.1.15_1  June 23rd, 2016
-	  1.1.16    July 7th, 2016
-	  1.2.16    July 25th, 2016
-	  1.2.17    August 18th, 2016     installed
+    Package: meteor@1.2.17                        
+    Maintainers: mdg                              
+    Exports: Meteor, global, meteorEnv            
+                                                  
+    This is an internal Meteor package.           
+                                                  
+    Recent versions:                              
+      1.1.15    June 10th, 2016                   
+      1.1.15_1  June 23rd, 2016
+      1.1.16    July 7th, 2016
+      1.2.16    July 25th, 2016
+      1.2.17    August 18th, 2016     installed
 
 To check the version of Meteor that is a part of a project—which might be older than the system installed version—just check the contents of `.meteor/release` like this:
 
@@ -123,11 +123,11 @@ The output should be something like this:
 #### Building for a mobile app.
 
     meteor add cordova:cordova-plugin-meteor-webapp@1.4.1
-	
+    
     meteor install-sdk ios
-	
+    
     meteor add-platform ios
-	
+    
     meteor run ios
 
 
@@ -135,21 +135,21 @@ The output should be something like this:
 
 Note that the compressed `tar.gz` archive created by the build process is named after the directory the MeteorJS code is stored in. So to rename on a deploy, just do a `git clone` to a new destination. Decompressed archive will be a directory named `bundle`.
 
-	meteor build --architecture=os.linux.x86_64 /path/to/build/to/
-	scp /path/to/build/to/meteorapp.tar.gz username@example.com:/path/to/upload/to
+    meteor build --architecture=os.linux.x86_64 /path/to/build/to/
+    scp /path/to/build/to/meteorapp.tar.gz username@example.com:/path/to/upload/to
 
-	ssh username@example.com
-	cd /path/to/upload/to
-	tar -xf meteorapp.tar.gz
+    ssh username@example.com
+    cd /path/to/upload/to
+    tar -xf meteorapp.tar.gz
 
-	cd bundle/programs/server
-	npm install
+    cd bundle/programs/server
+    npm install
 
-	cd ../../
+    cd ../../
 
-	export MONGO_URL="mongodb://localhost:27017/meteorapp";
-	export MONGO_OPLOG_URL="";
-	export ROOT_URL="http://localhost";
-	export PORT=3000;
+    export MONGO_URL="mongodb://localhost:27017/meteorapp";
+    export MONGO_OPLOG_URL="";
+    export ROOT_URL="http://localhost";
+    export PORT=3000;
 
-	node main.js
+    node main.js

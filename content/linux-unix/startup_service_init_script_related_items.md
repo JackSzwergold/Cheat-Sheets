@@ -11,36 +11,36 @@ Template: index
 
 Use `update-rc.d` to install and remove System-V style init script links on Ubuntu/Debian. For example, to install the startup scripts for Apache just run this command:
 
-	sudo update-rc.d apache2 defaults
+    sudo update-rc.d apache2 defaults
 
 To check if the scripts are set, run this `ls` command:
 
-	ls -la /etc/rc*/*apache2
+    ls -la /etc/rc*/*apache2
 
 Output should look something like this:
 
-	lrwxrwxrwx 1 root root 17 Oct  3 21:58 /etc/rc0.d/K20apache2 -> ../init.d/apache2
-	lrwxrwxrwx 1 root root 17 Oct  3 21:58 /etc/rc1.d/K20apache2 -> ../init.d/apache2
-	lrwxrwxrwx 1 root root 17 Oct  3 21:58 /etc/rc2.d/S20apache2 -> ../init.d/apache2
-	lrwxrwxrwx 1 root root 17 Oct  3 21:58 /etc/rc3.d/S20apache2 -> ../init.d/apache2
-	lrwxrwxrwx 1 root root 17 Oct  3 21:58 /etc/rc4.d/S20apache2 -> ../init.d/apache2
-	lrwxrwxrwx 1 root root 17 Oct  3 21:58 /etc/rc5.d/S20apache2 -> ../init.d/apache2
-	lrwxrwxrwx 1 root root 17 Oct  3 21:58 /etc/rc6.d/K20apache2 -> ../init.d/apache2
+    lrwxrwxrwx 1 root root 17 Oct  3 21:58 /etc/rc0.d/K20apache2 -> ../init.d/apache2
+    lrwxrwxrwx 1 root root 17 Oct  3 21:58 /etc/rc1.d/K20apache2 -> ../init.d/apache2
+    lrwxrwxrwx 1 root root 17 Oct  3 21:58 /etc/rc2.d/S20apache2 -> ../init.d/apache2
+    lrwxrwxrwx 1 root root 17 Oct  3 21:58 /etc/rc3.d/S20apache2 -> ../init.d/apache2
+    lrwxrwxrwx 1 root root 17 Oct  3 21:58 /etc/rc4.d/S20apache2 -> ../init.d/apache2
+    lrwxrwxrwx 1 root root 17 Oct  3 21:58 /etc/rc5.d/S20apache2 -> ../init.d/apache2
+    lrwxrwxrwx 1 root root 17 Oct  3 21:58 /etc/rc6.d/K20apache2 -> ../init.d/apache2
 
 Now if you wanted to remove the startup scripts for Apache just run this command:
 
-	sudo update-rc.d -f apache2 remove
+    sudo update-rc.d -f apache2 remove
 
 And then the output of that would be something like this:
 
-	Removing any system startup links for /etc/init.d/apache2 ...
-	  /etc/rc0.d/K20apache2
-	  /etc/rc1.d/K20apache2
-	  /etc/rc2.d/S20apache2
-	  /etc/rc3.d/S20apache2
-	  /etc/rc4.d/S20apache2
-	  /etc/rc5.d/S20apache2
-	  /etc/rc6.d/K20apache2
+    Removing any system startup links for /etc/init.d/apache2 ...
+      /etc/rc0.d/K20apache2
+      /etc/rc1.d/K20apache2
+      /etc/rc2.d/S20apache2
+      /etc/rc3.d/S20apache2
+      /etc/rc4.d/S20apache2
+      /etc/rc5.d/S20apache2
+      /etc/rc6.d/K20apache2
 
 ### Understanding what and how System-V style init script links work.
 
@@ -56,7 +56,7 @@ So this is just simple explanation of how/why this stuff works and is here mainl
 
 Here is a simple example of how init script links work:
 
-	sudo ln -s /etc/init.d/apache2 /etc/rc3.d/S20apache2
+    sudo ln -s /etc/init.d/apache2 /etc/rc3.d/S20apache2
 
 This would create a symbolic link between the Apache `/etc/init.d/` script  and the `/etc/rc3.d/` “run level” directory. Trying to explain the differences between `/etc/rc0.d/`, `/etc/rc1.d/`, `/etc/rc2.d/`, etc… can be headache inducing. So not delving into that for now.
 

@@ -19,7 +19,7 @@ In this setup we are using the same physical server with balancer members runnin
 
 Activate proxy related modules in Apache:
 
-	sudo a2enmod proxy proxy_http proxy_balancer
+    sudo a2enmod proxy proxy_http proxy_balancer
 
 And restart Apache for the modules to be loaded:
 
@@ -53,9 +53,9 @@ And add a simple `index.php` page to it like this:
 
 Then paste this content to the `index.php` file:
 
-	<?php
-	echo "Balancer - " . $_SERVER['SERVER_NAME'] . ":" . $_SERVER['SERVER_PORT'];
-	?>
+    <?php
+    echo "Balancer - " . $_SERVER['SERVER_NAME'] . ":" . $_SERVER['SERVER_PORT'];
+    ?>
 
 Note that if you can actually read that file while the balancer is active, something went wrong. That file should never be accessible unless something is seriously misconfigured with the balancer. The only content coming through the balancer should be the content piped in from the nodes.
 
@@ -67,61 +67,61 @@ Create the virtual host configuration for the `sandbox.local` load balancer that
 
 And add these contents to that file:
 
-	<VirtualHost *:80>
-	  DocumentRoot /var/www/sandbox.local/site
-	  ServerName sandbox.local
-	  ServerAlias sandbox.local
+    <VirtualHost *:80>
+      DocumentRoot /var/www/sandbox.local/site
+      ServerName sandbox.local
+      ServerAlias sandbox.local
 
       ErrorLog /var/log/apache2/sandbox.local.error.log
       CustomLog /var/log/apache2/sandbox.local.access.log combined
 
-	  ProxyRequests Off
-	  ProxyPreserveHost On
+      ProxyRequests Off
+      ProxyPreserveHost On
 
-	  <Proxy *>
-	    Order deny,allow
-	    Allow from all
-	  </Proxy>
+      <Proxy *>
+        Order deny,allow
+        Allow from all
+      </Proxy>
 
-	  # Set the 'ProxyPass' stuff.
-	  ProxyPass /balancer-manager !
-	  ProxyPass / balancer://simple_cluster/ stickysession=BALANCEID nofailover=On
+      # Set the 'ProxyPass' stuff.
+      ProxyPass /balancer-manager !
+      ProxyPass / balancer://simple_cluster/ stickysession=BALANCEID nofailover=On
 
-	  # Set the 'ProxyPassReverse' stuff.
-	  ProxyPassReverse / http://sandbox.local:8001/
-	  ProxyPassReverse / http://sandbox.local:8002/
+      # Set the 'ProxyPassReverse' stuff.
+      ProxyPassReverse / http://sandbox.local:8001/
+      ProxyPassReverse / http://sandbox.local:8002/
 
-	  # Define the load balancer itself.
-	  <Proxy balancer://simple_cluster>
-	    # BalancerMember http://sandbox.local:8001 route=www1 loadfactor=10 connectiontimeout=180ms retry=60
-	    # BalancerMember http://sandbox.local:8002 route=www2 loadfactor=10 connectiontimeout=180ms retry=60
-	    BalancerMember http://sandbox.local:8001 loadfactor=10 connectiontimeout=180ms retry=60
-	    BalancerMember http://sandbox.local:8002 loadfactor=10 connectiontimeout=180ms retry=60
-	    ProxySet lbmethod=byrequests
-	    # ProxySet lbmethod=bytraffic
-	    # ProxySet lbmethod=bybusyness
-	  </Proxy>
+      # Define the load balancer itself.
+      <Proxy balancer://simple_cluster>
+        # BalancerMember http://sandbox.local:8001 route=www1 loadfactor=10 connectiontimeout=180ms retry=60
+        # BalancerMember http://sandbox.local:8002 route=www2 loadfactor=10 connectiontimeout=180ms retry=60
+        BalancerMember http://sandbox.local:8001 loadfactor=10 connectiontimeout=180ms retry=60
+        BalancerMember http://sandbox.local:8002 loadfactor=10 connectiontimeout=180ms retry=60
+        ProxySet lbmethod=byrequests
+        # ProxySet lbmethod=bytraffic
+        # ProxySet lbmethod=bybusyness
+      </Proxy>
 
-	  <Location /balancer-manager>
-	    SetHandler balancer-manager
+      <Location /balancer-manager>
+        SetHandler balancer-manager
 
-	    Order Deny,Allow
-	    Deny from all
-	    Allow from 127.0.0.1 ::1
-	    Allow from localhost
-	    Allow from 192.168
-	    Allow from 10
-	    Satisfy Any
+        Order Deny,Allow
+        Deny from all
+        Allow from 127.0.0.1 ::1
+        Allow from localhost
+        Allow from 192.168
+        Allow from 10
+        Satisfy Any
 
-	  </Location>
+      </Location>
 
-	</VirtualHost>
+    </VirtualHost>
 
 ##### Enable the virtual host configuration.
 
 Then enable this virtual host configuration by running this `a2ensite` command:
 
-	sudo a2ensite sandbox.local.conf
+    sudo a2ensite sandbox.local.conf
 
 And reload Apache for the config to take effect:
 
@@ -145,9 +145,9 @@ And add a simple `index.php` page to it like this:
 
 Then paste this content to the `index.php` file:
 
-	<?php
-	echo "Node 1 - " . $_SERVER['SERVER_NAME'] . ":" . $_SERVER['SERVER_PORT'];
-	?>
+    <?php
+    echo "Node 1 - " . $_SERVER['SERVER_NAME'] . ":" . $_SERVER['SERVER_PORT'];
+    ?>
 
 ##### Create the virtual host configuration.
 
@@ -159,34 +159,34 @@ And add these contents to that file:
 
     NameVirtualHost *:8001
     Listen 8001
-	<VirtualHost *:8001>
-	  DocumentRoot /var/www/sandbox.local.8001/site
-	  ServerName sandbox.local
-	  ServerAlias sandbox.local
+    <VirtualHost *:8001>
+      DocumentRoot /var/www/sandbox.local.8001/site
+      ServerName sandbox.local
+      ServerAlias sandbox.local
 
-	  ErrorLog /var/log/apache2/sandbox.local.8001.error.log
-	  CustomLog /var/log/apache2/sandbox.local.8001.access.log combined
+      ErrorLog /var/log/apache2/sandbox.local.8001.error.log
+      CustomLog /var/log/apache2/sandbox.local.8001.access.log combined
 
-	  # Set a cookie to identify the balancer member and set it to the server domain.
+      # Set a cookie to identify the balancer member and set it to the server domain.
       # RewriteEngine On
       # RewriteCond %{HTTP_X_FORWARDED_HOST} ^(www\.)?sandbox\.local/ [NC]
       # RewriteRule .* - [CO=BALANCEID:balancer.www1:.sandbox.local] [L]
 
-	  <Directory "/var/www/sandbox.local.8001/site">
-	    Options FollowSymLinks
+      <Directory "/var/www/sandbox.local.8001/site">
+        Options FollowSymLinks
 
-	    Order Allow,Deny
-	    Allow from all
-	    Satisfy Any
+        Order Allow,Deny
+        Allow from all
+        Satisfy Any
 
-	  </Directory>
+      </Directory>
 
-	  # 2014-01-11: Compression JSON output.
-	  <IfModule mod_deflate.c>
-	    AddOutputFilterByType DEFLATE application/json
-	  </IfModule>
+      # 2014-01-11: Compression JSON output.
+      <IfModule mod_deflate.c>
+        AddOutputFilterByType DEFLATE application/json
+      </IfModule>
 
-	</VirtualHost>
+    </VirtualHost>
 
 ##### Enable the virtual host configuration.
 
@@ -216,9 +216,9 @@ And add a simple `index.php` page to it like this:
 
 Then paste this content to the `index.php` file:
 
-	<?php
-	echo "Node 2 - " . $_SERVER['SERVER_NAME'] . ":" . $_SERVER['SERVER_PORT'];
-	?>
+    <?php
+    echo "Node 2 - " . $_SERVER['SERVER_NAME'] . ":" . $_SERVER['SERVER_PORT'];
+    ?>
 
 ##### Create the virtual host configuration.
 
@@ -230,34 +230,34 @@ And add these contents to that file:
 
     NameVirtualHost *:8002
     Listen 8002
-	<VirtualHost *:8002>
-	  DocumentRoot /var/www/sandbox.local.8002/site
-	  ServerName sandbox.local
-	  ServerAlias sandbox.local
+    <VirtualHost *:8002>
+      DocumentRoot /var/www/sandbox.local.8002/site
+      ServerName sandbox.local
+      ServerAlias sandbox.local
 
-	  ErrorLog /var/log/apache2/sandbox.local.8002.error.log
-	  CustomLog /var/log/apache2/sandbox.local.8002.access.log combined
+      ErrorLog /var/log/apache2/sandbox.local.8002.error.log
+      CustomLog /var/log/apache2/sandbox.local.8002.access.log combined
 
-	  # Set a cookie to identify the balancer member and set it to the server domain.
+      # Set a cookie to identify the balancer member and set it to the server domain.
       # RewriteEngine On
       # RewriteCond %{HTTP_X_FORWARDED_HOST} ^(www\.)?sandbox\.local/ [NC]
       # RewriteRule .* - [CO=BALANCEID:balancer.www2:.sandbox.local] [L]
 
-	  <Directory "/var/www/sandbox.local.8002/site">
-	    Options FollowSymLinks
+      <Directory "/var/www/sandbox.local.8002/site">
+        Options FollowSymLinks
 
-	    Order Allow,Deny
-	    Allow from all
-	    Satisfy Any
+        Order Allow,Deny
+        Allow from all
+        Satisfy Any
 
-	  </Directory>
+      </Directory>
 
-	  # 2014-01-11: Compression JSON output.
-	  <IfModule mod_deflate.c>
-	    AddOutputFilterByType DEFLATE application/json
-	  </IfModule>
+      # 2014-01-11: Compression JSON output.
+      <IfModule mod_deflate.c>
+        AddOutputFilterByType DEFLATE application/json
+      </IfModule>
 
-	</VirtualHost>
+    </VirtualHost>
 
 ##### Enable the virtual host configuration.
 

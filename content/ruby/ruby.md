@@ -19,16 +19,16 @@ First, go into the `ruby_test` directory:
 
 Make sure there is a `config.ru` which has contents like this; this is for a simple Sinatra app:
 
-	# config.ru
-	
-	# Set the required GEMs.
-	require "sinatra"
-	
-	# Require the app.
-	require './bin/app.rb'
-	
-	# Run the Sinatra app.
-	run Sinatra::Application
+    # config.ru
+    
+    # Set the required GEMs.
+    require "sinatra"
+    
+    # Require the app.
+    require './bin/app.rb'
+    
+    # Run the Sinatra app.
+    run Sinatra::Application
 
 Now run the applictation like this:
 

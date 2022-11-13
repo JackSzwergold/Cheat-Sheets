@@ -7,7 +7,7 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-#### Create a simple one-line web server with Netcat.
+### Create a simple one-line web server with Netcat.
 
 First, create a simple `index.html` file like this:
 

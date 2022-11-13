@@ -9,15 +9,19 @@ Template: index
 
 ### Comment out all uncommented lines in a file including empty lines.
 
-	sed -e '/^#/!s/\(.*\)/# \1/g' /etc/update-motd.d/90-updates-available
-	sed -e '/^#/!s/\(.*\)/# \1/g' /etc/update-motd.d/91-release-upgrade
-	sed -e '/^#/!s/\(.*\)/# \1/g' /etc/update-motd.d/95-hwe-eol
+    sed -e '/^#/!s/\(.*\)/# \1/g' /etc/update-motd.d/90-updates-available
+    sed -e '/^#/!s/\(.*\)/# \1/g' /etc/update-motd.d/91-release-upgrade
+    sed -e '/^#/!s/\(.*\)/# \1/g' /etc/update-motd.d/95-hwe-eol
+
+***
 
 ### Comment out all uncommented lines in a file excluding empty lines.
 
-	sed -e 's/^\([^#].*\)/# \1/g' /etc/update-motd.d/90-updates-available
-	sed -e 's/^\([^#].*\)/# \1/g' /etc/update-motd.d/91-release-upgrade
-	sed -e 's/^\([^#].*\)/# \1/g' /etc/update-motd.d/95-hwe-eol
+    sed -e 's/^\([^#].*\)/# \1/g' /etc/update-motd.d/90-updates-available
+    sed -e 's/^\([^#].*\)/# \1/g' /etc/update-motd.d/91-release-upgrade
+    sed -e 's/^\([^#].*\)/# \1/g' /etc/update-motd.d/95-hwe-eol
+
+***
 
 ### Stuff that somehow didn’t work in the Vagrant provisioning scripts.
 

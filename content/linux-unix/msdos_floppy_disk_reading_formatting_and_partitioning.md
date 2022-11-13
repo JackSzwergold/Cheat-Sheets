@@ -46,15 +46,15 @@ Show a list of all connected block level devices using `lsblk` and make note of 
 
 Output should be something like this. The floppy should be near the end of the list and be a disk without any related partitions connected to it:
 
-	NAME                          MAJ:MIN RM   SIZE RO TYPE MOUNTPOINT
-	sda                             8:0    0    32G  0 disk
-	├─sda1                          8:1    0   243M  0 part /boot
-	├─sda2                          8:2    0     1K  0 part
-	└─sda5                          8:5    0  31.8G  0 part
-	  ├─sandbox--vg-root (dm-0)   252:0    0  27.8G  0 lvm  /
-	  └─sandbox--vg-swap_1 (dm-1) 252:1    0     4G  0 lvm  [SWAP]
-	sdb                             8:16   1   1.4M  0 disk
-	sr0                            11:0    1  1024M  0 rom
+    NAME                          MAJ:MIN RM   SIZE RO TYPE MOUNTPOINT
+    sda                             8:0    0    32G  0 disk
+    ├─sda1                          8:1    0   243M  0 part /boot
+    ├─sda2                          8:2    0     1K  0 part
+    └─sda5                          8:5    0  31.8G  0 part
+      ├─sandbox--vg-root (dm-0)   252:0    0  27.8G  0 lvm  /
+      └─sandbox--vg-swap_1 (dm-1) 252:1    0     4G  0 lvm  [SWAP]
+    sdb                             8:16   1   1.4M  0 disk
+    sr0                            11:0    1  1024M  0 rom
 
 In this case it’s `sdb` so the full device path should be `/dev/sdb`.
 
@@ -72,14 +72,14 @@ After the disk is mounted you can confirm it’s mounted and available by runnin
 
 The output should be something like this; note the `/dev/sdb` mounted with 1.4M of available space on it:
 
-	Filesystem                    Size  Used Avail Use% Mounted on
-	/dev/mapper/sandbox--vg-root   28G  5.4G   21G  21% /
-	udev                          2.0G  8.0K  2.0G   1% /dev
-	tmpfs                         396M  352K  395M   1% /run
-	none                          5.0M     0  5.0M   0% /run/lock
-	none                          2.0G     0  2.0G   0% /run/shm
-	/dev/sda1                     236M   36M  188M  16% /boot
-	/dev/sdb                      1.4M     0  1.4M   0% /home/sysop/usb_mount
+    Filesystem                    Size  Used Avail Use% Mounted on
+    /dev/mapper/sandbox--vg-root   28G  5.4G   21G  21% /
+    udev                          2.0G  8.0K  2.0G   1% /dev
+    tmpfs                         396M  352K  395M   1% /run
+    none                          5.0M     0  5.0M   0% /run/lock
+    none                          2.0G     0  2.0G   0% /run/shm
+    /dev/sda1                     236M   36M  188M  16% /boot
+    /dev/sdb                      1.4M     0  1.4M   0% /home/sysop/usb_mount
 
 Check out what’s on that disk by running `ls` like this:
 

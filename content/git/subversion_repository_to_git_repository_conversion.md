@@ -21,7 +21,7 @@ While the Subversion repository to Git repository process is pretty clean, the o
 
 First, in the Subversion cloned directory, run this command to get a list of authors connected to the Subversion repository:
 
-	svn log --xml | grep author | sort -u | perl -pe 's/.*>(.*?)<.*/$1 = /'
+    svn log --xml | grep author | sort -u | perl -pe 's/.*>(.*?)<.*/$1 = /'
 
 Take that output and place it in file called `svn-authors.txt` like this:
 
@@ -30,8 +30,8 @@ Take that output and place it in file called `svn-authors.txt` like this:
 
 And edit that file manually to map those users to their Git equivalents like this:
 
-	userone = User One <userone@example.com>
-	usertwo = User Two <usertwo@example.com>
+    userone = User One <userone@example.com>
+    usertwo = User Two <usertwo@example.com>
 
 Save that `svn-authors.txt` and move onto the next steps.
 

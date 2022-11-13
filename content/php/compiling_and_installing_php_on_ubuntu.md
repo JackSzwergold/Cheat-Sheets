@@ -15,7 +15,7 @@ This cheat sheet was compiled based on some notes from my dealing with a client 
 
 Before you do anything else, create a backup of the already installed `libphp5.so` module by copying it like this:
 
-	sudo cp /usr/lib/apache2/modules/libphp5.so /usr/lib/apache2/modules/libphp5310.so
+    sudo cp /usr/lib/apache2/modules/libphp5.so /usr/lib/apache2/modules/libphp5310.so
 
 The name `libphp5310.so` is derived from the PHP 5.3.10 version of `libphp5.so` that is currently available for installation on Ubuntu 12.04. Adjust name as needed but be sure to rename `libphp5.so` before compiling and installing so you are not left flying in the wind of this setup goes bad.
 
@@ -36,14 +36,14 @@ Next, install APC via Pecl like this:
 
 Now install all of the required development libraries and other stuff:
 
-	sudo aptitude install apache2-threaded-dev \
-	                      libjpeg8 libjpeg8-dev libxml2-dev \
-	                      libz-dev libfreetype6-dev libpng12-0-dev \
-	                      libbz2-dev libgmp3-dev libpspell-dev \
-	                      php-gettext gettext \
-	                      mcrypt libmcrypt-dev \
-	                      pkg-config \
-	                      flex libfl-dev \
+    sudo aptitude install apache2-threaded-dev \
+                          libjpeg8 libjpeg8-dev libxml2-dev \
+                          libz-dev libfreetype6-dev libpng12-0-dev \
+                          libbz2-dev libgmp3-dev libpspell-dev \
+                          php-gettext gettext \
+                          mcrypt libmcrypt-dev \
+                          pkg-config \
+                          flex libfl-dev \
                           libmysqld-dev \
                           libcurl4-openssl-dev libcurl-dev
 
@@ -63,7 +63,7 @@ Set the PNG library symbolic link for Ubuntu:
 
 Set the MySQL library symbolic link for Ubuntu:
 
-	sudo ln -s /usr/lib/x86_64-linux-gnu/libmysqlclient.so /usr/lib/libmysqlclient.so
+    sudo ln -s /usr/lib/x86_64-linux-gnu/libmysqlclient.so /usr/lib/libmysqlclient.so
 
 ### Building PHP 5.1.6 from source.
 
@@ -71,79 +71,79 @@ Set the MySQL library symbolic link for Ubuntu:
 
 First grab a compressed archive from an official ImageMagick source site:
 
-	curl -O -L http://museum.php.net/php5/php-5.1.6.tar.gz
+    curl -O -L http://museum.php.net/php5/php-5.1.6.tar.gz
 
 Then grab the PHP Suhosin patch:
 
-	curl -O -L http://download.suhosin.org/suhosin-patch-5.1.6-0.9.6.patch.gz
+    curl -O -L http://download.suhosin.org/suhosin-patch-5.1.6-0.9.6.patch.gz
 
 Now, decompress the PHP source code:
 
-	tar -xf ~/php-5.1.6.tar.gz
+    tar -xf ~/php-5.1.6.tar.gz
 
 Then, decempress the PHP Suhosin patch:
 
-	gzip -d ~/suhosin-patch-5.1.6-0.9.6.patch.gz
+    gzip -d ~/suhosin-patch-5.1.6-0.9.6.patch.gz
 
 Go into the PHP 5.1.6 source directory:
 
-	cd ~/php-5.1.6
+    cd ~/php-5.1.6
 
 With that done, apply the PHP Suhosin patch:
 
-	patch -p 1 -i ~/suhosin-patch-5.1.6-0.9.6.patch
+    patch -p 1 -i ~/suhosin-patch-5.1.6-0.9.6.patch
 
 Finally, create the PHP 5.1.6 install destination directory:
 
-	sudo mkdir -p /opt/php516-gd
+    sudo mkdir -p /opt/php516-gd
 
 #### Configuring, making and installing PHP 5.1.6.
 
 Run this `configure` command:
 
-	./configure --prefix=/opt/php516-gd --with-iconv --with-jpeg-dir=/usr --with-png-dir=/usr --with-zlib-dir=/usr \
-	    --with-freetype-dir=/usr --enable-gd-native-ttf --with-gd --with-apxs2=/usr/bin/apxs2 \
-		--with-pic --with-bz2 --with-gettext --with-pspell \
-		--with-expat-dir=/usr --with-zlib --enable-exif --enable-ftp --enable-mbstring --with-gettext \
-		--enable-magic-quotes --enable-sockets -enable-sysvsem --enable-sysvshm --enable-sysvmsg \
-		--enable-track-vars --enable-trans-sid --enable-wddx --with-kerberos --enable-memory-limit \
-		--enable-shmop --enable-calendar --enable-dbx --enable-dio --with-xml --enable-apc --enable-apc-mmap \
-		--with-pcre-regex=/usr --enable-utf8 \
-		--with-mysql=/usr --with-pdo-mysql=/usr --with-mcrypt=/usr \
-		--with-gmp --with-curl --with-openssl
+    ./configure --prefix=/opt/php516-gd --with-iconv --with-jpeg-dir=/usr --with-png-dir=/usr --with-zlib-dir=/usr \
+        --with-freetype-dir=/usr --enable-gd-native-ttf --with-gd --with-apxs2=/usr/bin/apxs2 \
+        --with-pic --with-bz2 --with-gettext --with-pspell \
+        --with-expat-dir=/usr --with-zlib --enable-exif --enable-ftp --enable-mbstring --with-gettext \
+        --enable-magic-quotes --enable-sockets -enable-sysvsem --enable-sysvshm --enable-sysvmsg \
+        --enable-track-vars --enable-trans-sid --enable-wddx --with-kerberos --enable-memory-limit \
+        --enable-shmop --enable-calendar --enable-dbx --enable-dio --with-xml --enable-apc --enable-apc-mmap \
+        --with-pcre-regex=/usr --enable-utf8 \
+        --with-mysql=/usr --with-pdo-mysql=/usr --with-mcrypt=/usr \
+        --with-gmp --with-curl --with-openssl
 
 ***NOTE:** If there are GMP, Curl and OpenSSL issues when running `make`, you can ditch the line with the ` --with-gmp --with-curl --with-openssl` item at the end for now. Would be nice to know why GMP, Curl and OpenSSL chokes things. But not worth reseaching now*
 
 Once the `configure` process completes, run `make`:
 
-	make
+    make
 
 Finally install it by running `sudo make install`:
 
-	sudo make install
+    sudo make install
 
 After the module is installed, rename it to match its PHP version number; in this case PHP 5.1.6:
 
-	sudo mv /usr/lib/apache2/modules/libphp5.so /usr/lib/apache2/modules/libphp516-gd.so
+    sudo mv /usr/lib/apache2/modules/libphp5.so /usr/lib/apache2/modules/libphp516-gd.so
 
 #### Adjust Apache for the new PHP 5.1.6 module.
 
 The edit the Apache PHP config to allow for easy switching between different versions.
 
-	sudo nano /etc/apache2/mods-available/php5.load
+    sudo nano /etc/apache2/mods-available/php5.load
 
 An example of what should be in the Apache2 PHP config:
 
-	# LoadModule php5_module        /usr/lib/apache2/modules/libphp5310.so
-	LoadModule php5_module        /usr/lib/apache2/modules/libphp516-gd.so
+    # LoadModule php5_module        /usr/lib/apache2/modules/libphp5310.so
+    LoadModule php5_module        /usr/lib/apache2/modules/libphp516-gd.so
 
 Set the `php.ini` file for PHP 5.1.6:
 
-	sudo cp ~/php-5.1.6/php.ini-dist /opt/php516-gd/lib/php.ini
+    sudo cp ~/php-5.1.6/php.ini-dist /opt/php516-gd/lib/php.ini
 
 Edit the `php.ini` file for PHP 5.1.6 if you need to:
 
-	sudo nano /opt/php516-gd/lib/php.ini
+    sudo nano /opt/php516-gd/lib/php.ini
 
 And with that done, you can restart Apache like this to get the new module loaded in as expected:
 
@@ -163,13 +163,13 @@ And replace that line with this one:
 
 How to turn off FreeType hinting in PHP GD 2.0.13:
 
-	sudo nano ~/php-5.1.6/ext/gd/libgd/gdft.c
+    sudo nano ~/php-5.1.6/ext/gd/libgd/gdft.c
 
 Search for `render_mode`; should look like this:
 
-	int render_mode = FT_LOAD_DEFAULT;
-	int render_mode = FT_LOAD_RENDER;
+    int render_mode = FT_LOAD_DEFAULT;
+    int render_mode = FT_LOAD_RENDER;
 
 Change to:
 
-	int render_mode = FT_LOAD_NO_HINTING;
+    int render_mode = FT_LOAD_NO_HINTING;

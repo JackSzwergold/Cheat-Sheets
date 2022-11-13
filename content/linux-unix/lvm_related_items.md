@@ -11,11 +11,11 @@ Template: index
 
 Show all the volume groups on the system:
 
-	sudo vgdisplay
+    sudo vgdisplay
 
 Rename the volume group:
 
-	sudo vgrename [old name] [new name]
+    sudo vgrename [old name] [new name]
 
 Double check the volume groups again to make sure the change went through:
 
@@ -23,15 +23,15 @@ Double check the volume groups again to make sure the change went through:
 
 Edit the `fstab` to reflect the logical volume name change. Note that if the volume group name has a `-` in it, it needs to be doubled in the `fstab`. So a volume group named `sandbox-vg` would need to be `sandbox--vg` in the `fstab`:
 
-	sudo nano /etc/fstab
+    sudo nano /etc/fstab
 
 Update the GRUB bootloader to get the new logical volume name recognized:
 
-	sudo update-grub2
+    sudo update-grub2
 
 The update the existing `initramfs` stuff like this:
 
-	sudo update-initramfs -u
+    sudo update-initramfs -u
 
 ### Creating a new LVM physical and logical volume group.
 
@@ -51,9 +51,9 @@ Next run `pvscan` to get a short list of physical volumes connected to the the m
 
 The output should be something like this:
 
-	PV /dev/sda5   VG sandbox-vg      lvm2 [31.76 GiB / 0    free]
-	PV /dev/sdb                       lvm2 [8.00 GiB]
-	Total: 2 [39.76 GiB] / in use: 1 [31.76 GiB] / in no VG: 1 [8.00 GiB]
+    PV /dev/sda5   VG sandbox-vg      lvm2 [31.76 GiB / 0    free]
+    PV /dev/sdb                       lvm2 [8.00 GiB]
+    Total: 2 [39.76 GiB] / in use: 1 [31.76 GiB] / in no VG: 1 [8.00 GiB]
 
 Or run `pvdisplay` to get deeper information on the physical volumes:
 
@@ -121,14 +121,14 @@ Now let’s manually mount the device to the mount point like this:
 
 If the device mounted, you should be returned cleanly to the command prompt. To see if it is mounted, just check the output of `mount -l` or `df -h` to see it there. Here is an example of some `df -h` output:
 
-	Filesystem                          Size  Used Avail Use% Mounted on
-	/dev/mapper/sandbox--vg-root         28G  2.8G   24G  11% /
-	udev                                2.0G  4.0K  2.0G   1% /dev
-	tmpfs                               396M  356K  395M   1% /run
-	none                                5.0M     0  5.0M   0% /run/lock
-	none                                2.0G     0  2.0G   0% /run/shm
-	/dev/sda1                           236M   36M  188M  16% /boot
-	/dev/mapper/test_group-test_volume  7.8G   19M  7.4G   1% /home/sysop/mount_test
+    Filesystem                          Size  Used Avail Use% Mounted on
+    /dev/mapper/sandbox--vg-root         28G  2.8G   24G  11% /
+    udev                                2.0G  4.0K  2.0G   1% /dev
+    tmpfs                               396M  356K  395M   1% /run
+    none                                5.0M     0  5.0M   0% /run/lock
+    none                                2.0G     0  2.0G   0% /run/shm
+    /dev/sda1                           236M   36M  188M  16% /boot
+    /dev/mapper/test_group-test_volume  7.8G   19M  7.4G   1% /home/sysop/mount_test
 
 And finally to make that volume mount automatically on system start, we need to edit the `fstab` like this:
 
@@ -156,7 +156,7 @@ Once that is unmounted, use `lsblk` to see a list of all connected block level d
 
 Create the physical volume for the new LVM like this:
 
-	sudo pvcreate /dev/sdc
+    sudo pvcreate /dev/sdc
 
 Response should be something like this:
 
@@ -168,11 +168,11 @@ Now get your volume group name with `vgdisplay` like this:
 
 In this case let’s assume the volume group name is `test_group`. So now let’s add the disk to the existing volume group using `vgextend` like this:
 
-	sudo vgextend test_group /dev/sdc
+    sudo vgextend test_group /dev/sdc
 
 The response should be something like this:
 
-	Volume group "test_group" successfully extended
+    Volume group "test_group" successfully extended
 
 Next, let’s actually extend the `test_volume` with the full contents of `/dev/sdc`:
 
@@ -192,14 +192,14 @@ Now, remount `/dev/test_group/test_volume` to ` ~/mount_test/` like this:
 
 And once remounted, the new added space will be reflected in it’s expanded size; here is an example of some `df -h` output:
 
-	Filesystem                          Size  Used Avail Use% Mounted on
-	/dev/mapper/sandbox--vg-root         28G  2.8G   24G  11% /
-	udev                                2.0G  4.0K  2.0G   1% /dev
-	tmpfs                               396M  356K  395M   1% /run
-	none                                5.0M     0  5.0M   0% /run/lock
-	none                                2.0G     0  2.0G   0% /run/shm
-	/dev/sda1                           236M   36M  188M  16% /boot
-	/dev/mapper/test_group-test_volume   16G   23M   15G   1% /home/sysop/mount_test
+    Filesystem                          Size  Used Avail Use% Mounted on
+    /dev/mapper/sandbox--vg-root         28G  2.8G   24G  11% /
+    udev                                2.0G  4.0K  2.0G   1% /dev
+    tmpfs                               396M  356K  395M   1% /run
+    none                                5.0M     0  5.0M   0% /run/lock
+    none                                2.0G     0  2.0G   0% /run/shm
+    /dev/sda1                           236M   36M  188M  16% /boot
+    /dev/mapper/test_group-test_volume   16G   23M   15G   1% /home/sysop/mount_test
 
 ### Sundry LVM debugging stuff.
 
@@ -217,4 +217,4 @@ And then run this `vgreduce` command:
 
 Check the current UUID:
 
-	sudo blkid -c /dev/null
+    sudo blkid -c /dev/null

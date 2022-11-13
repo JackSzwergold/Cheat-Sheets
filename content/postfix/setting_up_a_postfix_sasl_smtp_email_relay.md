@@ -29,35 +29,35 @@ Here is another example with some GMail specifics to make it a bit clearer but t
 
 Now run `postmap` to create the Postfix lookup table (`sasl_passwd.db`) like this:
 
-	sudo postmap /etc/postfix/sasl_passwd
+    sudo postmap /etc/postfix/sasl_passwd
 
 ### Configure Postfix to use SASL.
 
 Open up the main Postfix configuration file like this:
 
-	sudo nano /etc/postfix/main.cf
+    sudo nano /etc/postfix/main.cf
 
 Many of these settings might already be set or actually commented out in that config file, so just append this all to the end of the Postfix configuration file; theer are some GMail specifics—for `relayhost`—to make it a bit clearer but the same concept can be used for any SMTP service with the correct settings:
 
-	# Minimum Postfix-specific configurations.
-	mydomain_fallback = localhost
-	mail_owner = _postfix
-	setgid_group = _postdrop
-	relayhost=smtp.gmail.com:587
-	
-	# Enable SASL authentication in the Postfix SMTP client.
-	smtp_sasl_auth_enable=yes
-	smtp_sasl_password_maps=hash:/etc/postfix/sasl_passwd
-	smtp_sasl_security_options=
-	
-	# Enable Transport Layer Security (TLS), i.e. SSL.
-	smtp_use_tls=yes
-	smtp_tls_security_level=encrypt
-	tls_random_source=dev:/dev/urandom
+    # Minimum Postfix-specific configurations.
+    mydomain_fallback = localhost
+    mail_owner = _postfix
+    setgid_group = _postdrop
+    relayhost=smtp.gmail.com:587
+    
+    # Enable SASL authentication in the Postfix SMTP client.
+    smtp_sasl_auth_enable=yes
+    smtp_sasl_password_maps=hash:/etc/postfix/sasl_passwd
+    smtp_sasl_security_options=
+    
+    # Enable Transport Layer Security (TLS), i.e. SSL.
+    smtp_use_tls=yes
+    smtp_tls_security_level=encrypt
+    tls_random_source=dev:/dev/urandom
 
 Save the file and then start Postfix like this:
 
-	sudo postfix start
+    sudo postfix start
 
 You will know the Postfix system is up and running if this message is returned:
 
@@ -73,27 +73,27 @@ The response should be something like this:
 
 Here are some other Postfix start, stop, control and status options:
 
-	sudo postfix start
-	sudo postfix stop
-	sudo postfix reload
-	sudo postfix status
-	sudo postfix check
-	sudo postfix set-permissions
-	sudo postfix upgrade-configuration
+    sudo postfix start
+    sudo postfix stop
+    sudo postfix reload
+    sudo postfix status
+    sudo postfix check
+    sudo postfix set-permissions
+    sudo postfix upgrade-configuration
 
 ### Testing and debugging the Postfix SASL setup.
 
 The simplest way to check if this setup works is
 
-	echo "Hello, world." | mail -s "Test Subject" email_address@example.com
+    echo "Hello, world." | mail -s "Test Subject" email_address@example.com
 
 If the mail doesn’t get sent out right away, check the mail queue like this:
 
-	mailq
+    mailq
 
 If the mails get stuck in that queue and you ned to clear them out, run this command:
 
-	sudo postsuper -d ALL
+    sudo postsuper -d ALL
 
 ### Getting Postfix to start on system startup/reboot in macOS.
 
@@ -103,60 +103,60 @@ If you want Postfix to automatically startup when the system starts up or reboot
 
 And edit the XML that looks like this:
 
-	<?xml version="1.0" encoding="UTF-8"?>
-	<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/Prop$
-	<plist version="1.0">
-	<dict>
-	        <key>Label</key>
-	        <string>org.postfix.master</string>
-	        <key>Program</key>
-	        <string>/usr/libexec/postfix/master</string>
-	        <key>ProgramArguments</key>
-	        <array>
-	                <string>master</string>
-	                <string>-e</string>
-	                <string>60</string>
-	        </array>
-	        <key>QueueDirectories</key>
-	        <array>
-	                <string>/var/spool/postfix/maildrop</string>
-	        </array>
-	        <key>AbandonProcessGroup</key>
-	        <true/>
-	</dict>
-	</plist>
+    <?xml version="1.0" encoding="UTF-8"?>
+    <!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/Prop$
+    <plist version="1.0">
+    <dict>
+            <key>Label</key>
+            <string>org.postfix.master</string>
+            <key>Program</key>
+            <string>/usr/libexec/postfix/master</string>
+            <key>ProgramArguments</key>
+            <array>
+                    <string>master</string>
+                    <string>-e</string>
+                    <string>60</string>
+            </array>
+            <key>QueueDirectories</key>
+            <array>
+                    <string>/var/spool/postfix/maildrop</string>
+            </array>
+            <key>AbandonProcessGroup</key>
+            <true/>
+    </dict>
+    </plist>
 
 To be this; note the `<string>-e</string>` and `<string>60</string>` are disabled and `<key>KeepAlive</key><true/>` is added to the bottom:
 
-	<?xml version="1.0" encoding="UTF-8"?>
-	<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/Prop$
-	<plist version="1.0">
-	<dict>
-	        <key>Label</key>
-	        <string>org.postfix.master</string>
-	        <key>Program</key>
-	        <string>/usr/libexec/postfix/master</string>
-	        <key>ProgramArguments</key>
-	        <array>
-	                <string>master</string>
-	                <!-- <string>-e</string> -->
-	                <!-- <string>60</string> -->
-	        </array>
-	        <key>QueueDirectories</key>
-	        <array>
-	                <string>/var/spool/postfix/maildrop</string>
-	        </array>
-	        <key>AbandonProcessGroup</key>
-	        <true/>
-	        <key>KeepAlive</key>
-	        <true/>
-	</dict>
-	</plist>
+    <?xml version="1.0" encoding="UTF-8"?>
+    <!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/Prop$
+    <plist version="1.0">
+    <dict>
+            <key>Label</key>
+            <string>org.postfix.master</string>
+            <key>Program</key>
+            <string>/usr/libexec/postfix/master</string>
+            <key>ProgramArguments</key>
+            <array>
+                    <string>master</string>
+                    <!-- <string>-e</string> -->
+                    <!-- <string>60</string> -->
+            </array>
+            <key>QueueDirectories</key>
+            <array>
+                    <string>/var/spool/postfix/maildrop</string>
+            </array>
+            <key>AbandonProcessGroup</key>
+            <true/>
+            <key>KeepAlive</key>
+            <true/>
+    </dict>
+    </plist>
 
 Then you can stop reload that XML config by running this `launchctl unload` command:
 
-	sudo launchctl unload /System/Library/LaunchDaemons/org.postfix.master.plist
+    sudo launchctl unload /System/Library/LaunchDaemons/org.postfix.master.plist
 
 Followed by this `launchctl load` command:
 
-	sudo launchctl load /System/Library/LaunchDaemons/org.postfix.master.plist
+    sudo launchctl load /System/Library/LaunchDaemons/org.postfix.master.plist

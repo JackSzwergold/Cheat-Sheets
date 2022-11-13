@@ -11,7 +11,7 @@ Template: index
 
 Run this command to manually bring up a network interface via `ifconfig`; mainly useful during initial system setup to get an interface up from the console:
 
-	sudo ifconfig eth1 192.168.56.10 netmask 255.255.255.0 up
+    sudo ifconfig eth1 192.168.56.10 netmask 255.255.255.0 up
 
 While this works, these settings are lost on reboot. To retain network settings on reboot, follow the instructions below.
 
@@ -23,8 +23,8 @@ Some places saying restarting the `networking` service is the best way to restar
 
 But in Ubuntu 12.04.5 the response returned is something like this:
 
-	stop: Unknown instance: 
-	networking stop/waiting
+    stop: Unknown instance: 
+    networking stop/waiting
 
 Instead, running this combination of `ifdown` and `ifup` seems to work more reliably while still respecting the order of items in `/etc/network/interfaces`:
 
@@ -34,23 +34,23 @@ Instead, running this combination of `ifdown` and `ifup` seems to work more reli
 
 You can then add a network interface by opening up `/etc/network/interfaces`:
 
-	sudo nano /etc/network/interfaces
+    sudo nano /etc/network/interfaces
 
 And then add a chunk of configuration code like this; adjust for your specific needs. This is for a static IP address:
 
-	auto eth0
-	iface eth0 inet static
-	address 192.168.1.160
-	netmask 255.255.255.0
-	gateway 192.168.1.12
-	dns-nameservers 192.168.1.10 192.168.1.20 192.168.1.30
-	dns-domain something.com
-	dns-search something.com
+    auto eth0
+    iface eth0 inet static
+    address 192.168.1.160
+    netmask 255.255.255.0
+    gateway 192.168.1.12
+    dns-nameservers 192.168.1.10 192.168.1.20 192.168.1.30
+    dns-domain something.com
+    dns-search something.com
 
 If you need to use a DHCP/NAT-based IP address, just use this:
 
-	auto eth0
-	iface eth0 inet dhcp
+    auto eth0
+    iface eth0 inet dhcp
 
 ### Clearing up MAC address issues.
 
@@ -60,11 +60,11 @@ This would mainly come up in VirtualBox when a hard drive for one virtual machin
 
 To fix it, just edit this file to get change the MAC address to match the new setup:
 
-	sudo nano /etc/udev/rules.d/70-persistent-net.rules
+    sudo nano /etc/udev/rules.d/70-persistent-net.rules
 
 Or more simply, just toss the file entirely and reboot the virtual machine; the `70-persistent-net.rules` will be regenerated after reboot:
 
-	sudo rm /etc/udev/rules.d/70-persistent-net.rules
+    sudo rm /etc/udev/rules.d/70-persistent-net.rules
 
 ### Flushing the routing table.
 
@@ -76,11 +76,11 @@ Do this to view the current routing table entries:
 
 Now, take down the main network interface on the machine like this:
 
-	sudo ifconfig eth0 down
+    sudo ifconfig eth0 down
 
 The run, this `route flush` command to flush the routing tables:
 
-	sudo route flush
+    sudo route flush
 
 Check the routing tables again if you wish:
 
@@ -88,4 +88,4 @@ Check the routing tables again if you wish:
 
 They should be set to some default state. All good? Now startup the main network interface again like this:
 
-	sudo ifconfig eth0 up
+    sudo ifconfig eth0 up

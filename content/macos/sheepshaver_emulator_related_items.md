@@ -19,4 +19,4 @@ If your user is not already a member of the group `operator`, run this command t
 
 And to remove your user from the group `operator` just run this command:
 
-	sudo dscl . -delete /Groups/operator GroupMembership $USER
+    sudo dscl . -delete /Groups/operator GroupMembership $USER

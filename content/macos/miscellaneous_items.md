@@ -25,8 +25,8 @@ List all Arp entries on the system and show extended link-layer reachability inf
 
 If you are on a system and see files that a prefaced by `.SM.gul.` clone files like this:
 
-	/Library/ColorSync/Profiles/.SM.gul.WebSafeColors.icc
-	/Library/ColorSync/Profiles/WebSafeColors.icc
+    /Library/ColorSync/Profiles/.SM.gul.WebSafeColors.icc
+    /Library/ColorSync/Profiles/WebSafeColors.icc
 
 Those are files created by Apple’s Migration Assistant. Either the process forgot to clean up the `.SM.gul.` files or it crashed and left them behind. But those `.SM.gul.` files can be safely ignored or deleted if need bee.
 
@@ -34,30 +34,30 @@ Those are files created by Apple’s Migration Assistant. Either the process for
 
 Running this `ls -la` command:
 
-	sudo ls -la /private/var/db/dslocal/nodes/Default
+    sudo ls -la /private/var/db/dslocal/nodes/Default
 
 Will show you and overview of the `/private/var/db/dslocal/nodes/Default`:
 
-	drw-------   12 root  wheel     408 Jan 25  2015 .
-	drwxr-xr-x    3 root  wheel     102 Aug 24  2013 ..
-	drwx------   10 root  wheel     340 Jan 25  2015 aliases
-	drwx------    3 root  wheel     102 Jan 25  2015 computers
-	drwx------    4 root  wheel     136 Jan 25  2015 config
-	drwx------  102 root  wheel    3468 Jan 25  2015 groups
-	drwx------    3 root  wheel     102 Jan 25  2015 networks
-	drwx------    3 root  wheel     102 Jan 25  2015 sharepoints
-	-rw-------    1 root  wheel  352256 Oct  1 00:20 sqlindex
-	-rw-------    1 root  wheel   32768 Oct  6 23:42 sqlindex-shm
-	-rw-------    1 root  wheel  350232 Oct  6 20:49 sqlindex-wal
-	drwx------   79 root  wheel    2686 Oct  6 20:49 users
+    drw-------   12 root  wheel     408 Jan 25  2015 .
+    drwxr-xr-x    3 root  wheel     102 Aug 24  2013 ..
+    drwx------   10 root  wheel     340 Jan 25  2015 aliases
+    drwx------    3 root  wheel     102 Jan 25  2015 computers
+    drwx------    4 root  wheel     136 Jan 25  2015 config
+    drwx------  102 root  wheel    3468 Jan 25  2015 groups
+    drwx------    3 root  wheel     102 Jan 25  2015 networks
+    drwx------    3 root  wheel     102 Jan 25  2015 sharepoints
+    -rw-------    1 root  wheel  352256 Oct  1 00:20 sqlindex
+    -rw-------    1 root  wheel   32768 Oct  6 23:42 sqlindex-shm
+    -rw-------    1 root  wheel  350232 Oct  6 20:49 sqlindex-wal
+    drwx------   79 root  wheel    2686 Oct  6 20:49 users
 
 This `ls -la` command will show you the `.plist` files for users on the system:
 
-	sudo ls -la /private/var/db/dslocal/nodes/Default/users
-	
+    sudo ls -la /private/var/db/dslocal/nodes/Default/users
+    
 This `ls -la` command will show you the `.plist` files for groups on the system:
 
-	sudo ls -la /private/var/db/dslocal/nodes/Default/groups
+    sudo ls -la /private/var/db/dslocal/nodes/Default/groups
 
 ### Kill `VNCDragHelper` if it spirals out of control.
 
@@ -105,9 +105,9 @@ And this would eject the media from `/dev/disk3`:
 
 Force Spotlight to reindex a specific volume:
 
-	sudo rm -R /.Spotlight-V100
-	sudo mdutil -i on /
-	sudo mdutil -E /
+    sudo rm -R /.Spotlight-V100
+    sudo mdutil -i on /
+    sudo mdutil -E /
 
 Force Spotlight to reindex Apple Mail:
 
@@ -121,11 +121,11 @@ Use this command to force Spotlight to reindex the whole system:
 
 Or just go into `/usr/libexec`:
 
-	cd /usr/libexec
+    cd /usr/libexec
 
 And then run `./locate.updatedb` from there:
 
-	sudo ./locate.updatedb
+    sudo ./locate.updatedb
 
 ### Some basic networking items.
 
@@ -262,16 +262,16 @@ Use this command to specifically get the macOS system version information from t
 
 The output of that command would be something like this:
 
-	System Software Overview:
-	
-	  System Version: OS X 10.9.5 (13F1112)
-	  Kernel Version: Darwin 13.4.0
-	  Boot Volume: Hard Disk
-	  Boot Mode: Normal
-	  Computer Name: Macintosh
-	  User Name: Some User (some_user)
-	  Secure Virtual Memory: Enabled
-	  Time since boot: 6:54
+    System Software Overview:
+    
+      System Version: OS X 10.9.5 (13F1112)
+      Kernel Version: Darwin 13.4.0
+      Boot Volume: Hard Disk
+      Boot Mode: Normal
+      Computer Name: Macintosh
+      User Name: Some User (some_user)
+      Secure Virtual Memory: Enabled
+      Time since boot: 6:54
 
 ### How to disable disk journaling on HFS+ volumes from the command line.
 
@@ -300,13 +300,13 @@ Exit the Terminal and open it up again and all should be good and the hostname i
 
 Just run this command to get the battery percentage from the command line:
 
-	ioreg -n AppleSmartBattery -r | awk '$1~/Capacity/{c[$1]=$3} END{OFMT="%.2f%%"; max=c["\"MaxCapacity\""]; print (max>0? 100*c["\"CurrentCapacity\""]/max: "?")}'
+    ioreg -n AppleSmartBattery -r | awk '$1~/Capacity/{c[$1]=$3} END{OFMT="%.2f%%"; max=c["\"MaxCapacity\""]; print (max>0? 100*c["\"CurrentCapacity\""]/max: "?")}'
 
 ### Delete All ‘.DS_Store’ Files From macOS
 
 Run this command to delete all `.DS_Store` files from a root volume in macOS.
 
-	sudo find / -name ".DS_Store" -depth -exec rm {} \;
+    sudo find / -name ".DS_Store" -depth -exec rm {} \;
 
 ### How to use Apple’s command line Airport Wi-Fi utility
 
@@ -316,44 +316,44 @@ First, create a symbolic link from the command line binary in the official Apple
 
 Then once that is done you can run the command easilly from the command line like any other command line command like this:
 
-	airport -s
+    airport -s
 
 ### Allow Apps From Anywhere
 
 Run this command to allow the running of apps from anywhere:
 
-	sudo spctl --master-disable
+    sudo spctl --master-disable
 
 To reenable app protection, run this command:
 
-	sudo spctl --master-enable
+    sudo spctl --master-enable
 
 ### Disable Metal
 
 Useful for cases where a video card isn’t spec’ed for macOS Mojave (10.4). Run these two commands:
 
-	sudo defaults write /Library/Preferences/com.apple.CoreDisplay useMetal -boolean no
-	sudo defaults write /Library/Preferences/com.apple.CoreDisplay useIOP -boolean no
+    sudo defaults write /Library/Preferences/com.apple.CoreDisplay useMetal -boolean no
+    sudo defaults write /Library/Preferences/com.apple.CoreDisplay useIOP -boolean no
 
 And this re-enabled font smoothing for non-Apple displays; fonts look like junk otherwise:
 
-	defaults write -g CGFontRenderingFontSmoothingDisabled -bool NO
+    defaults write -g CGFontRenderingFontSmoothingDisabled -bool NO
 
 ### Enable Touch ID for the Terminal
 
 To use Touch ID in the Terminal for `sudo` tasks, do this. First, open up the `/etc/pam.d/sudo` config like this:
 
-	sudo nano /etc/pam.d/sudo
+    sudo nano /etc/pam.d/sudo
 
 Then add this line to the top of the config options:
 
-	auth       sufficient     pam_tid.so
+    auth       sufficient     pam_tid.so
 
 The final config file should look like this:
 
-	auth       sufficient     pam_tid.so
-	auth       sufficient     pam_smartcard.so
-	auth       required       pam_opendirectory.so
-	account    required       pam_permit.so
-	password   required       pam_deny.so
-	session    required       pam_permit.so
+    auth       sufficient     pam_tid.so
+    auth       sufficient     pam_smartcard.so
+    auth       required       pam_opendirectory.so
+    account    required       pam_permit.so
+    password   required       pam_deny.so
+    session    required       pam_permit.so

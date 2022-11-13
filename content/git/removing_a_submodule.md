@@ -15,12 +15,12 @@ In this example, let’s remove the submodule `wordpress`. First, check the subm
 
 Now, `deinit` the submodule from GIT:
 
-	git submodule deinit wordpress
+    git submodule deinit wordpress
 
 Now remove the actual `wordpress` directory:
 
-	git rm -rf wordpress
+    git rm -rf wordpress
 
 And finally—if you have no need for any submodules in your repository—remove the `.gitmodules` file from the root of the repository:
 
-	git rm .gitmodules
+    git rm .gitmodules

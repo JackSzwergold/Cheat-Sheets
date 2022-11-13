@@ -23,8 +23,8 @@ Main config for Monit; broad adjustments happen here:
 
 Adjust the default daemon values to check services every 60 seconds with a start delay of 120:
 
-	set daemon 60
-	with start delay 60
+    set daemon 60
+    with start delay 60
 
 Then find the `mailserver` area of `monitrc` and add the following line. Postfix or an SMTP needs to be active for this to work:
 
@@ -32,7 +32,7 @@ Then find the `mailserver` area of `monitrc` and add the following line. Postfix
 
 Create the `conf.d` monit directory if it doesn’t exist:
 
-	sudo mkdir -p /etc/monit/conf.d
+    sudo mkdir -p /etc/monit/conf.d
 
 Follow the Monit log to see it in action:
 
@@ -46,6 +46,8 @@ Restart Monit and all should be good:
 
     sudo service monit restart
 
+***
+
 ### Ubuntu 12.04: Create a custom Monit Apache status monitoring rule.
 
 Check to see if the `apache2.pid` file exists like this:
@@ -58,7 +60,7 @@ Now create the actual Apache monitoring rule for Monit:
 
 One type of Apache monitoring rule:
 
-	check process apache with pidfile /var/run/apache2.pid
+    check process apache with pidfile /var/run/apache2.pid
       start "/usr/sbin/service apache2 start"
       stop  "/usr/sbin/service apache2 stop"
       if failed host 127.0.0.1 port 80
@@ -68,7 +70,7 @@ One type of Apache monitoring rule:
 
 Another type of Apache monitoring rule:
 
-	check process apache with pidfile /var/run/apache2.pid
+    check process apache with pidfile /var/run/apache2.pid
       start "/usr/sbin/service apache2 start"
       stop  "/usr/sbin/service apache2 stop"
       if failed host 127.0.0.1 port 80
@@ -79,8 +81,10 @@ Another type of Apache monitoring rule:
       then restart
       alert email_address@example.com only on { timeout, nonexist, resource }
 
+***
+
 ### Ubuntu 14.04: Create a custom Monit Apache status monitoring rule.
-	
+
 Check to see if the `apache2.pid` file exists like this:
 
     ls -la /var/run/apache2/apache2.pid
@@ -91,7 +95,7 @@ Now create the actual Apache monitoring rule for Monit:
 
 One type of Apache monitoring rule:
 
-	check process apache with pidfile /var/run/apache2/apache2.pid
+    check process apache with pidfile /var/run/apache2/apache2.pid
       start "/usr/sbin/service apache2 start"
       stop  "/usr/sbin/service apache2 stop"
       if failed host 127.0.0.1 port 80
@@ -101,7 +105,7 @@ One type of Apache monitoring rule:
 
 Another type of Apache monitoring rule:
 
-	check process apache with pidfile /var/run/apache2/apache2.pid
+    check process apache with pidfile /var/run/apache2/apache2.pid
       start "/usr/sbin/service apache2 start"
       stop  "/usr/sbin/service apache2 stop"
       if failed host 127.0.0.1 port 80
@@ -111,10 +115,12 @@ Another type of Apache monitoring rule:
         for 5 cycles
       then restart
       alert email_address@example.com only on { timeout, nonexist, resource }
-	
+
 Restart Monit and all should be good:
 
     sudo service monit restart
+
+***
 
 ### Create a custom Monit MySQL status monitoring rule.
 
@@ -128,17 +134,19 @@ Now create the actual MySQL monitoring rule for Monit:
 
 One type of MySQL monitoring rule:
 
-	check process mysqld with pidfile /var/run/mysqld/mysqld.pid
-	  start program = "/usr/sbin/service mysql start"
-	  stop program = "/usr/sbin/service mysql stop"
-	  if failed host 127.0.0.1 port 3306 protocol mysql
-	    with timeout 15 seconds
-	  then restart
-	  alert email_address@example.com only on { timeout, nonexist }
+    check process mysqld with pidfile /var/run/mysqld/mysqld.pid
+      start program = "/usr/sbin/service mysql start"
+      stop program = "/usr/sbin/service mysql stop"
+      if failed host 127.0.0.1 port 3306 protocol mysql
+        with timeout 15 seconds
+      then restart
+      alert email_address@example.com only on { timeout, nonexist }
 
 Restart Monit and all should be good:
 
     sudo service monit restart
+
+***
 
 ### Create a custom Monit MongoDB status monitoring rule.
 
@@ -148,17 +156,19 @@ Create the actual MongoDB monitoring rule for Monit:
 
 One type of MongoDB monitoring rule:
 
-	check process mongod matching "/usr/bin/mongod"
-	  start program = "/usr/sbin/service mongod start"
-	  stop program = "/usr/sbin/service mongod stop"
-	  if failed host 127.0.0.1 port 27017 protocol http
-	    with timeout 15 seconds
-	  then restart
-	  alert email_address@example.com only on { timeout, nonexist }
+    check process mongod matching "/usr/bin/mongod"
+      start program = "/usr/sbin/service mongod start"
+      stop program = "/usr/sbin/service mongod stop"
+      if failed host 127.0.0.1 port 27017 protocol http
+        with timeout 15 seconds
+      then restart
+      alert email_address@example.com only on { timeout, nonexist }
 
 Restart Monit and all should be good:
 
     sudo service monit restart
+
+***
 
 ### Create a custom Monit NodeJS application status monitoring rule.
 
@@ -168,10 +178,10 @@ Create the actual MongoDB monitoring rule for Monit:
 
 One type of NodeJS monitoring rule:
 
-	check process node_app with pidfile "/var/run/node_app.pid"
-	  start program = "/sbin/start node_app"
-	  stop program  = "/sbin/stop node_app"
-	  if failed host 127.0.0.1 port 8080 protocol http
+    check process node_app with pidfile "/var/run/node_app.pid"
+      start program = "/sbin/start node_app"
+      stop program  = "/sbin/stop node_app"
+      if failed host 127.0.0.1 port 8080 protocol http
         with timeout 15 seconds
       then restart
       alert email_address@example.com only on { timeout, nonexist }

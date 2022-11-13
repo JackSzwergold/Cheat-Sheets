@@ -13,13 +13,17 @@ MediaWiki is a popular open source wiki platform that can be used for public or 
 
 In this guide, we will be setting up the latest version of MediaWiki on an Ubuntu 14.04 server. We will use the lighttpd web server to make the actual content available, php-fpm to handle dynamic processing, and mysql to store our wiki's data.
 
-## Prerequisites
+***
+
+### Prerequisites
 
 To complete this guide, you should have access to a clean Ubuntu 14.04 server instance. On this system, you should have a non-root user configured with sudo privileges for administrative tasks. You can learn how to set this up by following our [Ubuntu 14.04 initial server setup guide](https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-14-04).
 
 When you are ready to continue, log into your server with your sudo user and get started below.
 
-## Step One — Install the Server Components
+***
+
+### Step One — Install the Server Components
 
 First, login to the system you wish to install MediaWiki onto and update your repository lists like this:
 
@@ -31,9 +35,9 @@ Next, make sure you have **curl** installed by running this command to check the
 
 If all went well, the output of that command should look something like this:
 
-	curl 7.35.0 (x86_64-pc-linux-gnu) libcurl/7.35.0 OpenSSL/1.0.1f zlib/1.2.8 libidn/1.28 librtmp/2.3
-	Protocols: dict file ftp ftps gopher http https imap imaps ldap ldaps pop3 pop3s rtmp rtsp smtp smtps telnet tftp 
-	Features: AsynchDNS GSS-Negotiate IDN IPv6 Largefile NTLM NTLM_WB SSL libz TLS-SRP 
+    curl 7.35.0 (x86_64-pc-linux-gnu) libcurl/7.35.0 OpenSSL/1.0.1f zlib/1.2.8 libidn/1.28 librtmp/2.3
+    Protocols: dict file ftp ftps gopher http https imap imaps ldap ldaps pop3 pop3s rtmp rtsp smtp smtps telnet tftp
+    Features: AsynchDNS GSS-Negotiate IDN IPv6 Largefile NTLM NTLM_WB SSL libz TLS-SRP
 
 If the response is something like:
 
@@ -45,7 +49,9 @@ Install **curl** by running this command:
 
 Once that’s done, you’re good to move onto the next step.
 
-## Step Two — Configure MySQL and Create Credentials for MediaWiki
+***
+
+### Step Two — Configure MySQL and Create Credentials for MediaWiki
 
 Now that we know that the system you are working on is properly setup, let’s get MySQL installed like this:
 
@@ -59,11 +65,11 @@ Now, let’s do some basic MySQL hardening by running this command:
 
 You’ll be prompted for the MySQL **root** password that was just created; enter that and hit return. Answer the remaining prompts as follows:
 
-* **Change the root password?** Select **N** for “No.”
-* **Remove anonymous users?** Select **Y** for “Yes.”
-* **Disallow root login remotely?** Select **Y** for “Yes.”
-* **Remove test database and access to it?** Select **Y** for “Yes.”
-* **Reload privilege tables now?** Select **Y** for “Yes.”
+ - **Change the root password?** Select **N** for “No.”
+ - **Remove anonymous users?** Select **Y** for “Yes.”
+ - **Disallow root login remotely?** Select **Y** for “Yes.”
+ - **Remove test database and access to it?** Select **Y** for “Yes.”
+ - **Reload privilege tables now?** Select **Y** for “Yes.”
 
 With that all done, let’s login into your server’s newly installed MySQL instance with this command; note you will be prompted for your **root** password:
 
@@ -92,7 +98,9 @@ And with that done, we need to run this command to get MySQL to reload—and rec
 
 Once that’s done you can exit MySQL by simply typing `exit;` and hitting return which will get you back to your server’s terminal shell where we can move onto the next step: Getting Lighttpd installed and configured.
 
-## Step Three — Configure Lighttpd and PHP-FPM
+***
+
+### Step Three — Configure Lighttpd and PHP-FPM
 
 We are going to be using Lighttpd and PHP-FPM as our web server for MediaWiki in this tutorial, so let’s go ahead and install it like this.
 
@@ -148,7 +156,9 @@ If everything goes as planned, that page should load with the standard PHP info 
 
 With that done, let’s move onto getting the MediaWiki itself installed.
 
-## Step Four — Install MediaWiki
+***
+
+### Step Four — Install MediaWiki
 
 With MySQL and Lighttpd (with PHP) installed and configured, we’re now read to install MediaWiki itself.
 
@@ -194,10 +204,10 @@ If that’s all good, just click **Continue** to move onto the next step; if som
 
 Now you will be on a page where you can enter info to get your install of MediWiki connected to a database. We will be using the MySQL credentials and details that were setup previously as follows:
 
-* The database host should be: **localhost**
-* The database name should be: **mediawiki**
-* The database table prefix should be left blank.
-* The database username and password should be set to what you set them to previously.
+ - The database host should be: `localhost`
+ - The database name should be: `mediawiki`
+ - The database table prefix should be left blank.
+ - The database username and password should be set to what you set them to previously.
 
 When those items are set, just hit **Continue** and move onto the database settings page.
 
@@ -235,6 +245,8 @@ Once that’s done, your install of MediaWiki should be complete! You can check 
 
     http://domain_name_or_IP/
 
-## Conclusion
+***
+
+### Conclusion
 
 With all of that done, you should now have MediaWiki fully installed and configured on your system.

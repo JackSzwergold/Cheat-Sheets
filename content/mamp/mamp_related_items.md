@@ -13,30 +13,30 @@ This is how you can setup named virtual hosts on MAMP. First open up the `httpd.
 
 Add this to the bottom of the file. Requests to a `localhost` request would go to one virtual host. Requests to any host with a `*.local` extension go to the other virtual host.
 
-	NameVirtualHost *
-		
-	<VirtualHost *>
-		# DocumentRoot "/Applications/MAMP/htdocs"
-		# DocumentRoot "/Applications/MAMP/htdocs/blogs-test"
-		DocumentRoot "/Applications/MAMP/htdocs/Public-Seminar"
-		# DocumentRoot "/Applications/MAMP/htdocs/IT-Website"
-		ServerName localhost
-		ServerAlias localhost
-			
-		ErrorLog "/Applications/MAMP/logs/apache_error.log"
-		CustomLog "/Applications/MAMP/logs/apache_access.log" combined
-		
-	</VirtualHost>
-		
-	<VirtualHost *>
-		DocumentRoot "/Applications/MAMP/htdocs"
-		ServerName *.local
-		ServerAlias *.local
-			
-		ErrorLog "/Applications/MAMP/logs/apache_local_error.log"
-		CustomLog "/Applications/MAMP/logs/apache_local_access.log" combined
-		
-	</VirtualHost>
+    NameVirtualHost *
+        
+    <VirtualHost *>
+        # DocumentRoot "/Applications/MAMP/htdocs"
+        # DocumentRoot "/Applications/MAMP/htdocs/blogs-test"
+        DocumentRoot "/Applications/MAMP/htdocs/Public-Seminar"
+        # DocumentRoot "/Applications/MAMP/htdocs/IT-Website"
+        ServerName localhost
+        ServerAlias localhost
+            
+        ErrorLog "/Applications/MAMP/logs/apache_error.log"
+        CustomLog "/Applications/MAMP/logs/apache_access.log" combined
+        
+    </VirtualHost>
+        
+    <VirtualHost *>
+        DocumentRoot "/Applications/MAMP/htdocs"
+        ServerName *.local
+        ServerAlias *.local
+            
+        ErrorLog "/Applications/MAMP/logs/apache_local_error.log"
+        CustomLog "/Applications/MAMP/logs/apache_local_access.log" combined
+        
+    </VirtualHost>
 
 ### Dealing with `DYLD_LIBRARY_PATH` issues connected to MAMP and ImageMagick.
 
@@ -68,15 +68,15 @@ Since MAMP is developed in Germany, the default time zone is set to `Europe/Berl
 
 Find this chunk of configuration code:
 
-	; Defines the default timezone used by the date functions
-	; Will be changed by MAMP to system timezone
-	date.timezone = "Europe/Berlin"
+    ; Defines the default timezone used by the date functions
+    ; Will be changed by MAMP to system timezone
+    date.timezone = "Europe/Berlin"
 
 Then adjust it like this; which in this case switches the timezone to `America/New_York`:
 
-	; Defines the default timezone used by the date functions
-	; Will be changed by MAMP to system timezone
-	; date.timezone = "Europe/Berlin"
-	date.timezone = "America/New_York"
+    ; Defines the default timezone used by the date functions
+    ; Will be changed by MAMP to system timezone
+    ; date.timezone = "Europe/Berlin"
+    date.timezone = "America/New_York"
 
 With that done, save the file, restart MAMP and the timezone for things like PHP error logs will now be properly set to the `America/New_York` timezone.

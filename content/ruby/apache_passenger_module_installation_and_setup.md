@@ -25,19 +25,19 @@ With all of that covered, make sure the Apache development packages and Curl dev
 
 Install `passenger` on Ruby 1.8.x or 1.9.x like this:
 
-	sudo gem install passenger -v "=4.0.59" --no-rdoc --no-ri
+    sudo gem install passenger -v "=4.0.59" --no-rdoc --no-ri
 
 Uninstall `passenger` on Ruby 1.8.x or 1.9.x like this:
 
-	sudo gem uninstall passenger --version 4.0.59
+    sudo gem uninstall passenger --version 4.0.59
 
 Install `passenger` on Ruby 2.x.x like this:
 
-	sudo gem install passenger:4.0.59 --no-rdoc --no-ri
+    sudo gem install passenger:4.0.59 --no-rdoc --no-ri
 
 Unnstall `passenger` on Ruby 2.x.x like this:
 
-	sudo gem uninstall passenger --version 4.0.59
+    sudo gem uninstall passenger --version 4.0.59
 
 ### Install the Passenger Apache Module.
 
@@ -71,8 +71,8 @@ The first thing to do is create a Ruby config file (`config.ru`) like this:
 
 And this Ruby configuration goes in there:
 
-	require './my_app'
-	run MyApp.new
+    require './my_app'
+    run MyApp.new
 
 Save it and change the permissions like this:
 
@@ -88,12 +88,12 @@ Now create the actual Ruby application file (`my_app.rb`) like this:
 
 And this code goes in there:
 
-	# my_app.rb
-	class MyApp
-	  def call env
-	    [200, {"Content-Type" => "text/html"}, ["<h1>Hello world!<\/h1>Ruby Version " + RUBY_VERSION + " on " + RUBY_PLATFORM]]
-	  end
-	end
+    # my_app.rb
+    class MyApp
+      def call env
+        [200, {"Content-Type" => "text/html"}, ["<h1>Hello world!<\/h1>Ruby Version " + RUBY_VERSION + " on " + RUBY_PLATFORM]]
+      end
+    end
 
 Save it and change the permissions like this:
 
@@ -113,9 +113,9 @@ And run the `rackup` command on that Ruby config file (`config.ru`) like this:
 
 The running output should be something like this:
 
-	[2015-09-20 23:25:25] INFO  WEBrick 1.3.1
-	[2015-09-20 23:25:25] INFO  ruby 2.2.3 (2015-08-18) [x86_64-linux-gnu]
-	[2015-09-20 23:25:25] INFO  WEBrick::HTTPServer#start: pid=14300 port=9292
+    [2015-09-20 23:25:25] INFO  WEBrick 1.3.1
+    [2015-09-20 23:25:25] INFO  ruby 2.2.3 (2015-08-18) [x86_64-linux-gnu]
+    [2015-09-20 23:25:25] INFO  WEBrick::HTTPServer#start: pid=14300 port=9292
 
 And you can test the application via a web browser by going to this URL:
 
@@ -147,35 +147,35 @@ Now with all of that done, open up the Apache configuration file you want to add
 
 And then add then Passenger (`mod_passenger`) configuration stuff to the virtual host configuration file:
 
-	# Check if Passenger is loaded. And if it isn’t? Load it.
-	<IfModule !mod_passenger.c>
-	  LoadModule passenger_module /var/lib/gems/2.2.0/gems/passenger-4.0.59/buildout/apache2/mod_passenger.so
-	</IfModule>
-	
-	# Passenger configuration items.
-	<IfModule mod_passenger.c>
-	  PassengerRoot /var/lib/gems/2.2.0/gems/passenger-4.0.59
-	  PassengerDefaultRuby /usr/bin/ruby2.2
-	
-	  PassengerSpawnMethod smart-lv2
-	  PassengerBufferResponse on
-	  PassengerPoolIdleTime 120
-	  PassengerMaxPoolSize 10
-	  PassengerMaxInstancesPerApp 10
-	  PassengerMaxRequests 2000
-	  # PassengerStatThrottleRate 300
-	  # PassengerStatThrottleRate 60
-	  PassengerStatThrottleRate 0
-	  PassengerEnabled off
-	
-	</IfModule>
-	
-	# And more specific Passenger configuration items.
-	<IfModule mod_passenger.c>
-	  PassengerEnabled on
-	  PassengerAppRoot /var/www/sandbox.local/site
-	  RackBaseURI /
-	</IfModule>
+    # Check if Passenger is loaded. And if it isn’t? Load it.
+    <IfModule !mod_passenger.c>
+      LoadModule passenger_module /var/lib/gems/2.2.0/gems/passenger-4.0.59/buildout/apache2/mod_passenger.so
+    </IfModule>
+    
+    # Passenger configuration items.
+    <IfModule mod_passenger.c>
+      PassengerRoot /var/lib/gems/2.2.0/gems/passenger-4.0.59
+      PassengerDefaultRuby /usr/bin/ruby2.2
+    
+      PassengerSpawnMethod smart-lv2
+      PassengerBufferResponse on
+      PassengerPoolIdleTime 120
+      PassengerMaxPoolSize 10
+      PassengerMaxInstancesPerApp 10
+      PassengerMaxRequests 2000
+      # PassengerStatThrottleRate 300
+      # PassengerStatThrottleRate 60
+      PassengerStatThrottleRate 0
+      PassengerEnabled off
+    
+    </IfModule>
+    
+    # And more specific Passenger configuration items.
+    <IfModule mod_passenger.c>
+      PassengerEnabled on
+      PassengerAppRoot /var/www/sandbox.local/site
+      RackBaseURI /
+    </IfModule>
 
 Restart the Apache server like this:
 
@@ -195,57 +195,57 @@ And you are now good to go!
 
 ### Various Passenger configuration options.
 
-	PassengerRoot <directory>
-	PassengerRuby <filename>
-	PassengerAppRoot <path/to/root>
-	PassengerSpawnMethod <string>
-	PassengerUseGlobalQueue <on|off>
-	PassengerEnabled <on|off>
-	PassengerTempDir <directory>
-	PassengerUploadBufferDir <directory>
-	PassengerRestartDir <directory>
-	PassengerBufferResponse <on|off>
+    PassengerRoot <directory>
+    PassengerRuby <filename>
+    PassengerAppRoot <path/to/root>
+    PassengerSpawnMethod <string>
+    PassengerUseGlobalQueue <on|off>
+    PassengerEnabled <on|off>
+    PassengerTempDir <directory>
+    PassengerUploadBufferDir <directory>
+    PassengerRestartDir <directory>
+    PassengerBufferResponse <on|off>
 
 #### Security Options
 
-	PassengerUserSwitching <on|off>
-	PassengerUser <username>
-	PassengerGroup <group name>
-	PassengerDefaultUser <username>
-	PassengerDefaultGroup <group name>
-	PassengerFriendlyErrorPages <on|off>
+    PassengerUserSwitching <on|off>
+    PassengerUser <username>
+    PassengerGroup <group name>
+    PassengerDefaultUser <username>
+    PassengerDefaultGroup <group name>
+    PassengerFriendlyErrorPages <on|off>
 
 #### Resource Control & Optimization Options
 
-	PassengerMaxPoolSize <integer>
-	PassengerMinInstances <integer>
-	PassengerMaxInstancesPerApp <integer>
-	PassengerPoolIdleTime <integer>
-	PassengerMaxRequests <integer>
-	PassengerStatThrottleRate <integer>
-	PassengerPreStart <url>
-	PassengerHighPerformance <on|off>
+    PassengerMaxPoolSize <integer>
+    PassengerMinInstances <integer>
+    PassengerMaxInstancesPerApp <integer>
+    PassengerPoolIdleTime <integer>
+    PassengerMaxRequests <integer>
+    PassengerStatThrottleRate <integer>
+    PassengerPreStart <url>
+    PassengerHighPerformance <on|off>
 
 #### Compatibility Options
 
-	PassengerResolveSymlinksInDocumentRoot <on|off>
-	PassengerAllowEncodedSlashes <on|off>
+    PassengerResolveSymlinksInDocumentRoot <on|off>
+    PassengerAllowEncodedSlashes <on|off>
 
 #### Logging and Debugging Options
 
-	PassengerLogLevel <integer>
-	PassengerDebugLogFile <filename>
+    PassengerLogLevel <integer>
+    PassengerDebugLogFile <filename>
 
 #### Ruby on Rails-Specific Options
 
-	RailsAutoDetect <on|off>
-	RailsBaseURI <uri>
-	RailsEnv <string>
-	RailsFrameworkSpawnerIdleTime <integer>
-	RailsAppSpawnerIdleTime <integer>
+    RailsAutoDetect <on|off>
+    RailsBaseURI <uri>
+    RailsEnv <string>
+    RailsFrameworkSpawnerIdleTime <integer>
+    RailsAppSpawnerIdleTime <integer>
 
 #### Rack-Specific Options
 
-	RackAutoDetect <on|off>
-	RackBaseURI <uri>
-	RackEnv <string>
+    RackAutoDetect <on|off>
+    RackBaseURI <uri>
+    RackEnv <string>

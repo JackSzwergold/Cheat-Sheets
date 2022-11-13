@@ -13,44 +13,44 @@ The reason you should install Tony Wang]s fork of `s3fs` version 1.59 is that—
 
 First, make sure some core PHP development packages are installed like this:
 
-	sudo aptitude install git build-essential libfuse-dev fuse-utils libcurl4-openssl-dev libxml2-dev
+    sudo aptitude install git build-essential libfuse-dev fuse-utils libcurl4-openssl-dev libxml2-dev
 
 Next, clone the source code from Tony Wang’s `s3fs-c` GitHub repository:
 
-	git clone git://github.com/tongwang/s3fs-c.git
+    git clone git://github.com/tongwang/s3fs-c.git
 
 Now go into the repository directory:
 
-	cd s3fs-c
+    cd s3fs-c
 
 Run this `configure` command:
 
-	./configure --prefix=/usr
+    ./configure --prefix=/usr
 
 Once the `configure` process completes, run `make`:
 
-	make
+    make
 
 Finally install it by running `sudo make install`:
 
-	sudo make install
+    sudo make install
 
 ### Create the config file for `s3fs`.
 
 A `root`-only `s3fs` setup would go in here:
 
-	sudo nano /etc/passwd-s3fs
+    sudo nano /etc/passwd-s3fs
 
 And a per user `s3fs` setup would go in here:
 
-	nano ~/.passwd-s3fs
+    nano ~/.passwd-s3fs
 
 And the contents of either file would be something like this:
 
-	# AccessKey:SuperSecretKey
-	[AccessKey]:[SuperSecretKey]
-	# use_cache=/tmp
-	# use_rrs
+    # AccessKey:SuperSecretKey
+    [AccessKey]:[SuperSecretKey]
+    # use_cache=/tmp
+    # use_rrs
 
 Remember that the credentials files cannot have lax permissions as this creates a security hole and the `s3fs` setup would enforce it.
 

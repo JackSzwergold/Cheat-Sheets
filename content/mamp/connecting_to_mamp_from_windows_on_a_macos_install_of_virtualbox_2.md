@@ -21,15 +21,15 @@ The most immediate way you can connect to a `host` machine is to use the default
 
 So if you were to connect to MAMP on macOS running on port **8888**, the address to connect to would be:
 
-	http://10.0.2.2:8888
+    http://10.0.2.2:8888
 
 But that is far from ideal since the MAMP setup I like to use utilizes Apache name-based virtual hosts to allow for there to be one root at:
 
-	http://localhost:8888
+    http://localhost:8888
 
 And then another one based on your machine ID of—for example—**MY_MACHINE** like this:
 
-	http://MY_MACHINE.local:8888
+    http://MY_MACHINE.local:8888
 
 #### The problem with this and how to solve it.
 
@@ -40,14 +40,14 @@ The problem? Two things.
 
 The solution to both of these issues for our purposes is to simply edit the `hosts` file on the Windows `guest` OS. The file is located here.
 
-	c:\windows\system32\drivers\etc\hosts
+    c:\windows\system32\drivers\etc\hosts
 
 And should be edited via a text editor—such as Notepad—run as an administrator.
 
 Since the `hosts` file user editable when running Windows in VirtualBox, so you can create hostname aliases of your choice. But for this example I would use **MY_MACHINE** like so.
 
-	10.0.2.2	MY_MACHINE
-	10.0.2.2	MY_MACHINE.local
+    10.0.2.2    MY_MACHINE
+    10.0.2.2    MY_MACHINE.local
 
 Doing this, you would be able to connect to the equivalent of the following.
 

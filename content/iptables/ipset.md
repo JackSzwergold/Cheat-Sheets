@@ -21,16 +21,16 @@ Create an IP set like this:
 
 Check that the IP set exists by listing the all sets like this:
 
-	sudo ipset -L
+    sudo ipset -L
 
 The output at this point would be something like this:
 
-	Name: FooBar
-	Type: hash:net
-	Header: family inet hashsize 1024 maxelem 65536
-	Size in memory: 16760
-	References: 0
-	Members:
+    Name: FooBar
+    Type: hash:net
+    Header: family inet hashsize 1024 maxelem 65536
+    Size in memory: 16760
+    References: 0
+    Members:
 
 Now let’s add a few IPs to that set like this:
 
@@ -40,19 +40,19 @@ Now let’s add a few IPs to that set like this:
 
 And if you run IP set again:
 
-	sudo ipset -L
+    sudo ipset -L
 
 The additions will be reflected in the new output:
 
-	Name: FooBar
-	Type: hash:net
-	Header: family inet hashsize 1024 maxelem 65536
-	Size in memory: 16856
-	References: 0
-	Members:
-	127.0.0.0/8
-	192.168.0.0/16
-	10.0.0.0/8
+    Name: FooBar
+    Type: hash:net
+    Header: family inet hashsize 1024 maxelem 65536
+    Size in memory: 16856
+    References: 0
+    Members:
+    127.0.0.0/8
+    192.168.0.0/16
+    10.0.0.0/8
 
 And can then save the IP set like this
 
@@ -60,10 +60,10 @@ And can then save the IP set like this
 
 The contents of `rules.ipset.FooBar` it will look something like this:
 
-	create FooBar hash:net family inet hashsize 1024 maxelem 65536
-	add FooBar 127.0.0.0/8
-	add FooBar 10.0.0.0/8
-	add FooBar 192.168.0.0/16
+    create FooBar hash:net family inet hashsize 1024 maxelem 65536
+    add FooBar 127.0.0.0/8
+    add FooBar 10.0.0.0/8
+    add FooBar 192.168.0.0/16
 
 At this point if you wanted to destroy the `FooBar` IP set, you can do so by doing this:
 
@@ -85,11 +85,11 @@ This variant uses the `-!` option to ignore errors if the IP address already exi
 
 If you need to get a count of the actual IP addresses IPSet is dealing with, you can run this command that uses Grep and some Bash shell math magic:
 
-	grep -oE '(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\/([0-9]{1,2})'ipset-20181229.txt | awk -F / '{ count[$2]++ } END { for (mask in count) total+=count[mask]*2^(32-mask); print total }'
+    grep -oE '(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\/([0-9]{1,2})'ipset-20181229.txt | awk -F / '{ count[$2]++ } END { for (mask in count) total+=count[mask]*2^(32-mask); print total }'
 
 Here is a variant of that same command that uses `prips`, but it stinks. It’s being added here for reference only. I actually expands all of the ranges and—as a result—takes forever to complete. So while the first version takes a few seconds to run, this `prips` version can take anywhere from 20 to 30 minutes to deal with an IPSet that contains 40,000+ entries:
 
-	grep -oE '(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\/([0-9]{1,2})' ipset-20181229.txt | awk 'NF { system( "prips " $0)  }' | wc -l
+    grep -oE '(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\/([0-9]{1,2})' ipset-20181229.txt | awk 'NF { system( "prips " $0)  }' | wc -l
 
 ### Get IPSet to retain values on reboot.
 
@@ -103,7 +103,7 @@ First, copy the IP set rules into a text file like this:
 
 Then copy those rules into a file named `rules.ipsets` in the `/etc/iptables/` directory like this:
 
-	sudo cp ~/rules.ipset /etc/iptables/rules.ipsets
+    sudo cp ~/rules.ipset /etc/iptables/rules.ipsets
 
 Now let’s tweak the `iptables-persistent` startup script like this:
 
@@ -124,17 +124,17 @@ Add this to `load_rules()` right after `log_action_begin_msg "Loading iptables r
 
 Add this to `save_rules()` right after `log_action_begin_msg "Saving rules"`:
 
-	#save IPsets
-	#need at least iptable_filter loaded:
-	if ! ipset list | grep -i "name">/dev/null 2>&1; then
-	  log_action_cont_msg " skipping IPset - no sets defined or not loaded"
-	elif [ -x /usr/sbin/ipset ] || [ -x /sbin/ipset ]; then
-	  log_action_cont_msg " IPset"
-	  ipset save | grep -iv "f2b"> /etc/iptables/rules.ipsets
-	  if [ $? -ne 0 ]; then
-	    rc=1
-	  fi
-	fi
+    #save IPsets
+    #need at least iptable_filter loaded:
+    if ! ipset list | grep -i "name">/dev/null 2>&1; then
+      log_action_cont_msg " skipping IPset - no sets defined or not loaded"
+    elif [ -x /usr/sbin/ipset ] || [ -x /sbin/ipset ]; then
+      log_action_cont_msg " IPset"
+      ipset save | grep -iv "f2b"> /etc/iptables/rules.ipsets
+      if [ $? -ne 0 ]; then
+        rc=1
+      fi
+    fi
 
 That said this is a clean/messy solution. If anything better comes along, gotta ditch this.
 
@@ -156,11 +156,11 @@ First, let’s create a generic `BANNED_RANGES` IP set like this:
 
 Now let’s download a raw zone file—such as `cn.zone`— from the IP Deny website like this:
 
-	curl -O -L http://www.ipdeny.com/ipblocks/data/countries/cn.zone
+    curl -O -L http://www.ipdeny.com/ipblocks/data/countries/cn.zone
 
 With that downloaded, lets now populate the `BANNED_RANGES` IP set config file with the values from the `cn.zone` file like this:
 
-	awk '{print "add BANNED_RANGES " $0}' cn.zone > rules.ipset.BANNED_RANGES
+    awk '{print "add BANNED_RANGES " $0}' cn.zone > rules.ipset.BANNED_RANGES
 
 With that done, let’s import the `BANNED_RANGES` IP set like this:
 
@@ -182,20 +182,20 @@ First, let’s create a generic `BANNED_RANGES` IP set like this:
 
 Now let’s download the `GeoIPCountryCSV.zip` from the official MaxMind GeoIP website:
 
-	curl -O -L http://geolite.maxmind.com/download/geoip/database/GeoIPCountryCSV.zip
+    curl -O -L http://geolite.maxmind.com/download/geoip/database/GeoIPCountryCSV.zip
 
 Let’s decompress it like this:
 
-	unzip -o -q -d . GeoIPCountryCSV.zip
+    unzip -o -q -d . GeoIPCountryCSV.zip
 
 And with the archive decompressed, let’s ditch the remaning `GeoIPCountryCSV.zip`:
 
-	rm GeoIPCountryCSV.zip
-	
+    rm GeoIPCountryCSV.zip
+    
 With that done, lets now populate the `BANNED_RANGES` IP set config file with the values from the `GeoIPCountryWhois.csv` file like this; note we are focusing only on China (`CN`) IP addresses:
 
-	awk -F "," -v COUNTRY_CODE=CN -v IPSET_TABLE=BANNED_RANGES} '$5 ~ COUNTRY_CODE { gsub(/"/, "", $1); gsub(/"/, "", $2); print "add "IPSET_TABLE" "$1"-"$2; }' /usr/local/share/GeoIP/GeoIPCountryWhois.csv >> rules.ipset.BANNED_RANGES
-	
+    awk -F "," -v COUNTRY_CODE=CN -v IPSET_TABLE=BANNED_RANGES} '$5 ~ COUNTRY_CODE { gsub(/"/, "", $1); gsub(/"/, "", $2); print "add "IPSET_TABLE" "$1"-"$2; }' /usr/local/share/GeoIP/GeoIPCountryWhois.csv >> rules.ipset.BANNED_RANGES
+    
 With that done, let’s import the `BANNED_RANGES` IP set like this:
 
     sudo ipset restore < rules.ipset.BANNED_RANGES
@@ -208,7 +208,7 @@ Now check the entries in the IP set by running this command:
 
 If that all looks good, let’s tell IPTables to pay attention to that `BANNED_RANGES` set like this:
 
-	sudo iptables -I INPUT -p tcp -m set --match-set BANNED_RANGES src -j REJECT
+    sudo iptables -I INPUT -p tcp -m set --match-set BANNED_RANGES src -j REJECT
 
 To remove all entries from the `BANNED_RANGES` IP set, just “flush” it like this:
 

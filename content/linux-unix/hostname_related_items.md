@@ -35,11 +35,11 @@ To permanently change the hostname on a CentOS/RedHat system, open up `/etc/sysc
 
 Look for the `HOSTNAME` value and adjust it like this:
 
-	NETWORKING=yes
-	HOSTNAME="example.com"
-	GATEWAY="192.168.56.1"
-	GATEWAYDEV="eth1"
-	FORWARD_IPV4="yes"
+    NETWORKING=yes
+    HOSTNAME="example.com"
+    GATEWAY="192.168.56.1"
+    GATEWAYDEV="eth1"
+    FORWARD_IPV4="yes"
 
 ### Using `sysctl` to permanently change the hostname value.
 

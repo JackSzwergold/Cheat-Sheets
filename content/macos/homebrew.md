@@ -39,7 +39,7 @@ A basic pile of macOS command line tools I like to install:
 
 If you get a package that spits out a message like “Error: An unsatisfied requirement failed this build.” but you need to force the install, just add the `--ignore-dependencies` option. For example, to force Htop to install like this just run this command:
 
-	brew install htop --ignore-dependencies
+    brew install htop --ignore-dependencies
 
 ***
 
@@ -49,23 +49,23 @@ Uninstall all Homebrew packages:
 
 Or do a similar thing this way:
 
-	brew list -1 | xargs brew uninstall -f
+    brew list -1 | xargs brew uninstall -f
 
 ***
 
 Install the latest OpenJDK Java version via Homebrew like this:
 
-	brew cask install adoptopenjdk
+    brew cask install adoptopenjdk
 
 Other specific OpenJDK versions can be installed like this:
 
-	brew tap AdoptOpenJDK/openjdk
-	brew cask install adoptopenjdk8-jre
+    brew tap AdoptOpenJDK/openjdk
+    brew cask install adoptopenjdk8-jre
 
 Additional versions of Java OpenJDK and JRE can be found here:
  
-	https://github.com/AdoptOpenJDK/homebrew-openjdk
+    https://github.com/AdoptOpenJDK/homebrew-openjdk
 
 Uninstall it like this:
 
-	brew cask uninstall adoptopenjdk8-jre
+    brew cask uninstall adoptopenjdk8-jre

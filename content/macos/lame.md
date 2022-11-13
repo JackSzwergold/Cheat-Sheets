@@ -7,9 +7,9 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-	curl -O -L https://svwh.dl.sourceforge.net/project/lame/lame/3.99/lame-3.99.5.tar.gz
-	tar -xf lame-3.*.tar.gz
-	cd lame-3.*
-	./configure
-	make
-	sudo make install
+    curl -O -L https://svwh.dl.sourceforge.net/project/lame/lame/3.99/lame-3.99.5.tar.gz
+    tar -xf lame-3.*.tar.gz
+    cd lame-3.*
+    ./configure
+    make
+    sudo make install

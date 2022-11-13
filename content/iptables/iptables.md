@@ -11,17 +11,17 @@ Template: index
 
 On Ubuntu/Debian systems you can start, stop, restart and flush IPTables this way:
 
-	sudo service iptables-persistent start
-	sudo service iptables-persistent stop
-	sudo service iptables-persistent restart
-	sudo service iptables-persistent flush
+    sudo service iptables-persistent start
+    sudo service iptables-persistent stop
+    sudo service iptables-persistent restart
+    sudo service iptables-persistent flush
 
 For Ubuntu 16.04, use `netfilter-persistent` instead:
 
-	sudo service netfilter-persistent start
-	sudo service netfilter-persistent stop
-	sudo service netfilter-persistent restart
-	sudo service netfilter-persistent flush
+    sudo service netfilter-persistent start
+    sudo service netfilter-persistent stop
+    sudo service netfilter-persistent restart
+    sudo service netfilter-persistent flush
 
 On CentOS/RedHat systems you can start, stop, restart and flush IPTables this way:
 
@@ -42,15 +42,15 @@ The output should be something like this:
 
 List all rules (`-L`) in the selected table—default is `-t filter`—with hostname lookups.
 
-	sudo iptables -L
+    sudo iptables -L
 
 List all rules (`-L`) in the selected table—default is `-t filter`—in numeric format (`-n`) without hostname lookups.
 
-	sudo iptables -L -n
+    sudo iptables -L -n
 
 List all rules (`-L`) in the selected table—default is `-t filter`—in numeric format (`-n`) without hostname lookups and add line numbers (`--line-numbers`) to each line.
 
-	sudo iptables --line-numbers -n -L
+    sudo iptables --line-numbers -n -L
 
 List all rules (`-L`) in the NAT table (`-t nat`) in numeric format (`-n`) without hostname lookups.
 
@@ -120,110 +120,110 @@ Or you can add this rule to the `*nat` table into the `rules.v4` text file; this
 
 This is a basic, solid and relatively simple rule set I like to use with IPTables. The only adjustments to note are that one should adjust the `123.456.789.0` port `22` line to match any IP address you want to be allowed past standard SSH rules. Ports `80` and `443` are open in this config as well as they are standard web ports; add or remove them based on server needs.
 
-	# NAT stuff.
-	*nat
-	:PREROUTING ACCEPT [2:80]
-	:INPUT ACCEPT [2:80]
-	:OUTPUT ACCEPT [3:198]
-	:POSTROUTING ACCEPT [3:198]
-	COMMIT
-	
-	# Mangle stuff.
-	*mangle
-	:PREROUTING ACCEPT [87:6395]
-	:INPUT ACCEPT [87:6395]
-	:FORWARD ACCEPT [0:0]
-	:OUTPUT ACCEPT [50:4502]
-	:POSTROUTING ACCEPT [50:4502]
-	COMMIT
-	
-	# Filter stuff.
-	*filter
-	:INPUT ACCEPT [0:0]
-	:FORWARD ACCEPT [0:0]
-	:OUTPUT ACCEPT [50:4502]
-	:BANNED_ACTIONS - [0:0]
-	:DDOS_ACTIONS - [0:0]
-	:DDOS_DETECT - [0:0]
-	:SPOOF_ACTIONS - [0:0]
-	:SPOOF_DETECT - [0:0]
-	:TOR_ACTIONS - [0:0]
-	:AWS_ACTIONS - [0:0]
-	-A INPUT -i lo -j ACCEPT
-	-A INPUT -p tcp -m set --match-set WHITELIST_IPS src -j ACCEPT
-	-A INPUT -p tcp -m set --match-set BANNED_RANGES src -j BANNED_ACTIONS
-	-A INPUT -p tcp -m set --match-set BANNED_IPS src -j BANNED_ACTIONS
-	-A INPUT -p tcp -m set --match-set TOR_IPS src -j TOR_ACTIONS
-	-A INPUT -p tcp -m set --match-set AWS_RANGES src -j AWS_ACTIONS
-	-A INPUT -j DDOS_DETECT
-	-A INPUT -j SPOOF_DETECT
-	-A INPUT -p tcp -m state --state NEW -m tcp -m multiport --dports 80,443 -j ACCEPT
-	-A INPUT -p tcp -m state --state NEW -m tcp --dport 22 -j ACCEPT
-	-A INPUT -d 224.0.0.251/32 -p udp -m udp --dport 5353 -j ACCEPT
-	-A INPUT -p icmp -m icmp --icmp-type any -j ACCEPT
-	-A INPUT -p esp -j ACCEPT
-	-A INPUT -p ah -j ACCEPT
-	-A INPUT -m state --state RELATED,ESTABLISHED -j ACCEPT
-	-A INPUT -j REJECT --reject-with icmp-host-prohibited
-	
-	# Define the banned actions.
-	-A BANNED_ACTIONS -j REJECT --reject-with icmp-host-prohibited
-	
-	# Define the DDoS actions.
-	-A DDOS_ACTIONS -p tcp -m limit --limit 3/min --limit-burst 10 -j LOG --log-prefix "IPTABLES_DENIED_TCP: "
-	-A DDOS_ACTIONS -p udp -m limit --limit 3/min --limit-burst 10 -j LOG --log-prefix "IPTABLES_DENIED_UDP: "
-	-A DDOS_ACTIONS -p icmp -m limit --limit 3/min --limit-burst 10 -j LOG --log-prefix "IPTABLES_DENIED_ICMP: "
-	-A DDOS_ACTIONS -j REJECT --reject-with icmp-host-prohibited
-	
-	# Drop invalid SYN packets.
-	-A DDOS_DETECT -p tcp -m tcp --tcp-flags ALL ACK,RST,SYN,FIN -j DDOS_ACTIONS
-	-A DDOS_DETECT -p tcp -m tcp --tcp-flags SYN,FIN SYN,FIN -j DDOS_ACTIONS
-	-A DDOS_DETECT -p tcp -m tcp --tcp-flags SYN,RST SYN,RST -j DDOS_ACTIONS
-	
-	# The combination of these TCP flags is not defined.
-	-A DDOS_DETECT -p tcp -m tcp --tcp-flags FIN,SYN,RST,PSH,ACK,URG NONE -j DDOS_ACTIONS
-	-A DDOS_DETECT -p tcp -m tcp --tcp-flags FIN,SYN,RST,PSH,ACK,URG FIN,SYN,RST,PSH,ACK,URG -j DDOS_ACTIONS
-	-A DDOS_DETECT -p tcp -m tcp --tcp-flags FIN,SYN,RST,PSH,ACK,URG FIN,PSH,URG -j DDOS_ACTIONS
-	-A DDOS_DETECT -p tcp -m tcp --tcp-flags FIN,RST FIN,RST -j DDOS_ACTIONS
-	-A DDOS_DETECT -p tcp -m tcp --tcp-flags FIN,ACK FIN -j DDOS_ACTIONS
-	-A DDOS_DETECT -p tcp -m tcp --tcp-flags PSH,ACK PSH -j DDOS_ACTIONS
-	-A DDOS_DETECT -p tcp -m tcp --tcp-flags ACK,URG URG -j DDOS_ACTIONS
-	
-	# Drop new incoming TCP connections are not SYN packets.
-	-A DDOS_DETECT -p tcp -m tcp ! --syn -m state --state NEW -j DDOS_ACTIONS
-	
-	# Drop packets with incoming fragments.
-	-A DDOS_DETECT -p tcp -m tcp --tcp-flags ALL ALL -j DDOS_ACTIONS
-	
-	# Define the spoof actions.
-	-A SPOOF_ACTIONS -j ACCEPT
-	# -A SPOOF_ACTIONS -m limit --limit 3/min --limit-burst 10 -j LOG --log-prefix "IPTABLES_DENIED_SPOOF: "
-	# -A SPOOF_ACTIONS -j REJECT --reject-with icmp-host-prohibited
-	
-	# One batch of spoof detection addresses.
-	-A SPOOF_DETECT -s 10.0.0.0/8 -j SPOOF_ACTIONS
-	# -A SPOOF_DETECT -s 169.254.0.0/16 -j SPOOF_ACTIONS
-	# -A SPOOF_DETECT -s 172.16.0.0/12 -j SPOOF_ACTIONS
-	-A SPOOF_DETECT -s 127.0.0.0/8 -j SPOOF_ACTIONS
-	
-	# Another batch of spoof detection addresses.
-	-A SPOOF_DETECT -s 224.0.0.0/4 -j SPOOF_ACTIONS
-	-A SPOOF_DETECT -d 224.0.0.0/4 -j SPOOF_ACTIONS
-	-A SPOOF_DETECT -s 240.0.0.0/5 -j SPOOF_ACTIONS
-	-A SPOOF_DETECT -d 240.0.0.0/5 -j SPOOF_ACTIONS
-	-A SPOOF_DETECT -s 0.0.0.0/8 -j SPOOF_ACTIONS
-	-A SPOOF_DETECT -d 0.0.0.0/8 -j SPOOF_ACTIONS
-	-A SPOOF_DETECT -d 239.255.255.0/24 -j SPOOF_ACTIONS
-	-A SPOOF_DETECT -d 255.255.255.255/32 -j SPOOF_ACTIONS
-	
-	# Define the TOR actions.
-	-A TOR_ACTIONS -j REJECT --reject-with icmp-host-prohibited
-	
-	# Define the AWS actions.
-	-A AWS_ACTIONS -j REJECT --reject-with icmp-host-prohibited
-	
-	# Commit it.
-	COMMIT
+    # NAT stuff.
+    *nat
+    :PREROUTING ACCEPT [2:80]
+    :INPUT ACCEPT [2:80]
+    :OUTPUT ACCEPT [3:198]
+    :POSTROUTING ACCEPT [3:198]
+    COMMIT
+    
+    # Mangle stuff.
+    *mangle
+    :PREROUTING ACCEPT [87:6395]
+    :INPUT ACCEPT [87:6395]
+    :FORWARD ACCEPT [0:0]
+    :OUTPUT ACCEPT [50:4502]
+    :POSTROUTING ACCEPT [50:4502]
+    COMMIT
+    
+    # Filter stuff.
+    *filter
+    :INPUT ACCEPT [0:0]
+    :FORWARD ACCEPT [0:0]
+    :OUTPUT ACCEPT [50:4502]
+    :BANNED_ACTIONS - [0:0]
+    :DDOS_ACTIONS - [0:0]
+    :DDOS_DETECT - [0:0]
+    :SPOOF_ACTIONS - [0:0]
+    :SPOOF_DETECT - [0:0]
+    :TOR_ACTIONS - [0:0]
+    :AWS_ACTIONS - [0:0]
+    -A INPUT -i lo -j ACCEPT
+    -A INPUT -p tcp -m set --match-set WHITELIST_IPS src -j ACCEPT
+    -A INPUT -p tcp -m set --match-set BANNED_RANGES src -j BANNED_ACTIONS
+    -A INPUT -p tcp -m set --match-set BANNED_IPS src -j BANNED_ACTIONS
+    -A INPUT -p tcp -m set --match-set TOR_IPS src -j TOR_ACTIONS
+    -A INPUT -p tcp -m set --match-set AWS_RANGES src -j AWS_ACTIONS
+    -A INPUT -j DDOS_DETECT
+    -A INPUT -j SPOOF_DETECT
+    -A INPUT -p tcp -m state --state NEW -m tcp -m multiport --dports 80,443 -j ACCEPT
+    -A INPUT -p tcp -m state --state NEW -m tcp --dport 22 -j ACCEPT
+    -A INPUT -d 224.0.0.251/32 -p udp -m udp --dport 5353 -j ACCEPT
+    -A INPUT -p icmp -m icmp --icmp-type any -j ACCEPT
+    -A INPUT -p esp -j ACCEPT
+    -A INPUT -p ah -j ACCEPT
+    -A INPUT -m state --state RELATED,ESTABLISHED -j ACCEPT
+    -A INPUT -j REJECT --reject-with icmp-host-prohibited
+    
+    # Define the banned actions.
+    -A BANNED_ACTIONS -j REJECT --reject-with icmp-host-prohibited
+    
+    # Define the DDoS actions.
+    -A DDOS_ACTIONS -p tcp -m limit --limit 3/min --limit-burst 10 -j LOG --log-prefix "IPTABLES_DENIED_TCP: "
+    -A DDOS_ACTIONS -p udp -m limit --limit 3/min --limit-burst 10 -j LOG --log-prefix "IPTABLES_DENIED_UDP: "
+    -A DDOS_ACTIONS -p icmp -m limit --limit 3/min --limit-burst 10 -j LOG --log-prefix "IPTABLES_DENIED_ICMP: "
+    -A DDOS_ACTIONS -j REJECT --reject-with icmp-host-prohibited
+    
+    # Drop invalid SYN packets.
+    -A DDOS_DETECT -p tcp -m tcp --tcp-flags ALL ACK,RST,SYN,FIN -j DDOS_ACTIONS
+    -A DDOS_DETECT -p tcp -m tcp --tcp-flags SYN,FIN SYN,FIN -j DDOS_ACTIONS
+    -A DDOS_DETECT -p tcp -m tcp --tcp-flags SYN,RST SYN,RST -j DDOS_ACTIONS
+    
+    # The combination of these TCP flags is not defined.
+    -A DDOS_DETECT -p tcp -m tcp --tcp-flags FIN,SYN,RST,PSH,ACK,URG NONE -j DDOS_ACTIONS
+    -A DDOS_DETECT -p tcp -m tcp --tcp-flags FIN,SYN,RST,PSH,ACK,URG FIN,SYN,RST,PSH,ACK,URG -j DDOS_ACTIONS
+    -A DDOS_DETECT -p tcp -m tcp --tcp-flags FIN,SYN,RST,PSH,ACK,URG FIN,PSH,URG -j DDOS_ACTIONS
+    -A DDOS_DETECT -p tcp -m tcp --tcp-flags FIN,RST FIN,RST -j DDOS_ACTIONS
+    -A DDOS_DETECT -p tcp -m tcp --tcp-flags FIN,ACK FIN -j DDOS_ACTIONS
+    -A DDOS_DETECT -p tcp -m tcp --tcp-flags PSH,ACK PSH -j DDOS_ACTIONS
+    -A DDOS_DETECT -p tcp -m tcp --tcp-flags ACK,URG URG -j DDOS_ACTIONS
+    
+    # Drop new incoming TCP connections are not SYN packets.
+    -A DDOS_DETECT -p tcp -m tcp ! --syn -m state --state NEW -j DDOS_ACTIONS
+    
+    # Drop packets with incoming fragments.
+    -A DDOS_DETECT -p tcp -m tcp --tcp-flags ALL ALL -j DDOS_ACTIONS
+    
+    # Define the spoof actions.
+    -A SPOOF_ACTIONS -j ACCEPT
+    # -A SPOOF_ACTIONS -m limit --limit 3/min --limit-burst 10 -j LOG --log-prefix "IPTABLES_DENIED_SPOOF: "
+    # -A SPOOF_ACTIONS -j REJECT --reject-with icmp-host-prohibited
+    
+    # One batch of spoof detection addresses.
+    -A SPOOF_DETECT -s 10.0.0.0/8 -j SPOOF_ACTIONS
+    # -A SPOOF_DETECT -s 169.254.0.0/16 -j SPOOF_ACTIONS
+    # -A SPOOF_DETECT -s 172.16.0.0/12 -j SPOOF_ACTIONS
+    -A SPOOF_DETECT -s 127.0.0.0/8 -j SPOOF_ACTIONS
+    
+    # Another batch of spoof detection addresses.
+    -A SPOOF_DETECT -s 224.0.0.0/4 -j SPOOF_ACTIONS
+    -A SPOOF_DETECT -d 224.0.0.0/4 -j SPOOF_ACTIONS
+    -A SPOOF_DETECT -s 240.0.0.0/5 -j SPOOF_ACTIONS
+    -A SPOOF_DETECT -d 240.0.0.0/5 -j SPOOF_ACTIONS
+    -A SPOOF_DETECT -s 0.0.0.0/8 -j SPOOF_ACTIONS
+    -A SPOOF_DETECT -d 0.0.0.0/8 -j SPOOF_ACTIONS
+    -A SPOOF_DETECT -d 239.255.255.0/24 -j SPOOF_ACTIONS
+    -A SPOOF_DETECT -d 255.255.255.255/32 -j SPOOF_ACTIONS
+    
+    # Define the TOR actions.
+    -A TOR_ACTIONS -j REJECT --reject-with icmp-host-prohibited
+    
+    # Define the AWS actions.
+    -A AWS_ACTIONS -j REJECT --reject-with icmp-host-prohibited
+    
+    # Commit it.
+    COMMIT
 
 ### Logging rejected packets.
 
@@ -237,9 +237,9 @@ Setting a generic log entry:
 
 Setting log entries based on TCP, UDP or ICMP requests:
 
-	-A INPUT -p tcp -m limit --limit 3/min --limit-burst 10 -j LOG --log-prefix "IPTABLES_DENIED_TCP: " --log-level 4
-	-A INPUT -p udp -m limit --limit 3/min --limit-burst 10 -j LOG --log-prefix "IPTABLES_DENIED_UDP: " --log-level 4
-	-A INPUT -p icmp -m limit --limit 3/min --limit-burst 10 -j LOG --log-prefix "IPTABLES_DENIED_ICMP: " --log-level 4
+    -A INPUT -p tcp -m limit --limit 3/min --limit-burst 10 -j LOG --log-prefix "IPTABLES_DENIED_TCP: " --log-level 4
+    -A INPUT -p udp -m limit --limit 3/min --limit-burst 10 -j LOG --log-prefix "IPTABLES_DENIED_UDP: " --log-level 4
+    -A INPUT -p icmp -m limit --limit 3/min --limit-burst 10 -j LOG --log-prefix "IPTABLES_DENIED_ICMP: " --log-level 4
 
 Finding the IPTables specific log entries in the Kernel log (`kern.log`):
 
@@ -263,29 +263,29 @@ This variant will let you know date, time and whether the dropped packet was TCP
 
 ### Some ideas that seem to work.
 
-	# Reject packets from RFC1918 class networks (i.e., spoofed)
-	
-	sudo iptables -N SPOOFING
-	sudo iptables -N SPOOF_ACTIONS
-	
-	sudo iptables -A INPUT -j SPOOFING
-	
-	sudo iptables -A SPOOFING -s 10.0.0.0/8 -j SPOOF_ACTIONS
-	sudo iptables -A SPOOFING -s 169.254.0.0/16 -j SPOOF_ACTIONS
-	sudo iptables -A SPOOFING -s 172.16.0.0/12 -j SPOOF_ACTIONS
-	sudo iptables -A SPOOFING -s 127.0.0.0/8 -j SPOOF_ACTIONS
-	
-	sudo iptables -A SPOOFING -s 224.0.0.0/4 -j SPOOF_ACTIONS
-	sudo iptables -A SPOOFING -d 224.0.0.0/4 -j SPOOF_ACTIONS
-	sudo iptables -A SPOOFING -s 240.0.0.0/5 -j SPOOF_ACTIONS
-	sudo iptables -A SPOOFING -d 240.0.0.0/5 -j SPOOF_ACTIONS
-	sudo iptables -A SPOOFING -s 0.0.0.0/8 -j SPOOF_ACTIONS
-	sudo iptables -A SPOOFING -d 0.0.0.0/8 -j SPOOF_ACTIONS
-	sudo iptables -A SPOOFING -d 239.255.255.0/24 -j SPOOF_ACTIONS
-	sudo iptables -A SPOOFING -d 255.255.255.255 -j SPOOF_ACTIONS
-	
-	sudo iptables -A SPOOF_ACTIONS -p tcp -m limit --limit 3/min --limit-burst 10 -j LOG --log-prefix "IPTABLES_DENIED_SPOOF: " --log-level 4
-	sudo iptables -A SPOOF_ACTIONS -j REJECT --reject-with icmp-host-prohibited
+    # Reject packets from RFC1918 class networks (i.e., spoofed)
+    
+    sudo iptables -N SPOOFING
+    sudo iptables -N SPOOF_ACTIONS
+    
+    sudo iptables -A INPUT -j SPOOFING
+    
+    sudo iptables -A SPOOFING -s 10.0.0.0/8 -j SPOOF_ACTIONS
+    sudo iptables -A SPOOFING -s 169.254.0.0/16 -j SPOOF_ACTIONS
+    sudo iptables -A SPOOFING -s 172.16.0.0/12 -j SPOOF_ACTIONS
+    sudo iptables -A SPOOFING -s 127.0.0.0/8 -j SPOOF_ACTIONS
+    
+    sudo iptables -A SPOOFING -s 224.0.0.0/4 -j SPOOF_ACTIONS
+    sudo iptables -A SPOOFING -d 224.0.0.0/4 -j SPOOF_ACTIONS
+    sudo iptables -A SPOOFING -s 240.0.0.0/5 -j SPOOF_ACTIONS
+    sudo iptables -A SPOOFING -d 240.0.0.0/5 -j SPOOF_ACTIONS
+    sudo iptables -A SPOOFING -s 0.0.0.0/8 -j SPOOF_ACTIONS
+    sudo iptables -A SPOOFING -d 0.0.0.0/8 -j SPOOF_ACTIONS
+    sudo iptables -A SPOOFING -d 239.255.255.0/24 -j SPOOF_ACTIONS
+    sudo iptables -A SPOOFING -d 255.255.255.255 -j SPOOF_ACTIONS
+    
+    sudo iptables -A SPOOF_ACTIONS -p tcp -m limit --limit 3/min --limit-burst 10 -j LOG --log-prefix "IPTABLES_DENIED_SPOOF: " --log-level 4
+    sudo iptables -A SPOOF_ACTIONS -j REJECT --reject-with icmp-host-prohibited
 
 ### Some ideas that are not ready for prime time.
 

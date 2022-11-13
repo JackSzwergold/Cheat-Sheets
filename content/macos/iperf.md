@@ -11,28 +11,28 @@ This tutorial explains how you can install iPerf directly from source code on ma
 
 First grab a compressed archive from an official iPerf source site:
 
-	curl -O -L https://iperf.fr/download/source/iperf-2.0.5-source.tar.gz
+    curl -O -L https://iperf.fr/download/source/iperf-2.0.5-source.tar.gz
 
 Next, decompress the archive like this:
 
-	tar -xf iperf-2.*.tar.gz
+    tar -xf iperf-2.*.tar.gz
 
 Now go into the decompressed directory:
 
-	cd iperf-2.*
-	
+    cd iperf-2.*
+    
 Run this `configure` command:
 
-	./configure
+    ./configure
 
 Once the `configure` process completes, run `make`:
 
-	make
+    make
 
 Finally install it by running `sudo make install`:
 
-	sudo make install
+    sudo make install
 
 And once it’s installed, run the command with `-v` to do a simple check to see it’s working:
 
-	iperf -v
+    iperf -v

@@ -49,11 +49,11 @@ Close and save that file and now load this other file:
 
 Look for this line:
 
-	interfaceNames.push_back(string(sdl->sdl_data));
+    interfaceNames.push_back(string(sdl->sdl_data));
 
 And change it to:
 
-	interfaceNames.push_back(string(sdl->sdl_data).substr(0, sdl->sdl_nlen));
+    interfaceNames.push_back(string(sdl->sdl_data).substr(0, sdl->sdl_nlen));
 
 Save that file and now run `run_autotools`:
 
@@ -61,19 +61,19 @@ Save that file and now run `run_autotools`:
 
 Run this `configure` command:
 
-	./configure --disable-debug --disable-dependency-tracking
-	
+    ./configure --disable-debug --disable-dependency-tracking
+    
 Once the `configure` process completes, run `make`:
 
-	make
-	
+    make
+    
 Finally install it by running `sudo make install`:
 
-	sudo make install
+    sudo make install
 
 And once it’s installed, run the command with `--version` to do a simple check to see it’s working:
 
-	nload --help
+    nload --help
 
 Response should be something like this:
 
@@ -81,4 +81,4 @@ Response should be something like this:
 
 Uninstall if you need to:
 
-	sudo make uninstall
+    sudo make uninstall

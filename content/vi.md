@@ -11,14 +11,14 @@ I honestly get confused when I’m using VI since I prefer to use Nano or Pico. 
 
 First, if you are in VI itself, you need to use “insert mode” to edit something:
 
-- `s`: Insert mode.
-- `esc`: Escape out of insert mode.
-- `:`: Enter command mode.
+ - `s`: Insert mode.
+ - `esc`: Escape out of insert mode.
+ - `:`: Enter command mode.
 
 And when you are done, just hit `esc` to escape out of insert mode.
 
 Now if you want to exit, enter “command mode” by typing `:` and choose one of the following:
 
-- `q`: Quit.
-- `w`: Write.
-- `wq`: Write and quit at the same time.
+ - `q`: Quit.
+ - `w`: Write.
+ - `wq`: Write and quit at the same time.

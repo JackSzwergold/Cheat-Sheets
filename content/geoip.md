@@ -7,15 +7,17 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-### 2019-10-14: Nothing Here Works as Expected
+### 2019-10-14: Nothing here works as expected anymore.
 
 MaxMind changed their DB format and now this happens. Anyway, reinstall GeoIP tools via repo like this:
 
-	 sudo add-apt-repository ppa:maxmind/ppa
+     sudo add-apt-repository ppa:maxmind/ppa
 
 Then this:
 
     sudo aptitude install libgeoip1 libgeoip-dev geoip-bin
+
+***
 
 ### Installing the GeoIP program.
 
@@ -25,50 +27,54 @@ Install the basics for the build:
 
 First grab a compressed archive from an official GeoIP source site:
 
-	curl -O -L http://www.maxmind.com/download/geoip/api/c/GeoIP-latest.tar.gz
+    curl -O -L http://www.maxmind.com/download/geoip/api/c/GeoIP-latest.tar.gz
 
 Next, decompress the archive like this:
 
-	tar -xf GeoIP-latest.tar.gz
+    tar -xf GeoIP-latest.tar.gz
 
 Now go into the decompressed directory:
 
-	cd ./GeoIP*
+    cd ./GeoIP*
 
 Run `libtoolize` and `automake -f` like this:
 
-	libtoolize -f
+    libtoolize -f
 
 Or if you installed `libtool` ith Homebrew, run `glibtoolize` like this:
 
-	glibtoolize -f
+    glibtoolize -f
 
 Then run this `configure` command:
 
-	./configure
+    ./configure
 
 Once the `configure` process completes, run `make`:
 
-	make
+    make
 
 After that run `make check` to make sure the `make` worked as expected:
 
-	make check
+    make check
 
 Finally install it by running `sudo make install`:
 
-	sudo make install
+    sudo make install
 
-#### Run `autoreconf` if `libtool` chokes with a version mismatch error.
+***
+
+### Run `autoreconf` if `libtool` chokes with a version mismatch error.
 
 If the `make` chokes due to a `libtool` version mismatch, do this before running `configure`. First install `dh-autoreconf`:
 
-	sudo aptitude install dh-autoreconf
+    sudo aptitude install dh-autoreconf
 
 Then run `autoreconf` like this:
 
-	autoreconf --force --install
-	
+    autoreconf --force --install
+
+***
+
 ### Installing the GeoIP databases.
 
 #### Get the GeoIP databases.
@@ -78,9 +84,9 @@ Then run `autoreconf` like this:
     curl -O -L http://geolite.maxmind.com/download/geoip/database/asnum/GeoIPASNum.dat.gz
     curl -O -L http://geolite.maxmind.com/download/geoip/database/GeoIPCountryCSV.zip
 
-	curl -O -L https://geolite.maxmind.com/download/geoip/database/GeoLite2-City.tar.gz
-	curl -O -L https://geolite.maxmind.com/download/geoip/database/GeoLite2-Country.tar.gz
-	curl -O -L https://geolite.maxmind.com/download/geoip/database/GeoLite2-ASN.tar.gz
+    curl -O -L https://geolite.maxmind.com/download/geoip/database/GeoLite2-City.tar.gz
+    curl -O -L https://geolite.maxmind.com/download/geoip/database/GeoLite2-Country.tar.gz
+    curl -O -L https://geolite.maxmind.com/download/geoip/database/GeoLite2-ASN.tar.gz
 
 #### Move the GeoIP databases to their proper directory.
 

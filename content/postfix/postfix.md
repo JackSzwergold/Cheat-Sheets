@@ -19,7 +19,7 @@ Or just run that command with `grep` to see if Postfix is running:
 
 The output if it’s running should be something like this:
 
-    -	0	org.postfix.master
+    -    0    org.postfix.master
 
 ### Sundry `postfix` status and maintenance items.
 
@@ -29,7 +29,7 @@ Check the running processes:
 
 Get the version number of installed postfix:
 
-	sudo postconf -d | grep mail_version
+    sudo postconf -d | grep mail_version
 
 The main `postfix` configuration file:
 
@@ -67,14 +67,14 @@ And similarly, edit the `mydestination` to match the server hostname as well:
 
 ### Start, stop and control `postfix`.
 
-	sudo postfix start
-	sudo postfix stop
-	sudo postfix reload
-	sudo postfix condrestart
-	sudo postfix status
-	sudo postfix check
-	sudo postfix set-permissions
-	sudo postfix upgrade-configuration
+    sudo postfix start
+    sudo postfix stop
+    sudo postfix reload
+    sudo postfix condrestart
+    sudo postfix status
+    sudo postfix check
+    sudo postfix set-permissions
+    sudo postfix upgrade-configuration
 
 Use `abort` to abruptly stop `postfix`:
 
@@ -82,8 +82,8 @@ Use `abort` to abruptly stop `postfix`:
 
 Use these commands to force deferred messages to be flushed from the system and sent:
 
-	sudo postfix flush
-	sudo postqueue -f
+    sudo postfix flush
+    sudo postqueue -f
 
 Checks `postfix` directory structures and permissions:
 
@@ -95,7 +95,7 @@ Sets `postfix` directory structures and permissions:
 
 Upgrades and checks the `postfix` configuration; warnings can be ignored:
 
-	sudo postfix upgrade-configuration
+    sudo postfix upgrade-configuration
 
 ### Count messages in various message queues/spools.
 
@@ -191,8 +191,8 @@ A simple test using `mail` from the command line:
 
 A simple test using `sendmail` from the command line:
 
-	printf "Subject: Hello, world.\n\nA quick brown fox jumped over the lazy dog." | sendmail -f email_address@example.com email_address@example.com
+    printf "Subject: Hello, world.\n\nA quick brown fox jumped over the lazy dog." | sendmail -f email_address@example.com email_address@example.com
 
 A more intricate test using `sendmail` from the command line:
 
-	printf "From: Example Email <email_address@example.com>\nTo: email_address@example.com\nSubject: Hello, world.\n\nA quick brown fox jumped over the lazy dog.\n" | /usr/sbin/sendmail -F "Example Email" -f "email_address@example.com" "email_address@example.com"
+    printf "From: Example Email <email_address@example.com>\nTo: email_address@example.com\nSubject: Hello, world.\n\nA quick brown fox jumped over the lazy dog.\n" | /usr/sbin/sendmail -F "Example Email" -f "email_address@example.com" "email_address@example.com"

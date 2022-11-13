@@ -17,15 +17,15 @@ This tutorial explains how to adjust hibernation mode and disable `sleepimage`.
 
 First, the details in `man pmset` explain `hibernatemode` settings as follows:
 
-	We do not recommend modifying hibernation settings. Any changes you make are not supported. If you choose to do so anyway, we recommend using one of these three settings. For your sake and mine, please don’t use anything other 0, 3, or 25.
+    We do not recommend modifying hibernation settings. Any changes you make are not supported. If you choose to do so anyway, we recommend using one of these three settings. For your sake and mine, please don’t use anything other 0, 3, or 25.
 
 I feel that warning is a bit dramatic, but here are the details on the recommended modes of 0, 3 and 25:
 
-	hibernatemode = 0 (binary 0000) by default on supported desktops. The system will not back memory up to persistent storage. The system must wake from the contents of memory; the system will lose context on power loss. This is, historically, plain old sleep.
-	
-	hibernatemode = 3 (binary 0011) by default on supported portables. The system will store a copy of memory to persistent storage (the disk), and will power memory during sleep. The system will wake from memory, unless a power loss forces it to restore from disk image.
-	
-	hibernatemode = 25 (binary 0001 1001) is only settable via pmset. The system will store a copy of memory to persistent storage (the disk), and will remove power to memory. The system will restore from disk image. If you want “hibernation” - slower sleeps, slower wakes, and better battery life, you should use this setting.
+    hibernatemode = 0 (binary 0000) by default on supported desktops. The system will not back memory up to persistent storage. The system must wake from the contents of memory; the system will lose context on power loss. This is, historically, plain old sleep.
+    
+    hibernatemode = 3 (binary 0011) by default on supported portables. The system will store a copy of memory to persistent storage (the disk), and will power memory during sleep. The system will wake from memory, unless a power loss forces it to restore from disk image.
+    
+    hibernatemode = 25 (binary 0001 1001) is only settable via pmset. The system will store a copy of memory to persistent storage (the disk), and will remove power to memory. The system will restore from disk image. If you want “hibernation” - slower sleeps, slower wakes, and better battery life, you should use this setting.
 
 ### Disable the hibernation mode `sleepimage`.
 

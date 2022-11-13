@@ -11,25 +11,25 @@ Template: index
 
 If you need to reset a user’s password, but cannot do so via WordPress’s web interface, you can change it directly in the MySQL database using a query like this:
 
-	UPDATE wp_users SET user_pass = MD5('[new password]') WHERE ID = [user id];
+    UPDATE wp_users SET user_pass = MD5('[new password]') WHERE ID = [user id];
 
 Just change the value of `[new password]` to match the new password you wish to use and change `[user id]` to match the user ID of the user this is being done for.
-	
+    
 ### Fixing WordPress FTP permissions.
 
 Sometimes WordPress will bizarrely ask for FTP credentials when a user in the web interface attempts to install a plug-in. The reality is you don’t need FTP credentials and this message is a bit ridiculous.
 
 So to fix that issue, you need to change ownership of the WordPress install to match the Apache web user. For example, let’s say that the Apache web server is being run by the user `www-data` just run this `chown` command to solve the issue:
 
-	sudo chown -R www-data /var/www/www.example.com
+    sudo chown -R www-data /var/www/www.example.com
 
 Note that this oddball FTP issue has 100% nothing to do with group permissions. Even if the user running Apache has group access to write to the WordPress install, this ridiculous FTP credential related error will pop up.
 
 ### Allocating more memory to WordPress PHP processes.
 
 If you need to allocate more memory to the PHP processes that WordPress initiates, just open up `wp-config.php` and add a `WP_MEMORY_LIMIT` line like this:
-	
-	define('WP_MEMORY_LIMIT', '64M');
+    
+    define('WP_MEMORY_LIMIT', '64M');
 
 But be careful with what you set here. Remember that this setting is a per process value and each time Apache starts, Apache will launch multiple child processes.
 

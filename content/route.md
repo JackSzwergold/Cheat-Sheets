@@ -27,6 +27,8 @@ To view the routing table you would run this `route` command:
 
     route -n
 
+***
+
 ### An example of the same for macOS.
 
 In macOS you would run a command like this:

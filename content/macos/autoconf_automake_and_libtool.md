@@ -15,31 +15,31 @@ So if you are planning on compiling any modern GNU projects you’re going to ha
 
 First grab a compressed archive from an official Autoconf source site:
 
-	curl -O -L http://ftpmirror.gnu.org/autoconf/autoconf-2.69.tar.gz
+    curl -O -L http://ftpmirror.gnu.org/autoconf/autoconf-2.69.tar.gz
 
 Next, decompress the archive like this:
 
-	tar -xzf autoconf-2.*.tar.gz
+    tar -xzf autoconf-2.*.tar.gz
 
 Now go into the decompressed directory:
 
-	cd autoconf-2.*
+    cd autoconf-2.*
 
 Run this `configure` command:
 
-	./configure
+    ./configure
 
 Once the `configure` process completes, run `make`:
 
-	make
+    make
 
 Finally install it by running `sudo make install`:
 
-	sudo make install
+    sudo make install
 
 And once it’s installed, run the command with `--version` to do a simple check to see it’s working:
 
-	autoconf --version
+    autoconf --version
 
 Response should be something like this:
 
@@ -47,37 +47,37 @@ Response should be something like this:
 
 Uninstall if you need to:
 
-	sudo make uninstall
+    sudo make uninstall
 
 ### Installing Automake via official source code archive.
 
 First grab a compressed archive from an official Automake source site:
 
-	curl -O -L http://ftpmirror.gnu.org/automake/automake-1.15.tar.gz
+    curl -O -L http://ftpmirror.gnu.org/automake/automake-1.15.tar.gz
 
 Next, decompress the archive like this:
 
-	tar -xzf automake-1.15.tar.gz
+    tar -xzf automake-1.15.tar.gz
 
 Now go into the decompressed directory:
 
-	cd automake-*
+    cd automake-*
 
 Run this `configure` command:
 
-	./configure
+    ./configure
 
 Once the `configure` process completes, run `make`:
 
-	make
+    make
 
 Finally install it by running `sudo make install`:
 
-	sudo make install
+    sudo make install
 
 And once it’s installed, run the command with `--version` to do a simple check to see it’s working:
 
-	automake --version
+    automake --version
 
 Response should be something like this:
 
@@ -85,42 +85,42 @@ Response should be something like this:
 
 Uninstall if you need to:
 
-	sudo make uninstall
+    sudo make uninstall
 
 ### Installing Libtool via official source code archive.
 
 First grab a compressed archive from an official Libtool source site:
 
-	curl -O -L http://ftpmirror.gnu.org/libtool/libtool-2.4.6.tar.gz
+    curl -O -L http://ftpmirror.gnu.org/libtool/libtool-2.4.6.tar.gz
 
 Next, decompress the archive like this:
 
-	tar -xzf libtool-2.4.6.tar.gz
+    tar -xzf libtool-2.4.6.tar.gz
 
 Now go into the decompressed directory:
 
-	cd libtool-*
+    cd libtool-*
 
 Run this `configure` command:
 
-	./configure
+    ./configure
 
 Once the `configure` process completes, run `make`:
 
-	make
+    make
 
 Finally install it by running `sudo make install`:
 
-	sudo make install
+    sudo make install
 
 And once it’s installed, run the command with `--version` to do a simple check to see it’s working:
 
-	libtool --version
+    libtool --version
 
 Response should be something like this:
 
-	libtool (GNU libtool) 2.4.6
+    libtool (GNU libtool) 2.4.6
 
 Uninstall if you need to:
 
-	sudo make uninstall
+    sudo make uninstall

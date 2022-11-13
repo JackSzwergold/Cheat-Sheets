@@ -15,28 +15,28 @@ Get the current Linux distribution name and related version information:
 
 And the output of that would be something like this:
 
-	DISTRIB_ID=Ubuntu
-	DISTRIB_RELEASE=12.04
-	DISTRIB_CODENAME=precise
-	DISTRIB_DESCRIPTION="Ubuntu 12.04.5 LTS"
-	NAME="Ubuntu"
-	VERSION="12.04.5 LTS, Precise Pangolin"
-	ID=ubuntu
-	ID_LIKE=debian
-	PRETTY_NAME="Ubuntu precise (12.04.5 LTS)"
-	VERSION_ID="12.04"
+    DISTRIB_ID=Ubuntu
+    DISTRIB_RELEASE=12.04
+    DISTRIB_CODENAME=precise
+    DISTRIB_DESCRIPTION="Ubuntu 12.04.5 LTS"
+    NAME="Ubuntu"
+    VERSION="12.04.5 LTS, Precise Pangolin"
+    ID=ubuntu
+    ID_LIKE=debian
+    PRETTY_NAME="Ubuntu precise (12.04.5 LTS)"
+    VERSION_ID="12.04"
 
 Another way of getting Linux distribution information:
 
-	lsb_release -a
+    lsb_release -a
 
 And the output of that would be something like this:
 
-	No LSB modules are available.
-	Distributor ID:	Ubuntu
-	Description:	Ubuntu 12.04.5 LTS
-	Release:	12.04
-	Codename:	precise
+    No LSB modules are available.
+    Distributor ID:    Ubuntu
+    Description:    Ubuntu 12.04.5 LTS
+    Release:    12.04
+    Codename:    precise
 
 Get the kernel release info:
 
@@ -72,7 +72,7 @@ Check if the OS is 32-bit or 64-bit by running this command:
 
 And the output of that would be something like this:
 
-	/sbin/init: ELF 64-bit LSB shared object, x86-64, version 1 (SYSV), dynamically linked (uses shared libs), for GNU/Linux 2.6.24, BuildID[sha1]=0x2b5d2db96270e85fa5e68475e37a5e94c479a396, stripped
+    /sbin/init: ELF 64-bit LSB shared object, x86-64, version 1 (SYSV), dynamically linked (uses shared libs), for GNU/Linux 2.6.24, BuildID[sha1]=0x2b5d2db96270e85fa5e68475e37a5e94c479a396, stripped
 
 ### Locale specific items.
 
@@ -86,21 +86,21 @@ And then run this to regenerate local related items:
 
 Check the output of `locale` which should now be something like this:
 
-	LANG=en_US.UTF-8
-	LANGUAGE=
-	LC_CTYPE="en_US.UTF-8"
-	LC_NUMERIC="en_US.UTF-8"
-	LC_TIME="en_US.UTF-8"
-	LC_COLLATE="en_US.UTF-8"
-	LC_MONETARY="en_US.UTF-8"
-	LC_MESSAGES="en_US.UTF-8"
-	LC_PAPER="en_US.UTF-8"
-	LC_NAME="en_US.UTF-8"
-	LC_ADDRESS="en_US.UTF-8"
-	LC_TELEPHONE="en_US.UTF-8"
-	LC_MEASUREMENT="en_US.UTF-8"
-	LC_IDENTIFICATION="en_US.UTF-8"
-	LC_ALL=
+    LANG=en_US.UTF-8
+    LANGUAGE=
+    LC_CTYPE="en_US.UTF-8"
+    LC_NUMERIC="en_US.UTF-8"
+    LC_TIME="en_US.UTF-8"
+    LC_COLLATE="en_US.UTF-8"
+    LC_MONETARY="en_US.UTF-8"
+    LC_MESSAGES="en_US.UTF-8"
+    LC_PAPER="en_US.UTF-8"
+    LC_NAME="en_US.UTF-8"
+    LC_ADDRESS="en_US.UTF-8"
+    LC_TELEPHONE="en_US.UTF-8"
+    LC_MEASUREMENT="en_US.UTF-8"
+    LC_IDENTIFICATION="en_US.UTF-8"
+    LC_ALL=
 
 ### Set the default test editor in Ubuntu/Debian.
 

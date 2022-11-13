@@ -41,9 +41,11 @@ Use this to extract a video — without transcoding — 25 seconds into the vide
 
 For basic h264 encoding, use this command:
 
-	caffeinate ffmpeg -i input.mp4 -vf scale=-2:480 -c:v libx264 -crf 18 -c:a aac -b:a 128k -max_muxing_queue_size 1024 output.mp4
+    caffeinate ffmpeg -i input.mp4 -vf scale=-2:480 -c:v libx264 -crf 18 -c:a aac -b:a 128k -max_muxing_queue_size 1024 output.mp4
 
-## HEVC (aka: x265)
+***
+
+### HEVC (aka: x265)
 
 To encode a video into an HEVC (aka: x265) video that is iOS compatible, you can do this. First, this line lets you create a sample video by using the `-ss` (seek) and `-t` (duration in seconds) parameters. For example, this line will create a 5 minute sample video:
 
@@ -59,42 +61,42 @@ Note the `-crf` controls quality: 0 is lossless, 23 is the default and 51 is los
 
 And example command to create a 10 minute (600 seconds) sample file with the `-ss` and `-t` options:
 
-	caffeinate \
-	nice -n 10 \
-	ffmpeg -i input.mp4 \
-	       -ss 0 -t 600 \
-	       -map_metadata -1 \
-	       -vf scale=-2:720 \
-	       -c:v libx265 -crf 20 \
-	       -c:a aac -b:a 128k -ac 2 -vol 384 \
-	       -tag:v hvc1 -sn output.mp4
-	       ;
+    caffeinate \
+    nice -n 10 \
+    ffmpeg -i input.mp4 \
+           -ss 0 -t 600 \
+           -map_metadata -1 \
+           -vf scale=-2:720 \
+           -c:v libx265 -crf 20 \
+           -c:a aac -b:a 128k -ac 2 -vol 384 \
+           -tag:v hvc1 -sn output.mp4
+           ;
 
 Same command bit without the `-ss` and `-t` options:
 
-	caffeinate \
-	nice -n 10 \
-	ffmpeg -i input.mkv \
-	       -map_metadata -1 \
-	       -vf scale=-2:720 \
-	       -c:v libx265 -crf 20 \
-	       -c:a aac -b:a 128k -ac 2 -vol 384 \
-	       -tag:v hvc1 -sn output.mp4
-	       ;
+    caffeinate \
+    nice -n 10 \
+    ffmpeg -i input.mkv \
+           -map_metadata -1 \
+           -vf scale=-2:720 \
+           -c:v libx265 -crf 20 \
+           -c:a aac -b:a 128k -ac 2 -vol 384 \
+           -tag:v hvc1 -sn output.mp4
+           ;
 
 This command uses Apple’s T2 encryption chips (available on most 2018 and above Macs) to speed up encoding. A lot faster than `lbx265` but the quality stinks and the `-crf` value cannot be adjusted. Here for reference only:
 
-	caffeinate \
-	nice -n 10 \
-	ffmpeg -i input.mkv \
-			 -map_metadata -1 \
-			 -vf scale=-2:720 \
-			 -c:v hevc_videotoolbox -crf 20 \
-			 -c:a aac -b:a 128k -ac 2 -vol 384 \
-			 -threads 4 -x265-params pools=4 \
-			 -tag:v hvc1 -sn \
-			 -map 0:0 -map 0:2 output_hevc_videotoolbox.mp4
-			 ;
+    caffeinate \
+    nice -n 10 \
+    ffmpeg -i input.mkv \
+             -map_metadata -1 \
+             -vf scale=-2:720 \
+             -c:v hevc_videotoolbox -crf 20 \
+             -c:a aac -b:a 128k -ac 2 -vol 384 \
+             -threads 4 -x265-params pools=4 \
+             -tag:v hvc1 -sn \
+             -map 0:0 -map 0:2 output_hevc_videotoolbox.mp4
+             ;
 
 Use this command to fix an MKV with an incorrect duration or other metadata related stuff:
 
@@ -102,45 +104,45 @@ Use this command to fix an MKV with an incorrect duration or other metadata rela
 
 ***
 
-## Misc. Notes
+### Misc. Notes
 
-	ffmpeg -i input.mp4 \
-	     -map_metadata -1 \
-	     -vf scale=-2:720 \
-	     -c:v libx265 -crf 20 \
-	     -c:a aac -b:a 128k \
-	     -threads 4 \
-	     -tag:v hvc1 -sn \
-	     -map 0:0 -map 0:1 output.mp4
-	     ;
+    ffmpeg -i input.mp4 \
+         -map_metadata -1 \
+         -vf scale=-2:720 \
+         -c:v libx265 -crf 20 \
+         -c:a aac -b:a 128k \
+         -threads 4 \
+         -tag:v hvc1 -sn \
+         -map 0:0 -map 0:1 output.mp4
+         ;
 
-	ffmpeg -i input.mp4 -i input.mkv \
-	     -c:v copy \
-	     -c:a aac -b:a 128k -ac 2 -af "aresample=matrix_encoding=dplii" \
-	     -map 0:0 -map 1:1 \
-	     -aspect 4/3 \
-	     output_v.mp4
-	     ;
+    ffmpeg -i input.mp4 -i input.mkv \
+         -c:v copy \
+         -c:a aac -b:a 128k -ac 2 -af "aresample=matrix_encoding=dplii" \
+         -map 0:0 -map 1:1 \
+         -aspect 4/3 \
+         output_v.mp4
+         ;
 
-	ffmpeg -i input.mp4 -i input.mkv \
-	     -c:v copy \
-	     -c:a aac -b:a 128k \
-	     -aspect 4/3 \
-	     -map 0:0 -map 1:1 \
-	     output.mp4
-	     ;
+    ffmpeg -i input.mp4 -i input.mkv \
+         -c:v copy \
+         -c:a aac -b:a 128k \
+         -aspect 4/3 \
+         -map 0:0 -map 1:1 \
+         output.mp4
+         ;
 
-	ffmpeg -i input.mkv \
-	     -c:v copy \
-	     -c:a copy \
-	     output.mp4
-	     ;
+    ffmpeg -i input.mkv \
+         -c:v copy \
+         -c:a copy \
+         output.mp4
+         ;
 
-	ffmpeg -i input.mkv \
-	     -map_metadata -1 \
-	     -vf scale=1280:720 -c:v libx265 -crf 20 \
-	     -c:a aac -b:a 128k \
-	     -threads 4 \
-	     -tag:v hvc1 -aspect 4/3 -sn \
-	     -map 0:0 -map 0:2 output.mp4
-	     ;
+    ffmpeg -i input.mkv \
+         -map_metadata -1 \
+         -vf scale=1280:720 -c:v libx265 -crf 20 \
+         -c:a aac -b:a 128k \
+         -threads 4 \
+         -tag:v hvc1 -aspect 4/3 -sn \
+         -map 0:0 -map 0:2 output.mp4
+         ;

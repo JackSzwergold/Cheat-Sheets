@@ -21,14 +21,14 @@ List all macOS user defaults preference files, more readable format:
 
 Save the `.GlobalPreferences.plist` in a human readable format:
 
-	defaults read > ~/GlobalPreferences.plist.txt
-	
+    defaults read > ~/GlobalPreferences.plist.txt
+    
 ### Removing the `.GlobalPreferences.plist`.
 
 First, make backup a copy of your `GlobalPreferences.plist` to your user’s directory:
 
-	cp -fp ~/Library/Preferences/.GlobalPreferences.plist ~/GlobalPreferences.plist
-	
+    cp -fp ~/Library/Preferences/.GlobalPreferences.plist ~/GlobalPreferences.plist
+    
 Now, delete the original `.GlobalPreferences.plist` file:
 
     rm -f ~/Library/Preferences/.GlobalPreferences.plist

@@ -13,11 +13,11 @@ Some disk images—such as those created of system disks by “Disk Utility”�
 
 First, we need to attach the disk to the system by running this command:
 
-	hdiutil attach -noverify -nomount disk_image.dmg
+    hdiutil attach -noverify -nomount disk_image.dmg
 
 Once that command is run check the list of available disks via `diskutil` like this:
 
-	diskutil list
+    diskutil list
 
 Look through that list and find the device ID for your the connected image; it should be the highest number near the bottom of the list. The device ID should look something like `disk[device id]` where `[number]` is device ID number itself.
 

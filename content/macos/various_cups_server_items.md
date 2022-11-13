@@ -11,21 +11,21 @@ Template: index
 
 The main CUPS log file directory is here:
 
-	/var/log/cups
+    /var/log/cups
 
 You can follow the access log like this:
 
-	tail -f -n 1000 /var/log/cups/access_log
+    tail -f -n 1000 /var/log/cups/access_log
 
 You can follow the error log like this:
 
-	tail -f -n 1000 /var/log/cups/error_log
+    tail -f -n 1000 /var/log/cups/error_log
 
 #### Checking for jobs in progress.
 
 You can check what CUPS printing jobs are in the spool already by checking this spool directory:
 
-	sudo ls -la /var/spool/cups/tmp
+    sudo ls -la /var/spool/cups/tmp
 
 #### Remotely manage CUPS.
 
@@ -37,32 +37,32 @@ Just go to this URL on the CUPS server; the key is port `631`:
 
 First, go into the `/var/spool/` directory:
 
-	cd /var/spool/
+    cd /var/spool/
 
 Then move/rename `cups` to `cups.old` like this:
 
-	sudo mv cups cups.old
+    sudo mv cups cups.old
 
 Now fully restart the server to get CUPS to create a new `/var/spool/` directory:
 
 After reboot, go back into the `/var/spool/` directory:
 
-	cd /var/spool/
+    cd /var/spool/
 
 And make sure the new `cups` directory is in place. If it is, all is good
 
-	sudo rm cups.old
+    sudo rm cups.old
 
 
 ### Restart the CUPS service.
 
 Stop CUPS:
 
-	sudo launchctl unload /System/Library/LaunchDaemons/org.cups.cupsd.plist
+    sudo launchctl unload /System/Library/LaunchDaemons/org.cups.cupsd.plist
 
 Start CUPS again:
 
-	sudo launchctl load /System/Library/LaunchDaemons/org.cups.cupsd.plist
+    sudo launchctl load /System/Library/LaunchDaemons/org.cups.cupsd.plist
 
 ### Restore “Printer & Fax” settings to the default
 
@@ -72,11 +72,11 @@ Stop CUPS:
 
 Rename `cupsd.conf` to `cupsd.conf.old`:
 
-	sudo mv /etc/cups/cupsd.conf /etc/cups/cupsd.conf.old
+    sudo mv /etc/cups/cupsd.conf /etc/cups/cupsd.conf.old
 
 Copy `cupsd.conf.default` to `cupsd.conf`:
 
-	sudo cp /etc/cups/cupsd.conf.default /etc/cups/cupsd.conf
+    sudo cp /etc/cups/cupsd.conf.default /etc/cups/cupsd.conf
 
 Rename `printers.conf` to `printers.conf.old`:
 

@@ -15,11 +15,11 @@ Check the log for the commit hash.
 
 Find a commit to roll back.
 
-	commit b331419ad4cc4397a3138d3fc1166be014debc4f
-	Author: Firstname Lastname <email_address@example.com>
-	Date:   Sat May 16 21:31:20 2015 -0400
-	
-	    Setting a short name for the application; useful for deployments.
+    commit b331419ad4cc4397a3138d3fc1166be014debc4f
+    Author: Firstname Lastname <email_address@example.com>
+    Date:   Sat May 16 21:31:20 2015 -0400
+    
+        Setting a short name for the application; useful for deployments.
 
 Reset the repo to that commit.
 

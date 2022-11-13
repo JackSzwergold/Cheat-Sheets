@@ -11,7 +11,7 @@ This tutorial explains how you can uninstall MacPorts on macOS.
 
 List the contents of the `/opt/local` directory used by MacPorts:
 
-	ls -la /opt/local/
+    ls -la /opt/local/
 
 Get the size of the `/opt/local` directory used by MacPorts:
 
@@ -19,40 +19,40 @@ Get the size of the `/opt/local` directory used by MacPorts:
 
 Clean out old MacPorts stuff.
 
-	sudo port clean --all installed
-	
-	sudo port -f uninstall inactive
+    sudo port clean --all installed
+    
+    sudo port -f uninstall inactive
 
 Uninstall MacPorts:
 
-	sudo port -fp uninstall installed
+    sudo port -fp uninstall installed
 
 Check the MacPorts stuff on the system:
 
-	ls -la /opt/local
-	ls -la /Applications/DarwinPorts
-	ls -la /Applications/MacPorts
-	ls -la /Library/LaunchDaemons/org.macports.*
-	ls -la /Library/Receipts/DarwinPorts*.pkg
-	ls -la /Library/Receipts/MacPorts*.pkg
-	ls -la /Library/StartupItems/DarwinPortsStartup
-	ls -la /Library/Tcl/darwinports1.0
-	ls -la /Library/Tcl/macports1.0
-	rm ~/.macports
+    ls -la /opt/local
+    ls -la /Applications/DarwinPorts
+    ls -la /Applications/MacPorts
+    ls -la /Library/LaunchDaemons/org.macports.*
+    ls -la /Library/Receipts/DarwinPorts*.pkg
+    ls -la /Library/Receipts/MacPorts*.pkg
+    ls -la /Library/StartupItems/DarwinPortsStartup
+    ls -la /Library/Tcl/darwinports1.0
+    ls -la /Library/Tcl/macports1.0
+    rm ~/.macports
 
 Remove the the MacPorts stuff on the system:
 
-	sudo rm -rf \
-	        /opt/local \
-	        /Applications/DarwinPorts \
-	        /Applications/MacPorts \
-	        /Library/LaunchDaemons/org.macports.* \
-	        /Library/Receipts/DarwinPorts*.pkg \
-	        /Library/Receipts/MacPorts*.pkg \
-	        /Library/StartupItems/DarwinPortsStartup \
-	        /Library/Tcl/darwinports1.0 \
-	        /Library/Tcl/macports1.0 \
-	        ~/.macports
+    sudo rm -rf \
+            /opt/local \
+            /Applications/DarwinPorts \
+            /Applications/MacPorts \
+            /Library/LaunchDaemons/org.macports.* \
+            /Library/Receipts/DarwinPorts*.pkg \
+            /Library/Receipts/MacPorts*.pkg \
+            /Library/StartupItems/DarwinPortsStartup \
+            /Library/Tcl/darwinports1.0 \
+            /Library/Tcl/macports1.0 \
+            ~/.macports
 
 Remove the `.plist` user and group files for the `macports` user (and related group) that was created when MacPorts was intially installed:
 

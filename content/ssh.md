@@ -11,15 +11,17 @@ Template: index
 
 This would route traffic from a remote server (`example.com`) on port 80 to `localhost` on port 8080:
 
-	ssh -nfNT -L 8080:localhost:80 someone@example.com
+    ssh -nfNT -L 8080:localhost:80 someone@example.com
 
 This would route traffic from a remote server (`example.com`) on port 80 to `localhost` on port 80; privledge port requires `sudo` access:
 
-	sudo ssh -nfNT -L 80:localhost:80 someone@example.com
+    sudo ssh -nfNT -L 80:localhost:80 someone@example.com
 
 Same basic concept but with `-R` for remote port forwarding:
 
-	ssh -nfNT -R 80:localhost:8080 someone@example.com
+    ssh -nfNT -R 80:localhost:8080 someone@example.com
+
+***
 
 ### A fix for slow SSH client logins by disabling DNS lookups.
 
@@ -41,6 +43,8 @@ Or if you are on RedHat/CentOS, restart the `ssh` daemon like this:
 
     sudo service sshd restart
 
+***
+
 ### A fix for slow SSH client logins by changing the preferred order of authentication methods.
 
 Sometimes slow SSH logins are caused by one item in the order of SSH authentication methods choking; making the SSH server “hang” while it waits to see if that choking authentication method ever responds. Chances are it won’t and will only wait until it times out and the next method can be used.
@@ -60,7 +64,7 @@ Or add this on a per-user/per-client basis if access to a system-wide config on 
 Add this line to the bottom of the file:
 
     Host *
-	    PreferredAuthentications publickey,password
+        PreferredAuthentications publickey,password
 
 After that’s done, if you are on Ubuntu/Debian, restart the `ssh` daemon like this:
 
@@ -69,6 +73,8 @@ After that’s done, if you are on Ubuntu/Debian, restart the `ssh` daemon like 
 Or if you are on RedHat/CentOS, restart the `ssh` daemon like this:
 
     sudo service sshd restart
+
+***
 
 ### A fix for `ssh_exchange_identification: Connection closed by remote host` errors.
 
@@ -86,6 +92,8 @@ Or if you are on RedHat/CentOS, restart the `ssh` daemon like this:
 
     sudo service sshd restart
 
+***
+
 ### A fix for `error: Could not load host key: /etc/ssh/ssh_host_ecdsa_key` errors.
 
 If you have this issue, it might mean that there is a problem with the host key located in `/etc/ssh/ssh_host_ecdsa_key` and it should be regenerated.
@@ -101,6 +109,8 @@ After that’s done, if you are on Ubuntu/Debian, restart the `ssh` daemon like 
 Or if you are on RedHat/CentOS, restart the `ssh` daemon like this:
 
     sudo service sshd restart
+
+***
 
 ### Disable the SFTP subsystem in SSH.
 
@@ -124,15 +134,17 @@ Or if you are on RedHat/CentOS, restart the `ssh` daemon like this:
 
     sudo service sshd restart
 
+***
+
 ### Setting up password-less login with SSH keys.
 
 Generate the RSA key pair. If it asks you for a passphrase just skip that; unless of course you need a passphrase so adjust as you see fit:
 
-	ssh-keygen -t rsa
+    ssh-keygen -t rsa
 
 Output the SSH key from local machine; copy output to clipboard:
 
-	cat ~/.ssh/id_rsa.pub
+    cat ~/.ssh/id_rsa.pub
 
 Or if you are in macOS, then use `pbcopy` like this to copy the `id_rsa.pub` key directly into the clipboard/pasteboard:
 
@@ -140,7 +152,7 @@ Or if you are in macOS, then use `pbcopy` like this to copy the `id_rsa.pub` key
 
 And then paste that `id_rsa.pub` key into the `authorized_keys` file on the other machine:
 
-	nano ~/.ssh/authorized_keys
+    nano ~/.ssh/authorized_keys
 
 Now sure to chmod the `authorized_keys` file to `600` (aka: `-rw-------`):
 
@@ -154,6 +166,7 @@ And finally make sure the parent `.ssh/` directory has it’s permissions set to
 
     ￼sudo chmod 700 ~/.ssh/
 
+***
 
 ### A fix for weird Vagrant (VirtualBox) hangs.
 

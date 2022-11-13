@@ -11,11 +11,11 @@ Watchman is a tool created by Facebook that is described as follows, “Watchman
 
 First clone the source code from the official Watchman GitHub repository:
 
-	git clone https://github.com/facebook/watchman.git
-	
+    git clone https://github.com/facebook/watchman.git
+    
 Now go into the repository directory:
 
-	cd watchman
+    cd watchman
 
 Checkout the latest tag of the source code like this:
 
@@ -23,19 +23,19 @@ Checkout the latest tag of the source code like this:
 
 Run `autogen.sh`:
 
-	./autogen.sh
-	
+    ./autogen.sh
+    
 Then run this `configure` command:
 
-	./configure
-	
+    ./configure
+    
 Once the `configure` process completes, run `make`:
 
-	make
-	
+    make
+    
 Finally install it by running `sudo make install`:
 
-	sudo make install
+    sudo make install
 
 To check if Watchman was properly installed, just check the version like this:
 

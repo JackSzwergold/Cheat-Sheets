@@ -9,6 +9,6 @@ Template: index
 
 Be sure the web server user can write to these ditectories in Joomla:
 
-	docs/module
-	docs/templates
-	docs/tmp
+    docs/module
+    docs/templates
+    docs/tmp

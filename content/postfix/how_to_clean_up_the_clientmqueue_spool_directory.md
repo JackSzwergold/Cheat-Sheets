@@ -19,7 +19,7 @@ Basic `/var/spool/clientmqueue` details if you need them for reference:
 
 First go into the `/var/spool/` directory:
 
-	cd /var/spool/
+    cd /var/spool/
 
 Now set the permissions on the `clientmqueue/` directory to be world executable:
 
@@ -27,11 +27,11 @@ Now set the permissions on the `clientmqueue/` directory to be world executable:
 
 With that done, do a TAR backup of the `clientmqueue/` to your home directory just in case; better be safe than sorry:
 
-	sudo tar -cf ~/clientmqueue.tar clientmqueue
+    sudo tar -cf ~/clientmqueue.tar clientmqueue
 
 Compress that TAR file with GZIP to save some space:
 
-	gzip ~/clientmqueue.tar
+    gzip ~/clientmqueue.tar
 
 Once all of that that is done, go into the `clientmqueue/` directory itself:
 
@@ -39,29 +39,29 @@ Once all of that that is done, go into the `clientmqueue/` directory itself:
 
 First, run these `find` commands to do a dry run test of the `find` command logic with `echo` before actually ditching the files:
 
-	sudo find . -type f -name "qfp*" -exec echo {} \;
-	sudo find . -type f -name "dfp*" -exec echo {} \;
-	sudo find . -type f -name "qfq*" -exec echo {} \;
-	sudo find . -type f -name "dfq*" -exec echo {} \;
+    sudo find . -type f -name "qfp*" -exec echo {} \;
+    sudo find . -type f -name "dfp*" -exec echo {} \;
+    sudo find . -type f -name "qfq*" -exec echo {} \;
+    sudo find . -type f -name "dfq*" -exec echo {} \;
 
 Run these `find` commands to do an interactive run of the `find` command logic to delete the files:
 
-	sudo find . -type f -name "qfp*" -exec rm -i {} \;
-	sudo find . -type f -name "dfp*" -exec rm -i {} \;
-	sudo find . -type f -name "qfq*" -exec rm -i {} \;
-	sudo find . -type f -name "dfq*" -exec rm -i {} \;
+    sudo find . -type f -name "qfp*" -exec rm -i {} \;
+    sudo find . -type f -name "dfp*" -exec rm -i {} \;
+    sudo find . -type f -name "qfq*" -exec rm -i {} \;
+    sudo find . -type f -name "dfq*" -exec rm -i {} \;
 
 Run these `find` commands to do an straight sweep of the `find` command logic and just delete all of the files:
 
-	sudo find . -type f -name "qfp*" -exec rm {} \;
-	sudo find . -type f -name "dfp*" -exec rm {} \;
-	sudo find . -type f -name "qfq*" -exec rm {} \;
-	sudo find . -type f -name "dfq*" -exec rm {} \;
+    sudo find . -type f -name "qfp*" -exec rm {} \;
+    sudo find . -type f -name "dfp*" -exec rm {} \;
+    sudo find . -type f -name "qfq*" -exec rm {} \;
+    sudo find . -type f -name "dfq*" -exec rm {} \;
 
 Once that is all cleared up and done, back out of `clientmqueue` and back into `/var/spool/`:
 
-	cd /var/spool/
+    cd /var/spool/
 
 And set the permissions back to what they were at the beginning of the process:
 
-	sudo chmod o-x /var/spool/clientmqueue/
+    sudo chmod o-x /var/spool/clientmqueue/

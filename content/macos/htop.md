@@ -13,39 +13,39 @@ This tutorial explains how you can install HTop directly from source code on mac
 
 First clone the source code from max-horvath’s `htop-osx` GitHub repository:
 
-	git clone git@github.com:hishamhm/htop.git
-	
+    git clone git@github.com:hishamhm/htop.git
+    
 Now go into the repository directory:
 
-	cd htop
+    cd htop
 
 You might have to run the `libtoolize` and `automake -f` commands like this:
 
-	libtoolize && automake -f
+    libtoolize && automake -f
 
 Now run `autogen.sh`:
 
-	./autogen.sh
-	
+    ./autogen.sh
+    
 Then run this `configure` command:
 
-	./configure
-	
+    ./configure
+    
 Once the `configure` process completes, run `make`:
 
-	make
-	
+    make
+    
 Finally install it by running `sudo make install`:
 
-	sudo make install
+    sudo make install
 
 Uninstall HTop by running this command from the source code directory:
 
-	sudo make uninstall
+    sudo make uninstall
 
 Or just run these commands:
 
-	rm -f /usr/local/share/applications/htop.desktop
-	rm -f /usr/local/bin/htop
-	rm -f /usr/local/share/man/man1/htop.1
-	rm -f /usr/local/share/pixmaps/htop.png
+    rm -f /usr/local/share/applications/htop.desktop
+    rm -f /usr/local/bin/htop
+    rm -f /usr/local/share/man/man1/htop.1
+    rm -f /usr/local/share/pixmaps/htop.png

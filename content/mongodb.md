@@ -35,53 +35,57 @@ Check the version number like this:
 
 And the output should be something like this:
 
-	db version v2.6.12
-	2016-09-13T10:39:01.986-0400 git version: d73c92b1c85703828b55c2916a5dd4ad46535f6a
+    db version v2.6.12
+    2016-09-13T10:39:01.986-0400 git version: d73c92b1c85703828b55c2916a5dd4ad46535f6a
 
 And the output should be something like this:
 
-	db version v2.6.12
+    db version v2.6.12
 
 Get logging level information like this:
 
-	db.adminCommand({getParameter: 1, logLevel: 1});
+    db.adminCommand({getParameter: 1, logLevel: 1});
 
 Get logging profiling status info like this:
 
-	db.getProfilingStatus();
+    db.getProfilingStatus();
 
 Get Mongo server status:
 
-	db.serverStatus();
+    db.serverStatus();
 
 Get Mongo command line options:
 
-	db.serverCmdLineOpts();
+    db.serverCmdLineOpts();
 
 Set the Mongo profiling level to 2 and slow milliseconds to 0 to log all queries:
 
-	db.setProfilingLevel(2, 0);
+    db.setProfilingLevel(2, 0);
+
+***
 
 #### Pin a specific version of MongoDB.
 
 Although you can specify any available version of MongoDB, `aptitude` will upgrade the packages when a newer version becomes available. To prevent unintended upgrades, pin the package. To pin the version of MongoDB at the currently installed version, issue the following command sequence:
 
-	echo "mongodb-org hold" | sudo dpkg --set-selections
-	echo "mongodb-org-server hold" | sudo dpkg --set-selections
-	echo "mongodb-org-shell hold" | sudo dpkg --set-selections
-	echo "mongodb-org-mongos hold" | sudo dpkg --set-selections
-	echo "mongodb-org-tools hold" | sudo dpkg --set-selections
+    echo "mongodb-org hold" | sudo dpkg --set-selections
+    echo "mongodb-org-server hold" | sudo dpkg --set-selections
+    echo "mongodb-org-shell hold" | sudo dpkg --set-selections
+    echo "mongodb-org-mongos hold" | sudo dpkg --set-selections
+    echo "mongodb-org-tools hold" | sudo dpkg --set-selections
+
+***
 
 #### Sundry MongoDB items on an Ubuntu/Debian system.
 
 Start, stop and control MongoDB on an Ubuntu/Debian system:
 
-	sudo service mongod status
-	sudo service mongod start
-	sudo service mongod stop
-	sudo service mongod restart
-	sudo service mongod reload
-	sudo service mongod force-reload
+    sudo service mongod status
+    sudo service mongod start
+    sudo service mongod stop
+    sudo service mongod restart
+    sudo service mongod reload
+    sudo service mongod force-reload
 
 Edit the MongoDB configuration file:
 
@@ -96,6 +100,8 @@ Follow the MongoDB logs:
     tail -f -n 200 /var/log/mongodb/mongod.log
     tail -f -n 200 /var/log/mongodb/mongodb.log
 
+***
+
 #### Bind to `127.0.0.1` to enable networking.
 
 To enable networking—so someone other that `localhost` can connect to the setup—open up the MongoDB config on the server.
@@ -104,13 +110,13 @@ To enable networking—so someone other that `localhost` can connect to the setu
 
 Find this line:
 
-	# Listen to local interface only. Comment out to listen on all interfaces.
-	bind_ip = 127.0.0.1
+    # Listen to local interface only. Comment out to listen on all interfaces.
+    bind_ip = 127.0.0.1
 
 And comment out the `bind_ip` like this:
 
-	# Listen to local interface only. Comment out to listen on all interfaces.
-	#bind_ip = 127.0.0.1
+    # Listen to local interface only. Comment out to listen on all interfaces.
+    #bind_ip = 127.0.0.1
 
 Now restart MongDB and networking should be enabled:
 
@@ -122,11 +128,13 @@ You can confirm this by checking if port `27017` is open on the local host via `
 
 The positive response should be something like this:
 
-	Starting Nmap 6.47 ( http://nmap.org ) at 2015-09-22 00:53 EDT
-	Nmap scan report for sandbox.local (192.168.56.10)
-	Host is up (0.00043s latency).
-	PORT      STATE SERVICE
-	27017/tcp open  unknown
+    Starting Nmap 6.47 ( http://nmap.org ) at 2015-09-22 00:53 EDT
+    Nmap scan report for sandbox.local (192.168.56.10)
+    Host is up (0.00043s latency).
+    PORT      STATE SERVICE
+    27017/tcp open  unknown
+
+***
 
 ### Practical MongoDB usage examples.
 
@@ -175,12 +183,12 @@ You can now do whatever you want thanks to the `localhost` exception for clean i
 
 Check the user privleges for the user called `root`:
 
-	db.runCommand(
-	  {
-	    usersInfo:"root",
-	    showPrivileges:true
-	  }
-	)
+    db.runCommand(
+      {
+        usersInfo:"root",
+        showPrivileges:true
+      }
+    )
 
 If the results are empty, them let’s create a user called `siteUserAdmin`. First connect to `admin` like this:
 
@@ -188,28 +196,28 @@ If the results are empty, them let’s create a user called `siteUserAdmin`. Fir
 
 And use `createUser` like this:
 
-	db.createUser(
-	  {
-	    user: "root",
-	    pwd: "root",
-	    roles:
-	    [
-	      {
-	        role: "userAdminAnyDatabase",
-	        db: "admin"
-	      }
-	    ]
-	  }
-	)
+    db.createUser(
+      {
+        user: "root",
+        pwd: "root",
+        roles:
+        [
+          {
+            role: "userAdminAnyDatabase",
+            db: "admin"
+          }
+        ]
+      }
+    )
 
 Now check the `root` user again:
 
-	db.runCommand(
-	  {
-	    usersInfo:"root",
-	    showPrivileges:true
-	  }
-	)
+    db.runCommand(
+      {
+        usersInfo:"root",
+        showPrivileges:true
+      }
+    )
 
 And if you want to change the password after the fact, run a command like this:
 
@@ -221,7 +229,7 @@ Check to see if you have any user in the database with admin rights like this:
 
 Output should be something like this:
 
-	{ "_id" : "admin.siteUserAdmin", "user" : "siteUserAdmin", "db" : "admin", "credentials" : { "MONGODB-CR" : "5a526e5d4d622d01a7feae8b7e5f470d" }, "roles" : [ { "role" : "userAdminAnyDatabase", "db" : "admin" } ] }
+    { "_id" : "admin.siteUserAdmin", "user" : "siteUserAdmin", "db" : "admin", "credentials" : { "MONGODB-CR" : "5a526e5d4d622d01a7feae8b7e5f470d" }, "roles" : [ { "role" : "userAdminAnyDatabase", "db" : "admin" } ] }
 
 Check the mongo command line options by running this command:
 
@@ -229,8 +237,8 @@ Check the mongo command line options by running this command:
 
 To have `localhost` login exceptions disabled one of the following should be set to `true`:
 
-	db.serverCmdLineOpts().parsed.auth
-	db.serverCmdLineOpts().parsed.keyFile
+    db.serverCmdLineOpts().parsed.auth
+    db.serverCmdLineOpts().parsed.keyFile
 
 To reenable authorization open up `/etc/mongod.conf`:
 
@@ -238,19 +246,19 @@ To reenable authorization open up `/etc/mongod.conf`:
 
 Find these lines around line 28:
 
-	# Turn on/off security.  Off is currently the default
-	#noauth = true
-	#auth = true
+    # Turn on/off security.  Off is currently the default
+    #noauth = true
+    #auth = true
 
 Set that `auth` to `true` like this:
 
-	# Turn on/off security.  Off is currently the default
-	#noauth = true
-	auth = true
+    # Turn on/off security.  Off is currently the default
+    #noauth = true
+    auth = true
 
 Then restart MongoDB and all should be good:
 
-	sudo service mongod restart
+    sudo service mongod restart
 
 Now login to MongoDB like this:
 
@@ -264,24 +272,24 @@ First connect to `admin` like this:
 
 And use `db.revokeRolesFromUser` like this:
 
-	db.revokeRolesFromUser(
-	    "root",
-	    [
-	      {
-	        role: "userAdminAnyDatabase",
-	        db: "admin"
-	      }
-	    ]
-	)
+    db.revokeRolesFromUser(
+        "root",
+        [
+          {
+            role: "userAdminAnyDatabase",
+            db: "admin"
+          }
+        ]
+    )
 
 Now check the `root` user again:
 
-	db.runCommand(
-	  {
-	    usersInfo:"root",
-	    showPrivileges:true
-	  }
-	)
+    db.runCommand(
+      {
+        usersInfo:"root",
+        showPrivileges:true
+      }
+    )
 
 #### Assign a user role in MongoDB.
 
@@ -291,24 +299,24 @@ First connect to `admin` like this:
 
 And use `db.grantRolesToUser` like this:
 
-	db.grantRolesToUser(
-	    "root",
-	    [
-	      {
-	        role: "root",
-	        db: "admin"
-	      }
-	    ]
-	)
+    db.grantRolesToUser(
+        "root",
+        [
+          {
+            role: "root",
+            db: "admin"
+          }
+        ]
+    )
 
 Now check the `root` user again:
 
-	db.runCommand(
-	  {
-	    usersInfo:"root",
-	    showPrivileges:true
-	  }
-	)
+    db.runCommand(
+      {
+        usersInfo:"root",
+        showPrivileges:true
+      }
+    )
 
 #### Create a MongoDB database and use it.
 
@@ -327,9 +335,9 @@ At least one actual record should be inserted for the database to actually exist
 
 Now when you run `show dbs` the database will be there:
 
-	admin             0.078GB
-	sandbox_dev       0.078GB
-	local             0.078GB
+    admin             0.078GB
+    sandbox_dev       0.078GB
+    local             0.078GB
 
 ### Some MongoDB debugging and maintenance items.
 
@@ -341,10 +349,10 @@ Compacting a specific collection in a database to reclaim used space:
 
 Compacting all collections in a database to save space:
 
-	db.getCollectionNames().forEach(function (collectionName) {
-	    print('Compacting: ' + collectionName);
-	    db.runCommand({ compact: collectionName });
-	});
+    db.getCollectionNames().forEach(function (collectionName) {
+        print('Compacting: ' + collectionName);
+        db.runCommand({ compact: collectionName });
+    });
 
 #### Exporting, droppping and restoring a database.
 
@@ -376,15 +384,15 @@ The error would look something like this:
 
 Open up the MongoDB config here:
 
-	sudo nano /etc/mongod.conf
+    sudo nano /etc/mongod.conf
 
 Look for this line:
-	
-	journal = true
+
+    journal = true
 
 And change it to this; using `nojournal` instead of `journal`:
-	
-	nojournal = true
+
+    nojournal = true
 
 #### Delete the lock file if the system has crashed.
 

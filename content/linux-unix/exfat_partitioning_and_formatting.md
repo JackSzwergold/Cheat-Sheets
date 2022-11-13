@@ -35,44 +35,44 @@ Type `d` to delete a partition. It should say something like:
 
 Type `n` to create a new partition and select `p` for `primary` partition:
 
-	Partition type:
-	   p   primary (0 primary, 0 extended, 4 free)
-	   e   extended
+    Partition type:
+       p   primary (0 primary, 0 extended, 4 free)
+       e   extended
 
 After doing that, just punch through the rest of the sundry specifics like this. Trust the prefilled values unless you know what you are doing explictly need to use different value:
 
-	Partition number (1-4, default 1):
-	Using default value 1
-	First sector (2048-30801919, default 2048):
-	Using default value 2048
-	Last sector, +sectors or +size{K,M,G} (2048-30801919, default 30801919):
-	Using default value 30801919
+    Partition number (1-4, default 1):
+    Using default value 1
+    First sector (2048-30801919, default 2048):
+    Using default value 2048
+    Last sector, +sectors or +size{K,M,G} (2048-30801919, default 30801919):
+    Using default value 30801919
 
 Type `t` to set the partition type and then select `7` which is `HPFS/NTFS/exFAT` partition type:
 
-	Command (m for help): t
-	Selected partition 1
-	Hex code (type L to list codes): 7
-	Changed system type of partition 1 to 7 (HPFS/NTFS/exFAT)
+    Command (m for help): t
+    Selected partition 1
+    Hex code (type L to list codes): 7
+    Changed system type of partition 1 to 7 (HPFS/NTFS/exFAT)
 
 Check the selected partition type by typing `p` to make sure all is good. The output should say something like this:
 
-	Disk /dev/sdb: 15.8 GB, 15770583040 bytes
-	85 heads, 23 sectors/track, 15755 cylinders, total 30801920 sectors
-	Units = sectors of 1 * 512 = 512 bytes
-	Sector size (logical/physical): 512 bytes / 512 bytes
-	I/O size (minimum/optimal): 512 bytes / 512 bytes
-	Disk identifier: 0x00000000
-	
-	   Device Boot      Start         End      Blocks   Id  System
-	/dev/sdb1            2048    30801919    15399936    7  HPFS/NTFS/exFAT
+    Disk /dev/sdb: 15.8 GB, 15770583040 bytes
+    85 heads, 23 sectors/track, 15755 cylinders, total 30801920 sectors
+    Units = sectors of 1 * 512 = 512 bytes
+    Sector size (logical/physical): 512 bytes / 512 bytes
+    I/O size (minimum/optimal): 512 bytes / 512 bytes
+    Disk identifier: 0x00000000
+    
+       Device Boot      Start         End      Blocks   Id  System
+    /dev/sdb1            2048    30801919    15399936    7  HPFS/NTFS/exFAT
 
 Now type `w` to write the partition data to the disk and exit `fdisk`. The output should be like this:
 
-	The partition table has been altered!
-	
-	Calling ioctl() to re-read partition table.
-	Syncing disks.
+    The partition table has been altered!
+    
+    Calling ioctl() to re-read partition table.
+    Syncing disks.
 
 With partitioning of the device done, the next step of the process involves formatting the device with an actual file system.
 
@@ -90,10 +90,10 @@ Now format the partition as exFAT:
 
 If all goes well, the output for that would be something like this:
 
-	mkexfatfs 1.0.1
-	Creating... done.
-	Flushing... done.
-	File system created successfully.
+    mkexfatfs 1.0.1
+    Creating... done.
+    Flushing... done.
+    File system created successfully.
 
 And you are all done! The partition located at `/dev/sdb1` has been successfully formatted as an exFAT device with the label/name being set to “FooBar.”
 
@@ -109,10 +109,10 @@ Now format the partition as HFS:
 
 If all goes well, the output for that would be something like this:
 
-	Volume name is "FooBar"
-	Volume was created on Mon Nov 10 00:13:08 2014
-	Volume was last modified on Mon Nov 10 00:13:08 2014
-	Volume has 15523445760 bytes free
+    Volume name is "FooBar"
+    Volume was created on Mon Nov 10 00:13:08 2014
+    Volume was last modified on Mon Nov 10 00:13:08 2014
+    Volume has 15523445760 bytes free
 
 ### Mounting a device’s partition using `mount`.
 
@@ -126,14 +126,14 @@ With that directory set, mount the volume using `mount` like this:
 
 Once that is done, if you do a `df -h` you should be able to see the volume mounted like this:
 
-	Filesystem                    Size  Used Avail Use% Mounted on
-	/dev/mapper/sandbox--vg-root  6.5G  4.3G  1.9G  70% /
-	udev                          487M  4.0K  487M   1% /dev
-	tmpfs                         100M  344K  100M   1% /run
-	none                          5.0M     0  5.0M   0% /run/lock
-	none                          497M     0  497M   0% /run/shm
-	/dev/sda1                     228M   34M  183M  16% /boot
-	/dev/sdb1                      15G  2.1M   15G   1% /home/sysop/usb_mount
+    Filesystem                    Size  Used Avail Use% Mounted on
+    /dev/mapper/sandbox--vg-root  6.5G  4.3G  1.9G  70% /
+    udev                          487M  4.0K  487M   1% /dev
+    tmpfs                         100M  344K  100M   1% /run
+    none                          5.0M     0  5.0M   0% /run/lock
+    none                          497M     0  497M   0% /run/shm
+    /dev/sda1                     228M   34M  183M  16% /boot
+    /dev/sdb1                      15G  2.1M   15G   1% /home/sysop/usb_mount
 
 Now the storage space on that volume is accessible to the OS and you can interact with that mounted file system.
 

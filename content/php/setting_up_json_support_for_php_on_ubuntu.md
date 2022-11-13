@@ -13,7 +13,7 @@ These were notes from an attempt to get JSON support included for a custom compi
 
 First, install JSON via Pecl like this:
 
-	sudo pecl install json
+    sudo pecl install json
 
 You might get a warning that reads like this:
 
@@ -25,7 +25,7 @@ Just ignore it. The warning is correct in that newer version of PHP have JSON su
 
 Now the tricky part is finding the exact path the `json-1.2.1.tgz`. In some cases it will be installed in a directory like this:
 
-	/build/buildd/php5-5.3.5/pear-build-download/
+    /build/buildd/php5-5.3.5/pear-build-download/
 
 In others it will be installed in a directory like this:
 
@@ -59,24 +59,24 @@ So just go into that directory like this and follow the rest of the steps:
 
 Next, decompress the archive like this:
 
-	sudo tar -xvf ./json-1.2.1.tgz
+    sudo tar -xvf ./json-1.2.1.tgz
 
 Now go into the decompressed directory:
 
-	cd json-1.2.1
+    cd json-1.2.1
 
 Run the `phpize` command on the code like this:
 
-	sudo /opt/php516-gd/bin/phpize json
+    sudo /opt/php516-gd/bin/phpize json
 
 Run this `configure` command:
 
-	sudo ./configure
-	
+    sudo ./configure
+    
 Once the `configure` process completes, run `make`:
 
-	sudo make
+    sudo make
 
 Finally install it by running `sudo make install`:
 
-	sudo make install
+    sudo make install

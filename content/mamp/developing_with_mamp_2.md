@@ -21,11 +21,11 @@ Which—for Mac users—means that you can utilize the way your Mac has a machin
 
 First determine what your local machine’s Bonjour MDNS hostname is by going to the command line and typing 'hostname' like so:
 
-	hostname
+    hostname
 
 Take a note of that hostname, which should be something like:
 
-	MY_MACHINE.local
+    MY_MACHINE.local
 
 Got that? Good. Now, switch your attention to the `htdocs` root of MAMP.
 
@@ -33,23 +33,23 @@ Got that? Good. Now, switch your attention to the `htdocs` root of MAMP.
 
 So now you are going to go to the `htdocs` root of MAMP and create a new directory called `test_host`:
 
-	mkdir /Applications/MAMP/htdocs/test_host
+    mkdir /Applications/MAMP/htdocs/test_host
 
 With that done, create an `index.php` file for testing purposes in that directory:
 
-	bbedit /Applications/MAMP/htdocs/index.php
+    bbedit /Applications/MAMP/htdocs/index.php
 
 And then copy in this short but sweet PHP script into that file:
 
-	<?php
+    <?php
 
-	echo "Hello world!";
-	echo "<br />";
-	echo "I am the root of a name-based virtual host.";
-	echo "<br />";
-	echo "My server name is: " . $_SERVER['SERVER_NAME'];
+    echo "Hello world!";
+    echo "<br />";
+    echo "I am the root of a name-based virtual host.";
+    echo "<br />";
+    echo "My server name is: " . $_SERVER['SERVER_NAME'];
 
-	?>
+    ?>
 
 Note the use of `$_SERVER['SERVER_NAME']`. That will help you see which virtual host you are using to connect to the web server with.
 
@@ -57,23 +57,23 @@ Note the use of `$_SERVER['SERVER_NAME']`. That will help you see which virtual 
 
 So with that done, you’re now going to adjust the Apache configuration in your MAMP install to enable name-based virtual hosts. Open up the Apache `httpd.conf` file like so:
 
-	bbedit /Applications/MAMP/conf/apache/httpd.conf
+    bbedit /Applications/MAMP/conf/apache/httpd.conf
 
 And add these lines to the bottom of the Apache `httpd.conf` file:
 
-	NameVirtualHost *
+    NameVirtualHost *
 
-	<VirtualHost *>
-	 DocumentRoot "/Applications/MAMP/htdocs"
-	 ServerName localhost
-	 ServerAlias localhost
-	</VirtualHost>
+    <VirtualHost *>
+     DocumentRoot "/Applications/MAMP/htdocs"
+     ServerName localhost
+     ServerAlias localhost
+    </VirtualHost>
 
-	<VirtualHost *>
-	 DocumentRoot "/Applications/MAMP/htdocs/test_host"
-	 ServerName *.local
-	 ServerAlias *.local
-	</VirtualHost>
+    <VirtualHost *>
+     DocumentRoot "/Applications/MAMP/htdocs/test_host"
+     ServerName *.local
+     ServerAlias *.local
+    </VirtualHost>
 
 The first `VirtualHost` config is pretty straight forward; it handles traffic going to `localhost` and sends it to `htdocs`. But note the second `VirtualHost` config. That one basically tells Apache to set the `DocumentRoot` to be `test_host` for connections going to any `ServerName` that has the `.local`—aka: `*.local`—top level domain.
 
@@ -83,11 +83,11 @@ Also note that I set `ServerAlias` in addition to `ServerName`. I do that out of
 
 Now that you have a `test_host` directory in your main MAMP `htdocs` directory as well an adjusted Apache `httpd.conf` in your MAMP setup, you should be all set. So restart MAMP and go to this URL:
 
-	http://MY_MACHINE.local:8888
+    http://MY_MACHINE.local:8888
 
 And compare what you see in your browser to the to the basic/standard `localhost` setup URL:
 
-	http://localhost:8888
+    http://localhost:8888
 
 The `index.php` page you’re viewing on `MY_MACHINE.local:8888` should be 100% different than what is served up from `localhost:8888` since `MY_MACHINE.local:8888` is serving the content from the `test_host` directory. While `localhost:8888` is still serving content from the main `htdocs` document root.
 

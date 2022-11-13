@@ -11,7 +11,7 @@ Template: index
 
 To create a SNMP `snmpconf` file on the host, run this command as root:
 
-	sudo snmpconf -i
+    sudo snmpconf -i
 
 Customize the config as you feel fit and then when it’s done, it will create a new `snmpd.conf` file here:
 
@@ -37,8 +37,8 @@ Fetch the location info from the host:
 
 Fetch the contact info from the host:
 
-	/usr/bin/snmpget -c public [hostname] system.sysContact.0
+    /usr/bin/snmpget -c public [hostname] system.sysContact.0
 
 Fetch the services info from the host:
 
-	/usr/bin/snmpget -c public [hostname] system.sysServices.0
+    /usr/bin/snmpget -c public [hostname] system.sysServices.0

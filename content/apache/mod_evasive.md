@@ -25,26 +25,26 @@ Create a log directory for `mod_evasive`:
 
 Create a sample `mod_evasive` config by creating a `mod_evasive.conf` file like this:
 
-	sudo nano /etc/apache2/conf.d/mod_evasive.conf
+    sudo nano /etc/apache2/conf.d/mod_evasive.conf
 
 Setup a config like this; this is sample config that can be adjusted as needed:
 
-	<ifmodule mod_evasive20.c>
-	  DOSHashTableSize 1024
-	  DOSPageCount 2
-	  DOSSiteCount 50
-	  DOSPageInterval 1
-	  DOSSiteInterval 1
-	  DOSBlockingPeriod 10
-	  DOSCloseSocket On
-	  DOSLogDir /var/log/apache2/mod_evasive
-	  DOSEmailNotify email_address@example.com
-	  DOSWhitelist 127.0.0.1
-	</ifmodule>
+    <ifmodule mod_evasive20.c>
+      DOSHashTableSize 1024
+      DOSPageCount 2
+      DOSSiteCount 50
+      DOSPageInterval 1
+      DOSSiteInterval 1
+      DOSBlockingPeriod 10
+      DOSCloseSocket On
+      DOSLogDir /var/log/apache2/mod_evasive
+      DOSEmailNotify email_address@example.com
+      DOSWhitelist 127.0.0.1
+    </ifmodule>
 
 Now just restart Apache to get `mod_evasive` and related settings loaded and you should be good:
 
-	sudo service apache2 restart
+    sudo service apache2 restart
 
 ### A simple DDoS Perl test script.
 
@@ -56,23 +56,23 @@ On an unrelated system—like the desktop of a macOS system—create a file name
 
 Now place this code in that file. Adjust the values of `$how_many` and `$target_host` to match the values that suit your testing needs:
 
-	#!/usr/bin/perl
+    #!/usr/bin/perl
 
-	use IO::Socket;
-	use strict;
+    use IO::Socket;
+    use strict;
 
-	my $how_many = 30;
-	my $target_host = "sandbox.local:80";
+    my $how_many = 30;
+    my $target_host = "sandbox.local:80";
 
-	for (0..$how_many) {
-	  my($response);
-	  my($SOCKET) = new IO::Socket::INET(Proto => "tcp", PeerAddr => $target_host);
-	  if (!defined $SOCKET) { die $!; }
-	  print $SOCKET "GET /?$_ HTTP/1.0\n\n";
-	  $response = <$SOCKET>;
-	  print $response;
-	  close($SOCKET);
-	}
+    for (0..$how_many) {
+      my($response);
+      my($SOCKET) = new IO::Socket::INET(Proto => "tcp", PeerAddr => $target_host);
+      if (!defined $SOCKET) { die $!; }
+      print $SOCKET "GET /?$_ HTTP/1.0\n\n";
+      $response = <$SOCKET>;
+      print $response;
+      close($SOCKET);
+    }
 
 Save the file and change the permissions to make it executable:
 
@@ -84,34 +84,34 @@ Then run it like this:
 
 The output will be a pile of headers for each HTTP request that is made; see below for sample output. Note that after about 16 attempts the responses of “200 OK” suddenly switch to “403 Forbidden”; that means that `mod_evasive` has recognized the “attack” and is successfully blocking it:
 
-	HTTP/1.1 200 OK
-	HTTP/1.1 200 OK
-	HTTP/1.1 200 OK
-	HTTP/1.1 200 OK
-	HTTP/1.1 200 OK
-	HTTP/1.1 200 OK
-	HTTP/1.1 200 OK
-	HTTP/1.1 200 OK
-	HTTP/1.1 200 OK
-	HTTP/1.1 200 OK
-	HTTP/1.1 200 OK
-	HTTP/1.1 200 OK
-	HTTP/1.1 200 OK
-	HTTP/1.1 200 OK
-	HTTP/1.1 200 OK
-	HTTP/1.1 200 OK
-	HTTP/1.1 403 Forbidden
-	HTTP/1.1 403 Forbidden
-	HTTP/1.1 403 Forbidden
-	HTTP/1.1 403 Forbidden
-	HTTP/1.1 403 Forbidden
-	HTTP/1.1 403 Forbidden
-	HTTP/1.1 403 Forbidden
-	HTTP/1.1 403 Forbidden
-	HTTP/1.1 403 Forbidden
-	HTTP/1.1 403 Forbidden
-	HTTP/1.1 403 Forbidden
-	HTTP/1.1 403 Forbidden
-	HTTP/1.1 403 Forbidden
-	HTTP/1.1 403 Forbidden
-	HTTP/1.1 403 Forbidden
+    HTTP/1.1 200 OK
+    HTTP/1.1 200 OK
+    HTTP/1.1 200 OK
+    HTTP/1.1 200 OK
+    HTTP/1.1 200 OK
+    HTTP/1.1 200 OK
+    HTTP/1.1 200 OK
+    HTTP/1.1 200 OK
+    HTTP/1.1 200 OK
+    HTTP/1.1 200 OK
+    HTTP/1.1 200 OK
+    HTTP/1.1 200 OK
+    HTTP/1.1 200 OK
+    HTTP/1.1 200 OK
+    HTTP/1.1 200 OK
+    HTTP/1.1 200 OK
+    HTTP/1.1 403 Forbidden
+    HTTP/1.1 403 Forbidden
+    HTTP/1.1 403 Forbidden
+    HTTP/1.1 403 Forbidden
+    HTTP/1.1 403 Forbidden
+    HTTP/1.1 403 Forbidden
+    HTTP/1.1 403 Forbidden
+    HTTP/1.1 403 Forbidden
+    HTTP/1.1 403 Forbidden
+    HTTP/1.1 403 Forbidden
+    HTTP/1.1 403 Forbidden
+    HTTP/1.1 403 Forbidden
+    HTTP/1.1 403 Forbidden
+    HTTP/1.1 403 Forbidden
+    HTTP/1.1 403 Forbidden

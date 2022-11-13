@@ -15,11 +15,11 @@ Open up the main `sshd_config` on the server:
 
 And add—or edit—the following to the bottom of `sshd_config`:
 
-	Match User [username]
-	  ChrootDirectory /var/www
-	  ForceCommand internal-sftp
-	  AllowTcpForwarding no
-	  X11Forwarding no
+    Match User [username]
+      ChrootDirectory /var/www
+      ForceCommand internal-sftp
+      AllowTcpForwarding no
+      X11Forwarding no
 
 The chroot directory needs to be owned by root and permissions need to be:
 
@@ -41,6 +41,8 @@ Then restart `ssh`:
 
      sudo service ssh restart
 
+***
+
 ### Preventing SFTP access.
 
 To disable SFTP access to a server, open up the main `sshd_config` on the server:
@@ -49,10 +51,10 @@ To disable SFTP access to a server, open up the main `sshd_config` on the server
 
 Do this to disable SFTP access on a per-user basis:
 
-	Match User [username]
-	  Subsystem sftp /bin/false
+    Match User [username]
+      Subsystem sftp /bin/false
 
 Or do this to disable SFTP access on a per-group basis:
 
-	Match Group [groupname]
-	  Subsystem sftp /bin/false
+    Match Group [groupname]
+      Subsystem sftp /bin/false

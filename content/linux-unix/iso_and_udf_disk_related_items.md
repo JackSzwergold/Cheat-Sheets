@@ -17,17 +17,17 @@ Template: index
 
 Copying it is as simple as using this `dd` command:
 
-	sudo dd if=~/ubuntu-12.04.5-server-amd64.iso of=/dev/sdb bs=1024
+    sudo dd if=~/ubuntu-12.04.5-server-amd64.iso of=/dev/sdb bs=1024
 
 Or use the `pv` command with `dd` to monitor copy progress:
 
-	sudo dd if=~/ubuntu-12.04.5-server-amd64.iso | pv | sudo dd of=/dev/sdb bs=1024
+    sudo dd if=~/ubuntu-12.04.5-server-amd64.iso | pv | sudo dd of=/dev/sdb bs=1024
 
 When it’s done, output should be something like this:
 
-	705536+0 records in
-	705536+0 records out
-	722468864 bytes (722 MB) copied, 32.6091 s, 22.2 MB/s
+    705536+0 records in
+    705536+0 records out
+    722468864 bytes (722 MB) copied, 32.6091 s, 22.2 MB/s
 
 And if you check the info on `/dev/sdb` now using this command:
 
@@ -35,7 +35,7 @@ And if you check the info on `/dev/sdb` now using this command:
 
 The output would be something like this:
 
-	/dev/sdb: # ISO 9660 CD-ROM filesystem data 'Ubuntu-Server 12.04.5 LTS amd64 ' (bootable)
+    /dev/sdb: # ISO 9660 CD-ROM filesystem data 'Ubuntu-Server 12.04.5 LTS amd64 ' (bootable)
 
 #### Prepping and partitioning the device for use.
 
@@ -57,13 +57,13 @@ That output would be something like this:
 
 Knowing that the device is accessible and ready, we will partition the device like this:
 
-	sudo fdisk /dev/sdb
+    sudo fdisk /dev/sdb
 
 Once in the `fdisk` interface, press `n` for a new partition. The output will be something like this:
 
-	Partition type:
-	   p   primary (0 primary, 0 extended, 4 free)
-	   e   extended
+    Partition type:
+       p   primary (0 primary, 0 extended, 4 free)
+       e   extended
 
 Select `p` for a `primary` partition. Select all of the defaults for the items like partition number, first sector and last sector.
 
@@ -77,30 +77,30 @@ If it asks you to select a partition to act on, remember the partition number fr
 
 With that done type `w` to write the partition info to the disk and the process of partitioning should be finished and you will see the following output:
 
-	The partition table has been altered!
-	
-	Calling ioctl() to re-read partition table.
-	
-	WARNING: If you have created or modified any DOS 6.x
-	partitions, please see the fdisk manual page for additional
-	information.
-	Syncing disks.
+    The partition table has been altered!
+    
+    Calling ioctl() to re-read partition table.
+    
+    WARNING: If you have created or modified any DOS 6.x
+    partitions, please see the fdisk manual page for additional
+    information.
+    Syncing disks.
 
 Don’t worry about the warning. You’re all done as far as partitioning goes.
-	
+    
 ### Manually mount an ISO image to a mount point.
 
 Create a mount point:
 
-	mkdir -p ~/ubuntu-12.04.5
+    mkdir -p ~/ubuntu-12.04.5
 
 Mount the ISO to the mount point:
 
-	sudo mount -o ro,loop ubuntu-12.04.5-server-amd64.iso ~/ubuntu-12.04.5
+    sudo mount -o ro,loop ubuntu-12.04.5-server-amd64.iso ~/ubuntu-12.04.5
 
 Unmount the ISO from the mount point like this:
 
-	sudo umount ~/ubuntu-12.04.5
+    sudo umount ~/ubuntu-12.04.5
 
 ### Sundry UDF and similar items.
 
@@ -112,13 +112,13 @@ Get info on the ISO itself with a plain `file` check like this:
 
 Output would be something like this:
 
-	ubuntu-12.04.5-server-amd64.iso: # ISO 9660 CD-ROM filesystem data 'Ubuntu-Server 12.04.5 LTS amd64 ' (bootable)
+    ubuntu-12.04.5-server-amd64.iso: # ISO 9660 CD-ROM filesystem data 'Ubuntu-Server 12.04.5 LTS amd64 ' (bootable)
 
 #### Creating UDF file systems from scratch.
 
 Install `udftools` and `udisks` on your system if you need them:
 
-	sudo aptitude install udftools udisks
+    sudo aptitude install udftools udisks
 
 Create a UDF file system on a partition:
 

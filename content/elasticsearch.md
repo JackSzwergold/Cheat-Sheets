@@ -11,6 +11,8 @@ Template: index
 
 Elasticsearch requires Java 7—or better—to be installed for it to work. So make sure the system you plan on running Elasticsearch on has Java 7 installed and `JAVA_HOME` is properly set on the system.
 
+***
+
 ### Install Elasticsearch.
 
 First, import the public key used by the package management system:
@@ -43,15 +45,17 @@ If somehow you need to remove the `update-rc.d` stuff, remove these items:
     sudo rm /etc/rc4.d/S95elasticsearch
     sudo rm /etc/rc5.d/S95elasticsearch
 
-#### Sundry Elasticsearch items on an Ubuntu/Debian system.
+***
+
+### Sundry Elasticsearch items on an Ubuntu/Debian system.
 
 Start, stop and control Elasticsearch on an Ubuntu/Debian system:
 
-	sudo service elasticsearch start
-	sudo service elasticsearch stop
-	sudo service elasticsearch restart
-	sudo service elasticsearch force-reload
-	sudo service elasticsearch status
+    sudo service elasticsearch start
+    sudo service elasticsearch stop
+    sudo service elasticsearch restart
+    sudo service elasticsearch force-reload
+    sudo service elasticsearch status
 
 Edit the Elasticsearch configuration file:
 
@@ -86,6 +90,8 @@ Elasticsearch work file storage location:
 
     ls -la /tmp/elasticsearch
 
+***
+
 ### Install Elasticsearch on macOS.
 
 Some applications insist on using `localhost` or are a pain in the ass to set an alternative URL for. So in cases like that, installing Elasticsearch locally via Homebrew. And here is how to do that.
@@ -104,12 +110,12 @@ Install the latest version of Elasticsearch like this:
 
 And if you want to install an older, supported version of Elasticsearch—like versions 1.7 and 2.3—just run this command:
 
-	brew install homebrew/versions/elasticsearch17 
-	brew install homebrew/versions/elasticsearch23 
+    brew install homebrew/versions/elasticsearch17
+    brew install homebrew/versions/elasticsearch23
 
 Create a startup service for Elasticsearch like this:
 
-	brew services start elasticsearch
+    brew services start elasticsearch
 
 To manually start up an 2.x version of Elasticsearch, run this command:
 
@@ -117,9 +123,11 @@ To manually start up an 2.x version of Elasticsearch, run this command:
 
 And to manually start up a 1.x version of Elasticsearch, run this command with the `--config` option:
 
-	elasticsearch --config=/usr/local/opt/elasticsearch17/config/elasticsearch.yml
+    elasticsearch --config=/usr/local/opt/elasticsearch17/config/elasticsearch.yml
 
-#### Testing Elasticsearch.
+***
+
+### Testing Elasticsearch.
 
 With Elasticsearch installed—and with the service script installed—we can start it by running this command:
 
@@ -139,9 +147,9 @@ You can check returned headers like this:
 
 If running, it will cleanly return a `200` status like this:
 
-	HTTP/1.1 200 OK
-	Content-Type: text/plain; charset=UTF-8
-	Content-Length: 0
+    HTTP/1.1 200 OK
+    Content-Type: text/plain; charset=UTF-8
+    Content-Length: 0
 
 And will send back data via the command line using `curl` as well:
 
@@ -149,21 +157,23 @@ And will send back data via the command line using `curl` as well:
 
 The response should be something like:
 
-	{
-	  "status" : 200,
-	  "name" : "Watcher",
-	  "cluster_name" : "elasticsearch",
-	  "version" : {
-	    "number" : "1.4.5",
-	    "build_hash" : "2aaf797f2a571dcb779a3b61180afe8390ab61f9",
-	    "build_timestamp" : "2015-04-27T08:06:06Z",
-	    "build_snapshot" : false,
-	    "lucene_version" : "4.10.4"
-	  },
-	  "tagline" : "You Know, for Search"
-	}
+    {
+      "status" : 200,
+      "name" : "Watcher",
+      "cluster_name" : "elasticsearch",
+      "version" : {
+        "number" : "1.4.5",
+        "build_hash" : "2aaf797f2a571dcb779a3b61180afe8390ab61f9",
+        "build_timestamp" : "2015-04-27T08:06:06Z",
+        "build_snapshot" : false,
+        "lucene_version" : "4.10.4"
+      },
+      "tagline" : "You Know, for Search"
+    }
 
-#### Bind to `localhost` to disable networking.
+***
+
+### Bind to `localhost` to disable networking.
 
 By default, Elasticsearch will be networked to allow connections from anywhere, everywhere. If that’s not really desired you can disable networking like this.
 
@@ -173,16 +183,16 @@ First, open up the main config file here:
 
 Find the `network.host` config area:
 
-	# Set both 'bind_host' and 'publish_host':
-	#
-	#network.host: 192.168.0.1
+    # Set both 'bind_host' and 'publish_host':
+    #
+    #network.host: 192.168.0.1
 
 And adjust it like so:
 
-	# Set both 'bind_host' and 'publish_host':
-	#
-	#network.host: 192.168.0.1
-	network.host: localhost
+    # Set both 'bind_host' and 'publish_host':
+    #
+    #network.host: 192.168.0.1
+    network.host: localhost
 
 Then restart Elasticsearch:
 
@@ -191,6 +201,8 @@ Then restart Elasticsearch:
 And it will now only be available to `localhost` connections on port `9200` moving forward so it would have to be accessed on the server directly like this:
 
     curl http://localhost:9200
+
+***
 
 ### Practical Elasticsearch data usage examples.
 
@@ -232,26 +244,26 @@ Let’s do a test search for the name “al” in the “tubebar” index like t
 
 And the returned results should be something like this:
 
-	{
-	  "took" : 3,
-	  "timed_out" : false,
-	  "_shards" : {
-	    "total" : 5,
-	    "successful" : 5,
-	    "failed" : 0
-	  },
-	  "hits" : {
-	    "total" : 1,
-	    "max_score" : 0.19178301,
-	    "hits" : [ {
-	      "_index" : "pranks",
-	      "_type" : "tubebar",
-	      "_id" : "1",
-	      "_score" : 0.19178301,
-	      "_source":{ "name" : "Al Coholic" }
-	    } ]
-	  }
-	}
+    {
+      "took" : 3,
+      "timed_out" : false,
+      "_shards" : {
+        "total" : 5,
+        "successful" : 5,
+        "failed" : 0
+      },
+      "hits" : {
+        "total" : 1,
+        "max_score" : 0.19178301,
+        "hits" : [ {
+          "_index" : "pranks",
+          "_type" : "tubebar",
+          "_id" : "1",
+          "_score" : 0.19178301,
+          "_source":{ "name" : "Al Coholic" }
+        } ]
+      }
+    }
 
 And now let’s do a test search for the word “lox” in the “jokes” index like this:
 
@@ -259,26 +271,26 @@ And now let’s do a test search for the word “lox” in the “jokes” index
 
 And the returned data should be:
 
-	{
-	  "took" : 3,
-	  "timed_out" : false,
-	  "_shards" : {
-	    "total" : 5,
-	    "successful" : 5,
-	    "failed" : 0
-	  },
-	  "hits" : {
-	    "total" : 1,
-	    "max_score" : 0.15342641,
-	    "hits" : [ {
-	      "_index" : "jokes",
-	      "_type" : "bagels",
-	      "_id" : "1",
-	      "_score" : 0.15342641,
-	      "_source":{ "question" : "How do you keep a bagel safe?", "answer" : "Put lox on it!" }
-	    } ]
-	  }
-	}
+    {
+      "took" : 3,
+      "timed_out" : false,
+      "_shards" : {
+        "total" : 5,
+        "successful" : 5,
+        "failed" : 0
+      },
+      "hits" : {
+        "total" : 1,
+        "max_score" : 0.15342641,
+        "hits" : [ {
+          "_index" : "jokes",
+          "_type" : "bagels",
+          "_id" : "1",
+          "_score" : 0.15342641,
+          "_source":{ "question" : "How do you keep a bagel safe?", "answer" : "Put lox on it!" }
+        } ]
+      }
+    }
 
 #### List all indexes in the Elasticsearch server.
 
@@ -288,9 +300,9 @@ This lists all indexes:
 
 Results should be something like this:
 
-	health status index  pri rep docs.count docs.deleted store.size pri.store.size
-	yellow open   pranks   5   1          1            0      2.9kb          2.9kb
-	yellow open   jokes    5   1          1            0      3.3kb          3.3kb
+    health status index  pri rep docs.count docs.deleted store.size pri.store.size
+    yellow open   pranks   5   1          1            0      2.9kb          2.9kb
+    yellow open   jokes    5   1          1            0      3.3kb          3.3kb
 
 #### Flush an Elasticsearch index to rebuild it.
 

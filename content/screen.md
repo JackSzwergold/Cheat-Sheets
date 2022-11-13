@@ -21,12 +21,12 @@ List all open screens.
 
 The output would be.
 
-	There is a screen on:
-	        2839.test_screen        (09/27/2015 02:48:00 AM)        (Attached)
-	1 Socket in /var/run/screen/S-sysop.
+    There is a screen on:
+            2839.test_screen        (09/27/2015 02:48:00 AM)        (Attached)
+    1 Socket in /var/run/screen/S-sysop.
 
 So if you wanted to reattach to that session, just enter this line.
 
-	screen -D -r '2839.test_screen'
+    screen -D -r '2839.test_screen'
 
 The `-D` detaches the screen session and then the `-r` reattaches the session.

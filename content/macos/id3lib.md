@@ -13,23 +13,23 @@ This tutorial explains how you can install ID3Lib directly from source code on m
 
 First clone the source code from attilagyorffy’s `id3lib-osx` GitHub repository:
 
-	git clone git@github.com:attilagyorffy/id3lib-osx.git
-	
+    git clone git@github.com:attilagyorffy/id3lib-osx.git
+    
 Now go into the repository directory:
 
-	cd id3lib-osx
-	
+    cd id3lib-osx
+    
 Run this `configure` command:
 
-	./configure
-	
+    ./configure
+    
 Once the `configure` process completes, run `make`:
 
-	make
-	
+    make
+    
 Finally install it by running `sudo make install`:
 
-	sudo make install
+    sudo make install
 
 ### Binaires installed.
 

@@ -11,7 +11,7 @@ So let’s say you accidentally deleted a file in a Git repository and somehow y
 
 First find the commit hash for the commit where the file was removed with the following command; be sure to change `[path of deleted file]` to the actual path of the deleted file:
 
-	git rev-list -n 1 HEAD -- [path of deleted file]
+    git rev-list -n 1 HEAD -- [path of deleted file]
 
 Once you get that commit hash, run this command to restore the file; be sure to change `[commit hash]` to the actual commit hash and change `[path of deleted file]` to the actual path of the deleted file:
 

@@ -17,18 +17,18 @@ This would happen if you use a GPT/GUID-centric system like macOS, format a disk
 
 And the output returned was like this:
 
-	WARNING: GPT (GUID Partition Table) detected on '/dev/sdb'! The util fdisk doesn't support GPT. Use GNU Parted.
-	
-	
-	Disk /dev/sdb: 8019 MB, 8019509248 bytes
-	255 heads, 63 sectors/track, 974 cylinders, total 15663104 sectors
-	Units = sectors of 1 * 512 = 512 bytes
-	Sector size (logical/physical): 512 bytes / 512 bytes
-	I/O size (minimum/optimal): 512 bytes / 512 bytes
-	Disk identifier: 0x00000000
-	
-	   Device Boot      Start         End      Blocks   Id  System
-	/dev/sdb1               1    15663103     7831551+  ee  GPT
+    WARNING: GPT (GUID Partition Table) detected on '/dev/sdb'! The util fdisk doesn't support GPT. Use GNU Parted.
+    
+    
+    Disk /dev/sdb: 8019 MB, 8019509248 bytes
+    255 heads, 63 sectors/track, 974 cylinders, total 15663104 sectors
+    Units = sectors of 1 * 512 = 512 bytes
+    Sector size (logical/physical): 512 bytes / 512 bytes
+    I/O size (minimum/optimal): 512 bytes / 512 bytes
+    Disk identifier: 0x00000000
+    
+       Device Boot      Start         End      Blocks   Id  System
+    /dev/sdb1               1    15663103     7831551+  ee  GPT
 
 Okay, that setup might be useful for you in macOS, but not in a pure Linux system. So this is what we can do to wipe away that partition table so we’re working with a clean device that won’t throw up any warnings.
 
@@ -40,9 +40,9 @@ First run `sfdisk` to get some basic info on the device itself:
 
 The output should be something like this:
 
-	WARNING: GPT (GUID Partition Table) detected on '/dev/sdb'! The util sfdisk doesn't support GPT. Use GNU Parted.
-	
-	/dev/sdb: 1022 cylinders, 247 heads, 62 sectors/track
+    WARNING: GPT (GUID Partition Table) detected on '/dev/sdb'! The util sfdisk doesn't support GPT. Use GNU Parted.
+    
+    /dev/sdb: 1022 cylinders, 247 heads, 62 sectors/track
 
 Now let’s get the blocksize of the device like this:
 
@@ -58,9 +58,9 @@ The returned value would be `7830528`. Make note of that for the step after the 
 
 Output should be something like this:
 
-	1+0 records in
-	1+0 records out
-	1024 bytes (1.0 kB) copied, 0.0136733 s, 74.9 kB/s
+    1+0 records in
+    1+0 records out
+    1024 bytes (1.0 kB) copied, 0.0136733 s, 74.9 kB/s
 
 Now run this next command to wipe the partition info near the end of the device using the “seek” value of `7830528`:
 
@@ -68,10 +68,10 @@ Now run this next command to wipe the partition info near the end of the device 
 
 And the output for that should be something like this:
 
-	dd: writing `/dev/sdb': No space left on device
-	1025+0 records in
-	1024+0 records out
-	1048576 bytes (1.0 MB) copied, 2.77809 s, 377 kB/s
+    dd: writing `/dev/sdb': No space left on device
+    1025+0 records in
+    1024+0 records out
+    1048576 bytes (1.0 MB) copied, 2.77809 s, 377 kB/s
 
 Now tell the system to re-read the partition table for the device using `partprobe` like this:
 

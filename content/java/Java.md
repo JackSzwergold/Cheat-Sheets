@@ -13,15 +13,15 @@ Template: index
 
 First install `python-software-properties` like this:
 
-	sudo aptitude install python-software-properties
+    sudo aptitude install python-software-properties
 
 Next add the WebUpd8 PPA repository to the system like this:
 
-	sudo add-apt-repository ppa:webupd8team/java
+    sudo add-apt-repository ppa:webupd8team/java
 
 With that done, run `aptitude update` to get the new repository picked up like this:
 
-	sudo aptitude update
+    sudo aptitude update
 
 ### Install various versions of Java via the WebUpd8 PPA.
 
@@ -37,8 +37,8 @@ Check the version number like this:
 
 And the output should be something like this:
 
-	Java(TM) SE Runtime Environment (build 1.6.0_45-b06)
-	Java HotSpot(TM) 64-Bit Server VM (build 20.45-b01, mixed mode)
+    Java(TM) SE Runtime Environment (build 1.6.0_45-b06)
+    Java HotSpot(TM) 64-Bit Server VM (build 20.45-b01, mixed mode)
 
 #### Install Java 7.
 
@@ -52,9 +52,9 @@ Check the version number like this:
 
 And the output should be something like this:
 
-	java version "1.7.0_80"
-	Java(TM) SE Runtime Environment (build 1.7.0_80-b15)
-	Java HotSpot(TM) 64-Bit Server VM (build 24.80-b11, mixed mode)
+    java version "1.7.0_80"
+    Java(TM) SE Runtime Environment (build 1.7.0_80-b15)
+    Java HotSpot(TM) 64-Bit Server VM (build 24.80-b11, mixed mode)
 
 #### Install Java 8.
 
@@ -68,9 +68,9 @@ Check the version number like this:
 
 And the output should be something like this:
 
-	java version "1.8.0_60"
-	Java(TM) SE Runtime Environment (build 1.8.0_60-b27)
-	Java HotSpot(TM) 64-Bit Server VM (build 25.60-b23, mixed mode)
+    java version "1.8.0_60"
+    Java(TM) SE Runtime Environment (build 1.8.0_60-b27)
+    Java HotSpot(TM) 64-Bit Server VM (build 25.60-b23, mixed mode)
 
 ### Sundry Java items.
 
@@ -84,7 +84,7 @@ You can do this by opening up the main `/etc/environment` file on the system lik
 
 And add a `JAVA_HOME` assignment to the bottom of the file like this; adjust the `java-6-oracle` value to match whatever Java version you have installed:
 
-	JAVA_HOME=/usr/lib/jvm/java-6-oracle/jre
+    JAVA_HOME=/usr/lib/jvm/java-6-oracle/jre
 
 #### Detect the version of Java a class was compiled under
 
@@ -94,20 +94,20 @@ If you have ever need to check what version of Java compiled a Java class, just 
 
 The output of that command should be something like this:
 
-	public class javaversion
-	minor version: 3
-	major version: 45
+    public class javaversion
+    minor version: 3
+    major version: 45
 
 Cross reference the “major version” value with the following list:
 
-	Java 1.0 uses major version 45
-	Java 1.1 uses major version 45
-	Java 1.2 uses major version 46
-	Java 1.3 uses major version 47
-	Java 1.4 uses major version 48
-	Java 5 uses major version 49
-	Java 6 uses major version 50
-	Java 7 uses major version 51
+    Java 1.0 uses major version 45
+    Java 1.1 uses major version 45
+    Java 1.2 uses major version 46
+    Java 1.3 uses major version 47
+    Java 1.4 uses major version 48
+    Java 5 uses major version 49
+    Java 6 uses major version 50
+    Java 7 uses major version 51
 
 And using that table above, we can see that a Java class with a major version of 45 translates to Java 1.0/1.1.
 
@@ -119,7 +119,7 @@ If you are somehow working on a system where Java was installed via the default 
 
 Just run this `sudo aptitude purge` command to get rid of any Java stuff installed via the default Ubuntu “partner” repository:
 
-	sudo aptitude purge java-common libcommons-collections3-java libcommons-dbcp-java libcommons-pool-java libecj-java libservlet2.5-java libtomcat6-java oracle-java6-installer sun-java6-bin sun-java6-jre
+    sudo aptitude purge java-common libcommons-collections3-java libcommons-dbcp-java libcommons-pool-java libecj-java libservlet2.5-java libtomcat6-java oracle-java6-installer sun-java6-bin sun-java6-jre
 
 #### Removing the `oab-java.sh` Java install items.
 
@@ -127,11 +127,11 @@ If you somehow installed Java previously via the `oab-java.sh` script, you can g
 
 First, check what is in the `sources.list` directory:
 
-	ls -la /etc/apt/sources.list.d/
+    ls -la /etc/apt/sources.list.d/
 
 Next, get rid of the previously installed `oab-java.sh` Java packages:
 
-	sudo aptitude purge sun-java6-jdk sun-java6-fonts sun-java6-source
+    sudo aptitude purge sun-java6-jdk sun-java6-fonts sun-java6-source
 
 Now, remove the `oab-java.sh` PPA (Personal Package Archive) stuff:
 

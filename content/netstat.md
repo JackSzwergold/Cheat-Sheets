@@ -11,4 +11,4 @@ Template: index
 
 Use `watch` to check the number of established connections at an interval of 1 second:
 
-	watch -n 1 "netstat -an | grep ESTABLISHED | wc -l"
+    watch -n 1 "netstat -an | grep ESTABLISHED | wc -l"

@@ -11,17 +11,17 @@ Template: index
 
 If you are using macOS 1.7 (Lion) and higher, you can create bootable USB media using a command like this:
 
-	sudo /path/to/Install\ OS\ X\ Yosemite.app/Contents/Resources/createinstallmedia --volume /Volumes/Untitled --applicationpath /path/to/Install\ OS\ X\ Yosemite.app --nointeraction
+    sudo /path/to/Install\ OS\ X\ Yosemite.app/Contents/Resources/createinstallmedia --volume /Volumes/Untitled --applicationpath /path/to/Install\ OS\ X\ Yosemite.app --nointeraction
 
 You need to set the path to the actual “Install OS X [Nickname].app” as well as the volume path to the USB flash drive. Just insert the USB flash drive, open up the Terminal and run that command. It will ask for your administrator password and then output would be something like this:
 
-	Erasing Disk: 0%... 10%... 20%... 30%...100%...
-	Copying installer files to disk...
-	Copy complete.
-	Making disk bootable...
-	Copying boot files...
-	Copy complete.
-	Done.
+    Erasing Disk: 0%... 10%... 20%... 30%...100%...
+    Copying installer files to disk...
+    Copy complete.
+    Making disk bootable...
+    Copying boot files...
+    Copy complete.
+    Done.
 
 The disk erasing process is pretty quick, but the “Copying installer files to disk...” takes forever. Just wait until that finishes and when it’s all done, it’s done and you will have bootable macOS USB flash drive.
 
@@ -35,11 +35,11 @@ Frustrating isn’t it. Well, the fix is not to waste time or bandwidth by redow
 
 Just boot up from that system disk, open up the terminal and type in this command:
 
-	ntpdate -u time.apple.com
+    ntpdate -u time.apple.com
 
 And it should work fine. If not, open up the Terminal again and set the system time to be some time in the past like this:
 
-	date 0901000015
+    date 0901000015
 
 That would set the system time to September 1, 2015 at 00 hours and 00 minutes. Yes, that seems crazy. But it works.
 
@@ -67,17 +67,17 @@ This variant of the command should work in macOS 10.7:
 
 The output would be something like this; when prompted to erase the USB flash drive respond `y`:
 
-	Validating target...done
-	Validating source...done
-	Erase contents of /dev/disk3s2 (/Volumes/Untitled)? [ny]: y
-	Retrieving scan information...done
-	Validating sizes...done
-	Restoring  ....10
+    Validating target...done
+    Validating source...done
+    Erase contents of /dev/disk3s2 (/Volumes/Untitled)? [ny]: y
+    Retrieving scan information...done
+    Validating sizes...done
+    Restoring  ....10
 
 The “Restoring” process will seemingly take forever but when it is done this will be the output:
 
     Restoring  ....10....20....30....40....50....60....70....80....90....100
-	Remounting target volume...done
+    Remounting target volume...done
 
 And that new volume would be mounted. But we’re not done yet! The issue is that image will have an alias to `Packages` but we need a full copy of the actual `Packages` directory to continue. And this is how we can do that.
 

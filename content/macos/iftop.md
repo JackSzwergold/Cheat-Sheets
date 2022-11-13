@@ -13,28 +13,28 @@ This tutorial explains how you can install IFTop directly from source code on ma
 
 First grab a compressed archive from an official IFTop source site:
 
-	curl -O -L http://www.ex-parrot.com/pdw/iftop/download/iftop-0.17.tar.gz
+    curl -O -L http://www.ex-parrot.com/pdw/iftop/download/iftop-0.17.tar.gz
 
 Next, decompress the archive like this:
 
-	tar -xf iftop-0.*.tar.gz
-	
+    tar -xf iftop-0.*.tar.gz
+    
 Now go into the decompressed directory:
 
-	cd iftop-0.*
-	
+    cd iftop-0.*
+    
 Run this `configure` command:
 
-	./configure
+    ./configure
 
 Once the `configure` process completes, run `make`:
 
-	make
-	
+    make
+    
 Finally install it by running `sudo make install`:
 
-	sudo make install
+    sudo make install
 
 And once it’s installed, run the command with `-h` to do a simple check to see it’s working:
 
-	iftop -h
+    iftop -h

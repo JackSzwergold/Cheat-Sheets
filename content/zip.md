@@ -19,7 +19,7 @@ To create an encrypted Zip with full directory paths do this. The `-r` option is
 
 And to create an encrypted Zip *without* directory paths do this. The `-r` option is for recursing directory paths and the `-j` option is for “junking the paths”; meaning just store the name of a saved file, and do not store directory names:
 
-	zip -jr [zip file name] [path to directory]
+    zip -jr [zip file name] [path to directory]
 
 ***
 
@@ -35,7 +35,7 @@ To create an encrypted Zip with full directory paths do this. The `-e` option is
 
 And to create an encrypted Zip *without* directory paths do this. The `-e` option is for encryption, the `-r` option is for recursing directory paths and the `-j` option is for “junking the paths”; meaning just store the name of a saved file, and do not store directory names:
 
-	zip -ejr [zip file name] [path to directory]
+    zip -ejr [zip file name] [path to directory]
 
 ***
 

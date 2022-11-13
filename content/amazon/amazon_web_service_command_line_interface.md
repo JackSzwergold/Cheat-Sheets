@@ -11,11 +11,11 @@ Template: index
 
 Download the `get-pip.py` script:
 
-	curl -O -L https://bootstrap.pypa.io/get-pip.py > get-pip.py
+    curl -O -L https://bootstrap.pypa.io/get-pip.py > get-pip.py
 
 And run it through Python like this:
 
-	sudo python get-pip.py
+    sudo python get-pip.py
 
 Verify your PIP installation works by running this simple “help” command.:
 
@@ -37,10 +37,10 @@ Once it’s installed, you can configure it with this “wizard”-like command:
 
 It will ask you for something like this:
 
-	AWS Access Key ID [None]: ABCDEFGHIJKLMNOPQRST
-	AWS Secret Access Key [None]: AbcdEfghiJklmnOpqrstUvwxyZ1234567890
-	Default region name [None]: us-east-1
-	Default output format [None]: json
+    AWS Access Key ID [None]: ABCDEFGHIJKLMNOPQRST
+    AWS Secret Access Key [None]: AbcdEfghiJklmnOpqrstUvwxyZ1234567890
+    Default region name [None]: us-east-1
+    Default output format [None]: json
 
 And if you think you screwed up that stuff, don’t panic. All of that info can be manually edited here:
 
@@ -48,9 +48,9 @@ And if you think you screwed up that stuff, don’t panic. All of that info can 
 
 Which has generic, non-credential config items like this:
 
-	[default]
-	region = us-east-1
-	output = json
+    [default]
+    region = us-east-1
+    output = json
 
 And in this file that stores credential-specific config items:
 
@@ -58,9 +58,9 @@ And in this file that stores credential-specific config items:
 
 Which has credential info like this:
 
-	[default]
-	aws_access_key_id = ABCDEFGHIJKLMNOPQRST
-	aws_secret_access_key = AbcdEfghiJklmnOpqrstUvwxyZ1234567890
+    [default]
+    aws_access_key_id = ABCDEFGHIJKLMNOPQRST
+    aws_secret_access_key = AbcdEfghiJklmnOpqrstUvwxyZ1234567890
 
 ### Checking bucket info via Amazon Web Service CLI.
 
@@ -70,18 +70,18 @@ Get a list of all buckets:
 
 The output would be something like this:
 
-	{
-	    "Owner": {
-	        "DisplayName": "some_username",
-	        "ID": "1234567890abcdefghijklmnopqrstuvwxyz1234567890abcdefghijklmnopqr"
-	    },
-	    "Buckets": [
-	        {
-	            "CreationDate": "2014-12-13T06:59:17.000Z",
-	            "Name": "my_bucket"
-	        }
-	    ]
-	}
+    {
+        "Owner": {
+            "DisplayName": "some_username",
+            "ID": "1234567890abcdefghijklmnopqrstuvwxyz1234567890abcdefghijklmnopqr"
+        },
+        "Buckets": [
+            {
+                "CreationDate": "2014-12-13T06:59:17.000Z",
+                "Name": "my_bucket"
+            }
+        ]
+    }
 
 And here is a command to check a specific bucket’s info:
 
@@ -89,7 +89,7 @@ And here is a command to check a specific bucket’s info:
 
 Output returned would be something like this:
 
-	[
-	    0,
-	    0
-	]
+    [
+        0,
+        0
+    ]

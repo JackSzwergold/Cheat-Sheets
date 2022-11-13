@@ -27,43 +27,43 @@ Once the device is unmounted, run the following `fsck_hfs` command on the volume
 
 The output should be something like this:
 
-	** /dev/rdisk3s2
-	   Executing fsck_hfs (version hfs-226.1.1).
-	** Checking Journaled HFS Plus volume.
-	   The volume name is Toshiba500
-	** Checking extents overflow file.
-	** Checking catalog file.
-	** Rebuilding catalog B-tree.
-	** Rechecking volume.
-	** Checking Journaled HFS Plus volume.
-	   The volume name is Toshiba500
-	** Checking extents overflow file.
-	** Checking catalog file.
-	** Checking multi-linked files.
-	** Checking catalog hierarchy.
-	** Checking extended attributes file.
-	** Checking volume bitmap.
-	** Checking volume information.
-	   Invalid volume file count
-	   (It should be 101 instead of 2)
-	   Invalid volume directory count
-	   (It should be 19 instead of 0)
-	   Invalid volume free block count
-	   (It should be 121903155 instead of 121903469)
-	   Volume header needs minor repair
-	(2, 0)
-	** Repairing volume.
-	** Rechecking volume.
-	** Checking Journaled HFS Plus volume.
-	   The volume name is Toshiba500
-	** Checking extents overflow file.
-	** Checking catalog file.
-	** Checking multi-linked files.
-	** Checking catalog hierarchy.
-	** Checking extended attributes file.
-	** Checking volume bitmap.
-	** Checking volume information.
-	** The volume Toshiba500 was repaired successfully.
+    ** /dev/rdisk3s2
+       Executing fsck_hfs (version hfs-226.1.1).
+    ** Checking Journaled HFS Plus volume.
+       The volume name is Toshiba500
+    ** Checking extents overflow file.
+    ** Checking catalog file.
+    ** Rebuilding catalog B-tree.
+    ** Rechecking volume.
+    ** Checking Journaled HFS Plus volume.
+       The volume name is Toshiba500
+    ** Checking extents overflow file.
+    ** Checking catalog file.
+    ** Checking multi-linked files.
+    ** Checking catalog hierarchy.
+    ** Checking extended attributes file.
+    ** Checking volume bitmap.
+    ** Checking volume information.
+       Invalid volume file count
+       (It should be 101 instead of 2)
+       Invalid volume directory count
+       (It should be 19 instead of 0)
+       Invalid volume free block count
+       (It should be 121903155 instead of 121903469)
+       Volume header needs minor repair
+    (2, 0)
+    ** Repairing volume.
+    ** Rechecking volume.
+    ** Checking Journaled HFS Plus volume.
+       The volume name is Toshiba500
+    ** Checking extents overflow file.
+    ** Checking catalog file.
+    ** Checking multi-linked files.
+    ** Checking catalog hierarchy.
+    ** Checking extended attributes file.
+    ** Checking volume bitmap.
+    ** Checking volume information.
+    ** The volume Toshiba500 was repaired successfully.
 
 After `fsck_hfs` has done it’s thing, do a quick check—using the `-q` flag—to see if everything is okay:
 
@@ -71,9 +71,9 @@ After `fsck_hfs` has done it’s thing, do a quick check—using the `-q` flag�
 
 The output should look something like this:
 
-	** /dev/rdisk3s2 (NO WRITE)
-	   Executing fsck_hfs (version hfs-226.1.1).
-	QUICKCHECK ONLY; FILESYSTEM CLEAN
+    ** /dev/rdisk3s2 (NO WRITE)
+       Executing fsck_hfs (version hfs-226.1.1).
+    QUICKCHECK ONLY; FILESYSTEM CLEAN
 
 If everything went well, the volume should be repaired, working and ready for use again. You can now mount the partition with this command:
 
@@ -87,34 +87,34 @@ You can manually disable journaling from the command line using this command wit
 
 Other options/flags for `hfs.util` are as follows:
 
-	usage: /System/Library/Filesystems/hfs.fs/hfs.util action_arg device_arg [mount_point_arg] [Flags]
-	action_arg:
-	       -p (Probe for mounting)
-	       -m (Mount)
-	       -u (Unmount)
-	       -M (Force Mount)
-	       -a (Adopt permissions)
-	       -J (Make a file system journaled)
-	       -U (Turn off journaling on a file system)
-	       -N (Turn off journaling on a raw device)
-	       -e (Disable use of an external journal on a raw device)
-	       -E (Enable the use of an external journal on a raw device)
-	       -I (Get size & location of journaling on a file system)
-	device_arg:
-	       device we are acting upon (for example, 'disk0s2')
-	       if '-J' or '-U' is specified, this should be the
-	       name of the file system we're to act on (for example, '/Volumes/foo' or '/')
-	mount_point_arg:
-	       required for Mount and Force Mount
-	Flags:
-	       required for Mount, Force Mount and Probe
-	       indicates removable or fixed (for example 'fixed')
-	       indicates readonly or writable (for example 'readonly')
-	       indicates suid or nosuid (for example 'suid')
-	       indicates dev or nodev (for example 'dev')
-	Examples:
-	       /System/Library/Filesystems/hfs.fs/hfs.util -p disk0s2 fixed writable
-	       /System/Library/Filesystems/hfs.fs/hfs.util -m disk0s2 /my/hfs removable readonly nosuid nodev
+    usage: /System/Library/Filesystems/hfs.fs/hfs.util action_arg device_arg [mount_point_arg] [Flags]
+    action_arg:
+           -p (Probe for mounting)
+           -m (Mount)
+           -u (Unmount)
+           -M (Force Mount)
+           -a (Adopt permissions)
+           -J (Make a file system journaled)
+           -U (Turn off journaling on a file system)
+           -N (Turn off journaling on a raw device)
+           -e (Disable use of an external journal on a raw device)
+           -E (Enable the use of an external journal on a raw device)
+           -I (Get size & location of journaling on a file system)
+    device_arg:
+           device we are acting upon (for example, 'disk0s2')
+           if '-J' or '-U' is specified, this should be the
+           name of the file system we're to act on (for example, '/Volumes/foo' or '/')
+    mount_point_arg:
+           required for Mount and Force Mount
+    Flags:
+           required for Mount, Force Mount and Probe
+           indicates removable or fixed (for example 'fixed')
+           indicates readonly or writable (for example 'readonly')
+           indicates suid or nosuid (for example 'suid')
+           indicates dev or nodev (for example 'dev')
+    Examples:
+           /System/Library/Filesystems/hfs.fs/hfs.util -p disk0s2 fixed writable
+           /System/Library/Filesystems/hfs.fs/hfs.util -m disk0s2 /my/hfs removable readonly nosuid nodev
 
 ### Erasing a volume from the command line using `diskutil`.
 

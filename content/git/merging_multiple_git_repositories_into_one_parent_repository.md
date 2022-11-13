@@ -15,19 +15,19 @@ For this example we’ll create a parent project directory simply named `ParentP
 
 Create the `ParentProject` directory like this:
 
-	mkdir ParentProject
+    mkdir ParentProject
 
 Now go into the `ParentProject` directory:
 
-	cd ParentProject
+    cd ParentProject
 
 Init it as a Git repo:
 
-	git init
+    git init
 
 Create a basic `.gitignore` file that will ignore `.DS_Store` for now:
 
-	echo ".DS_Store" > .gitignore
+    echo ".DS_Store" > .gitignore
 
 Add the `.gitignore` file to the repository:
 
@@ -35,40 +35,40 @@ Add the `.gitignore` file to the repository:
 
 Finally, create the first real commit for the repo:
 
-	git commit -a -m "First real commit."
+    git commit -a -m "First real commit."
 
 ### Merging `ChildRepositoryA` (`Child_A`) into `Directory_A`.
 
 Now, let’s add a remote branch based on the first repository you want to merge like this:
 
-	git remote add -f Child_A git@github.com:JackSzwergold/ChildRepositoryA.git
+    git remote add -f Child_A git@github.com:JackSzwergold/ChildRepositoryA.git
 
 Merge it like this:
 
-	git merge -s ours --no-commit Child_A/master
+    git merge -s ours --no-commit Child_A/master
 
 Then run `read-tree` to get the contents of `Child_A` into `Directory_A` like this:
 
-	git read-tree --prefix=Directory_A/ -u Child_A/master
+    git read-tree --prefix=Directory_A/ -u Child_A/master
 
 And finally commit it like this:
 
-	git commit -a -m "Merging the contents of Child_A into Directory_A."
+    git commit -a -m "Merging the contents of Child_A into Directory_A."
 
 ### Merging `ChildRepositoryB` (`Child_B`) into `Directory_B`.
 
 Now, let’s add a remote branch based on the second repository you want to merge like this:
 
-	git remote add -f Child_B git@github.com:JackSzwergold/ChildRepositoryB.git
+    git remote add -f Child_B git@github.com:JackSzwergold/ChildRepositoryB.git
 
 Merge it like this:
 
-	git merge -s ours --no-commit Child_B/master
+    git merge -s ours --no-commit Child_B/master
 
 Then run `read-tree` to get the contents of `Child_B` into `Directory_B` like this:
 
-	git read-tree --prefix=Directory_B/ -u Child_B/master
+    git read-tree --prefix=Directory_B/ -u Child_B/master
 
 And finally commit it like this:
 
-	git commit -a -m "Merging the contents of Child_B into Directory_B."
+    git commit -a -m "Merging the contents of Child_B into Directory_B."

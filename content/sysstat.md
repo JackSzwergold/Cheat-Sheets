@@ -13,14 +13,18 @@ Install the Sysstat utilities to monitor system statistics via `aptitude`:
 
     sudo aptitude install sysstat
 
+***
+
 ### Basic `munin` usage items.
 
 Control `sysstat`:
 
-	sudo service sysstat reload
-	sudo service sysstat restart
-	sudo service sysstat start
-	sudo service sysstat stop
+    sudo service sysstat reload
+    sudo service sysstat restart
+    sudo service sysstat start
+    sudo service sysstat stop
+
+***
 
 ### Clearing up “sadc not enabled…” errors.
 
@@ -34,10 +38,12 @@ Then edit this file:
 
 Then look for this and change the value of `ENABLED` from `false` to `true`:
 
-	# Should sadc collect system activity informations? Valid values
-	# are "true" and "false". Please do not put other values, they
-	# will be overwritten by debconf!
-	ENABLED="true"
+    # Should sadc collect system activity informations? Valid values
+    # are "true" and "false". Please do not put other values, they
+    # will be overwritten by debconf!
+    ENABLED="true"
+
+***
 
 ### Clearing up “Invalid system activity file…” errors.
 

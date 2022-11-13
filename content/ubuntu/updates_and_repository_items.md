@@ -33,7 +33,7 @@ Finally, run the commands below to remove the kernel you selected:
 
 As a part of the process, `grub2` should be automatically run to update the GRUB bootloader available systems list. But if it somehow doesn’t run automatically, you and run it manually like this:
 
-	sudo update-grub2
+    sudo update-grub2
 
 With that done, just reboot your system and you should be all done.
 

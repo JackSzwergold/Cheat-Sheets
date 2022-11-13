@@ -21,20 +21,20 @@ First install `python-software-properties` like this:
 
 Next add the Chris Lea PPA repository to the system like this:
 
-	sudo add-apt-repository ppa:chris-lea/redis-server
-	
+    sudo add-apt-repository ppa:chris-lea/redis-server
+    
 With that done, run `aptitude update` to get the new repository picked up like this:
 
-	sudo aptitude update
-	
+    sudo aptitude update
+    
 Then install Redis via `aptitude` like this:
 
-	sudo aptitude install redis-server
+    sudo aptitude install redis-server
 
 Check the version number like this:
 
-	redis-server --version
+    redis-server --version
 
 And the output should be something like this:
 
-	Redis server v=3.0.4 sha=00000000:0 malloc=jemalloc-3.6.0 bits=64 build=e10d4bb04434c274
+    Redis server v=3.0.4 sha=00000000:0 malloc=jemalloc-3.6.0 bits=64 build=e10d4bb04434c274

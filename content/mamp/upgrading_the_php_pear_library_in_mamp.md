@@ -24,7 +24,7 @@ Then add lines like this. This is my preferred method of managing `PATH` values.
 
 Save the `.bash_profile` and reload it like this:
 
-	source ~/.bash_profile
+    source ~/.bash_profile
 
 ### Fixing the Pear configuration file.
 
@@ -72,16 +72,16 @@ It might need to have `channel-update pear.php.net` set:
 
 Once that is done, do another dry run of `pear remote-list`:
 
-	pear remote-list
-	
+    pear remote-list
+    
 Should now look something like this:
 
-	Channel pear.php.net Available packages:
-	========================================
-	Package                                   Version
-	Auth_HTTP                                 2.1.8
-	Auth                                      1.6.4
-	Auth_SASL                                 1.0.6
+    Channel pear.php.net Available packages:
+    ========================================
+    Package                                   Version
+    Auth_HTTP                                 2.1.8
+    Auth                                      1.6.4
+    Auth_SASL                                 1.0.6
 
 Great! Now pipe that 'pear remote-list' into a file:
 
@@ -93,10 +93,10 @@ Open that file:
 
 And remove the stuff at the top of the file so it looks like this:
 
-	Channel pear.php.net Available packages:
-	========================================
-	Package                                   Version
+    Channel pear.php.net Available packages:
+    ========================================
+    Package                                   Version
 
 Now pipe that `pear-list` via `xargs` into `pear install` and wait:
 
-	cat pear-list | xargs -n 1 pear install
+    cat pear-list | xargs -n 1 pear install

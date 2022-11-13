@@ -37,11 +37,11 @@ And start the Ember app like this:
 
 If that runs successfully, this will be the output:
 
-	version: 1.13.12
-	Could not find watchman, falling back to NodeWatcher for file system events.
-	Visit http://www.ember-cli.com/user-guide/#watchman for more info.
-	Livereload server on http://localhost:49152
-	Serving on http://localhost:4200/
+    version: 1.13.12
+    Could not find watchman, falling back to NodeWatcher for file system events.
+    Visit http://www.ember-cli.com/user-guide/#watchman for more info.
+    Livereload server on http://localhost:49152
+    Serving on http://localhost:4200/
 
 So just go to the URL `http://localhost:4200/` in any web browser and the output should be something like this:
 
@@ -53,20 +53,22 @@ If you want to do simple edits to the content of that page just open up `app/tem
 
 The content of that sample file should look like this:
 
-	<h2 id="title">Welcome to Ember</h2>
-	
-	{{outlet}}
+    <h2 id="title">Welcome to Ember</h2>
+
+    {{outlet}}
 
 To add an input text field that will allow you to customize the welcome name just change it to this:
 
-	<h2 id="title">Welcome to Ember {{name}}!</h2>
-	
-	<div>
-	 <label>Name:</label>
-	 {{input type="text" value=name placeholder="Enter your name"}}
-	</div>
-	
-	{{outlet}}
+    <h2 id="title">Welcome to Ember {{name}}!</h2>
+
+    <div>
+     <label>Name:</label>
+     {{input type="text" value=name placeholder="Enter your name"}}
+    </div>
+
+    {{outlet}}
+
+***
 
 ### Getting an EmberJS app ready for production.
 
@@ -77,6 +79,8 @@ So far, all of that fiddling is for a development version of an EmberJS app. But
 Which would then create a new subfolder in the directory called `dist/`. That—for all intents and purposes—would be the web root for the application.
 
 Copy or deploy that directory where it is needed, set `dist/` as the web root and just go to the regular URL of that web server and your EmberJS app should be good to go.
+
+***
 
 ### Cleaning out caches and temp files.
 
@@ -89,6 +93,8 @@ First, clear out the temp files, Node modules and Bower components:
 Next, reinstall the NPM and Bower dependencies:
 
     npm install && bower install
+
+***
 
 ### Installing MD5 support.
 
@@ -104,50 +110,58 @@ Now just run this Ember `generate` command and you should be good to go:
 
     ember generate md-5
 
+***
+
 ### Adjusting URL type in Ember CLI
 
 By default, EmberCLI will use the `location:` type of `auto`. But if for some reason you need to adjust that just go into `config/environment.js` and adjust `locationType` in this config area:
 
-	module.exports = function(environment) {
-	  var ENV = {
-	    modulePrefix: 'ember-sandbox',
-	    environment: environment,
-	    baseURL: '/',
-	    locationType: 'auto',
-	    EmberENV: {
-	      FEATURES: {
-	        // Here you can enable experimental features on an ember canary build
-	        // e.g. 'with-controller': true
-	      }
-	    },
+    module.exports = function(environment) {
+      var ENV = {
+        modulePrefix: 'ember-sandbox',
+        environment: environment,
+        baseURL: '/',
+        locationType: 'auto',
+        EmberENV: {
+          FEATURES: {
+            // Here you can enable experimental features on an ember canary build
+            // e.g. 'with-controller': true
+          }
+        },
 
 Just change that `locationType:` to `history` or `none` if your app requires it.
+
+***
 
 ### Adjusting Ember CLI build options.
 
 All Ember CLI build options are configurable via the `ember-cli-build.js` in this chunk of code:
 
-	var app = new EmberApp(defaults, {
-	  // Add options here
-	});
+    var app = new EmberApp(defaults, {
+      // Add options here
+    });
 
 For example, this config would adjust the `prepend` and `customHash` values:
 
-	var app = new EmberApp(defaults, {
-	  // Add options here
-	  fingerprint: {
-	    prepend: '',
-	    customHash: null
-	  }
-	});
+    var app = new EmberApp(defaults, {
+      // Add options here
+      fingerprint: {
+        prepend: '',
+        customHash: null
+      }
+    });
 
 The `prepend` value would prepend a URL to all of the Ember app requests which are usually relative URLs. And the `customHash` setting can either be a custom hash value or could even be `null` to simply disable the `customHash` being added to filenames.
+
+***
 
 ### Adding meta tag support.
 
 Just install `ember-meta-meta` support like this:
 
     ember install ember-meta-meta
+
+***
 
 ### Fixing Bower install issues.
 
@@ -169,6 +183,8 @@ Then reinstall it like this:
 
 Then try running `bower install` again and all should be good to go.
 
+***
+
 ### Using Ember CLI to create structural components.
 
 #### Generating a “component” structure in Ember CLI.
@@ -179,12 +195,12 @@ Let’s say we want to create a component structure for an Ember project. And in
 
 The output of that command would be as follows:
 
-	version: 1.13.12
-	installing component
-	  create app/components/gravatar-image.js
-	  create app/templates/components/gravatar-image.hbs
-	installing component-test
-	  create tests/integration/components/gravatar-image-test.js
+    version: 1.13.12
+    installing component
+      create app/components/gravatar-image.js
+      create app/templates/components/gravatar-image.hbs
+    installing component-test
+      create tests/integration/components/gravatar-image-test.js
 
 The JavaScript component logic would go into `app/components/gravatar-image.js` and the HTML tempting logic would go into `app/templates/components/gravatar-image.hbs`. Tests are test and would be set in `tests/integration/components/gravatar-image-test.js` but nothing to really worry about in there just now.
 
@@ -196,14 +212,14 @@ Let’s say we want to create a routing structure for an Ember project. And in t
 
 The output of that command would be as follows:
 
-	version: 1.13.12
-	installing route
-	  create app/routes/routing-example.js
-	  create app/templates/routing-example.hbs
-	updating router
-	  add route routing-example
-	installing route-test
-	  create tests/unit/routes/routing-example-test.js
+    version: 1.13.12
+    installing route
+      create app/routes/routing-example.js
+      create app/templates/routing-example.hbs
+    updating router
+      add route routing-example
+    installing route-test
+      create tests/unit/routes/routing-example-test.js
 
 The JavaScript component logic would go into `app/routes/routing-example.js` and the HTML tempting logic would go into `app/templates/routing-example.hbs`. Tests are test and would be set in `tests/unit/routes/routing-example-test.js` but nothing to really worry about in there just now.
 
@@ -215,9 +231,9 @@ Let’s say we want to create a model structure for an Ember project. And in thi
 
 The output of that command would be as follows:
 
-	version: 1.13.12
-	installing model
-	  create app/models/pull-requests.js
-	installing model-test
+    version: 1.13.12
+    installing model
+      create app/models/pull-requests.js
+    installing model-test
 
 The JavaScript component logic would go into `app/models/pull-requests.js`.

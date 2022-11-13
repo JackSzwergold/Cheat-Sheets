@@ -45,11 +45,11 @@ First, run `aptitude update` like this:
 
 Install the basics for the build:
 
-	sudo aptitude install build-essential chrpath git-core libssl-dev libfontconfig1-dev libxft-dev
+    sudo aptitude install build-essential chrpath git-core libssl-dev libfontconfig1-dev libxft-dev
 
 Get the latest source code fro the GitHub repository:
 
-	git clone git://github.com/ariya/phantomjs.git
+    git clone git://github.com/ariya/phantomjs.git
 
 Now go into the repository directory:
 
@@ -60,8 +60,8 @@ Checkout version 1.9 from the repository:
     git checkout 1.9
 
 Run the `build.sh` script:
-	
-	./build.sh
+    
+    ./build.sh
 
 The script will warn you:
 

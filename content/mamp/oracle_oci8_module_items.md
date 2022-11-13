@@ -30,33 +30,33 @@ First, you need to get copies of the “Basic” and “SDK” archives for the 
 
 Once you get those archives, create the directory structure they will live in here:
 
-	sudo mkdir -p /opt/oracle/instantclient/
+    sudo mkdir -p /opt/oracle/instantclient/
 
 Now copy—or move—those ZIP archives into that directory and decompress them like this. First, go into the parent Instant Client directory like this:
 
-	cd /opt/oracle/instantclient/
+    cd /opt/oracle/instantclient/
 
 Now unZip the archives like this:
 
-	sudo unzip instantclient-basic-macos.x64-12.2.0.1.0.zip
-	sudo unzip instantclient-sdk-macos.x64-12.2.0.1.0.zip
+    sudo unzip instantclient-basic-macos.x64-12.2.0.1.0.zip
+    sudo unzip instantclient-sdk-macos.x64-12.2.0.1.0.zip
 
 And when that’s done, cleanup by deleting the Zip archives:
 
-	sudo rm *.zip
+    sudo rm *.zip
 
 They should both decompress into the a directory named `instantclient_12_2` which would make the full path:
 
-	/opt/oracle/instantclient/instantclient_12_2/
+    /opt/oracle/instantclient/instantclient_12_2/
 
 With that done, go into that directory:
 
-	cd /opt/oracle/instantclient/instantclient_12_2/
+    cd /opt/oracle/instantclient/instantclient_12_2/
 
 And then set these two symbolic links:
 
-	sudo ln -s libclntsh.dylib.12.1 libclntsh.dylib
-	sudo ln -s libocci.dylib.12.1 libocci.dylib
+    sudo ln -s libclntsh.dylib.12.1 libclntsh.dylib
+    sudo ln -s libocci.dylib.12.1 libocci.dylib
 
 #### Compiling the OCI8 Module
 
@@ -69,19 +69,19 @@ Now install the OCI8 version that works with your version of PHP. Here is how it
 
 So in this case, we are installing it for PHP version 5.6.10 so we will install version 2.0.12 using this command:
 
-	pecl install oci8-2.0.12
+    pecl install oci8-2.0.12
 
 If you need to force a rebuild, use the `-f` option like this:
 
-	pecl install -f oci8-2.0.12
+    pecl install -f oci8-2.0.12
 
 During the install you might be asked to provide the `ORACLE_HOME` path via a message like this:
 
-	Please provide the path to the ORACLE_HOME directory. Use 'instantclient,/path/to/instant/client/lib' if you're compiling with Oracle Instant Client [autodetect] :
+    Please provide the path to the ORACLE_HOME directory. Use 'instantclient,/path/to/instant/client/lib' if you're compiling with Oracle Instant Client [autodetect] :
 
 We are not permanently setting `ORACLE_HOME` so just use this as the path:
 
-	instantclient,/opt/oracle/instantclient/instantclient_12_2
+    instantclient,/opt/oracle/instantclient/instantclient_12_2
 
 After PECL does it’s thing, the `oci8.so` should be compiled and ready to go.
 
@@ -89,7 +89,7 @@ After PECL does it’s thing, the `oci8.so` should be compiled and ready to go.
 
 Now adjust the PHP config file (`php.ini`) like this to get PHP to recognize it:
 
-	sh -c "printf '\n[OCI8]\nextension=oci8.so\n' >> /Applications/MAMP/bin/php/php5.6.10/conf/php.ini"
+    sh -c "printf '\n[OCI8]\nextension=oci8.so\n' >> /Applications/MAMP/bin/php/php5.6.10/conf/php.ini"
 
 Now start MAMP again and check the output of the PHP info page and `oci8` should be clearly listed there under installed components.
 
@@ -118,19 +118,19 @@ Now install the OCI 8 version that works with your version of PHP. Here is how i
 
 So in this case, we are installing it for PHP version 7.0.8 so we will install it using this command:
 
-	pecl install oci8
+    pecl install oci8
 
 If you need to force a rebuild, use the `-f` option like this:
 
-	pecl install -f oci8
+    pecl install -f oci8
 
 During the install you might be asked to provide the `ORACLE_HOME` path via a message like this:
 
-	Please provide the path to the ORACLE_HOME directory. Use 'instantclient,/path/to/instant/client/lib' if you're compiling with Oracle Instant Client [autodetect] :
+    Please provide the path to the ORACLE_HOME directory. Use 'instantclient,/path/to/instant/client/lib' if you're compiling with Oracle Instant Client [autodetect] :
 
 We are not permanently setting `ORACLE_HOME` so just use this as the path:
 
-	instantclient,/opt/oracle/instantclient/instantclient_12_2
+    instantclient,/opt/oracle/instantclient/instantclient_12_2
 
 After PECL does it’s thing, the `oci8.so` should be compiled and ready to go.
 
@@ -138,6 +138,6 @@ After PECL does it’s thing, the `oci8.so` should be compiled and ready to go.
 
 Now adjust the PHP config file (`php.ini`) like this to get PHP to recognize it:
 
-	sh -c "printf '\n[OCI8]\nextension=oci8.so\n' >> /Applications/MAMP/bin/php/php7.0.8/conf/php.ini"
+    sh -c "printf '\n[OCI8]\nextension=oci8.so\n' >> /Applications/MAMP/bin/php/php7.0.8/conf/php.ini"
 
 Now start MAMP again and check the output of the PHP info page and `oci8` should be clearly listed there under installed components.

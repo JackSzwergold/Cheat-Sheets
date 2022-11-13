@@ -9,19 +9,19 @@ Template: index
 
 Scan a range via a wildcard and returns hostname as well as IP:
 
-	nmap -sP 192.168.1.*
+    nmap -sP 192.168.1.*
 
 Scan a range via a slash notation and returns hostname as well as IP:
 
-	nmap -sP 192.168.1.1/24
+    nmap -sP 192.168.1.1/24
 
 Scan a range via a slash notation and checks if ports `80` and `8080` are open and returns hostname as well as IP:
 
-	sudo nmap -v -O 192.168.1.1/24 -p80,8080
+    sudo nmap -v -O 192.168.1.1/24 -p80,8080
 
 Scans all ports on `192.168.1.1` in verbose mode using the `-v` flag:
 
-	nmap -v 192.168.1.1
+    nmap -v 192.168.1.1
 
 Scans all ports on `192.168.1.1` in verbose mode using the `-v` flag and attempts to detect OS via the `-O` flag:
 
@@ -29,9 +29,11 @@ Scans all ports on `192.168.1.1` in verbose mode using the `-v` flag and attempt
 
 Scanning multiple hosts with grepable output to simply show port status:
 
-	nmap -p 27017 -oG - example1.com example2.com example3.com example4.com | grep Ports
+    nmap -p 27017 -oG - example1.com example2.com example3.com example4.com | grep Ports
 
-#### Port scanning a specific host.
+***
+
+### Port scanning a specific host.
 
 A standard TCP port scan:
 
