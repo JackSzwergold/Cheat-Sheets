@@ -86,7 +86,7 @@ Elasticsearch work file storage location:
 
     ls -la /tmp/elasticsearch
 
-### Install Elasticsearch on Mac OS X.
+### Install Elasticsearch on macOS.
 
 Some applications insist on using `localhost` or are a pain in the ass to set an alternative URL for. So in cases like that, installing Elasticsearch locally via Homebrew. And here is how to do that.
 

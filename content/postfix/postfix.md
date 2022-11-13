@@ -7,9 +7,9 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-### Check if `postfix` is running in Mac OS X.
+### Check if `postfix` is running in macOS.
 
-In Mac OS X this checks to see what services are launched at startup; look for `org.postfix.master`:
+In macOS this checks to see what services are launched at startup; look for `org.postfix.master`:
 
     sudo launchctl list
 

@@ -15,9 +15,9 @@ These are mainly intended for quick reference without too much deep explanation 
 
 **Caveat Emptor**: But please keep in mind that many of the instructions and ideas here might be out of date or no longer work. So if you choose to follow them, and something doesn’t work as expected? What can I tell you.
 
-- [Connecting to MAMP from Windows on a Mac OS X Install of VirtualBox 1](mamp/connecting_to_mamp_from_windows_on_a_mac_os_x_install_of_virtualbox_1)
-- [Connecting to MAMP from Windows on a Mac OS X Install of VirtualBox 2](mamp/connecting_to_mamp_from_windows_on_a_mac_os_x_install_of_virtualbox_2)
-- [Connecting to MAMP from Windows on a Mac OS X Install of VirtualBox 3](mamp/connecting_to_mamp_from_windows_on_a_mac_os_x_install_of_virtualbox_3)
+- [Connecting to MAMP from Windows on a macOS Install of VirtualBox 1](mamp/connecting_to_mamp_from_windows_on_a_macos_install_of_virtualbox_1)
+- [Connecting to MAMP from Windows on a macOS Install of VirtualBox 2](mamp/connecting_to_mamp_from_windows_on_a_macos_install_of_virtualbox_2)
+- [Connecting to MAMP from Windows on a macOS Install of VirtualBox 3](mamp/connecting_to_mamp_from_windows_on_a_macos_install_of_virtualbox_3)
 - [Developing With MAMP 1](mamp/developing_with_mamp_1)
 - [Developing With MAMP 2](mamp/developing_with_mamp_2)
 - [Developing With MAMP 3](mamp/developing_with_mamp_3)

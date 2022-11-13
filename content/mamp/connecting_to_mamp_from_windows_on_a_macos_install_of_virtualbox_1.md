@@ -1,5 +1,5 @@
 ---
-Title: Connecting to MAMP from Windows on a Mac OS X Install of VirtualBox 1
+Title: Connecting to MAMP from Windows on a macOS Install of VirtualBox 1
 Description: Part 1 - Overall Virtualization Concepts
 Author: Jack Szwergold
 Date: 2014-03-02
@@ -21,11 +21,11 @@ But emulation and virtualization is not 100% the same.
 
 Virtualization—in contrast to emulation—is a software method which allows you to better divide and allocate existing, non-emulated system resources for other purposes.
 
-So in the case of a modern PC—like Apple’s Macintosh computers—which use the same Intel-based x86 CPUs like Windows machines, virtualization allows an Apple Macintosh x86-based hardware running Mac OS X to run Microsoft Windows—which requires x86-based hardware as well—within a virtual environment on the same machine. This is great!
+So in the case of a modern PC—like Apple’s Macintosh computers—which use the same Intel-based x86 CPUs like Windows machines, virtualization allows an Apple Macintosh x86-based hardware running macOS to run Microsoft Windows—which requires x86-based hardware as well—within a virtual environment on the same machine. This is great!
 
 #### Why is virtualization so great for web development?
 
-You know why this is great? Because, I like to work on primarily in Mac OS X and regularly need do web browser cross-platform compatibility of my work with Internet Explorer running on Windows.
+You know why this is great? Because, I like to work on primarily in macOS and regularly need do web browser cross-platform compatibility of my work with Internet Explorer running on Windows.
 
 In the past, I literally had another completely separate Windows PC I would use exclusively to do web browser cross-platform compatibility tests with Internet Explorer. That setup worked, but it’s clunky to say the least. A whole separate machine? One I had to maintain as well? Nope. Not a good setup.
 
@@ -35,4 +35,4 @@ But now thanks to virtualization, I can have Windows in a `guest` machine runnin
 
 If it’s unclear to you what a `host` machine is compared to a `guest` machine: A `host` machine is the computer running the VirtualBox application itself and a `guest` machine is a virtual machine that runs within the VirtualBox application itself.
 
-So in this case, the `host` machine is my Macintosh running Mac OS X and the `guest` machine is a version of Windows running via VirtualBox.
+So in this case, the `host` machine is my Macintosh running macOS and the `guest` machine is a version of Windows running via VirtualBox.

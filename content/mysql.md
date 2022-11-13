@@ -157,11 +157,11 @@ Remove the InnoDB related binary file stuff. It will be rebuilt when MySQL resta
 	sudo rm /var/lib/mysql/ib_logfile0
 	sudo rm /var/lib/mysql/ib_logfile1
 
-### Different methods used to start MySQL in Mac OS X.
+### Different methods used to start MySQL in macOS.
 
 #### With a “Startup Item.”
 
-In Mac OS X, if you have installed the “Startup Item,” use this command:
+In macOS, if you have installed the “Startup Item,” use this command:
 
 	sudo /Library/StartupItems/MySQLCOM/MySQLCOM start
 
@@ -169,7 +169,7 @@ Enter your password if prompted to do so. Then press “Ctrl+D” or type “EXI
 
 #### Manually without a “Startup Item.”
 
-If you’re not using the “Startup Item” in Mac OS X, enter the following command sequence:
+If you’re not using the “Startup Item” in macOS, enter the following command sequence:
 
 	cd /usr/local/mysql
 	sudo ./bin/mysqld_safe

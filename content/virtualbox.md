@@ -96,7 +96,7 @@ Browse all Avahi services on the LAN:
 
     avahi-browse -at
 
-Browse for broadcast services in Mac OS X:
+Browse for broadcast services in macOS:
 
     dns-sd -B
 

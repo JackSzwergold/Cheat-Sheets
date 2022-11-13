@@ -50,7 +50,7 @@ Now just restart Apache to get `mod_evasive` and related settings loaded and you
 
 The purpose of this Perl script is to create a test DDoS attack on a target server. It’s not sophisticated in any way and fairly clumsy in execution but it works well for simple testing of `mod_evasive`’s DDoS capabilities.
 
-On an unrelated system—like the desktop of a Mac OS X system—create a file named `mod_security_perl_test.pl`:
+On an unrelated system—like the desktop of a macOS system—create a file named `mod_security_perl_test.pl`:
 
     nano mod_security_perl_test.pl
 

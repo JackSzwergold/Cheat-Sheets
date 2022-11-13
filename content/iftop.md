@@ -9,7 +9,7 @@ Template: index
 
 ### Basic IFTop usage.
 
-You can just launch IFTop with no options and it will show network traffic on the main network interface such as `en0` (Mac OS X) or `eth0` (Linux):
+You can just launch IFTop with no options and it will show network traffic on the main network interface such as `en0` (macOS) or `eth0` (Linux):
 
     sudo iftop
 

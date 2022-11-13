@@ -71,7 +71,7 @@ And add these configuration items to the bottom of the file:
 
 #### Disable “Content-Security-Policy” headers.
 
-And disable “Content-Security-Policy” headers so Safari in Mac OS X can properly load images by opening up `Header.class.php`:
+And disable “Content-Security-Policy” headers so Safari in macOS can properly load images by opening up `Header.class.php`:
 
 	sudo nano /usr/share/phpmyadmin/libraries/Header.class.php
 

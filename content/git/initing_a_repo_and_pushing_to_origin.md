@@ -79,7 +79,7 @@ Create a `.gitignore` file to set what files to ignore:
 
     nano .gitignore
 
-For example, on Mac OS X we have no need to commit `.DS_Store` files so add `.DS_Store` to that file like this:
+For example, on macOS we have no need to commit `.DS_Store` files so add `.DS_Store` to that file like this:
 
 	.DS_Store
 

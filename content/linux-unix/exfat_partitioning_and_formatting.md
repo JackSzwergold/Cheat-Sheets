@@ -151,7 +151,7 @@ After ejecting you can physically connect the drive from the system.
 
 ### Sundry device label related items.
 
-Depending on the OS you are on, labelling of volumes might not be an issue. In command line Linux, you might never run across the volume label. But when interacting with the volume in Mac OS X—for example—the label is the name the volume will be mounted on for you to use in the Finder.
+Depending on the OS you are on, labelling of volumes might not be an issue. In command line Linux, you might never run across the volume label. But when interacting with the volume in macOS—for example—the label is the name the volume will be mounted on for you to use in the Finder.
 
 Run this command to list all the block device attributes including the device’s label:
 

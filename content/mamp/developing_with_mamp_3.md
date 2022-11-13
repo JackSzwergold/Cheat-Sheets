@@ -33,7 +33,7 @@ Now we’re going to see if you have PEAR installed in your system. We do this u
 
 	which pear
 
-And the output—if you are on a basic Mac OS X install—should be blank. Great! Nothing better than starting things off [tabula rasa][3]!
+And the output—if you are on a basic macOS install—should be blank. Great! Nothing better than starting things off [tabula rasa][3]!
 
 So now with that established, let’s edit your shell `.bash_profile` file to recognized your MAMP install binaries.
 

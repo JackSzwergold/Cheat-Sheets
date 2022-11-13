@@ -7,7 +7,7 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-### Using Stat in Mac OS X.
+### Using Stat in macOS.
 
 **ACCESS:** Get the last access time of a file.
 

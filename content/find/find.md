@@ -59,15 +59,15 @@ Find and concatenate CSV files while skipping the first header line of a file:
 
     find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'
 
-### Mac OS X specific stuff.
+### macOS specific stuff.
 
 #### Finding locked files and unlocking them.
 
-Find locked files in Mac OS X:
+Find locked files in macOS:
 
     find . -maxdepth 1 -type f -flags uchg
 
-Use this command find locked files in Mac OS X and remove the lock on those found files:
+Use this command find locked files in macOS and remove the lock on those found files:
 
     find . -maxdepth 1 -type f -flags uchg -exec chflags nouchg {} \;
 

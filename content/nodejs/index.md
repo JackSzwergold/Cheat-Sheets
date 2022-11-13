@@ -19,4 +19,4 @@ These are mainly intended for quick reference without too much deep explanation 
 - [Installing PhantomJS via a NPM on Ubuntu](nodejs/installing_phantomjs_via_a_npm_on_ubuntu)
 - [KeystoneJS](nodejs/keystone)
 - [Meteor](nodejs/meteor)
-- [Uninstalling NodeJS and NPM in Mac OS X](nodejs/uninstalling_nodejs_and_npm_in_mac_os_x)
+- [Uninstalling NodeJS and NPM in macOS](nodejs/uninstalling_nodejs_and_npm_in_macos)

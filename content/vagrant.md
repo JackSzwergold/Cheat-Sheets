@@ -95,7 +95,7 @@ To upgrade the already downloaded Vagrant boxes—so you don’t have to upgrade
 
     vagrant box --force update
 
-And for some reason in Mac OS X, that command will choke in El Capitan (10.11) and Sierra (10.12) when running Vagrant 1.8.7. And the solution is to ditch the Vagrant specific version of Curl like this:
+And for some reason in macOS, that command will choke in El Capitan (10.11) and Sierra (10.12) when running Vagrant 1.8.7. And the solution is to ditch the Vagrant specific version of Curl like this:
 
 	sudo rm /opt/vagrant/embedded/bin/curl
 

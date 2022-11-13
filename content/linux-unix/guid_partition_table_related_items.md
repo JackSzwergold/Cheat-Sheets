@@ -11,7 +11,7 @@ Template: index
 
 #### What’s this all about?
 
-This would happen if you use a GPT/GUID-centric system like Mac OS X, format a disk and then need to use it on a Linix system that doesn’t support GPT/GUID stuff. For example, I formatted a USB flash drive in Mac OS X, connected it to an Ubuntu Linux system and ran `fdisk` to list the partition tables like this:
+This would happen if you use a GPT/GUID-centric system like macOS, format a disk and then need to use it on a Linix system that doesn’t support GPT/GUID stuff. For example, I formatted a USB flash drive in macOS, connected it to an Ubuntu Linux system and ran `fdisk` to list the partition tables like this:
 
     sudo fdisk -l /dev/sdb
 
@@ -30,7 +30,7 @@ And the output returned was like this:
 	   Device Boot      Start         End      Blocks   Id  System
 	/dev/sdb1               1    15663103     7831551+  ee  GPT
 
-Okay, that setup might be useful for you in Mac OS X, but not in a pure Linux system. So this is what we can do to wipe away that partition table so we’re working with a clean device that won’t throw up any warnings.
+Okay, that setup might be useful for you in macOS, but not in a pure Linux system. So this is what we can do to wipe away that partition table so we’re working with a clean device that won’t throw up any warnings.
 
 #### How to wipe out the GPT/GUID disk label.
 

@@ -7,9 +7,9 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-By default, Mac OS X has Postfix installed. But it’s not enabled by default. Not to mention sending emails via a `localhost` MTA will most likely result in the message being tagged as SPAM pretty quickly.
+By default, macOS has Postfix installed. But it’s not enabled by default. Not to mention sending emails via a `localhost` MTA will most likely result in the message being tagged as SPAM pretty quickly.
 
-So this cheat sheet explains how you can use an external SMTP account to send emails via Postfix on a local machine. Tested and works well in Mac OS X.
+So this cheat sheet explains how you can use an external SMTP account to send emails via Postfix on a local machine. Tested and works well in macOS.
 
 ***
 
@@ -95,7 +95,7 @@ If the mails get stuck in that queue and you ned to clear them out, run this com
 
 	sudo postsuper -d ALL
 
-### Getting Postfix to start on system startup/reboot in Mac OS X.
+### Getting Postfix to start on system startup/reboot in macOS.
 
 If you want Postfix to automatically startup when the system starts up or reboots, open up the `org.postfix.master.plist` file in `LaunchDaemons`:
 

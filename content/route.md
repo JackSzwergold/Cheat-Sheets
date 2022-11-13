@@ -27,12 +27,12 @@ To view the routing table you would run this `route` command:
 
     route -n
 
-### An example of the same for Mac OS X.
+### An example of the same for macOS.
 
-In Mac OS X you would run a command like this:
+In macOS you would run a command like this:
 
     sudo route -n add -net 10.1.2.0/8 192.168.56.10
 
-To view the routing table in Mac OS X you would run this Netstat command:
+To view the routing table in macOS you would run this Netstat command:
 
     netstat -nr

@@ -1,5 +1,5 @@
 ---
-Title: Connecting to MAMP from Windows on a Mac OS X Install of VirtualBox 2
+Title: Connecting to MAMP from Windows on a macOS Install of VirtualBox 2
 Description: Part 2 - Basic — Using a Single Network Interface Setup
 Author: Jack Szwergold
 Date: 2014-03-02
@@ -11,7 +11,7 @@ Template: index
 
 In this tutorial I am going to outline one of the most basic ways to connect to a `host` machine from a `guest` machine within VirtualBox from a fresh Windows `guest` OS install using the main VirtualBox network interface.
 
-This is being done primarily for Microsoft Internet Explorer web browser cross-platform compatibility testing with MAMP-based development tools in Mac OS X. But the basic concepts of this kind of setup can be used for all sorts of things beyond testing web browser cross-platform browser compatibly.
+This is being done primarily for Microsoft Internet Explorer web browser cross-platform compatibility testing with MAMP-based development tools in macOS. But the basic concepts of this kind of setup can be used for all sorts of things beyond testing web browser cross-platform browser compatibly.
 
 The main drawback of this method is there is no easy way to connect from the `host` machine to the `guest`, but that is not a big issue for basic Internet Explorer testing. If you think you might need that extra level of two-way connectivity, skip to the second part of this tutorial where I explain how you can use dual network interfaces with a special host-only adapter in VirtualBox.
 
@@ -19,7 +19,7 @@ The main drawback of this method is there is no easy way to connect from the `ho
 
 The most immediate way you can connect to a `host` machine is to use the default VirtualBox user network gateway of **10.0.2.2**.
 
-So if you were to connect to MAMP on Mac OS X running on port **8888**, the address to connect to would be:
+So if you were to connect to MAMP on macOS running on port **8888**, the address to connect to would be:
 
 	http://10.0.2.2:8888
 

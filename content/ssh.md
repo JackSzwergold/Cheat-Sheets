@@ -134,7 +134,7 @@ Output the SSH key from local machine; copy output to clipboard:
 
 	cat ~/.ssh/id_rsa.pub
 
-Or if you are in Mac OS X, then use `pbcopy` like this to copy the `id_rsa.pub` key directly into the clipboard/pasteboard:
+Or if you are in macOS, then use `pbcopy` like this to copy the `id_rsa.pub` key directly into the clipboard/pasteboard:
 
     cat ~/.ssh/id_rsa.pub | pbcopy
 

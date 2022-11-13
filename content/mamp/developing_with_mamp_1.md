@@ -31,7 +31,7 @@ Once you find the `Loaded Configuration File` value and you figure out which PHP
 
 	bbedit /Applications/MAMP/bin/php/php5.4.10/conf/php.ini
 
-That will open BBEdit via the command line and open the `php.ini` at the same time. Or if you are more comfortable doing it all in the command line, you can open the file with [GNU nano][3]—the command line editor I like to use which comes with all Mac OS X installs—like so:
+That will open BBEdit via the command line and open the `php.ini` at the same time. Or if you are more comfortable doing it all in the command line, you can open the file with [GNU nano][3]—the command line editor I like to use which comes with all macOS installs—like so:
 
 	nano /Applications/MAMP/bin/php/php5.4.10/conf/php.ini
 

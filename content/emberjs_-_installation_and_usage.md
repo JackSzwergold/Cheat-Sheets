@@ -7,7 +7,7 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-Before anything, you need to be sure NodeJS is installed. The process is different and dependent on what OS you are using. For Mac OS X you can just download a package installer. But once installed you can then complete the following steps.
+Before anything, you need to be sure NodeJS is installed. The process is different and dependent on what OS you are using. For macOS you can just download a package installer. But once installed you can then complete the following steps.
 
 ### Installing and using EmberJS via NodeJS.
 

@@ -272,7 +272,7 @@ That command will install the whole suite of Debian compilers such as `gcc`/`g++
 
 #### <a name="install_locate_tool"></a> Install and initialize the ‘locate’ tool.
 
-Now we’ll install a tool that will make your life lots easier: `locate`. Simply put, if you know what `Spotlight` is in Mac OS X, then you know what `locate` is. It’s a tool that indexes content on your file system and allows you to quickly find files—including full file paths—with ease.
+Now we’ll install a tool that will make your life lots easier: `locate`. Simply put, if you know what `Spotlight` is in macOS, then you know what `locate` is. It’s a tool that indexes content on your file system and allows you to quickly find files—including full file paths—with ease.
 
 Your first step in using it is to actually install it like so:
 
