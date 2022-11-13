@@ -3,7 +3,7 @@ lock '3.17.0'
 
 set :application, 'cheat_sheets'
 set :short_name, 'cheat_sheets'
-set :repo_url, 'git@github.com:JackSzwergold/Preworn-Cheat-Sheets.git'
+set :repo_url, 'git@github.com:JackSzwergold/Cheat-Sheets.git'
 
 # Set the 'deploy_to' directory.
 set :deploy_to, '/var/www'

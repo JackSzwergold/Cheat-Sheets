@@ -1,4 +1,4 @@
-# Preworn-Cheat-Sheets
+# Cheat-Sheets
 
 A repository for some of my technical cheat sheets I’ve compiled over the years. All in Markdown format.
 
