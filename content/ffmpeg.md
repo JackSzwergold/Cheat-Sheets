@@ -29,7 +29,7 @@ Same, but strip out all metadata:
 
 Slight variation of the above:
 
-    ffmpeg -iinput.mkv -map_metadata -1 -map 0:v -map 0:a -codec copy -fflags +bitexact -flags:v +bitexact -flags:a +bitexact output.mkv
+    ffmpeg -i input.mkv -map_metadata -1 -map 0:v -map 0:a -codec copy -fflags +bitexact -flags:v +bitexact -flags:a +bitexact output.mkv
 
 Extract MP4 video out of an MKV file without transcoding video but converting audio to AC3 by specifying a stream using `-map`:
 
