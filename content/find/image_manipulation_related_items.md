@@ -201,18 +201,22 @@ This script is a first draft of a script that uses ImageMagick and Potrace to co
 
         # Set the directory values.
         eps_dirpath="${image_dirname}/eps";
+        pdf_dirpath="${image_dirname}/pdf";
         pnm_dirpath="${image_dirname}/eps";
 
         # Set the filename values.
         eps_filepath="${eps_dirpath}/${image_filename}.eps";
+        pdf_filepath="${pdf_dirpath}/${image_filename}.pdf";
         pnm_filepath="${pnm_dirpath}/${image_filename}.pnm";
 
         # Create the child directories.
         mkdir -p "${eps_dirpath}";
+        mkdir -p "${pdf_dirpath}";
 
         # Where the magic happens.
         convert "${full_image_filepath}" "${pnm_filepath}";
         potrace --eps "${pnm_filepath}" -o "${eps_filepath}";
+        ps2pdf -dEPSCrop "${eps_filepath}" "${pdf_filepath}";
         rm -f "${pnm_filepath}";
 
       done
