@@ -21,7 +21,7 @@ Dry run to find any JPEG images and just echo their full path:
 
 Convert any JPEG images found into JPEG thumbnail images at 90% quality:
 
-    find 'Desktop/Pics' -type f -name '*.jpg' |\
+    find 'Desktop/Pics' -type f -name '*.jpg' |\`
       while read FULL_IMAGE_PATH
       do
         PATH_SANS_EXTENSION="${FULL_IMAGE_PATH%.*}"
@@ -32,7 +32,7 @@ Convert any JPEG images found into JPEG thumbnail images at 90% quality:
 
 Dry run to find any JPEG, PNG, PSD or TIFF images and just echo their full path:
 
-    find -E 'Desktop/Pics' -type f -iregex '.*\.(JPG|JPEG|PNG|TIF|TIFF)$' |\
+    find -E 'Desktop/Pics' -type f -iregex '.*\.(JPG|JPEG|PNG|TIF|TIFF|WEBP)$' |\
       while read FULL_IMAGE_PATH
       do
         echo "${FULL_IMAGE_PATH}"
@@ -40,7 +40,7 @@ Dry run to find any JPEG, PNG, PSD or TIFF images and just echo their full path:
 
 Convert any JPEG, PNG, PSD or TIFF images found into 300 pixels wide or high JPEG thumbnail images at 90% quality:
 
-    find -E 'Desktop/Pics' -type f -iregex '.*\.(JPG|JPEG|PNG|PSD|TIF|TIFF)$' |\
+    find -E 'Desktop/Pics' -type f -iregex '.*\.(JPG|JPEG|PNG|PSD|TIF|TIFF|WEBP)$' |\
       while read FULL_IMAGE_PATH
       do
         PATH_SANS_EXTENSION="${FULL_IMAGE_PATH%.*}"
@@ -51,7 +51,7 @@ Convert any JPEG, PNG, PSD or TIFF images found into 300 pixels wide or high JPE
 
 Dry run to find any JPEG, PNG or TIFF images and just echo their full path:
 
-    find -E 'Desktop/Pics' -type f -iregex '.*\.(JPG|JPEG|PNG|TIF|TIFF)$' |\
+    find -E 'Desktop/Pics' -type f -iregex '.*\.(JPG|JPEG|PNG|TIF|TIFF|WEBP)$' |\
       while read FULL_IMAGE_PATH
       do
         echo "${FULL_IMAGE_PATH}"
@@ -59,7 +59,7 @@ Dry run to find any JPEG, PNG or TIFF images and just echo their full path:
 
 Convert any JPEG, PNG or TIFF images found into a same format 300 pixels wide or high thumbnail image at 90% quality:
 
-    find -E 'Desktop/Pics' -type f -iregex '.*\.(JPG|JPEG|PNG|TIF|TIFF)$' |\
+    find -E 'Desktop/Pics' -type f -iregex '.*\.(JPG|JPEG|PNG|TIF|TIFF|WEBP)$' |\
       while read FULL_IMAGE_PATH
       do
         # PATH_SANS_EXTENSION="${FULL_IMAGE_PATH%.*}"
@@ -75,7 +75,7 @@ Convert any JPEG, PNG or TIFF images found into a same format 300 pixels wide or
 
 Strip out all image EXIF data connected to JPEG, PNG or TIFF images with ExifTool:
 
-    find -E 'Desktop/Pics' -type f -iregex '.*\.(JPG|JPEG|PNG|TIF|TIFF)$' |\
+    find -E 'Desktop/Pics' -type f -iregex '.*\.(JPG|JPEG|PNG|TIF|TIFF|WEBP)$' |\
       while read FULL_IMAGE_PATH
       do
         exiftool -all= -overwrite_original_in_place "${FULL_IMAGE_PATH}"
@@ -99,7 +99,7 @@ Strip the ICC profile out of the EXIF data connected to TIFF images with ExifToo
 
 Strip the ICC profile out of the EXIF data connected to JPEG, PNG or TIFF images with ExifTool:
 
-    find 'Desktop/Pics' -type f -iregex '.*\.(JPG|JPEG|PNG|TIF|TIFF)$' |\
+    find 'Desktop/Pics' -type f -iregex '.*\.(JPG|JPEG|PNG|TIF|TIFF|WEBP)$' |\
       while read FULL_IMAGE_PATH
       do
         exiftool -icc_profile:all= -overwrite_original_in_place "${FULL_IMAGE_PATH}"
@@ -127,7 +127,7 @@ Change the `Creator` value to match whatever creator value you want:
 
 Change the DPI of JPEG images to 200 dpi:
 
-    find -E 'Desktop/Pics' -type f -iregex '.*\.(JPG|JPEG|PNG|PSD|TIF|TIFF|HEIC)$' |\
+    find -E 'Desktop/Pics' -type f -iregex '.*\.(JPG|JPEG|PNG|PSD|TIF|TIFF|HEIC|WEBP)$' |\
       while read FULL_IMAGE_PATH
       do
         convert -density 300 -units PixelsPerInch -quality 100 "${FULL_IMAGE_PATH}" "${FULL_IMAGE_PATH}"
@@ -137,7 +137,7 @@ Change the DPI of JPEG images to 200 dpi:
 
 Resize JPEG, PNG, PSD, TIFF or HEIC images to dimensions of 1200 pixels wide or high if they are larger than 1200 pixels:
 
-    find -E 'Desktop/Pics' -type f -iregex '.*\.(JPG|JPEG|PNG|PSD|TIF|TIFF|HEIC)$' |\
+    find -E 'Desktop/Pics' -type f -iregex '.*\.(JPG|JPEG|PNG|PSD|TIF|TIFF|HEIC|WEBP)$' |\
       while read FULL_IMAGE_PATH
       do
         convert -density 72 -units PixelsPerInch -resize "1200x1200>" -quality 100 "${FULL_IMAGE_PATH}" "${FULL_IMAGE_PATH}"
@@ -145,7 +145,7 @@ Resize JPEG, PNG, PSD, TIFF or HEIC images to dimensions of 1200 pixels wide or 
 
 Resize JPEG, PNG, TIFF or HEIC images to dimensions of 1920 pixels wide or high if they are larger than 1920 pixels:
 
-    find -E 'Desktop/Pics' -type f -iregex '.*\.(JPG|JPEG|PNG|TIF|TIFF|HEIC)$' |\
+    find -E 'Desktop/Pics' -type f -iregex '.*\.(JPG|JPEG|PNG|TIF|TIFF|HEIC|WEBP)$' |\
       while read FULL_IMAGE_PATH
       do
         convert -density 72 -units PixelsPerInch -resize "1920x1920>" -quality 90 "${FULL_IMAGE_PATH}" "${FULL_IMAGE_PATH}"
@@ -155,7 +155,7 @@ Resize JPEG, PNG, TIFF or HEIC images to dimensions of 1920 pixels wide or high 
 
 This command converts JPEG, PNG, TIFF or HEIC images to JPEGs at 90% quality:
 
-    find -E 'Desktop/Pics' -type f -iregex '.*\.(JPG|JPEG|PNG|TIF|TIFF|HEIC)$' |\
+    find -E 'Desktop/Pics' -type f -iregex '.*\.(JPG|JPEG|PNG|TIF|TIFF|HEIC|WEBP)$' |\
       while read FULL_IMAGE_PATH
       do
         PATH_SANS_EXTENSION="${FULL_IMAGE_PATH%.*}"
@@ -164,7 +164,7 @@ This command converts JPEG, PNG, TIFF or HEIC images to JPEGs at 90% quality:
 
 This command converts TIFF images to JPEGs at 100% quality with a 1200 DPI setting:
 
-    find -E 'Desktop/Pics' -type f -iregex '.*\.(JPG|JPEG|PNG|TIF|TIFF|HEIC)$' |\
+    find -E 'Desktop/Pics' -type f -iregex '.*\.(JPG|JPEG|PNG|TIF|TIFF|HEIC|WEBP)$' |\
       while read FULL_IMAGE_PATH
       do
         PATH_SANS_EXTENSION="${FULL_IMAGE_PATH%.*}"
@@ -175,7 +175,7 @@ This command converts TIFF images to JPEGs at 100% quality with a 1200 DPI setti
 
 This command converts images to HEIC format:
 
-    find -E 'Desktop/Pics' -type f -iregex '.*\.(JPG|JPEG|PNG|TIF|TIFF)$' |\
+    find -E 'Desktop/Pics' -type f -iregex '.*\.(JPG|JPEG|PNG|TIF|TIFF|WEBP)$' |\
       while read FULL_IMAGE_PATH
       do
         PATH_SANS_EXTENSION="${FULL_IMAGE_PATH%.*}"
@@ -189,7 +189,7 @@ This command converts images to HEIC format:
 
 This script is a first draft of a script that uses ImageMagick and Potrace to convert rasterized images into vector images. Works fine so far, but it would be nice to simply stream the output of convert right into potrace.
 
-    find -E 'Desktop/Pics' -type f -iregex ".*\.(JPG|JPG|PNG|TIF|TIFF|HEIC)$" |\
+    find -E 'Desktop/Pics' -type f -iregex ".*\.(JPG|JPG|PNG|TIF|TIFF|HEIC|WEBP)$" |\
       while read full_image_filepath
       do
 
