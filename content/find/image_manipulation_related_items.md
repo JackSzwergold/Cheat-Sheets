@@ -130,7 +130,7 @@ Change the DPI of JPEG images to 200 dpi:
     find -E 'Desktop/Pics' -type f -iregex '.*\.(JPG|JPEG|PNG|PSD|TIF|TIFF|HEIC|WEBP)$' |\
       while read FULL_IMAGE_PATH
       do
-        convert -density 300 -units PixelsPerInch -quality 100 "${FULL_IMAGE_PATH}" "${FULL_IMAGE_PATH}"
+        convert -density 200 -units PixelsPerInch -quality 100 "${FULL_IMAGE_PATH}" "${FULL_IMAGE_PATH}"
       done
 
 ### Resize images.
