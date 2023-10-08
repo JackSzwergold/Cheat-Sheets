@@ -93,3 +93,24 @@ Simple script traverse a directory filled with DV, MOV and MKV files and extract
         PATH_SANS_EXTENSION="${FULL_PATH%.*}"
         caffeinate ffmpeg -y -v quiet -i "${FULL_PATH}" -map_metadata -1 -c:v copy -c:a copy -map 0:0 -map 0:1 "${PATH_SANS_EXTENSION}"_content.mp4 < /dev/null;
       done
+
+### Strip Metadata Out of Video Files
+
+Simple script traverse a directory filled with MKV or MP4 files strips the metadata out of them:
+
+    find -E 'Desktop/Movies' -type f -iregex '.*\.(MKV|MP4)$' |\
+      while read full_video_filepath
+      do
+
+        # Break up the full audio filepath stuff into different directory and filename components.
+        video_dirname=$(dirname "${full_video_filepath}");
+        video_basename=$(basename "${full_video_filepath}");
+        video_filename="${video_basename%.*}";
+        video_extension="${video_basename##*.}";
+
+        # Run the command.
+        ffmpeg -y -v quiet -i "${full_video_filepath}" -map_metadata -1 -map 0 -c:v copy -c:a copy -c:s copy "${video_dirname}"/"${video_filename}"_new."${video_extension}" & task_pid=(`jobs -l | awk '{print $2}'`);
+        wait ${task_pid};
+
+      done
+  
