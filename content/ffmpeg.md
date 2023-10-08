@@ -25,7 +25,7 @@ Extract MP4 video out of an MKV file without transcoding but specifying a stream
 
 Same, but strip out all metadata:
 
-    ffmpeg -i input.mkv -map_metadata -1 -c:v copy -c:a copy -map 0:0 -map 0:1 output.mp4
+    ffmpeg -i input.mkv -map_metadata -1 -map 0 -c:v copy -c:a copy -c:s copy output.mp4
 
 Slight variation of the above:
 
