@@ -43,6 +43,14 @@ For basic h264 encoding, use this command:
 
     caffeinate ffmpeg -i input.mp4 -vf scale=-2:480 -c:v libx264 -crf 18 -c:a aac -b:a 128k -max_muxing_queue_size 1024 output.mp4
 
+Correct aspect ratio without re-encoding; for example make something 640 wide by 480 high:
+
+	ffmpeg -i input.mp4 -aspect 640:480 -c copy output.mp4
+
+Or do it via “math” for a 4 to 3 aspect ratio:
+
+	ffmpeg -i input.mp4 -aspect 4/3 -c copy output.mp4
+
 ***
 
 ### HEVC (aka: x265)
