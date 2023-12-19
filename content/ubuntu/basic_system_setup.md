@@ -263,6 +263,14 @@ And for some reason, the MCrypt module needs to be enabled like this:
 
     sudo php5enmod mcrypt
 
+#### For Ubuntu 22.04, install the PHP modules like this.
+
+	sudo aptitude install \
+	  php-mysql php-pgsql php-odbc php-sybase \
+	  php-xmlrpc php-json php-xsl php-curl \
+	  php-getid3 php-imap php-ldap \
+	  php-pspell php-gmp php-gd
+
 #### Enable a few core Apache modules.
 
 Enable these basic Apache modules:
