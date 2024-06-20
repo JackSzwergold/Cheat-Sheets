@@ -53,6 +53,14 @@ Or do it via “math” for a 4 to 3 aspect ratio:
 
 ***
 
+### Audio Items
+
+Trim silence at the beginning and ending of an audio file:
+
+    ffmpeg -i input.mp3 -af "silenceremove=start_periods=1:start_threshold=-60dB:start_silence=1:stop_periods=1:stop_silence=1:detection=peak" output.mp3
+
+***
+
 ### HEVC (aka: x265)
 
 To encode a video into an HEVC (aka: x265) video that is iOS compatible, you can do this. First, this line lets you create a sample video by using the `-ss` (seek) and `-t` (duration in seconds) parameters. For example, this line will create a 5 minute sample video:
