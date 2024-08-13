@@ -45,31 +45,31 @@ And when that’s done, cleanup by deleting the Zip archives:
 
     sudo rm *.zip
 
-They should both decompress into the a directory named `instantclient_19_8` which would make the full path:
+They should both decompress into the a directory named `instantclient_23_3` which would make the full path:
 
-    /opt/oracle/instantclient/instantclient_19_8/
+    /opt/oracle/instantclient/instantclient_23_3/
 
 With that done, go into that directory:
 
-    cd /opt/oracle/instantclient/instantclient_19_8/
+    cd /opt/oracle/instantclient/instantclient_23_3/
 
 And then set these two symbolic links:
 
     sudo ln -s libclntsh.dylib.12.1 libclntsh.dylib
     sudo ln -s libocci.dylib.12.1 libocci.dylib
 
-#### Compiling the OCI8 Module
+#### Compiling and installing the Oracle InstantClient (OCI8) module for PHP.
 
 Now install the OCI 8 version that works with your version of PHP. Here is how it breaks down:
 
-* **PHP 8.2**: `pecl install oci8-3.3.0`
+* **PHP 8.2**: `pecl install oci8-3.4.0`
 * **PHP 8.1**: `pecl install oci8-3.2.1`
 * **PHP 8.0**: `pecl install oci8-3.0.1`
 * **PHP 7.x**: `pecl install oci8-2.2.0`
 * **PHP 5.2–5.6**: `pecl install oci8-2.0.12`
 * **PHP 4.3.9-5.1**: `pecl install oci8-1.4.10`
 
-So in this case, we are installing it for PHP version 7.0.8 so we will install it using this command:
+So in this case, we are installing it for PHP version 8.2 so we will install it using this command:
 
     pecl install oci8
 
@@ -83,14 +83,14 @@ During the install you might be asked to provide the `ORACLE_HOME` path via a me
 
 We are not permanently setting `ORACLE_HOME` so just use this as the path:
 
-    instantclient,/opt/oracle/instantclient/instantclient_19_8
+    instantclient,/opt/oracle/instantclient/instantclient_23_3
 
 After PECL does it’s thing, the `oci8.so` should be compiled and ready to go.
 
 #### Installing the OCI8 Module
 
-Now adjust the PHP config file (`php.ini`) like this to get PHP to recognize it:
+[Now adjust the PHP config file (`php.ini`) like this to get PHP to recognize it:
 
-    sh -c "printf '\n[OCI8]\nextension=oci8.so\n' >> /Applications/MAMP/bin/php/php7.0.8/conf/php.ini"
+    sh -c "printf '\n[OCI8]\nextension=oci8.so\n' >> /Applications/MAMP/bin/php/php8.2.0/conf/php.ini"
 
-Now start MAMP again and check the output of the PHP info page and `oci8` should be clearly listed there under installed components.
+Now start MAMP again and check the output of the PHP info page and `oci8.so` should be clearly listed there under installed components.]()
