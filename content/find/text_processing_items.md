@@ -9,7 +9,7 @@ Template: index
 
 This simple script uses `tr`:
 
-      tr -d '\r' < "${source_filepath}" > "${source_filepath}".txt;
+    tr -d '\r' < "${source_filepath}" > "${source_filepath}".txt;
 
 ### Convert old Mac OS line endings to modern text files using `dos2unix`.
 
