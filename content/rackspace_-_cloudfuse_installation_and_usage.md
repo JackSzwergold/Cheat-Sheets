@@ -1,6 +1,6 @@
 ---
 Title: Rackspace - Cloudfuse Installation and Usage
-Description: Rackspace - Cloudfuse Installation and Usage
+Description: A cheat sheet for Rackspace - Cloudfuse related items.
 Author: Jack Szwergold
 Date: 2015-10-07
 Robots: noindex,nofollow
