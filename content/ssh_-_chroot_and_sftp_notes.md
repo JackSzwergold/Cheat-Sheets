@@ -1,6 +1,6 @@
 ---
 Title: SSH - Chroot and SFTP Notes
-Description: SSH - Chroot and SFTP Notes
+Description: A cheat sheet for SSH - Chroot and SFTP related items.
 Author: Jack Szwergold
 Date: 2015-09-17
 Robots: noindex,nofollow

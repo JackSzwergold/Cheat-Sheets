@@ -1,6 +1,6 @@
 ---
 Title: LAME MP3 Related Items
-Description: A cheat sheet for Kernel Networking Tweaks related items.
+Description: A cheat sheet for LAME MP3 related items.
 Author: Jack Szwergold
 Date: 2015-10-08
 Robots: noindex,nofollow

@@ -1,6 +1,6 @@
 ---
 Title: VirtualBox - SMB and Netatalk Filesharing Items
-Description: VirtualBox - SMB and Netatalk Filesharing Items
+Description: A cheat sheet for VirtualBox - SMB and Netatalk related items.
 Author: Jack Szwergold
 Date: 2015-09-20
 Robots: noindex,nofollow
