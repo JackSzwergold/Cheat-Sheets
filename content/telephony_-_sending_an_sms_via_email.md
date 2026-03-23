@@ -1,6 +1,6 @@
 ---
 Title: Telephony - Sending an SMS via Email
-Description: Telephony - Sending an SMS via Email
+Description: A cheat sheet for sending an SMS via email related items.
 Author: Jack Szwergold
 Date: 2015-10-08
 Robots: noindex,nofollow

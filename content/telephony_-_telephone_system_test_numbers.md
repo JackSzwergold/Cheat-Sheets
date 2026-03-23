@@ -1,6 +1,6 @@
 ---
 Title: Telephony - Telephone System Test Numbers
-Description: Telephony - Telephone System Test Numbers
+Description: A cheat sheet for some telephone system test numbers.
 Author: Jack Szwergold
 Date: 2015-09-19
 Robots: noindex,nofollow
