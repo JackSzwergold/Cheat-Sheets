@@ -1,6 +1,6 @@
 ---
 Title: Ruby - Capistrano Deployments
-Description: Ruby - Capistrano Deployments
+Description: A cheat sheet for Capistrano deployments related items.
 Author: Jack Szwergold
 Date: 2015-10-15
 Robots: noindex,nofollow
