@@ -1,6 +1,6 @@
 ---
 Title: Git - Delete All Commits Prior to a Specific Commit
-Description: Git - Delete All Commits Prior to a Specific Commit
+Description: A cheat sheet for how to delete all commits prior to a specific commit and related items.
 Author: Jack Szwergold
 Date: 2015-09-15
 Robots: noindex,nofollow
