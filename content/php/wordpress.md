@@ -1,6 +1,6 @@
 ---
-Title: PHP - WordPress Related Items
-Description: PHP - WordPress Related Items
+Title: PHP - WordPress
+Description: A cheat sheet for WordPress related items.
 Author: Jack Szwergold
 Date: 2015-10-16
 Robots: noindex,nofollow
