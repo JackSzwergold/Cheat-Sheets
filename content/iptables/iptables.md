@@ -1,5 +1,5 @@
 ---
-Title: IPTables - Upgrade for GeoIP Support
+Title: IPTables
 Description: A cheat sheet for IPTables related items.
 Author: Jack Szwergold
 Date: 2015-10-11
