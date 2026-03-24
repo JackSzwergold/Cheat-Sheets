@@ -1,6 +1,6 @@
 ---
 Title: Git - Rewinding to a Specific Commit
-Description: Git - Rewinding to a Specific Commit
+Description: A cheat sheet for rewinding to a specific commit and related items.
 Author: Jack Szwergold
 Date: 2015-09-15
 Robots: noindex,nofollow
