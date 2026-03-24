@@ -1,6 +1,6 @@
 ---
 Title: Ubuntu - Basic System Setup
-Description: Ubuntu - Basic System Setup
+Description: A cheat sheet for basic Ubuntu system setup related items.
 Author: Jack Szwergold
 Date: 2016-01-16
 Robots: noindex,nofollow
