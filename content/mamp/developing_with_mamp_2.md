@@ -1,6 +1,6 @@
 ---
 Title: Developing With MAMP 2.1.4
-Description: Part 2 - Configuring Name-Based Virtual Hosts in MAMP
+Description: A cheat sheet for developing With MAMP 2.1.4 related items.
 Author: Jack Szwergold
 Date: 2014-02-17
 Robots: noindex,nofollow
