@@ -1,6 +1,6 @@
 ---
-Title: NodeJS - Installing NodeJS and NPM via a PPA on Ubuntu
-Description: NodeJS - Installing NodeJS and NPM via a PPA on Ubuntu
+Title: NodeJS - Installing NodeJS and NPM via a PPA on Ubuntu 
+Description: A cheat sheet for installing NodeJS and NPM via a PPA on Ubuntu related items.
 Author: Jack Szwergold
 Date: 2015-09-22
 Robots: noindex,nofollow
