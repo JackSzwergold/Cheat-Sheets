@@ -1,6 +1,6 @@
 ---
-Title: IPTables - Upgrade for GeoIP Support
-Description: A cheat sheet for IPTables - Upgrade for GeoIP Support related items.
+Title: IPTables - Upgrading for GeoIP Support
+Description: A cheat sheet for upgrading IPTables for GeoIP support related items.
 Author: Jack Szwergold
 Date: 2015-10-15
 Robots: noindex,nofollow
@@ -9,7 +9,7 @@ Template: index
 
 ### For Reference Only! 100% none of this seems to work!
 
-This is just here for refernece for now. Might not be worth the headache to get this setup for Ubuntu 12.04.5.
+This is just here for reference for now. Might not be worth the headache to get this setup for Ubuntu 12.04.5.
 
 ***
 
