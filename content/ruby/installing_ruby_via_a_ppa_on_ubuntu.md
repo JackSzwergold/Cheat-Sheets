@@ -1,6 +1,6 @@
 ---
 Title: Ruby - Installing Ruby via a PPA on Ubuntu
-Description: Ruby - Installing Ruby via a PPA on Ubuntu
+Description: A cheat sheet for installing Ruby via PPA on Ubuntu related items.
 Author: Jack Szwergold
 Date: 2015-09-20
 Robots: noindex,nofollow

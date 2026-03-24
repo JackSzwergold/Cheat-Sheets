@@ -1,6 +1,6 @@
 ---
 Title: Ruby - Installing Ruby via RVM
-Description: Ruby - Installing Ruby via RVM
+Description: A cheat sheet for installing Ruby via RVM on Ubuntu related items.
 Author: Jack Szwergold
 Date: 2015-09-20
 Robots: noindex,nofollow
