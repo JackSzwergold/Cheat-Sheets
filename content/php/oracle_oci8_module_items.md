@@ -1,6 +1,6 @@
 ---
 Title: PHP - Oracle OCI8 Module Items
-Description: PHP - Oracle OCI8 Module Items
+Description: A cheat sheet for Oracle OCI8 module related items.
 Author: Jack Szwergold
 Date: 2017-10-10
 Robots: noindex,nofollow
