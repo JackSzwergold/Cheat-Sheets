@@ -1,6 +1,6 @@
 ---
 Title: Ruby - Installing Ruby from Source on Ubuntu
-Description: Ruby - Installing Ruby from Source on Ubuntu
+Description: A cheat sheet for installing Ruby from source on Ubuntu related items.
 Author: Jack Szwergold
 Date: 2015-09-21
 Robots: noindex,nofollow
