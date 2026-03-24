@@ -1,5 +1,5 @@
 ---
-Title: Ubuntu - Setting Up and Using Apple Filing Protocol Utility Items
+Title: Ubuntu - Setting Up and Using Apple Filing Protocol Utility
 Description: Ubuntu - Setting Up and Using Apple Filing Protocol Utility Items
 Author: Jack Szwergold
 Date: 2015-10-04
