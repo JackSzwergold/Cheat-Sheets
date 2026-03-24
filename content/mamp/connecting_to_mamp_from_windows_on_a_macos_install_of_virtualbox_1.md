@@ -1,6 +1,6 @@
 ---
 Title: Connecting to MAMP from Windows on a macOS Install of VirtualBox 1
-Description: Part 1 - Overall Virtualization Concepts
+Description: A cheat sheet for connecting to MAMP from Windows on a macOS install of VirtualBox related items.
 Author: Jack Szwergold
 Date: 2014-03-02
 Robots: noindex,nofollow
