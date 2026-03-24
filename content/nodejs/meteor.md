@@ -1,6 +1,6 @@
 ---
 Title: NodeJS - Meteor
-Description: NodeJS - Meteor
+Description: A cheat sheet for Meteor related items.
 Author: Jack Szwergold
 Date: 2015-09-22
 Robots: noindex,nofollow
