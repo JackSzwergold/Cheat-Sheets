@@ -1,6 +1,6 @@
 ---
 Title: Git - Removing a File from all Commits in a Branch
-Description: Git - Removing a File from all Commits in a Branch
+Description: A cheat sheet for removing a file from all commits in a branch and related items.
 Author: Jack Szwergold
 Date: 2015-09-15
 Robots: noindex,nofollow
