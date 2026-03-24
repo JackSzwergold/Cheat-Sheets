@@ -1,6 +1,6 @@
 ---
-Title: PHP - phpMyAdmin Related Items
-Description: PHP - phpMyAdmin Related Items
+Title: PHP - phpMyAdmin
+Description: A cheat sheet for phpMyAdmin related items.
 Author: Jack Szwergold
 Date: 2015-10-17
 Robots: noindex,nofollow
