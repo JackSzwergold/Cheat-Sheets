@@ -1,6 +1,6 @@
 ---
 Title: Ubuntu - SMB Related Items
-Description: Ubuntu - SMB Related Items
+Description: A cheat sheet for SMB related items.
 Author: Jack Szwergold
 Date: 2015-09-15
 Robots: noindex,nofollow
