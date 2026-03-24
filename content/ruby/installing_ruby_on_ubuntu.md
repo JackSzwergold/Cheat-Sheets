@@ -1,6 +1,6 @@
 ---
 Title: Ruby - Installing Ruby on Ubuntu
-Description: Ruby - Installing Ruby on Ubuntu
+Description: A cheat sheet for installing Ruby on Ubuntu related items.
 Author: Jack Szwergold
 Date: 2015-09-20
 Robots: noindex,nofollow
