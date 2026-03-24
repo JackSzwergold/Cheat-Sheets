@@ -1,6 +1,6 @@
 ---
 Title: Git - Restoring a Deleted File in a Git Repository
-Description: Git - Restoring a Deleted File in a Git Repository
+Description: A cheat sheet for restoring a deleted file in a Git repository and related items.
 Author: Jack Szwergold
 Date: 2015-10-02
 Robots: noindex,nofollow
