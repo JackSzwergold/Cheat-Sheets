@@ -1,6 +1,6 @@
 ---
 Title: PHP - Installing APC
-Description: PHP - Installing APC
+Description: A cheat sheet for installing APC related items.
 Author: Jack Szwergold
 Date: 2015-10-05
 Robots: noindex,nofollow
