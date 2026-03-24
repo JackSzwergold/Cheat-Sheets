@@ -1,6 +1,6 @@
 ---
 Title: Ruby - Apache Passenger Module Installation and Setup
-Description: Ruby - Apache Passenger Module Installation and Setup
+Description: A cheat sheet for Apache Passenger module installation and setup related items.
 Author: Jack Szwergold
 Date: 2015-09-20
 Robots: noindex,nofollow
