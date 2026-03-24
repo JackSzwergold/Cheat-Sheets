@@ -1,6 +1,6 @@
 ---
 Title: Connecting to MAMP from Windows on a macOS Install of VirtualBox 3
-Description: Part 3 - Advanced — Using a Dual Network Interface Setup with a Host-Only Interface
+Description: A cheat sheet for connecting to MAMP from Windows on a macOS install of VirtualBox related items.
 Author: Jack Szwergold
 Date: 2014-03-02
 Robots: noindex,nofollow
