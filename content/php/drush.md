@@ -1,6 +1,6 @@
 ---
 Title: PHP - Drush
-Description: PHP - Drush
+Description: A cheat sheet for Drush related items.
 Author: Jack Szwergold
 Date: 2016-12-15
 Robots: noindex,nofollow
