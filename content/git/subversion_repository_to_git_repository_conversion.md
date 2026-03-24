@@ -1,6 +1,6 @@
 ---
 Title: Git - Subversion Repository to Git Repository Conversion
-Description: Git - Subversion Repository to Git Repository Conversion
+Description: A cheat sheet for Subversion repository to Git repository conversion and related items.
 Author: Jack Szwergold
 Date: 2015-10-08
 Robots: noindex,nofollow
