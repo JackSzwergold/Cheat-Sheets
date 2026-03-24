@@ -1,6 +1,6 @@
 ---
 Title: Git - Initing a Repo and Pushing to Origin
-Description: Git - Initing a Repo and Pushing to Origin
+Description: A cheat sheet for initing a repo and pushing to origin and related items.
 Author: Jack Szwergold
 Date: 2015-09-15
 Robots: noindex,nofollow

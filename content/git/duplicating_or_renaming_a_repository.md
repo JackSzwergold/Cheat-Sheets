@@ -1,6 +1,6 @@
 ---
 Title: Git - Duplicating or Renaming a Repository
-Description: Git - Duplicating or Renaming a Repository
+Description: A cheat sheet for duplicating or renaming a repository and related items.
 Author: Jack Szwergold
 Date: 2015-09-15
 Robots: noindex,nofollow
