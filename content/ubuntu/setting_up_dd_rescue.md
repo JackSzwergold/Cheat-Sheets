@@ -1,6 +1,6 @@
 ---
 Title: Ubuntu - Setting Up DD_Rescue Items
-Description: Ubuntu - Setting Up DD_Rescue Items
+Description: A cheat sheet for setting up and using DD_Rescue related items.
 Author: Jack Szwergold
 Date: 2015-10-05
 Robots: noindex,nofollow
