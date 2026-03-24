@@ -1,6 +1,6 @@
 ---
-Title: Ubuntu - Let’s Encrypt Items
-Description: Ubuntu - Let’s Encrypt Items
+Title: Ubuntu - Let’s Encrypt
+Description: A cheat sheet for Let’s Encrypt related items.
 Author: Jack Szwergold
 Date: 2019-11-03
 Robots: noindex,nofollow

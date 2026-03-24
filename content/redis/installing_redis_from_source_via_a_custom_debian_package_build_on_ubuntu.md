@@ -1,6 +1,6 @@
 ---
 Title: Redis - Installing Redis from Source via a Custom Debian Package Build on Ubuntu
-Description: Redis - Installing Redis from Source via a Custom Debian Package Build on Ubuntu
+Description: A cheat sheet for installing Redis from Source via a custom Debian package build on Ubuntu related items.
 Author: Jack Szwergold
 Date: 2015-09-22
 Robots: noindex,nofollow

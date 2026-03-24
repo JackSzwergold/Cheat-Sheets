@@ -1,6 +1,6 @@
 ---
 Title: Git - Changing Text Across Multiple Commit Messages
-Description: Git - Changing Text Across Multiple Commit Messages
+Description: A cheat sheet for changing text across multiple commit messages related items.
 Author: Jack Szwergold
 Date: 2015-09-15
 Robots: noindex,nofollow

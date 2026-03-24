@@ -1,6 +1,6 @@
 ---
 Title: PHP - Microsoft SQLSRV Module Items
-Description: PHP - Microsoft SQLSRV Module Items
+Description: A cheat sheet for Microsoft SQLSRV Module related items.
 Author: Jack Szwergold
 Date: 2019-01-25
 Robots: noindex,nofollow

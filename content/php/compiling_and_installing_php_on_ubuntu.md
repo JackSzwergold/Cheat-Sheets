@@ -1,6 +1,6 @@
 ---
 Title: PHP - Compiling and Installing PHP on Ubuntu
-Description: PHP - Compiling and Installing PHP on Ubuntu
+Description: A cheat sheet for compiling and Installing PHP on Ubuntu related items.
 Author: Jack Szwergold
 Date: 2015-10-13
 Robots: noindex,nofollow

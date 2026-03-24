@@ -93,4 +93,4 @@ After PECL does it’s thing, the `oci8.so` should be compiled and ready to go.
 
     sh -c "printf '\n[OCI8]\nextension=oci8.so\n' >> /Applications/MAMP/bin/php/php8.2.0/conf/php.ini"
 
-Now start MAMP again and check the output of the PHP info page and `oci8.so` should be clearly listed there under installed components.]()
+Now start MAMP again and check the output of the PHP info page and `oci8.so` should be clearly listed there under installed components.

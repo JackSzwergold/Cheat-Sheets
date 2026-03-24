@@ -1,13 +1,13 @@
 ---
 Title: Git - Restoring a Deleted File in a Git Repository
-Description: Git - Restoring a Deleted File in a Git Repository
+Description: A cheat sheet for restoring a deleted file in a Git repository and related items.
 Author: Jack Szwergold
 Date: 2015-10-02
 Robots: noindex,nofollow
 Template: index
 ---
 
-So let’s say you accidentally deleted a file in a Git repository and somehow you never noticed until a pile of commits in. Don’t panic! As long as you know the exact path of the file removed, you can recover it. Here is how.
+Let’s say you accidentally deleted a file in a Git repository and somehow you never noticed until a pile of commits in. Don’t panic! As long as you know the exact path of the file removed, you can recover it. Here is how.
 
 First find the commit hash for the commit where the file was removed with the following command; be sure to change `[path of deleted file]` to the actual path of the deleted file:
 

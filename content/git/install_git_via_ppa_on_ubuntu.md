@@ -1,6 +1,6 @@
 ---
 Title: Git - Install GIT via PPA on Ubuntu
-Description: Git - Install GIT via PPA on Ubuntu
+Description: A cheat sheet for install GIT via PPA on Ubuntu and related items.
 Author: Jack Szwergold
 Date: 2015-09-15
 Robots: noindex,nofollow

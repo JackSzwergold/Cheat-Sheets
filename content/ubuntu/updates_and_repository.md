@@ -1,6 +1,6 @@
 ---
-Title: Ubuntu - Updates and Repository Items
-Description: Ubuntu - Updates and Repository Items
+Title: Ubuntu - Updates and Repository
+Description: A cheat sheet for updates and repository related items.
 Author: Jack Szwergold
 Date: 2015-09-11
 Robots: noindex,nofollow

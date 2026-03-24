@@ -1,6 +1,6 @@
 ---
 Title: Postfix - Delete Specific Messages from the Mail Queue
-Description: Postfix - Delete Specific Messages from the Mail Queue
+Description: A cheat sheet for deleting specific messages from the mail queue related items.
 Author: Jack Szwergold
 Date: 2015-09-17
 Robots: noindex,nofollow

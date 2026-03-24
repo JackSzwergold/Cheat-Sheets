@@ -1,6 +1,6 @@
 ---
 Title: Using an Ubuntu Linux Server 1
-Description: Using an Ubuntu Linux Server 1
+Description: A cheat sheet for using an Ubuntu Linux server and related items.
 Author: Jack Szwergold
 Date: 2014-03-19
 Robots: noindex,nofollow

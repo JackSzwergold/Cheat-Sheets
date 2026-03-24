@@ -1,6 +1,6 @@
 ---
 Title: NodeJS - KeystoneJS
-Description: NodeJS - KeystoneJS
+Description: A cheat sheet for installing KeystoneJS via a NPM on Ubuntu related items.
 Author: Jack Szwergold
 Date: 2016-11-05
 Robots: noindex,nofollow

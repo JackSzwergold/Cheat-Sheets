@@ -1,6 +1,6 @@
 ---
-Title: Ubuntu - LDAP Related Items
-Description: Ubuntu - LDAP Related Items
+Title: Ubuntu - LDAP
+Description: A cheat sheet for LDAP related items.
 Author: Jack Szwergold
 Date: 2015-10-05
 Robots: noindex,nofollow

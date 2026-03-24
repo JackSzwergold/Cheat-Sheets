@@ -1,6 +1,6 @@
 ---
 Title: NodeJS - Uninstalling NodeJS and NPM in macOS
-Description: NodeJS - Uninstalling NodeJS and NPM in macOS
+Description: A cheat sheet for uninstalling NodeJS and NPM in macOS related items.
 Author: Jack Szwergold
 Date: 2015-02-03
 Robots: noindex,nofollow

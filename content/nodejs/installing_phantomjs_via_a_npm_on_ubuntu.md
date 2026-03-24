@@ -1,6 +1,6 @@
 ---
 Title: NodeJS - Installing PhantomJS via a NPM on Ubuntu
-Description: NodeJS - Installing PhantomJS via a NPM on Ubuntu
+Description: A cheat sheet for installing PhantomJS via a NPM on Ubuntu related items.
 Author: Jack Szwergold
 Date: 2015-09-22
 Robots: noindex,nofollow
@@ -33,7 +33,7 @@ And if there are SSL issues, disable the strict SSL settings:
 
 #### Fair Warning! This is for reference only and not recommended.
 
-Installing PhantomJS from source is *not recommended* because it can be installed via precompiled packages from elsewhere and as the developer’s state:
+Installing PhantomJS from source is *not recommended* because it can be installed via pre-compiled packages from elsewhere and as the developer’s state:
 
 > Building PhantomJS from source takes a very long time, anywhere from 30 minutes to several hours (depending on the machine configuration). It is recommended to use the pre-made binary packages on supported operating systems.
 

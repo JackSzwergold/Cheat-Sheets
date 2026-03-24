@@ -1,6 +1,6 @@
 ---
 Title: Ubuntu - Sensors
-Description: Ubuntu - Sensors
+Description: A cheat sheet for Sensors related items.
 Author: Jack Szwergold
 Date: 2015-09-22
 Robots: noindex,nofollow

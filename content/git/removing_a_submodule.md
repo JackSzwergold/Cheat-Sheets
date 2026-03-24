@@ -1,6 +1,6 @@
 ---
 Title: Git - Removing a Submodule
-Description: Git - Removing a Submodule
+Description: A cheat sheet for removing a submodule and related items.
 Author: Jack Szwergold
 Date: 2015-09-15
 Robots: noindex,nofollow

@@ -1,6 +1,6 @@
 ---
 Title: Ubuntu - Trickle
-Description: Ubuntu - Trickle
+Description: A cheat sheet for Trickle related items.
 Author: Jack Szwergold
 Date: 2015-10-09
 Robots: noindex,nofollow

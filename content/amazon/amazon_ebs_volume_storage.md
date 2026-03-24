@@ -11,7 +11,7 @@ Template: index
 
 Everything here happens in the Amazon Web Services control panel. Login to your Amazon Web Services console and go to the “EC2 Management Console”.
 
-Under *Instances* select an instance (basically a server) you wish to attach an EBS volume to and make note of the *Instance ID* as well as the *Availablity Zone*.
+Under *Instances* select an instance (basically a server) you wish to attach an EBS volume to and make note of the *Instance ID* as well as the *Availability Zone*.
 
 ### Creating an EBS volume.
 
@@ -39,4 +39,4 @@ Now, hit the *Attach* button and wait. The “in progress” spinner should be s
 
 So with all that done, if you login to the server and run `lsblk` or `cat /proc/partitions` you should now see the device attached as expected.
 
-And in my tests the device, instead of the volume being `sdf` it’s actually `xvdf`; so it would be `/dev/xvdf` when partitioning, formating and mounting. So yes, it can be a bit confussing but just make note of it for partitioning and setup and all should be good.
+And in my tests the device, instead of the volume being `sdf` it’s actually `xvdf`; so it would be `/dev/xvdf` when partitioning, formatting and mounting. So yes, it can be a bit confusing but just make note of it for partitioning and setup and all should be good.

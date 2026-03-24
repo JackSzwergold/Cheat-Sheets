@@ -1,6 +1,6 @@
 ---
 Title: Installing a Web Crawler based on Solr and Nutch
-Description: A cheat sheet for Java - Installing a Web Crawler based on Solr and Nutch related items.
+Description: A cheat sheet for installing a web crawler based on Solr and Nutch related items.
 Author: Jack Szwergold
 Date: 2015-10-14
 Robots: noindex,nofollow

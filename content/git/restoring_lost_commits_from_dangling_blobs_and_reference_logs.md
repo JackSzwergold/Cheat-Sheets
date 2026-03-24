@@ -1,6 +1,6 @@
 ---
 Title: Git - Restoring Lost Commits from Dangling Blobs and Reference Logs
-Description: Git - Restoring Lost Commits from Dangling Blobs and Reference Logs
+Description: A cheat sheet for restoring lost commits from dangling blobs and reference logs and related items.
 Author: Jack Szwergold
 Date: 2015-10-03
 Robots: noindex,nofollow

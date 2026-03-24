@@ -1,6 +1,6 @@
 ---
 Title: Git - Dealing With Tags
-Description: Git - Dealing With Tags
+Description: A cheat sheet for dealing with tags and related items.
 Author: Jack Szwergold
 Date: 2015-09-15
 Robots: noindex,nofollow

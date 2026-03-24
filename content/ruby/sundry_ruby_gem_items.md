@@ -1,6 +1,6 @@
 ---
 Title: Ruby - Sundry Ruby GEM Items
-Description: Ruby - Sundry Ruby GEM Items
+Description: A cheat sheet for sundry Ruby GEM related items.
 Author: Jack Szwergold
 Date: 2015-09-20
 Robots: noindex,nofollow

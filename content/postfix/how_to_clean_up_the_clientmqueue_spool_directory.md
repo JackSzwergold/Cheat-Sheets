@@ -1,6 +1,6 @@
 ---
 Title: Postfix - How to clean up the clientmqueue Spool Directory
-Description: Postfix - How to clean up the clientmqueue Spool Directory
+Description: A cheat sheet for how to clean up the clientmqueue spool sirectory related items.
 Author: Jack Szwergold
 Date: 2015-09-17
 Robots: noindex,nofollow

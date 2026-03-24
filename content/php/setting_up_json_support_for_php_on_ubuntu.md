@@ -1,6 +1,6 @@
 ---
 Title: PHP - Setting up JSON support for PHP on Ubuntu
-Description: PHP - Setting up JSON support for PHP on Ubuntu
+Description: A cheat sheet for setting up JSON support for PHP on Ubuntu related items.
 Author: Jack Szwergold
 Date: 2015-10-13
 Robots: noindex,nofollow

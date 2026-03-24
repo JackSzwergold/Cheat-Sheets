@@ -1,6 +1,6 @@
 ---
 Title: Git - Merging Multiple Git Repositories into One Parent Repository
-Description: Git - Merging Multiple Git Repositories into One Parent Repository
+Description: A cheat sheet for merging multiple Git repositories into one parent repository and related items.
 Author: Jack Szwergold
 Date: 2015-10-18
 Robots: noindex,nofollow

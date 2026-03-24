@@ -1,6 +1,6 @@
 ---
 Title: Redis - Installing Redis via a PPA on Ubuntu
-Description: Redis - Installing Redis via a PPA on Ubuntu
+Description: A cheat sheet for installing Redis via a PPA on Ubuntu related items.
 Author: Jack Szwergold
 Date: 2015-09-22
 Robots: noindex,nofollow
