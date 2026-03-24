@@ -1,6 +1,6 @@
 ---
-Title: Ubuntu - Locale Related Items
-Description: Ubuntu - Locale Related Items
+Title: Ubuntu - Locale
+Description: A cheat sheet for Locale related items.
 Author: Jack Szwergold
 Date: 2015-10-05
 Robots: noindex,nofollow
