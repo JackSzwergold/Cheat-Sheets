@@ -1,6 +1,6 @@
 ---
 Title: PHP - Acquia Dev Desktop
-Description: PHP - Acquia Dev Desktop
+Description: A cheat sheet for Acquia Dev Desktop related items.
 Author: Jack Szwergold
 Date: 2016-12-13
 Robots: noindex,nofollow
